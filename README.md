@@ -3,6 +3,10 @@ TumblrSharp
 
 This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codeplex.com/) C# Library developed by [the community](https://tumblrsharp.codeplex.com/team/view).
 
+Documentation
+========
+
+Please refer to the [Wiki](https://github.com/piedoom/TumblrSharp/wiki) to learn how to use TumblrSharp. 
 
 Why?
 ========

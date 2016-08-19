@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Don't Panic Software")]
 [assembly: AssemblyProduct("TumblrSharp")]
-[assembly: AssemblyCopyright("Copyright ©  2013 Don't Panic Software")]
+[assembly: AssemblyCopyright("Copyright ©  2013 Don't Panic Software, Doomy")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("1.0.0.6")]
-[assembly: AssemblyFileVersion("1.0.0.6")]
+[assembly: AssemblyVersion("1.0.0.7")]
+[assembly: AssemblyFileVersion("1.0.0.7")]
 [assembly: ComVisible(false)]

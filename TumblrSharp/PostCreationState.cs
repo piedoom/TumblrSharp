@@ -30,8 +30,5 @@ namespace DontPanic.TumblrSharp
 		/// The post is an unpublished submission
 		/// </summary>
 		Submission = 4
-
-
-
 	}
 }

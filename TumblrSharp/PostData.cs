@@ -88,26 +88,45 @@ namespace DontPanic.TumblrSharp
             return result;
 		}
 
-		#region Static Methods
+        #region Static Methods
 
-		#region CreateText
+        #region CreateAnswer
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a text post.
-		/// </summary>
-		/// <param name="body">
-		/// The body of the text post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the text post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="body"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="body"/> is empty.
-		/// </exception>
-		public static PostData CreateText(string body)
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for an answer post.
+        /// </summary>
+        /// <param name="answer">The body of the answer post.</param>
+        /// <param name="tags"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public static PostData CreateAnswer(string answer, IEnumerable<string> tags, PostCreationState state)
+        {
+            var postData = new PostData(state, tags);
+            postData.parameters.Add("type", "answer");
+            postData.parameters.Add("answer", answer);
+
+            return postData;
+        }
+        #endregion
+
+        #region CreateText
+
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a text post.
+        /// </summary>
+        /// <param name="body">
+        /// The body of the text post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the text post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="body"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="body"/> is empty.
+        /// </exception>
+        public static PostData CreateText(string body)
 		{
 			return CreateText(body, null, null, PostCreationState.Published);
 		}

@@ -15,6 +15,7 @@ TumblrSharp is a very nicely designed library, and perhaps the *only* usable C# 
 What has been fixed?
 ========
 - [x] Errors with getting submission posts and their new post `state` type
+- [x] Allow posts to be sent with a `published` state, which is currently the only way to publish asks
 - [ ] Getting dashboard posts *after* a date rather than *before*
 
 What needs to be implemented?

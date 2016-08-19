@@ -43,6 +43,7 @@
     <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj">
       <Project>{4a8b7b77-f7ae-4155-9e9c-253afd6e0c3a}</Project>
       <Name>TumblrSharp</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +78,11 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\lib\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

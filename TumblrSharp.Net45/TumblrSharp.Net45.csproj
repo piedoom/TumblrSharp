@@ -39,10 +39,12 @@
     <Reference Include="DontPanic.TumblrSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Projects\Noted\tumblrsharp-34908\TumblrSharp\bin\Debug\DontPanic.TumblrSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DontPanic.TumblrSharp.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Projects\Noted\tumblrsharp-34908\TumblrSharp.Client\bin\Debug\DontPanic.TumblrSharp.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

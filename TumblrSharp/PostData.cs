@@ -66,10 +66,7 @@ namespace DontPanic.TumblrSharp
         /// </returns>
 		public MethodParameterSet ToMethodParameterSet()
 		{
-			var result = new MethodParameterSet(parameters);
-
-			if (State != PostCreationState.Published)
-				result.Add("state", State.ToString().ToLowerInvariant());
+			var result = new MethodParameterSet(parameters);				
 
 			if (Tags != null)
 				result.Add("tags", String.Join(",", Tags.ToArray()));
@@ -86,7 +83,9 @@ namespace DontPanic.TumblrSharp
 			if (!String.IsNullOrEmpty(Slug))
 				result.Add("slug", Slug);
 
-			return result;
+            result.Add("state", State.ToString().ToLowerInvariant());
+
+            return result;
 		}
 
 		#region Static Methods

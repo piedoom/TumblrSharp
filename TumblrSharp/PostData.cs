@@ -111,75 +111,6 @@ namespace DontPanic.TumblrSharp
 
         #region CreateText
 
-        /// <summary>
-        /// Creates the <see cref="PostData"/> for a text post.
-        /// </summary>
-        /// <param name="body">
-        /// The body of the text post.
-        /// </param>
-        /// <returns>
-        /// A <see cref="PostData"/> instance representing the text post.
-        /// </returns>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="body"/> is <b>null</b>.
-        /// </exception>
-        /// <exception cref="ArgumentException">
-        /// <paramref name="body"/> is empty.
-        /// </exception>
-        public static PostData CreateText(string body)
-		{
-			return CreateText(body, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a text post.
-		/// </summary>
-		/// <param name="body">
-		/// The body of the text post.
-		/// </param>
-		/// <param name="title">
-		/// The title of the text post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="body"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="body"/> is empty.
-		/// </exception>
-		public static PostData CreateText(string body, string title)
-		{
-			return CreateText(body, title, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a text post.
-		/// </summary>
-		/// <param name="body">
-		/// The body of the text post.
-		/// </param>
-		/// <param name="title">
-		/// The title of the text post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="body"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="body"/> is empty.
-		/// </exception>
-		public static PostData CreateText(string body, string title, IEnumerable<string> tags)
-		{
-			return CreateText(body, title, tags, PostCreationState.Published);
-		}
-
 		/// <summary>
 		/// Creates the <see cref="PostData"/> for a text post.
 		/// </summary>
@@ -204,17 +135,18 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="body"/> is empty.
 		/// </exception>
-		public static PostData CreateText(string body, string title, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateText(
+            string body = null, 
+            string title = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
-			if (body == null)
-				throw new ArgumentNullException("body");
-
-			if (body.Length == 0)
-				throw new ArgumentException("Body cannot be empty.", "body");
+			if (body == null && title == null)
+				throw new ArgumentException("Must have at least body or title.");
 
 			var postData = new PostData(state, tags);
 			postData.parameters.Add("type", "text");
-			postData.parameters.Add("body", body);
+			postData.parameters.Add("body", body, null);
 			postData.parameters.Add("title", title, null);
 
 			return postData;
@@ -251,6 +183,16 @@ namespace DontPanic.TumblrSharp
 		/// <param name="photo">
 		/// A photo to upload, defined as a <see cref="BinaryFile"/> instance.
 		/// </param>
+        /// <param name="state">
+        /// The <see cref="PostCreationState"/> of this photo post.
+        /// </param>
+        /// <param name="caption">
+        /// The optional string caption for this photo post.
+        /// </param>
+        /// <param name="tags">
+        /// The optional array of string used for tags.
+        /// </param>
+        /// </param>
 		/// <param name="caption">
 		/// The caption for the photo post.
 		/// </param>
@@ -260,111 +202,17 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentNullException">
 		/// <paramref name="photo"/> is <b>null</b>.
 		/// </exception>
-		public static PostData CreatePhoto(BinaryFile photo, string caption)
+		public static PostData CreatePhoto(
+            BinaryFile photo, 
+            string caption = null,
+            IEnumerable<string> tags = null,
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (photo == null)
 				throw new ArgumentNullException("photo");
 
 			var photos = new BinaryFile[] { photo };
-			return CreatePhoto(photos, caption, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photos">
-		/// A list of photos to upload, defined as <see cref="BinaryFile"/> instances.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photos"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="photos"/> is empty.
-		/// </exception>
-		public static PostData CreatePhoto(IEnumerable<BinaryFile> photos)
-		{
-			return CreatePhoto(photos, null, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photos">
-		/// A list of photos to upload, defined as <see cref="BinaryFile"/> instances.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the photo post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photos"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="photos"/> is empty.
-		/// </exception>
-		public static PostData CreatePhoto(IEnumerable<BinaryFile> photos, string caption)
-		{
-			return CreatePhoto(photos, caption, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photos">
-		/// A list of photos to upload, defined as <see cref="BinaryFile"/> instances.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the photo post.
-		/// </param>
-		/// <param name="clickThroughUrl">
-		/// The photo(s) click trough url.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photos"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="photos"/> is empty.
-		/// </exception>
-		public static PostData CreatePhoto(IEnumerable<BinaryFile> photos, string caption, string clickThroughUrl)
-		{
-			return CreatePhoto(photos, caption, clickThroughUrl, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photos">
-		/// A list of photos to upload, defined as <see cref="BinaryFile"/> instances.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the photo post.
-		/// </param>
-		/// <param name="clickThroughUrl">
-		/// The photo(s) click trough url.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photos"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="photos"/> is empty.
-		/// </exception>
-		public static PostData CreatePhoto(IEnumerable<BinaryFile> photos, string caption, string clickThroughUrl, IEnumerable<string> tags)
-		{
-			return CreatePhoto(photos, caption, clickThroughUrl, tags, PostCreationState.Published);
+			return CreatePhoto(photos, caption, null, tags, PostCreationState.Published);
 		}
 
 		/// <summary>
@@ -394,7 +242,12 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="photos"/> is empty.
 		/// </exception>
-		public static PostData CreatePhoto(IEnumerable<BinaryFile> photos, string caption, string clickThroughUrl, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreatePhoto(
+            IEnumerable<BinaryFile> photos, 
+            string caption = null, 
+            string clickThroughUrl = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (photos == null)
 				throw new ArgumentNullException("photos");
@@ -433,75 +286,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="quote">
 		/// The quote.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="quote"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="quote"/> is empty.
-		/// </exception>
-		public static PostData CreateQuote(string quote)
-		{
-			return CreateQuote(quote, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a quote post.
-		/// </summary>
-		/// <param name="quote">
-		/// The quote.
-		/// </param>
-		/// <param name="source">
-		/// The quote's source.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="quote"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="quote"/> is empty.
-		/// </exception>
-		public static PostData CreateQuote(string quote, string source)
-		{
-			return CreateQuote(quote, source, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a quote post.
-		/// </summary>
-		/// <param name="quote">
-		/// The quote.
-		/// </param>
-		/// <param name="source">
-		/// The quote's source.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="quote"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="quote"/> is empty.
-		/// </exception>
-		public static PostData CreateQuote(string quote, string source, IEnumerable<string> tags)
-		{
-			return CreateQuote(quote, source, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a quote post.
-		/// </summary>
-		/// <param name="quote">
-		/// The quote.
-		/// </param>
 		/// <param name="source">
 		/// The quote's source.
 		/// </param>
@@ -520,7 +304,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="quote"/> is empty.
 		/// </exception>
-		public static PostData CreateQuote(string quote, string source, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateQuote(
+            string quote, 
+            string source, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (quote == null)
 				throw new ArgumentNullException("quote");
@@ -546,104 +334,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="url">
 		/// The url for the link.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateLink(string url)
-		{
-			return CreateLink(url, null, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a link post.
-		/// </summary>
-		/// <param name="url">
-		/// The url for the link.
-		/// </param>
-		/// <param name="title">
-		/// The display text for the link.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateLink(string url, string title)
-		{
-			return CreateLink(url, title, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a link post.
-		/// </summary>
-		/// <param name="url">
-		/// The url for the link.
-		/// </param>
-		/// <param name="title">
-		/// The display text for the link.
-		/// </param>
-		/// <param name="description">
-		/// The link's description.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateLink(string url, string title, string description)
-		{
-			return CreateLink(url, title, description, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a link post.
-		/// </summary>
-		/// <param name="url">
-		/// The url for the link.
-		/// </param>
-		/// <param name="title">
-		/// The display text for the link.
-		/// </param>
-		/// <param name="description">
-		/// The link's description.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateLink(string url, string title, string description, IEnumerable<string> tags)
-		{
-			return CreateLink(url, title, description, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a link post.
-		/// </summary>
-		/// <param name="url">
-		/// The url for the link.
-		/// </param>
 		/// <param name="title">
 		/// The display text for the link.
 		/// </param>
@@ -665,7 +355,12 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="url"/> is empty.
 		/// </exception>
-		public static PostData CreateLink(string url, string title, string description, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateLink(
+            string url, 
+            string title = null, 
+            string description = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (url == null)
 				throw new ArgumentNullException("url");
@@ -692,75 +387,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="conversation">
 		/// The chat conversation.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="conversation"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="conversation"/> is empty.
-		/// </exception>
-		public static PostData CreateChat(string conversation)
-		{
-			return CreateChat(conversation, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a chat post.
-		/// </summary>
-		/// <param name="conversation">
-		/// The chat conversation.
-		/// </param>
-		/// <param name="title">
-		/// The title of the chat.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="conversation"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="conversation"/> is empty.
-		/// </exception>
-		public static PostData CreateChat(string conversation, string title)
-		{
-			return CreateChat(conversation, title, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a chat post.
-		/// </summary>
-		/// <param name="conversation">
-		/// The chat conversation.
-		/// </param>
-		/// <param name="title">
-		/// The title of the chat.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="conversation"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="conversation"/> is empty.
-		/// </exception>
-		public static PostData CreateChat(string conversation, string title, IEnumerable<string> tags)
-		{
-			return CreateChat(conversation, title, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a chat post.
-		/// </summary>
-		/// <param name="conversation">
-		/// The chat conversation.
-		/// </param>
 		/// <param name="title">
 		/// The title of the chat.
 		/// </param>
@@ -779,7 +405,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="conversation"/> is empty.
 		/// </exception>
-		public static PostData CreateChat(string conversation, string title, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateChat(
+            string conversation, 
+            string title = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (conversation == null)
 				throw new ArgumentNullException("conversation");
@@ -805,66 +435,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="audioFile">
 		/// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="audioFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateAudio(BinaryFile audioFile)
-		{
-			return CreateAudio(audioFile, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="audioFile">
-		/// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="audioFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateAudio(BinaryFile audioFile, string caption)
-		{
-			return CreateAudio(audioFile, caption, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="audioFile">
-		/// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="audioFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateAudio(BinaryFile audioFile, string caption, IEnumerable<string> tags)
-		{
-			return CreateAudio(audioFile, caption, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="audioFile">
-		/// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
 		/// <param name="caption">
 		/// The caption for the audio post.
 		/// </param>
@@ -880,7 +450,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentNullException">
 		/// <paramref name="audioFile"/> is <b>null</b>.
 		/// </exception>
-		public static PostData CreateAudio(BinaryFile audioFile, string caption, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateAudio(
+            BinaryFile audioFile, 
+            string caption = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (audioFile == null)
 				throw new ArgumentNullException("audioFile");
@@ -899,75 +473,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="url">
 		/// The url to the audio file to post (the url must not be on Tumblr).
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateAudio(string url)
-		{
-			return CreateAudio(url, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="url">
-		/// The url to the audio file to post (the url must not be on Tumblr).
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateAudio(string url, string caption)
-		{
-			return CreateAudio(url, caption, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="url">
-		/// The url to the audio file to post (the url must not be on Tumblr).
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateAudio(string url, string caption, IEnumerable<string> tags)
-		{
-			return CreateAudio(url, caption, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="url">
-		/// The url to the audio file to post (the url must not be on Tumblr).
-		/// </param>
 		/// <param name="caption">
 		/// The caption for the audio post.
 		/// </param>
@@ -986,7 +491,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="url"/> is empty.
 		/// </exception>
-		public static PostData CreateAudio(string url, string caption, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateAudio(
+            string url, 
+            string caption = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (url == null)
 				throw new ArgumentNullException("url");
@@ -1012,66 +521,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="videoFile">
 		/// The video file to upload, defined as a <see cref="BinaryFile"/> instance.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="videoFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateVideo(BinaryFile videoFile)
-		{
-			return CreateVideo(videoFile, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="videoFile">
-		/// The video file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the video post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="videoFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateVideo(BinaryFile videoFile, string caption)
-		{
-			return CreateVideo(videoFile, caption, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="videoFile">
-		/// The video file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the video post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="videoFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateVideo(BinaryFile videoFile, string caption, IEnumerable<string> tags)
-		{
-			return CreateVideo(videoFile, caption, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="videoFile">
-		/// The video file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
 		/// <param name="caption">
 		/// The caption for the video post.
 		/// </param>
@@ -1087,7 +536,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentNullException">
 		/// <paramref name="videoFile"/> is <b>null</b>.
 		/// </exception>
-		public static PostData CreateVideo(BinaryFile videoFile, string caption, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateVideo(
+            BinaryFile videoFile, 
+            string caption = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (videoFile == null)
 				throw new ArgumentNullException("videoFile");
@@ -1106,75 +559,6 @@ namespace DontPanic.TumblrSharp
 		/// <param name="embedCode">
 		/// The HTML embed code for the video.
 		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="embedCode"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="embedCode"/> is empty.
-		/// </exception>
-		public static PostData CreateVideo(string embedCode)
-		{
-			return CreateVideo(embedCode, null, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="embedCode">
-		/// The HTML embed code for the video.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the video post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="embedCode"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="embedCode"/> is empty.
-		/// </exception>
-		public static PostData CreateVideo(string embedCode, string caption)
-		{
-			return CreateVideo(embedCode, caption, null, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="embedCode">
-		/// The HTML embed code for the video.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the video post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="embedCode"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="embedCode"/> is empty.
-		/// </exception>
-		public static PostData CreateVideo(string embedCode, string caption, IEnumerable<string> tags)
-		{
-			return CreateVideo(embedCode, caption, tags, PostCreationState.Published);
-		}
-
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a video post.
-		/// </summary>
-		/// <param name="embedCode">
-		/// The HTML embed code for the video.
-		/// </param>
 		/// <param name="caption">
 		/// The caption for the video post.
 		/// </param>
@@ -1193,7 +577,11 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentException">
 		/// <paramref name="embedCode"/> is empty.
 		/// </exception>
-		public static PostData CreateVideo(string embedCode, string caption, IEnumerable<string> tags, PostCreationState state)
+		public static PostData CreateVideo(
+            string embedCode, 
+            string caption = null, 
+            IEnumerable<string> tags = null, 
+            PostCreationState state = PostCreationState.Published)
 		{
 			if (embedCode == null)
 				throw new ArgumentNullException("embedCode");

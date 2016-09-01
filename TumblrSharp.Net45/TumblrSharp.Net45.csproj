@@ -60,6 +60,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TumblrClientFactory.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+      <Project>{8c69ea54-a853-4a68-a9a9-34736524bd1f}</Project>
+      <Name>TumblrSharp.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj">
+      <Project>{4a8b7b77-f7ae-4155-9e9c-253afd6e0c3a}</Project>
+      <Name>TumblrSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

@@ -20,6 +20,10 @@ If you download the old TumblrSharp version off of CodePlex or NuGet, you won't 
 - [x] Errors with getting submission posts and their new post `state` type
 - [x] Allow posts to be sent with a `published` state, which is currently the only way to publish asks
 - [x] New `CreateAnswer` method on `PostData` class allows for editing and publishing asks
+- [x] Eliminated superfluous constructor overloads in `PostData` methods, allowing for shorter, more maintainable code
+- [x] Eliminated unnecessary required parameters like `title` or `body` from a text post, as they are not required by the Tumblr API. 
+- [x] Opted for default values in `PostData`.  This is important because specifying something simple like a `PostCreationState` on 
+a photo post would require possibly unneeded data, like `tags`.
 - [ ] Getting dashboard posts *after* a date rather than *before*
 
 What needs to be implemented?

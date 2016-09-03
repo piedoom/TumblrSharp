@@ -45,12 +45,14 @@
     <Compile Include="BlogMethod.cs" />
     <Compile Include="BlogType.cs" />
     <Compile Include="DateTimeHelper.cs" />
+    <Compile Include="HmacSha1HashProvider.cs" />
     <Compile Include="IHmacSha1HashProvider.cs" />
     <Compile Include="IMethodParameter.cs" />
     <Compile Include="ITumblrClientFactory.cs" />
     <Compile Include="MethodParameterSet.cs" />
     <Compile Include="OAuth\IOAuthClientFactory.cs" />
     <Compile Include="OAuth\OAuthClient.cs" />
+    <Compile Include="OAuth\OAuthClientFactory.cs" />
     <Compile Include="OAuth\OAuthException.cs" />
     <Compile Include="OAuth\OAuthMessageHandler.cs" />
     <Compile Include="OAuth\Token.cs" />
@@ -72,6 +74,10 @@
     <Compile Include="UserMethod.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="bouncy_castle_hmac_sha_pcl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle-PCL.1.0.0.6\lib\bouncy_castle_hmac_sha_pcl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
@@ -81,11 +87,19 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

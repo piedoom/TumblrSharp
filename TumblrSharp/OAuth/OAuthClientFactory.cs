@@ -1,6 +1,4 @@
-﻿using DontPanic.TumblrSharp.OAuth;
-
-namespace DontPanic.TumblrSharp
+﻿namespace DontPanic.TumblrSharp.OAuth
 {
     /// <summary>
     /// Factory for <see cref="OAuthClient"/> instances.

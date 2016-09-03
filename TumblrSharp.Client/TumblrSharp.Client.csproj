@@ -70,6 +70,7 @@
     <Compile Include="TextPost.cs" />
     <Compile Include="TimestampConverter.cs" />
     <Compile Include="TumblrClient.cs" />
+    <Compile Include="TumblrClientFactory.cs" />
     <Compile Include="UserBlogInfo.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="UserInfoResponse.cs" />

@@ -24,13 +24,14 @@ If you download the old TumblrSharp version off of CodePlex or NuGet, you won't 
 - [x] Eliminated unnecessary required parameters like `title` or `body` from a text post, as they are not required by the Tumblr API. 
 - [x] Opted for default values in `PostData`.  This is important because specifying something simple like a `PostCreationState` on 
 a photo post would require possibly unneeded data, like `tags`.
-- [ ] Getting dashboard posts *after* a date rather than *before*
+- [x] Move everything into a PCL for maximum compatibility.
 
 What needs to be implemented?
 ========
 - [ ] Better documentation
 - [ ] Examples of how to use the library
 - [ ] Chat
+- [ ] Getting dashboard posts *after* a date rather than *before*
 
 Contributing 
 ========

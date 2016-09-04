@@ -60,14 +60,6 @@ namespace DontPanic.TumblrSharp.Client
                     case "video":
 						list.Add(jo.ToObject<VideoPost>());
                         break;
-
-                    case "submission":
-                        list.Add(jo.ToObject<AnswerPost>());
-                        break;
-						
-					default:
-						list.Add(jo.ToObject<AnswerPost>());
-						break;
                 }
             }
             while (reader.Read() && reader.TokenType != JsonToken.EndArray);

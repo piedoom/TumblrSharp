@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "TumblrSharp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Simple", "TumblrSharp.Simple\TumblrSharp.Simple.csproj", "{DA096773-09ED-4AF7-B6E1-C2D933835976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA096773-09ED-4AF7-B6E1-C2D933835976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA096773-09ED-4AF7-B6E1-C2D933835976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA096773-09ED-4AF7-B6E1-C2D933835976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA096773-09ED-4AF7-B6E1-C2D933835976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

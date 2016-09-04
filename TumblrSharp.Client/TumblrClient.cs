@@ -1032,32 +1032,46 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#endregion
+        #region GetBlogActivityAsync
 
-		#region User Methods
+        public void GetUserActivityAsync(string blogname)
+        {
+            MethodParameterSet parameters = new MethodParameterSet();
 
-		#region GetUserInfoAsync
+            CallApiMethodAsync<Likes>(
+                new BlogMethod(blogname, "notifications", OAuthToken, HttpMethod.Get, parameters),
+                CancellationToken.None);
 
-		/// <summary>
-		/// Asynchronously retrieves the user's account information that matches the OAuth credentials submitted with the request.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#user-methods
-		/// </remarks>
-		/// <returns>
-		/// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="UserInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
-		/// generated during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task<UserInfo> GetUserInfoAsync()
+        }
+
+        #endregion
+
+        #endregion
+
+        #region User Methods
+
+        #region GetUserInfoAsync
+
+        /// <summary>
+        /// Asynchronously retrieves the user's account information that matches the OAuth credentials submitted with the request.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#user-methods
+        /// </remarks>
+        /// <returns>
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry a <see cref="UserInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
+        /// generated during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task<UserInfo> GetUserInfoAsync()
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1644,21 +1658,21 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
-
-		#endregion
+        #endregion
 
         #endregion
 
-		#region IDisposable Implementation
+        #endregion
 
-		/// <summary>
-		/// Disposes of the object.
-		/// </summary>
-		/// <param name="disposing">
-		/// <b>true</b> if managed resources have to be disposed; otherwise <b>false</b>.
-		/// </param>
-		protected override void Dispose(bool disposing)
+        #region IDisposable Implementation
+
+        /// <summary>
+        /// Disposes of the object.
+        /// </summary>
+        /// <param name="disposing">
+        /// <b>true</b> if managed resources have to be disposed; otherwise <b>false</b>.
+        /// </param>
+        protected override void Dispose(bool disposing)
 		{
 			disposed = true;
 			base.Dispose();

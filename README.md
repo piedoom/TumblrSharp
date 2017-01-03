@@ -30,8 +30,14 @@ What needs to be implemented?
 ========
 - [ ] Better documentation
 - [ ] Examples of how to use the library
-- [ ] Chat
 - [ ] Getting dashboard posts *after* a date rather than *before*
+
+What will *not* be implemented?
+=========
+- Chat
+- Activity
+
+(This is due to restrictions to the V2 API.  These endpoints exist but can only be accessed with the official Tumblr app API key).
 
 Contributing 
 ========

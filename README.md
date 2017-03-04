@@ -28,6 +28,8 @@ a photo post would require possibly unneeded data, like `tags`.
 
 What needs to be implemented?
 ========
+- [ ] "Reblogged from" broken
+- [ ] Add Reblog Trail support
 - [ ] Better documentation
 - [ ] Examples of how to use the library
 - [ ] Getting dashboard posts *after* a date rather than *before*

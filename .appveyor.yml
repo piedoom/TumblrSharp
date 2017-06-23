@@ -17,3 +17,6 @@ branches:
   # blacklist
   except:
     - gh-pages
+
+before_build:
+  - nuget restore

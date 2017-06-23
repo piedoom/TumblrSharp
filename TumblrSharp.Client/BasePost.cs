@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace DontPanic.TumblrSharp.Client
 {
@@ -45,6 +46,12 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
         [JsonProperty(PropertyName = "note_count")]
         public long NotesCount { get; set; }
+
+	    /// <summary>
+	    /// The notes (likes and reblogs) for the post
+	    /// </summary>
+		[JsonProperty(PropertyName = "notes")]
+		public List<BaseNote> Notes { get; set; }
 
 		/// <summary>
 		/// The <see cref="PostFormat"/>.

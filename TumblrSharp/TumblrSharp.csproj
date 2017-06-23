@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ApiMethod.cs" />
+    <Compile Include="AvatarShape.cs" />
     <Compile Include="BinaryFile.cs" />
     <Compile Include="BinaryMethodParameter.cs" />
     <Compile Include="BlogMethod.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="IMethodParameter.cs" />
     <Compile Include="ITumblrClientFactory.cs" />
     <Compile Include="MethodParameterSet.cs" />
+    <Compile Include="NoteType.cs" />
     <Compile Include="OAuth\IOAuthClientFactory.cs" />
     <Compile Include="OAuth\OAuthClient.cs" />
     <Compile Include="OAuth\OAuthClientFactory.cs" />

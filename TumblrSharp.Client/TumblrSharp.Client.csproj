@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AnswerPost.cs" />
     <Compile Include="AudioPost.cs" />
+    <Compile Include="BaseNote.cs" />
     <Compile Include="BasePost.cs" />
     <Compile Include="BlogBase.cs" />
     <Compile Include="BlogInfo.cs" />

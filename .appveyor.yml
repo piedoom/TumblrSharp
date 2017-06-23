@@ -27,7 +27,6 @@ deploy:
     symbol_server: https://ci.appveyor.com/nuget/piedoom-ebgw4k2f9frs/api/v2/package
     api_key:
       secure: LOtfBJIPTd6epDZ6KmxB/r8QmvlXGyaBLBlYI67Q1Uk=
-    artifact: /.*\.symbols\.nupkg/
     on:
       branch: master                 # release from master branch only
       appveyor_repo_tag: false       # don't deploy only on tag push (may change)

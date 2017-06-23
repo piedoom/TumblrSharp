@@ -10,7 +10,7 @@
 #---------------------------------#
 
 # version format
-version: 1.0.{build}
+version: 1.1.{build}
 
 # branches to build
 branches:
@@ -20,3 +20,10 @@ branches:
 
 before_build:
   - nuget restore
+
+deploy:
+  - provider: NuGet
+    symbol_server: https://ci.appveyor.com/nuget/piedoom-ebgw4k2f9frs/api/v2/package
+    api_key:
+      secure: LOtfBJIPTd6epDZ6KmxB/r8QmvlXGyaBLBlYI67Q1Uk=
+    artifact: /.*\.symbols\.nupkg/

@@ -14,7 +14,12 @@
     <copyright>Copyright 2017</copyright>
     <tags>tumblr api</tags>
   </metadata>
+  <dependencies>
+    <dependency id="BouncyCastle-PCL" version="1.0.0.6" />
+    <dependency id="Newtonsoft.Json" version="5.0.6" />
+  </dependencies>
   <files>
-    <file src="bin\Release\DontPanic.TumblrSharp.dll" exclude="bin\Release\*.dll.config" target="lib\net45\HelloService.dll" />
+    <file src="TumblrSharp\bin\Release\DontPanic.TumblrSharp.dll" exclude="TumblrSharp\bin\Release\*.dll.config" target="TumblrSharp\lib\net45\DontPanic.TumblrSharp.dll" />
+    <file src="TumblrSharp.Client\bin\Release\DontPanic.TumblrSharp.Client.dll" exclude="TumblrSharp.Client\bin\Release\*.dll.config" target="TumblrSharp.Client\lib\net45\DontPanic.TumblrSharp.dll" />
   </files>
 </package>

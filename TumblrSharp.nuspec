@@ -15,7 +15,7 @@
     <tags>tumblr api</tags>
     <dependencies>
       <dependency id="BouncyCastle-PCL" version="1.0.0.6" />
-      <dependency id="Newtonsoft.Json" version="5.0.6" />
+      <dependency id="Newtonsoft.Json" version="10.0.0.0" />
     </dependencies>
   </metadata>
   <files>

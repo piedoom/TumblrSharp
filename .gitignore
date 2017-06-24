@@ -256,3 +256,5 @@ paket-files/
 .cr/
 
 lib/*
+packages/*
+*.nupkg

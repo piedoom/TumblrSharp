@@ -40,3 +40,4 @@ deploy:
       secure: VHKmwYG1g4hnnfq5uxx+NsehA9ajSNX2K0wwM8YSWEbz8N9aFLzN1Xkekhaz7MW/
     on:
       branch: master                 # release from master branch only
+      appveyor_repo_tag: true        # deploy on tag push only

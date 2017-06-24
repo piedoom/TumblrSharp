@@ -45,6 +45,10 @@ Contributing
 ========
 Please feel free to contribute if you find any problems / have any features.
 
+NuGet
+=====
+You can find the latest NuGet package [here](https://www.nuget.org/packages/NewTumblrSharp/).  An automated build system will push a new NuGet package when a tagged commit is merged into the master branch.
+
 License
 ========
 TumblrSharp follows the [MIT](https://tumblrsharp.codeplex.com/license) License.

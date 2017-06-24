@@ -19,7 +19,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="TumblrSharp\lib\DontPanic.TumblrSharp.dll" />
-    <file src="TumblrSharp\lib\DontPanic.TumblrSharp.Client.dll" />
+    <file src="lib\DontPanic.TumblrSharp.dll" />
+    <file src="lib\DontPanic.TumblrSharp.Client.dll" />
   </files>
 </package>

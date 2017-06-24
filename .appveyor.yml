@@ -29,10 +29,10 @@ build:
 
 after_build:
   - ps: >-
-      nuget pack TumblrSharp\TumblrSharp.nuspec -version $env:APPVEYOR_BUILD_VERSION
+      nuget pack TumblrSharp.nuspec -version $env:APPVEYOR_BUILD_VERSION
 
       Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
-      
+
 deploy:
     artifact: /.*\.nupkg/
     provider: NuGet

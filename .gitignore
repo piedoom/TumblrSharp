@@ -255,6 +255,5 @@ paket-files/
 # CodeRush
 .cr/
 
-lib/*
 packages/*
 *.nupkg

@@ -1,3 +1,5 @@
+![status badge](https://ci.appveyor.com/api/projects/status/35487kj678vdpq6h/branch/master?svg=true)
+
 TumblrSharp
 ========
 

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>NewTumblrSharp</id>
+    <version>$version$</version>
+    <title>New TumblrSharp</title>
+    <authors>Alexander Lozada</authors>
+    <owners>doomy</owners>
+    <licenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/piedoom/TumblrSharp</projectUrl>
+    <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tumblr# extension for .NET 4.5</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>tumblr api</tags>
+    <dependencies>
+      <dependency id="BouncyCastle-PCL" version="1.0.0.6" />
+      <dependency id="Newtonsoft.Json" version="5.0.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\DontPanic.TumblrSharp.dll" target="lib\net45\DontPanic.TumblrSharp.dll" />
+    <file src="bin\Release\DontPanic.TumblrSharp.Client.dll" target="lib\net45\DontPanic.TumblrSharp.Client.dll" />
+  </files>
+</package>

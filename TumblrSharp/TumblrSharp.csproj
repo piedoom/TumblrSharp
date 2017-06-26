@@ -40,7 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ApiMethod.cs" />
-    <Compile Include="AvatarShape.cs" />
     <Compile Include="BinaryFile.cs" />
     <Compile Include="BinaryMethodParameter.cs" />
     <Compile Include="BlogMethod.cs" />

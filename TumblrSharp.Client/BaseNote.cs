@@ -52,7 +52,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// left the note
 		/// </summary>
 		[JsonProperty(PropertyName = "avatar_shape")]
-		public string AvatarShape { get; set; }
+		public AvatarShape AvatarShape { get; set; }
 
 		/// <summary>
 		/// The text of the note if it is a reply

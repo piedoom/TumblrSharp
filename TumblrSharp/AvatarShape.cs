@@ -1,24 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace DontPanic.TumblrSharp
+{
+	using System.Runtime.Serialization;
+	using Newtonsoft.Json;
+	using Newtonsoft.Json.Converters;
 
-namespace DontPanic.TumblrSharp
-{	
 	/// <summary>
 	/// Options for what shape a user's avatar is 
 	/// intended to display as
 	/// </summary>
+	[JsonConverter(typeof(StringEnumConverter))]
 	public enum AvatarShape
 	{
 		/// <summary>
 		/// Square avatar
 		/// </summary>
+		[EnumMember(Value = "square")]
 		Square = 0,
 		/// <summary>
 		/// Circular avatar
+		/// </summary
+		[EnumMember(Value = "circle")]
+		Circle = 1,
+		/// <summary>
+		/// Empty avatar shape
 		/// </summary>
-		Circle = 1
+		[EnumMember(Value = "")]
+		None = 2
 	}
 }

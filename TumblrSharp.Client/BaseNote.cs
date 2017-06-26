@@ -51,7 +51,6 @@ namespace DontPanic.TumblrSharp.Client
 		/// The avatar shape used by the blog that
 		/// left the note
 		/// </summary>
-		[JsonConverter(typeof(EnumConverter))]
 		[JsonProperty(PropertyName = "avatar_shape")]
 		public AvatarShape AvatarShape { get; set; }
 

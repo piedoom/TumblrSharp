@@ -47,6 +47,12 @@ Contributing
 ========
 Please feel free to contribute if you find any problems / have any features.
 
+Things that are needed and would be super appreciated:
+
+- [ ] Bug Fixes of any kind
+- [ ] Unit Testing
+- [ ] Wiki contributions and examples
+
 NuGet
 =====
 You can find the latest NuGet package [here](https://www.nuget.org/packages/NewTumblrSharp/).  An automated build system will push a new NuGet package when a tagged commit is merged into the master branch.

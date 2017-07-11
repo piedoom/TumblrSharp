@@ -3,7 +3,7 @@
 TumblrSharp
 ========
 
-This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codeplex.com/) C# Library developed by [the community](https://tumblrsharp.codeplex.com/team/view).
+This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codeplex.com/) C# Library developed by [the community](http://archive.is/mrzqG).
 
 Documentation
 ========

@@ -1368,7 +1368,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("url", blogUrl);
 
 			return CallApiMethodNoResultAsync(
-				new UserMethod("follow", OAuthToken, HttpMethod.Get, parameters),
+				new UserMethod("follow", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 
@@ -1419,7 +1419,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("url", blogUrl);
 
 			return CallApiMethodNoResultAsync(
-				new UserMethod("unfollow", OAuthToken, HttpMethod.Get, parameters),
+				new UserMethod("unfollow", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 

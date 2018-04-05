@@ -18,7 +18,7 @@
 		Square = 0,
 		/// <summary>
 		/// Circular avatar
-		/// </summary
+		/// </summary>
 		[EnumMember(Value = "circle")]
 		Circle = 1,
 		/// <summary>

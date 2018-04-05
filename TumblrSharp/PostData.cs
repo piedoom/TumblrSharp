@@ -192,10 +192,6 @@ namespace DontPanic.TumblrSharp
         /// <param name="tags">
         /// The optional array of string used for tags.
         /// </param>
-        /// </param>
-		/// <param name="caption">
-		/// The caption for the photo post.
-		/// </param>
 		/// <returns>
 		/// A <see cref="PostData"/> instance representing the post.
 		/// </returns>

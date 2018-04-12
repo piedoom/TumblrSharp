@@ -217,6 +217,9 @@ namespace DontPanic.TumblrSharp.Client
 		/// <param name="includeNotesInfo">
 		/// Whether or not to include notes info with the posts.
 		/// </param>
+		/// <param name="blogName">
+		/// Blog name to reference
+		/// </param>
 		/// <returns>
 		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
 		/// carry a <see cref="BasePost"/> instance representing the desired post. Otherwise <see cref="Task.Exception"/> will carry a 
@@ -228,7 +231,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="System.ArgumentOutOfRangeException">
 		///	<paramref name="id"/> is less than 0.
 		/// </exception>
-		public Task<BasePost> GetPostAsync(long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
+		public Task<BasePost> GetPostAsync(long id, bool includeReblogInfo = false, bool includeNotesInfo = false, string blogName = "dummy")
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -243,7 +246,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("notes_info", includeNotesInfo, false);
 
 			return CallApiMethodAsync<Posts, BasePost>(
-				new BlogMethod("dummy", "posts", null, HttpMethod.Get, parameters),
+				new BlogMethod(blogName, "posts", null, HttpMethod.Get, parameters),
 				p => p.Result.FirstOrDefault(),
 				CancellationToken.None);
 		}

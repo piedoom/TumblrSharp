@@ -208,6 +208,9 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// Asynchronously retrieves a specific post by id.
 		/// </summary>
+		/// <param name="blogName">
+		/// Blog name to reference
+		/// </param>
 		/// <param name="id">
 		/// The id of the post to retrieve.
 		/// </param>
@@ -217,9 +220,6 @@ namespace DontPanic.TumblrSharp.Client
 		/// <param name="includeNotesInfo">
 		/// Whether or not to include notes info with the posts.
 		/// </param>
-		/// <param name="blogName">
-		/// Blog name to reference
-		/// </param>
 		/// <returns>
 		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
 		/// carry a <see cref="BasePost"/> instance representing the desired post. Otherwise <see cref="Task.Exception"/> will carry a 
@@ -228,13 +228,25 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ObjectDisposedException">
 		/// The object has been disposed.
 		/// </exception>
+		/// <exception cref="ArgumentNullException">
+		/// <paramref name="blogName"/> is <b>null</b>.
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// <paramref name="blogName"/> is empty.
+		/// </exception>
 		/// <exception cref="System.ArgumentOutOfRangeException">
 		///	<paramref name="id"/> is less than 0.
 		/// </exception>
-		public Task<BasePost> GetPostAsync(long id, bool includeReblogInfo = false, bool includeNotesInfo = false, string blogName = "dummy")
+		public Task<BasePost> GetPostAsync(string blogName, long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
+
+		    if (blogName == null)
+		        throw new ArgumentNullException("blogName");
+
+		    if (blogName.Length == 0)
+		        throw new ArgumentException("Blog name cannot be empty.", "blogName");
 
 			if (id < 0)
 				throw new ArgumentOutOfRangeException("id", "id must be greater or equal to zero.");

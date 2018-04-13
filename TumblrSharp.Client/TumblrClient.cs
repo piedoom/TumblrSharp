@@ -208,6 +208,9 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// Asynchronously retrieves a specific post by id.
 		/// </summary>
+		/// <param name="blogName">
+		/// Blog name to reference
+		/// </param>
 		/// <param name="id">
 		/// The id of the post to retrieve.
 		/// </param>
@@ -225,13 +228,25 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ObjectDisposedException">
 		/// The object has been disposed.
 		/// </exception>
+		/// <exception cref="ArgumentNullException">
+		/// <paramref name="blogName"/> is <b>null</b>.
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// <paramref name="blogName"/> is empty.
+		/// </exception>
 		/// <exception cref="System.ArgumentOutOfRangeException">
 		///	<paramref name="id"/> is less than 0.
 		/// </exception>
-		public Task<BasePost> GetPostAsync(long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
+		public Task<BasePost> GetPostAsync(string blogName, long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
+
+		    if (blogName == null)
+		        throw new ArgumentNullException("blogName");
+
+		    if (blogName.Length == 0)
+		        throw new ArgumentException("Blog name cannot be empty.", "blogName");
 
 			if (id < 0)
 				throw new ArgumentOutOfRangeException("id", "id must be greater or equal to zero.");
@@ -243,7 +258,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("notes_info", includeNotesInfo, false);
 
 			return CallApiMethodAsync<Posts, BasePost>(
-				new BlogMethod("dummy", "posts", null, HttpMethod.Get, parameters),
+				new BlogMethod(blogName, "posts", null, HttpMethod.Get, parameters),
 				p => p.Result.FirstOrDefault(),
 				CancellationToken.None);
 		}

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
+    <AssemblyVersion>1.1.30.0</AssemblyVersion>
+    <FileVersion>1.1.30.0</FileVersion>
+    <Version>1.1.30</Version>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
+    <PackageId>NewTumblrSharp.Client</PackageId>
+    <Description>Tumblr# extension for .NETStandard 1.3</Description>
+    <Copyright>Copyright 2017-2018</Copyright>
+    <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
+    <PackageTags>tumblr api</PackageTags>
+    <AssemblyName>DontPanic.TumblrSharp.Client</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DocumentationFile>..\..\lib\Debug\netstandard1.3\DontPanic.TumblrSharp.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DocumentationFile>..\..\lib\Release\netstandard1.3\DontPanic.TumblrSharp.Client.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj" />
+  </ItemGroup>
+
+</Project>

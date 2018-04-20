@@ -43,6 +43,27 @@ What will *not* be implemented?
 
 (This is due to restrictions to the V2 API.  These endpoints exist but can only be accessed with the official Tumblr app API key).
 
+Which platforms are supported?
+========
+
+- Portable
+  - .NetFramework 4.5
+  - ASP.Net Core 1.0
+  - Windows Phone 8
+  - Windows Phone Silverlight 8
+  - Xamarin.Android
+  - Xamarin.iOS
+  - Xamarin.iOS (Classic)
+  - Xamarin.Mac
+- .Net Standard 1.3
+  - .Net Core 1.0
+  - .Net Framework 4.6
+  - Mono 4.6
+  - Xamarin.iOS 10.0
+  - Xamarin.Mac 3.0
+  - Xamarin.Android 7.0
+  - Universelle Windows-Plattform 10.0
+
 Contributing 
 ========
 Please feel free to contribute if you find any problems / have any features.

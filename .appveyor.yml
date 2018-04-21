@@ -30,7 +30,7 @@ before_build:
 
 build:
   project: TumblrSharp.sln
-  publish_nuget: true
+  publish_nuget: false
   verbosity: minimal
 
 after_build:

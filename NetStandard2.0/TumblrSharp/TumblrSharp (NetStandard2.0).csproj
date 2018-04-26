@@ -5,6 +5,16 @@
     <AssemblyName>DontPanic.TumblSharp</AssemblyName>
     <RootNamespace>DontPanic.TumblSharp</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AssemblyVersion>2.1.33.0</AssemblyVersion>
+    <FileVersion>2.1.33.0</FileVersion>
+    <Version>2.1.33</Version>
+    <PackageId>NewTumblrSharp.2.0</PackageId>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
+    <Description>Tumblr# extension for .NETStandard 2.0</Description>
+    <Copyright>Copyright 2017-2018</Copyright>
+    <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
+    <PackageTags>tumblr api</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

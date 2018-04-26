@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
-    <AssemblyVersion>1.1.31.0</AssemblyVersion>
-    <FileVersion>1.1.31.0</FileVersion>
-    <Version>1.1.31</Version>
+    <AssemblyVersion>2.1.33.0</AssemblyVersion>
+    <FileVersion>2.1.33.0</FileVersion>
+    <Version>2.1.33</Version>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
-    <PackageId>NewTumblrSharp.Client.2</PackageId>
+    <PackageId>NewTumblrSharp.Client.2.0</PackageId>
     <Description>Tumblr# extension for .NETStandard 2.0</Description>
     <Copyright>Copyright 2017-2018</Copyright>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>

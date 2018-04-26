@@ -31,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="..\..\source\TumblrSharp\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 

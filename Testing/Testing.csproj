@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="OAuthTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TumblrClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

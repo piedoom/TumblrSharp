@@ -8,13 +8,10 @@ namespace Testing
     [TestClass]
     public class OAuthTest
     {
-        // This consumer-token is only for testing
+        // This consumer-token is only for testing!
 
         private string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
         private string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
-
-        private string _accessKey = "F1G7BF1JW4f1VKJ93xJSi7D66yZKN3Uj0bArn5i5riwVEnMHuU";
-        private string _accessSecret = "O977YH42yg98IsS9BAk80r5e5grYQDY9HauVmgf0aEmceZ2UTz";
 
         private string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
 
@@ -159,23 +156,12 @@ namespace Testing
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
-            Uri url;
-
-            url = oAuthClient.GetAuthorizeUrl(new Token(null, null));;
+            Uri url = oAuthClient.GetAuthorizeUrl(new Token(null, null)); ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void OAuth_GetAuthorizeUrl_Arg_null_3()
-        {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token("stref", null));
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_GetAuthorizeUrl_Arg_null_4()
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
@@ -188,23 +174,18 @@ namespace Testing
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token(string.Empty, string.Empty));
-        }
+            Token requestToken = new Token(string.Empty, string.Empty);
 
+            Uri url = oAuthClient.GetAuthorizeUrl(requestToken);
+        }
+        
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void OAuth_GetAuthorizeUrl_Arg_empty_2()
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token("stref", string.Empty));
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_GetAuthorizeUrl_Arg_empty_3()
-        {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            Token requestToken = new Token(string.Empty, "erdertf");
 
             Uri url = oAuthClient.GetAuthorizeUrl(new Token(string.Empty, "ertdgfrt"));
         }
@@ -256,12 +237,14 @@ namespace Testing
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public async Task OAuth_GetAccessTokenAsync_Null_3()
+        [ExpectedException(typeof(ArgumentException))]
+        public async Task OAuth_GetAccessTokenAsync_Empty_1()
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
-            Token  accessToken = await oAuthClient.GetAccessTokenAsync(new Token(null, null), null);
+            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
+
+            Token accessToken = await oAuthClient.GetAccessTokenAsync(requestToken, string.Empty);
         }
     }
 }

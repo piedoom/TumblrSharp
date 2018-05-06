@@ -27,20 +27,20 @@ namespace Announcement
         private static FrAnnouncement frMain;
 
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
-            //Mutex for one instance there app
+            // Mutex for one instance there app
             using (Mutex mu = new Mutex(true, "99E0A5F9-5A8F-4BE1-BBBD-EAB2A575EED4", out bool firstInstance))
             {
                 if (firstInstance)
                 {
-                    // Erzeuge Host für Service
+                    // Create Host for Service
                     ServiceHost host = new ServiceHost(typeof(Program));
 
-                    // Erstellen des Named Pipe Endpunkts
+                    // Create a named pipe endpoint
                     host.AddServiceEndpoint(typeof(IArgsReceiver), _binding, _pipeName);
                     
                     Application.EnableVisualStyles();
@@ -54,10 +54,10 @@ namespace Announcement
                 {                    
                     try
                     {
-                        // Erzeugen eines Kanals, über den mit dem Service kommuniziert wird
+                        // Create a channel to connect serviceendpoint
                         IArgsReceiver proxy = ChannelFactory<IArgsReceiver>.CreateChannel(_binding, new EndpointAddress(_pipeName));
 
-                        // Methode aufrufen und Kanal entsorgen
+                        // Transfer of data and channel disposal
                         using (proxy as IDisposable)
                         {
                             proxy.PassArgs(args);
@@ -76,12 +76,14 @@ namespace Announcement
 
         public void PassArgs(string[] args)
         {
-            string arg = args[0];
- 
+            // analyzing the data passed 
+            string arg = args[0]; 
             arg = arg.Replace("-i=", "");
 
+            // passing to mainForm
             frMain.SetAccessUrl(arg);
 
+            // bring the main form to the foreground
             frMain.Activate();
              
         }

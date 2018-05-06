@@ -22,12 +22,15 @@ namespace Announcement1
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void Button1_Click(object sender, EventArgs e)
         {
+            // creating oAuth-client
             OAuthClient oAuthClient = new OAuthClientFactory().Create(ConsumerKey.Text, ConsumerSecret.Text);
 
+            // get requesttoken
             Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
 
+            // get the authorize Url
             Uri url = oAuthClient.GetAuthorizeUrl(requestToken);
 
             var verifierUrl = WebAuth.ShowDialog(url, _callbackUrl);
@@ -39,11 +42,22 @@ namespace Announcement1
 
             Activate();
 
-            var tc = new TumblrClientFactory().Create<TumblrClient>(ConsumerKey.Text, ConsumerSecret.Text, accessToken);
+            UserInfo userInfo = null;
 
-            var userInfo = await tc.GetUserInfoAsync();
+            try
+            {
+                var tc = new TumblrClientFactory().Create<TumblrClient>(ConsumerKey.Text, ConsumerSecret.Text, accessToken);
+                userInfo = await tc.GetUserInfoAsync();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Logon failure", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            MessageBox.Show($"Dein Blog lautet {userInfo.Blogs[0].Name}");
+                return;
+            }
+            
+
+            MessageBox.Show($"Success! the name of your blog is {userInfo.Blogs[0].Name}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

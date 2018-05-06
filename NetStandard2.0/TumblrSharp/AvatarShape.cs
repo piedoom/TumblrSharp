@@ -11,20 +11,30 @@
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum AvatarShape
 	{
-		/// <summary>
+        /// <summary>
+        /// Empty avatar shape
+        /// </summary>
+        [EnumMember(Value = "")]
+        None = 0,
+        /// <summary>
 		/// Square avatar
 		/// </summary>
 		[EnumMember(Value = "square")]
-		Square = 0,
+		Square = 1,
 		/// <summary>
 		/// Circular avatar
 		/// </summary>
 		[EnumMember(Value = "circle")]
-		Circle = 1,
+		Circle = 2,
 		/// <summary>
-		/// Empty avatar shape
+		/// rounded avatar
 		/// </summary>
-		[EnumMember(Value = "")]
-		None = 2
-	}
+		[EnumMember(Value = "avatar-rounded")]
+        AvatarRounded = 3,
+        /// <summary>
+		/// circle avatar
+		/// </summary>
+		[EnumMember(Value = "avatar-circle")]
+        AvatarCircle = 4
+    }
 }

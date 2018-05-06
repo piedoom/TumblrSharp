@@ -75,18 +75,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(191, 142);
+            this.button1.Location = new System.Drawing.Point(170, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "connect";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 208);
+            this.label3.Location = new System.Drawing.Point(9, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 5;
@@ -94,14 +94,14 @@
             // 
             // AccessKey
             // 
-            this.AccessKey.Location = new System.Drawing.Point(12, 224);
+            this.AccessKey.Location = new System.Drawing.Point(12, 138);
             this.AccessKey.Name = "AccessKey";
             this.AccessKey.Size = new System.Drawing.Size(424, 20);
             this.AccessKey.TabIndex = 6;
             // 
             // AccessSecret
             // 
-            this.AccessSecret.Location = new System.Drawing.Point(12, 280);
+            this.AccessSecret.Location = new System.Drawing.Point(12, 184);
             this.AccessSecret.Name = "AccessSecret";
             this.AccessSecret.Size = new System.Drawing.Size(424, 20);
             this.AccessSecret.TabIndex = 8;
@@ -109,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 264);
+            this.label4.Location = new System.Drawing.Point(9, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 336);
+            this.ClientSize = new System.Drawing.Size(451, 223);
             this.Controls.Add(this.AccessSecret);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.AccessKey);

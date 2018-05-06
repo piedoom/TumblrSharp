@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
-    <AssemblyVersion>2.1.33.0</AssemblyVersion>
-    <FileVersion>2.1.33.0</FileVersion>
-    <Version>2.1.33</Version>
+    <AssemblyVersion>2.0.1.33</AssemblyVersion>
+    <FileVersion>2.0.1.33</FileVersion>
+    <Version>2.0.1.33</Version>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
     <PackageId>NewTumblrSharp.Client.2.0</PackageId>
     <Description>Tumblr# extension for .NETStandard 2.0</Description>

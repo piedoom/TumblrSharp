@@ -59,6 +59,7 @@
     <Compile Include="OAuthTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TumblrClientTest.cs" />
+    <Compile Include="TumblrClient_MethodenTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

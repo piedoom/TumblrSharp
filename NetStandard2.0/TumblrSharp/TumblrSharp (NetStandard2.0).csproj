@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>DontPanic.TumblSharp</AssemblyName>
-    <RootNamespace>DontPanic.TumblSharp</RootNamespace>
+    <AssemblyName>DontPanic.TumblrSharp</AssemblyName>
+    <RootNamespace>DontPanic.TumblrSharp</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <AssemblyVersion>2.1.33.0</AssemblyVersion>
-    <FileVersion>2.1.33.0</FileVersion>
-    <Version>2.1.33</Version>
+    <AssemblyVersion>2.0.1.33</AssemblyVersion>
+    <FileVersion>2.0.1.33</FileVersion>
+    <Version>2.0.1.33</Version>
     <PackageId>NewTumblrSharp.2.0</PackageId>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
     <Description>Tumblr# extension for .NETStandard 2.0</Description>

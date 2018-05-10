@@ -91,6 +91,8 @@ namespace Announcement
             MessageBox.Show("Number of Blogs is you following: " + userInfo.FollowingCount.ToString());
         }
 
+        // this is methode from wiki for
+        // [SomeFlagThatTellsThisMethodWhatToOpen]
         internal async void SetAccessUrl(string accessUrl)
         {
             // get the accesstoken

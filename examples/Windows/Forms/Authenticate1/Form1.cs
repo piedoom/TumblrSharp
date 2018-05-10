@@ -11,7 +11,7 @@ using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.OAuth;
 using DontPanic.TumblrSharp.Client;
 
-namespace Announcement1
+namespace Authenticate1
 {
     public partial class Form1 : Form
     {

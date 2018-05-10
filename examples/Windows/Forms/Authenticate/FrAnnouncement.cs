@@ -16,9 +16,9 @@ using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.Client;
 using Common;
 
-namespace Announcement
+namespace Authenticate
 {
-    public partial class FrAnnouncement : Form
+    public partial class FrAuthenticate : Form
     {
         private string callbackUrl = "www.test.de";
 
@@ -30,7 +30,7 @@ namespace Announcement
 
         private TumblrUrlProtocol tumblrUrlProtocol;
 
-        public FrAnnouncement(ServiceHost host)
+        public FrAuthenticate(ServiceHost host)
         {
             InitializeComponent();
                       

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Interfaces;
 
-namespace Announcement
+namespace Authenticate
 {
 
     class Program : IArgsReceiver
@@ -24,7 +24,7 @@ namespace Announcement
         /// <summary>
         /// mainform
         /// </summary>
-        private static FrAnnouncement frMain;
+        private static FrAuthenticate frMain;
 
         /// <summary>
         /// The main entry point for the application.
@@ -46,7 +46,7 @@ namespace Announcement
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
 
-                    frMain = new FrAnnouncement(host);
+                    frMain = new FrAuthenticate(host);
 
                     Application.Run(frMain);
                 }

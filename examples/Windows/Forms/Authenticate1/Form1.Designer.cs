@@ -1,4 +1,4 @@
-﻿namespace Announcement1
+﻿namespace Authenticate1
 {
     partial class Form1
     {

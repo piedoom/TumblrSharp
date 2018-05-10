@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Announcement1
+namespace Authenticate1
 {
     static class Program
     {

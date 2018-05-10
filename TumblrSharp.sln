@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
@@ -34,9 +34,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "forms", "forms", "{D7B10B5F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "examples\Windows\Forms\Common\Common.csproj", "{8258F002-0F2F-43F7-A9FA-DD1E4171D3A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Announcement", "examples\Windows\Forms\Announcement\Announcement.csproj", "{C207BFD0-D1EB-4F82-AF7A-120A862AFE1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate", "examples\Windows\Forms\Authenticate\Authenticate.csproj", "{C207BFD0-D1EB-4F82-AF7A-120A862AFE1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Announcement1", "examples\Windows\Forms\Announcement1\Announcement1.csproj", "{EBCBAB94-6012-4FEA-98E1-F5FC29B24342}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate1", "examples\Windows\Forms\Authenticate1\Authenticate1.csproj", "{EBCBAB94-6012-4FEA-98E1-F5FC29B24342}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{A7A3A82A-6000-4AA1-A1D3-2D6E75C30793}"
 EndProject

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Announcement1
+namespace Authenticate1
 {
     public partial class WebAuth : Form
     {

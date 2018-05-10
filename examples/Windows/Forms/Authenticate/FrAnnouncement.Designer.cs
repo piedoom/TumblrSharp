@@ -1,6 +1,6 @@
-﻿namespace Announcement
+﻿namespace Authenticate
 {
-    partial class FrAnnouncement
+    partial class FrAuthenticate
     {
         /// <summary>
         /// Erforderliche Designervariable.

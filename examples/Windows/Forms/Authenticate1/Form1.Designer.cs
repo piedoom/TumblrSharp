@@ -45,7 +45,7 @@
             this.ConsumerKey.Name = "ConsumerKey";
             this.ConsumerKey.Size = new System.Drawing.Size(424, 20);
             this.ConsumerKey.TabIndex = 0;
-            this.ConsumerKey.Text = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
+            this.ConsumerKey.Text = "<Your ConsumerKey>";
             // 
             // ConsumerSecret
             // 
@@ -53,7 +53,7 @@
             this.ConsumerSecret.Name = "ConsumerSecret";
             this.ConsumerSecret.Size = new System.Drawing.Size(424, 20);
             this.ConsumerSecret.TabIndex = 1;
-            this.ConsumerSecret.Text = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
+            this.ConsumerSecret.Text = "<Your ConsumerSecret>";
             // 
             // label1
             // 

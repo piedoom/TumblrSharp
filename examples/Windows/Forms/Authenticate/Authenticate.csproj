@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -97,13 +97,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\NetStandard2.0\TumblrSharp.Client\TumblrSharp.Client %28NetStandard2.0%29.csproj">
-      <Project>{1f73b780-fbe3-4ec8-822c-2752b9f7f775}</Project>
-      <Name>TumblrSharp.Client %28NetStandard2.0%29</Name>
+    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+      <Project>{cb9e7c42-a77c-4642-ac8d-d2143d45f118}</Project>
+      <Name>TumblrSharp.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\NetStandard2.0\TumblrSharp\TumblrSharp %28NetStandard2.0%29.csproj">
-      <Project>{09f73b95-5dd1-4e70-88d8-5228bfc0889b}</Project>
-      <Name>TumblrSharp %28NetStandard2.0%29</Name>
+    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj">
+      <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
+      <Name>TumblrSharp</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8258f002-0f2f-43f7-a9fa-dd1e4171d3a9}</Project>

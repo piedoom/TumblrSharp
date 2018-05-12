@@ -17,8 +17,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <OutputPath>..\bin\</OutputPath>
-    <DocumentationFile>..\bin\netstandard2.0\DontPanic.TumblrSharp.xml</DocumentationFile>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DocumentationFile>..\bin\Release\netstandard2.0\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
@@ -27,8 +27,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
-    <OutputPath>..\bin\</OutputPath>
-    <DocumentationFile>..\bin\Debug\netstandard1.3\DontPanic.TumblrSharp.xml</DocumentationFile>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DocumentationFile>..\bin\Release\netstandard1.3\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">

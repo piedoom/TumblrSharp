@@ -766,7 +766,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("comment", comment, null);
 
 			return CallApiMethodAsync<PostCreationInfo>(
-				new UserMethod("post/reblog", OAuthToken, HttpMethod.Post, parameters),
+				new BlogMethod(blogName, "post/reblog", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 

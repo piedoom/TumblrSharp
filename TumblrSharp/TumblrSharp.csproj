@@ -7,8 +7,8 @@
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
     <PackageId>NewTumblrSharp</PackageId>
-    <Version>1.1.33.0</Version>
-    <AssemblyVersion>1.1.33.0</AssemblyVersion>
+    <Version>1.1.36.0</Version>
+    <AssemblyVersion>1.1.36.0</AssemblyVersion>
     <Description>Tumblr# extension for .NETStandard 1.3 and 2.0</Description>
     <Copyright>Copyright 2017-2018</Copyright>
     <PackageTags>tumblr api</PackageTags>

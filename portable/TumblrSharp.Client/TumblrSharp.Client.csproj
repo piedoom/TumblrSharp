@@ -76,6 +76,11 @@
     <Compile Include="..\..\TumblrSharp.Client\UserInfo.cs" />
     <Compile Include="..\..\TumblrSharp.Client\UserInfoResponse.cs" />
     <Compile Include="..\..\TumblrSharp.Client\VideoPost.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\Exif.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\Trial.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\TrialBlog.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\TrialPost.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\TrialTheme.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

@@ -162,5 +162,11 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
 		[JsonProperty(PropertyName = "reblogged_root_title")]
 		public string RebloggedRootTitle { get; set; }
+
+        /// <summary>
+		/// trail
+		/// </summary>
+		[JsonProperty(PropertyName = "trail")]
+        public List<Trial> Trials { get; set; }
 	}
 }

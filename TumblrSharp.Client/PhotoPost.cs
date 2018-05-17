@@ -72,5 +72,8 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
 		[JsonProperty("url")]
 		public string ImageUrl { get; set; }
-	}
+
+        [JsonProperty("exif")]
+        public Exif Exif { get; set; }
+    }
 }

@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portable", "Portable", "{3F20BAC4-141B-49AD-9F98-8F797A40CE5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "Portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "portable\TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "Portable\TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TumblrSharp", "TumblrSharp\TumblrSharp.csproj", "{B6D630E0-3A92-4A98-9FC1-C62F67D23CEC}"
 EndProject
@@ -28,21 +28,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{C118
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{D7B10B5F-A96B-414F-80E5-4CF75EF958CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "examples\Windows\Forms\Common\Common.csproj", "{8258F002-0F2F-43F7-A9FA-DD1E4171D3A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Examples\Windows\Forms\Common\Common.csproj", "{8258F002-0F2F-43F7-A9FA-DD1E4171D3A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate", "examples\Windows\Forms\Authenticate\Authenticate.csproj", "{C207BFD0-D1EB-4F82-AF7A-120A862AFE1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate", "Examples\Windows\Forms\Authenticate\Authenticate.csproj", "{C207BFD0-D1EB-4F82-AF7A-120A862AFE1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate1", "examples\Windows\Forms\Authenticate1\Authenticate1.csproj", "{EBCBAB94-6012-4FEA-98E1-F5FC29B24342}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticate1", "Examples\Windows\Forms\Authenticate1\Authenticate1.csproj", "{EBCBAB94-6012-4FEA-98E1-F5FC29B24342}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{A7A3A82A-6000-4AA1-A1D3-2D6E75C30793}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{62940DF5-4505-40D1-BFD1-D49768AE7662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTextPost", "examples\console\CreateTextPost\CreateTextPost.csproj", "{782F1C59-5C1A-401F-9CA5-89EDD80E37D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTextPost", "Examples\Console\CreateTextPost\CreateTextPost.csproj", "{782F1C59-5C1A-401F-9CA5-89EDD80E37D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post_Photo_Queue", "examples\Windows\Forms\Post_Photo_Queue\Post_Photo_Queue.csproj", "{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post_Photo_Queue", "Examples\Windows\Forms\Post_Photo_Queue\Post_Photo_Queue.csproj", "{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "examples\Basics\Basics.csproj", "{F80616E7-BBA4-4FE2-B19A-BB9197101534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "Examples\Basics\Basics.csproj", "{F80616E7-BBA4-4FE2-B19A-BB9197101534}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardPosts", "Examples\Console\DrashboardPosts\DashboardPosts.csproj", "{9EE1507D-C6EA-4D3D-88F6-E355611BF00C}"
 EndProject

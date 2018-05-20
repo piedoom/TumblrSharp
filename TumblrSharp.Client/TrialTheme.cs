@@ -143,7 +143,7 @@ namespace DontPanic.TumblrSharp.Client
 #else
         /// <summary>
         /// color of the title
-        /// </summary
+        /// </summary>
         [JsonProperty(PropertyName = "title_color")]
         public string TitleColor { get; set; }
 #endif

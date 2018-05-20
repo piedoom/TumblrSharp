@@ -10,10 +10,10 @@ namespace Testing
     {
         // This consumer-token is only for testing!
 
-        private string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
-        private string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
+        private readonly string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
+        private readonly string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
 
-        private string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
+        private readonly string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
 
         [TestMethod]
         public void Token_IsValid()

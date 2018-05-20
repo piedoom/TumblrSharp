@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.eConsumerKey = new System.Windows.Forms.TextBox();
-            this.eConsumerSecret = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.eRequestKey = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.eConsumerKey = new PlaceholderTextBox.PlaceholderTextBox();
+            this.eConsumerSecret = new PlaceholderTextBox.PlaceholderTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -65,22 +65,6 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ConsumerKey";
-            // 
-            // eConsumerKey
-            // 
-            this.eConsumerKey.Location = new System.Drawing.Point(20, 38);
-            this.eConsumerKey.Name = "eConsumerKey";
-            this.eConsumerKey.Size = new System.Drawing.Size(321, 20);
-            this.eConsumerKey.TabIndex = 1;
-            this.eConsumerKey.Text = "<YourConsumerKey>";
-            // 
-            // eConsumerSecret
-            // 
-            this.eConsumerSecret.Location = new System.Drawing.Point(20, 83);
-            this.eConsumerSecret.Name = "eConsumerSecret";
-            this.eConsumerSecret.Size = new System.Drawing.Size(321, 20);
-            this.eConsumerSecret.TabIndex = 3;
-            this.eConsumerSecret.Text = "<YourConsumerSecret>";
             // 
             // label2
             // 
@@ -227,10 +211,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.eConsumerSecret);
             this.groupBox3.Controls.Add(this.eConsumerKey);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.eConsumerSecret);
             this.groupBox3.Location = new System.Drawing.Point(24, 124);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(360, 122);
@@ -257,7 +241,25 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Step 3 - Connect";
             // 
-            // FrAnnouncement
+            // eConsumerKey
+            // 
+            this.eConsumerKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eConsumerKey.Location = new System.Drawing.Point(20, 38);
+            this.eConsumerKey.Name = "eConsumerKey";
+            this.eConsumerKey.PlaceholderText = "ConsumerKey";
+            this.eConsumerKey.Size = new System.Drawing.Size(321, 20);
+            this.eConsumerKey.TabIndex = 4;
+            // 
+            // eConsumerSecret
+            // 
+            this.eConsumerSecret.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eConsumerSecret.Location = new System.Drawing.Point(20, 83);
+            this.eConsumerSecret.Name = "eConsumerSecret";
+            this.eConsumerSecret.PlaceholderText = "ConsumerSecret";
+            this.eConsumerSecret.Size = new System.Drawing.Size(318, 20);
+            this.eConsumerSecret.TabIndex = 5;
+            // 
+            // FrAuthenticate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,7 +268,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrAnnouncement";
+            this.Name = "FrAuthenticate";
             this.Text = "Announcement by Tumblr";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -282,8 +284,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox eConsumerKey;
-        private System.Windows.Forms.TextBox eConsumerSecret;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox eRequestKey;
         private System.Windows.Forms.Label label3;
@@ -303,6 +303,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private PlaceholderTextBox.PlaceholderTextBox eConsumerSecret;
+        private PlaceholderTextBox.PlaceholderTextBox eConsumerKey;
     }
 }
 

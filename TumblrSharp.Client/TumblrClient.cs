@@ -1595,6 +1595,104 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
+        /// <summary>
+        /// Asynchronously retrieves posts from the current user's dashboard.
+        /// </summary>
+        /// See:  http://www.tumblr.com/docs/en/api/v2#m-ug-dashboard
+        /// <param name="Id">
+        ///  Returns posts that appeared either after or before the given Id. after or before The <paramref name="drashboardType"/> parameter takes a number.
+        /// </param>
+        /// <param name="drashboardType">
+        /// <see cref="DashboardOption.After"/> returns newer posts,
+        /// <see cref="DashboardOption.Before"/> returns older posts
+        /// </param>
+        /// <param name="startIndex">
+        /// The post number to start at.
+        /// </param>
+        /// <param name="count">
+        /// The number of posts to return.
+        /// </param>
+        /// <param name="type">
+        /// The <see cref="PostType"/> to return.
+        /// </param>
+        /// <param name="includeReblogInfo">
+        /// Whether or not the response should include reblog info.
+        /// </param>
+        /// <param name="includeNotesInfo">
+        /// Whether or not the response should include notes info.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="Id"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<BasePost[]> GetDashboardPostsAsync(long Id, DashboardOption drashboardType, long startIndex = 0, int count = 20, PostType type = PostType.All, bool includeReblogInfo = false, bool includeNotesInfo = false)
+        {
+            if (disposed)
+                throw new ObjectDisposedException("TumblrClient");
+
+            if (Id < 0)
+                throw new ArgumentOutOfRangeException("ID", "Id must be greater or equal to zero.");
+            
+            if (startIndex < 0)
+                throw new ArgumentOutOfRangeException("startIndex", "startIndex must be greater or equal to zero.");
+
+            if (count < 1 || count > 20)
+                throw new ArgumentOutOfRangeException("count", "count must be between 1 and 20.");
+
+            if (OAuthToken == null)
+                throw new InvalidOperationException("GetDashboardPostsAsync method requires an OAuth token to be specified.");
+
+            MethodParameterSet parameters = new MethodParameterSet();
+
+            parameters.Add("type", type.ToString().ToLowerInvariant(), "all");
+
+            switch (drashboardType)
+            {
+                case DashboardOption.Before:
+                    parameters.Add("before_id", Id, 0);
+                    break;
+                case DashboardOption.After:
+                    parameters.Add("after_id", Id, 0);
+                    break;
+            }
+            
+            parameters.Add("offset", startIndex, 0);
+            parameters.Add("limit", count, 0);
+            parameters.Add("reblog_info", includeReblogInfo, false);
+            parameters.Add("notes_info", includeNotesInfo, false);
+
+            return CallApiMethodAsync<PostCollection, BasePost[]>(
+                new UserMethod("dashboard", OAuthToken, HttpMethod.Get, parameters),
+                r => r.Posts,
+                CancellationToken.None);
+        }
+
         #endregion
 
         #region GetUserLikesAsync
@@ -1679,6 +1777,6 @@ namespace DontPanic.TumblrSharp.Client
 			base.Dispose();
 		}
 
-		#endregion
-	}
+        #endregion
+    }
 }

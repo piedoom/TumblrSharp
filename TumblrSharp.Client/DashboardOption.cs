@@ -1,7 +1,7 @@
 ﻿namespace DontPanic.TumblrSharp.Client
 {
     /// <summary>
-    /// Option for get drashboardpost, before or after a spezifics Id
+    /// Option for get dashboardpost, before or after a spezifics Id
     /// </summary>
     public enum DashboardOption
     {

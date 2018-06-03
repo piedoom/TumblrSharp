@@ -7,9 +7,9 @@ using System.Drawing;
 namespace DontPanic.TumblrSharp.Client
 {
     /// <summary>
-    /// theme of a blog see <see cref="TrialBlog.Theme"/>
+    /// theme of a blog see <see cref="TrailBlog.Theme"/>
     /// </summary>
-    public class TrialTheme
+    public class TrailTheme
     {
         /// <summary>
         /// full width of the header

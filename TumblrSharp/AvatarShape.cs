@@ -32,9 +32,14 @@
 		[EnumMember(Value = "avatar-rounded")]
         AvatarRounded = 3,
         /// <summary>
-		/// circle avatar
+		/// circle avatar avatar-square
 		/// </summary>
 		[EnumMember(Value = "avatar-circle")]
-        AvatarCircle = 4
+        AvatarCircle = 4,
+        /// <summary>
+		/// square avatar
+		/// </summary>
+		[EnumMember(Value = "avatar-square")]
+        AvatarSquare = 5
     }
 }

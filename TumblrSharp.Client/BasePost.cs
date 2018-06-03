@@ -115,6 +115,12 @@ namespace DontPanic.TumblrSharp.Client
 		[JsonProperty(PropertyName = "bookmarklet")]
 		public string IsBookmarklet { get; set; }
 
+        /// <summary>
+        /// Reblog
+        /// </summary>
+        [JsonProperty(PropertyName = "reblog")]
+        public Reblog Reblog { get; set; }
+
 		/// <summary>
 		/// The id of a post being reblogged.
 		/// </summary>
@@ -164,9 +170,9 @@ namespace DontPanic.TumblrSharp.Client
 		public string RebloggedRootTitle { get; set; }
 
         /// <summary>
-		/// trail
+		/// Trail
 		/// </summary>
 		[JsonProperty(PropertyName = "trail")]
-        public List<Trial> Trials { get; set; }
+        public List<Trail> Trials { get; set; }
 	}
 }

@@ -23,6 +23,7 @@ namespace DontPanic.TumblrSharp.Client
         /// <summary>
         /// theme of the blog
         /// </summary>
+        [JsonConverter(typeof(TrailThemeConverter))]
         [JsonProperty(PropertyName = "theme")]
         public TrailTheme Theme { get; set; }
 

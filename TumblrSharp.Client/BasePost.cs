@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 
@@ -9,9 +10,16 @@ namespace DontPanic.TumblrSharp.Client
 	/// </summary>
     public class BasePost
     {
-		/// <summary>
-		/// The short name used to uniquely identify a blog.
-		/// </summary>
+        /// <summary>
+        /// The post type.
+        /// </summary>
+        [JsonConverter(typeof(EnumStringConverter))]
+        [JsonProperty(PropertyName = "type")]
+        public PostType Type { get; set; }
+
+        /// <summary>
+        /// The short name used to uniquely identify a blog.
+        /// </summary>
         [JsonProperty(PropertyName = "blog_name")]
         public string BlogName { get; set; }
 
@@ -22,17 +30,13 @@ namespace DontPanic.TumblrSharp.Client
         public long Id { get; set; }
 
 		/// <summary>
-		/// The post type.
-		/// </summary>
-        [JsonConverter(typeof(EnumConverter))]
-		[JsonProperty(PropertyName = "type")]
-        public PostType Type { get; set; }
-
-		/// <summary>
 		/// The url of the post.
 		/// </summary>
         [JsonProperty(PropertyName = "post_url")]
         public string Url { get; set; }
+
+        [JsonProperty(PropertyName = "slug")]
+        public string Slug { get; set; }
 
 		/// <summary>
 		/// The date and time of the post (in local time).
@@ -41,9 +45,41 @@ namespace DontPanic.TumblrSharp.Client
         [JsonProperty(PropertyName = "timestamp")]
         public DateTime Timestamp { get; set; }
 
-		/// <summary>
-		/// The number of notes (likes and reblogs) for the post.
-		/// </summary>
+        /// <summary>
+        /// The <see cref="PostCreationState"/>.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "state")]
+        public PostCreationState State { get; set; }
+
+        /// <summary>
+        /// The <see cref="PostFormat"/>.
+        /// </summary>
+        [JsonConverter(typeof(EnumStringConverter))]
+        [JsonProperty(PropertyName = "format")]
+        public PostFormat Format { get; set; }
+
+        /// <summary>
+        /// The key to use to reblog the post.
+        /// </summary>
+        [JsonProperty(PropertyName = "reblog_key")]
+        public string ReblogKey { get; set; }
+
+        /// <summary>
+        /// The tags applied to the post.
+        /// </summary>
+        [JsonProperty(PropertyName = "tags")]
+        public string[] Tags { get; set; }
+
+        [JsonProperty(PropertyName = "short_url")]
+        public string ShortUrl { get; set; }
+
+        [JsonProperty(PropertyName = "summary")]
+        public string Summary { get; set; }
+
+        /// <summary>
+        /// The number of notes (likes and reblogs) for the post.
+        /// </summary>
         [JsonProperty(PropertyName = "note_count")]
         public long NotesCount { get; set; }
 
@@ -52,26 +88,6 @@ namespace DontPanic.TumblrSharp.Client
 	    /// </summary>
 		[JsonProperty(PropertyName = "notes")]
 		public List<BaseNote> Notes { get; set; }
-
-		/// <summary>
-		/// The <see cref="PostFormat"/>.
-		/// </summary>
-		[JsonConverter(typeof(EnumConverter))]
-        [JsonProperty(PropertyName = "format")]
-        public PostFormat Format { get; set; }
-
-		/// <summary>
-		/// The key to use to reblog the post.
-		/// </summary>
-        [JsonProperty(PropertyName = "reblog_key")]
-        public string ReblogKey { get; set; }
-
-		/// <summary>
-		/// The tags applied to the post.
-		/// </summary>
-        [JsonProperty(PropertyName = "tags")]
-        public string[] Tags { get; set; }
-
 		/// <summary>
 		/// The url to the blog that is the source of the post, if any.
 		/// </summary>
@@ -89,14 +105,6 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
         [JsonProperty(PropertyName = "total_posts")]
         public int NumberOfPostsInResponse { get; set; }
-
-		/// <summary>
-		/// The <see cref="PostCreationState"/>.
-		/// </summary>
-		[JsonConverter(typeof(EnumConverter))]
-		[JsonProperty(PropertyName = "state")]
-		public PostCreationState State { get; set; }
-
 		/// <summary>
 		/// Indicates if the current user has already liked the post or not.
 		/// </summary>
@@ -172,7 +180,7 @@ namespace DontPanic.TumblrSharp.Client
         /// <summary>
 		/// Trail
 		/// </summary>
-		[JsonProperty(PropertyName = "trail")]
+        [JsonProperty(PropertyName = "trail")]
         public List<Trail> Trials { get; set; }
-	}
+    }
 }

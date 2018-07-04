@@ -2,6 +2,9 @@
 
 namespace DontPanic.TumblrSharp.Client
 {
+    /// <summary>
+    /// reblog
+    /// </summary>
     public class Reblog
     {
         /// <summary>

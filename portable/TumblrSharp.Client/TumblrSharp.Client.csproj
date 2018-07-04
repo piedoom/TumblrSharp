@@ -81,6 +81,7 @@
     <Compile Include="..\..\TumblrSharp.Client\TrailBlog.cs" />
     <Compile Include="..\..\TumblrSharp.Client\TrailPost.cs" />
     <Compile Include="..\..\TumblrSharp.Client\TrailTheme.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\TrailThemeConverter.cs" />
     <Compile Include="..\..\TumblrSharp.Client\DashboardOption.cs" />
     <Compile Include="..\..\TumblrSharp.Client\Reblog.cs" />
   </ItemGroup>

@@ -40,8 +40,7 @@ namespace Testing
 
             tc.Dispose();
 
-            var userInfo = await tc.GetUserInfoAsync();            
-
+            var userInfo = await tc.GetUserInfoAsync();    
         }
     }
 }

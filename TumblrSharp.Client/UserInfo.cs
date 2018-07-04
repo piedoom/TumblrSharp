@@ -16,7 +16,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// The user's default <see cref="PostFormat"/>.
 		/// </summary>
-        [JsonConverter(typeof(EnumConverter))]
+        [JsonConverter(typeof(EnumStringConverter))]
 		[JsonProperty(PropertyName = "default_post_format")]
 		public PostFormat DefaultPostFormat { get; set; }
 

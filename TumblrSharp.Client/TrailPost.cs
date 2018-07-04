@@ -3,9 +3,9 @@
 namespace DontPanic.TumblrSharp.Client
 {
     /// <summary>
-    /// post object from <see cref="Trial" />
+    /// post object from <see cref="Trail" />
     /// </summary>
-    public class TrialPost
+    public class TrailPost
     {
         /// <summary>
         /// id from post

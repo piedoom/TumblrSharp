@@ -9,7 +9,7 @@
 	/// intended to display as
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
-	public enum AvatarShape
+    public enum AvatarShape
 	{
         /// <summary>
         /// Empty avatar shape
@@ -29,12 +29,22 @@
 		/// <summary>
 		/// rounded avatar
 		/// </summary>
-		[EnumMember(Value = "avatar-rounded")]
-        AvatarRounded = 3,
+		[EnumMember(Value = "rounded")]
+        Rounded = 3,
         /// <summary>
 		/// circle avatar
 		/// </summary>
 		[EnumMember(Value = "avatar-circle")]
-        AvatarCircle = 4
+        AvatarCircle = 4,
+        /// <summary>
+		/// square avatar
+		/// </summary>
+		[EnumMember(Value = "avatar-square")]
+        AvatarSquare = 5,
+        /// <summary>
+        /// rounded avatar
+        /// </summary>
+        [EnumMember(Value = "avatar-rounded")]
+        AvatarRounded = 6
     }
 }

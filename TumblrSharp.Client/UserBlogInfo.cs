@@ -24,7 +24,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// The type of blog (public or private).
 		/// </summary>
-		[JsonConverter(typeof(EnumConverter))]
+		[JsonConverter(typeof(EnumStringConverter))]
 		[JsonProperty(PropertyName = "type")]
 		public BlogType BlogType { get; set; }
 

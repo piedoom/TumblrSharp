@@ -19,5 +19,8 @@ namespace DontPanic.TumblrSharp
 
 		[JsonProperty(PropertyName = "msg")]
 		public string Message { get; set; }
+
+        [JsonProperty(PropertyName = "x_tumblr_content_rating")]
+        public string XTumblrContentRating { get; set; }
 	}
 }

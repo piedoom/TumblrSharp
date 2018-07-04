@@ -3,13 +3,14 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Runtime.Serialization;
 
 namespace DontPanic.TumblrSharp.Client
 {
 	/// <summary>
 	/// Generic converter for enumerations.
 	/// </summary>
-	public class EnumConverter : JsonConverter
+	public class EnumStringConverter : JsonConverter
 	{
 		/// <exclude/>
 		public override bool CanConvert(Type objectType)
@@ -26,7 +27,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exclude/>
 		public override object ReadJson(JsonReader reader, Type	objectType, object existingValue, JsonSerializer serializer)
 		{
-			return Enum.Parse(objectType, reader.Value.ToString(), true);
+            return Enum.Parse(objectType, reader.Value.ToString(), true);
 		}
 	}
 }

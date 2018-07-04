@@ -5,12 +5,12 @@ namespace DontPanic.TumblrSharp.Client
     /// <summary>
     /// The blog from Trail
     /// </summary>
-    public class TrialBlog
+    public class TrailBlog
     {
         /// <summary>
         /// the name of the blog
         /// </summary>
-        [JsonProperty(PropertyName ="name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -23,8 +23,9 @@ namespace DontPanic.TumblrSharp.Client
         /// <summary>
         /// theme of the blog
         /// </summary>
+        [JsonConverter(typeof(TrailThemeConverter))]
         [JsonProperty(PropertyName = "theme")]
-        public TrialTheme Theme { get; set; }
+        public TrailTheme Theme { get; set; }
 
         /// <summary>
         /// share likes

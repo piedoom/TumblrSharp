@@ -48,7 +48,13 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
         [JsonProperty("original_size")]
         public PhotoInfo OriginalSize { get; set; }
-	}
+
+        /// <summary>
+        /// Exif-Data from Photo
+        /// </summary>
+        [JsonProperty("exif")]
+        public Exif Exif { get; set; }
+    }
 
 	/// <summary>
 	/// Represents information about a <see cref="Photo"/>.
@@ -72,8 +78,5 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
 		[JsonProperty("url")]
 		public string ImageUrl { get; set; }
-
-        [JsonProperty("exif")]
-        public Exif Exif { get; set; }
     }
 }

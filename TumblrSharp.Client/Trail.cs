@@ -3,21 +3,21 @@
 namespace DontPanic.TumblrSharp.Client
 {
     /// <summary>
-    /// Trial
+    /// Trail
     /// </summary>
-    public class Trial
+    public class Trail
     {
         /// <summary>
         /// the blog
         /// </summary>
         [JsonProperty(PropertyName = "blog")]
-        public TrialBlog Blog { get; set; }
+        public TrailBlog Blog { get; set; }
 
         /// <summary>
         /// the post that trail
         /// </summary>
         [JsonProperty(PropertyName ="post")]
-        public TrialPost Post { get; set; }
+        public TrailPost Post { get; set; }
 
         /// <summary>
         /// ContentRaw

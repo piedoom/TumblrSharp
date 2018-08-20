@@ -21,6 +21,9 @@ namespace Examples.Basics
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
+    /// <summary>
+    /// Helper class for tags
+    /// </summary>
     public class Tags
     {
         public Tags(IEnumerable<string> tags = null, bool caseSensitive = false, TumblrClient tumblrClient = null)

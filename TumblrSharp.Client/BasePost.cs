@@ -35,6 +35,9 @@ namespace DontPanic.TumblrSharp.Client
         [JsonProperty(PropertyName = "post_url")]
         public string Url { get; set; }
 
+        /// <summary>
+        /// slug
+        /// </summary>
         [JsonProperty(PropertyName = "slug")]
         public string Slug { get; set; }
 
@@ -71,9 +74,15 @@ namespace DontPanic.TumblrSharp.Client
         [JsonProperty(PropertyName = "tags")]
         public string[] Tags { get; set; }
 
+        /// <summary>
+        /// Shorturl
+        /// </summary>
         [JsonProperty(PropertyName = "short_url")]
         public string ShortUrl { get; set; }
 
+        /// <summary>
+        /// Summary
+        /// </summary>
         [JsonProperty(PropertyName = "summary")]
         public string Summary { get; set; }
 

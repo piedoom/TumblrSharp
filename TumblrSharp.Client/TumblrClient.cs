@@ -770,6 +770,129 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
+        /// <summary>
+		/// Asynchronously reblogs a post.
+		/// </summary>
+		/// <remarks>
+		/// See: http://www.tumblr.com/docs/en/api/v2#reblogging
+		/// </remarks>
+		/// <param name="blogName">
+		/// The name of the blog where to reblog the psot (must be one of the current user's blogs).
+		/// </param>
+		/// <param name="postId">
+		/// The identifier of the post to reblog.
+		/// </param>
+		/// <param name="reblogKey">
+		/// The post reblog key.
+		/// </param>
+		/// <param name="comment">
+		/// An optional comment to add to the reblog.
+		/// </param>
+        /// <param name="state">
+        /// Post creation state
+        /// </param>
+        /// <param name="publish_On">
+        /// if state is <see cref="PostCreationState.Queue"/> is this the publishingtime 
+        /// </param>
+		/// <returns>
+		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+		/// carry a <see cref="PostCreationInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+		/// representing the error occurred during the call.
+		/// </returns>
+		/// <exception cref="ObjectDisposedException">
+		/// The object has been disposed.
+		/// </exception>
+		/// <exception cref="ArgumentNullException">
+		/// <list type="bullet">
+		/// <item>
+		///		<description>
+		///			<paramref name="blogName"/> is <b>null</b>.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="reblogKey"/> is <b>null</b>.
+		///		</description>
+		///	</item>
+		/// </list>
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// /// <list type="bullet">
+		/// <item>
+		///		<description>
+		///			<paramref name="blogName"/> is empty.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="reblogKey"/> is empty.
+		///		</description>
+		///	</item>
+        ///	<item>
+        ///	    <description>
+        ///	        <paramref name="publish_On"/> is in the past.
+        ///	    </description>
+        /// </item>
+		/// </list>
+		/// </exception>
+		/// <exception cref="InvalidOperationException">
+		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+		/// </exception>
+        public Task<PostCreationInfo> ReblogAsync(string blogName, long postId, string reblogKey, PostCreationState state, DateTime? publish_On = null, string comment = null)
+        {
+            if (state == PostCreationState.Published)
+            {
+                return ReblogAsync(blogName, postId, reblogKey, comment);
+            }
+            else
+            {
+
+                if (disposed)
+                    throw new ObjectDisposedException("TumblrClient");
+
+                if (blogName == null)
+                    throw new ArgumentNullException("blogName");
+
+                if (blogName.Length == 0)
+                    throw new ArgumentException("Blog name cannot be empty.", "blogName");
+
+                if (postId <= 0)
+                    throw new ArgumentException("Post ID must be greater than 0.", "postId");
+
+                if (reblogKey == null)
+                    throw new ArgumentNullException("reblogKey");
+
+                if (reblogKey.Length == 0)
+                    throw new ArgumentException("ReblogKey cannot be empty.", "reblogKey");
+
+                if (OAuthToken == null)
+                    throw new InvalidOperationException("ReblogAsync method requires an OAuth token to be specified.");
+
+                if (publish_On != null)
+                {
+                    if (DateTime.Now >= publish_On)
+                        throw new ArgumentException("Published_On must be in the future");
+                }
+
+                MethodParameterSet parameters = new MethodParameterSet
+                {
+                    { "id", postId },
+                    { "reblog_key", reblogKey },
+                    { "comment", comment, null },
+                    { "state", state.ToString().ToLowerInvariant() }
+                };
+
+                if (state == PostCreationState.Queue && publish_On != null)
+                {
+                    parameters.Add("publish_on", publish_On.Value.ToUniversalTime().ToString("R"));
+                }
+
+                return CallApiMethodAsync<PostCreationInfo>(
+                    new BlogMethod(blogName, "post/reblog", OAuthToken, HttpMethod.Post, parameters),
+                    CancellationToken.None);
+            }
+        }
+
         #endregion
 
         #region GetQueuedPostsAsync

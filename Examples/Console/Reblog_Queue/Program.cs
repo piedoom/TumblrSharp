@@ -43,7 +43,7 @@ namespace Reblog_Queue
 
         public async void Reblog(string blogName, BasePost basePost)
         {
-            await client.ReblogAsync(blogName, basePost.Id, basePost.ReblogKey, null, PostCreationState.Queue);
+            await client.ReblogAsync(blogName, basePost.Id, basePost.ReblogKey, PostCreationState.Queue);
         }
 
         public async Task<List<string>> GetBlogs()
@@ -62,7 +62,7 @@ namespace Reblog_Queue
 
         public void Reblog(string blogName, BasePost basePost, DateTime dateTime)
         {
-            client.ReblogAsync(blogName, basePost.Id, basePost.ReblogKey, null, PostCreationState.Queue, dateTime);
+            client.ReblogAsync(blogName, basePost.Id, basePost.ReblogKey, PostCreationState.Queue, dateTime);
         }
     }
 

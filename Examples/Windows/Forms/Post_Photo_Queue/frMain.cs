@@ -11,7 +11,7 @@ using System.Linq;
 using System.Windows.Forms;
 using TumblrSharp.Samples.Common.Dialog;
 
-namespace Post_Photo_Queue
+namespace Post_Photo
 {
     public partial class FrMain : Form
     {
@@ -93,8 +93,19 @@ namespace Post_Photo_Queue
         {
             FileDialog dlg = sender as FileDialog;
 
-            var file = dlg.FileName;
+            int idx = 0;
 
+            foreach (var file in dlg.FileNames)
+            {
+                LoadPictureFile(file);
+                idx++;
+
+                if (idx == 10) break;
+            }            
+        }
+
+        private void LoadPictureFile(string file)
+        {
             byte[] array;
 
             MemoryStream arrayStream = new MemoryStream();
@@ -107,9 +118,7 @@ namespace Post_Photo_Queue
             array = arrayStream.ToArray();
 
             binaryFiles.Add(new BinaryFile(array));
-
-            var idx = binaryFiles.Count;
-
+            
             Image bild = new Bitmap(arrayStream);
 
             PictureBox pictureBox = new PictureBox()
@@ -117,34 +126,16 @@ namespace Post_Photo_Queue
                 Height = 150,
                 Width = 150,
                 Image = bild.GetThumbnailImage(150, 150, null, IntPtr.Zero),
-                Tag = idx
+                Tag = binaryFiles.Count
 
             };
 
             PhotoView.Controls.Add(pictureBox);
         }
 
-        private async void BtnPost_Click(object sender, EventArgs e)
-        {
-            string blogName = cbBlogs.Text;
-
-            string caption = TbCaption.Text;
-
-            PostData postData = PostData.CreatePhoto(binaryFiles, caption, null, tags.ToList(), PostCreationState.Queue);
-
-            if (CbDateTime.Checked)
-            {
-                postData.Publish_On = Convert.ToDateTime(TbDateTime.Text);
-            }
-
-            var postCreationInfo = await TumblrClient.CreatePostAsync(blogName, postData);
-
-            System.Diagnostics.Process.Start($"https://www.tumblr.com/blog/{blogName}/queue");
-        }
-
         private void BtnTag_Click(object sender, EventArgs e)
         {
-            DialogAddTag dlg = new DialogAddTag(tags);
+            DialogAddTag dlg = new DialogAddTag(this, tags);
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
@@ -159,5 +150,87 @@ namespace Post_Photo_Queue
             TbTags.Text = tags.ToString();
         }
 
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            PhotoView.Controls.Remove(PhotoView.Controls[PhotoView.Controls.Count - 1]);
+            binaryFiles.Remove(binaryFiles[binaryFiles.Count - 1]);
+        }
+
+        private void PhotoView_ControlAdded(object sender, ControlEventArgs e)
+        {
+            BtnDelete.Enabled = (sender as FlowLayoutPanel).Controls.Count > 0;
+            BtnAdd.Enabled = (sender as FlowLayoutPanel).Controls.Count < 10;
+        }
+
+        private void PhotoView_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            BtnDelete.Enabled = (sender as FlowLayoutPanel).Controls.Count > 0;
+            BtnAdd.Enabled = (sender as FlowLayoutPanel).Controls.Count < 10;
+        }
+
+        private async void BtnPostAsQueue_Click(object sender, EventArgs e)
+        {
+            EnabledForm(false);
+
+            string blogName = cbBlogs.Text;
+
+            string caption = TbCaption.Text;
+
+            PostData postData = PostData.CreatePhoto(binaryFiles, caption, null, tags.ToList(), PostCreationState.Queue);
+
+            if (CbDateTime.Checked)
+            {
+                postData.Publish_On = Convert.ToDateTime(TbDateTime.Text);
+            }
+            
+            var postCreationInfo = await TumblrClient.CreatePostAsync(blogName, postData);
+
+            System.Diagnostics.Process.Start($"https://www.tumblr.com/blog/{blogName}/queue");
+
+            EnabledForm(true);
+        }
+
+        private async void BtnPost_Click(object sender, EventArgs e)
+        {
+            EnabledForm(false);
+            
+            string blogName = cbBlogs.Text;
+
+            string caption = TbCaption.Text;
+
+            PostData postData = PostData.CreatePhoto(binaryFiles, caption, null, tags.ToList());
+
+            var postCreationInfo = await TumblrClient.CreatePostAsync(blogName, postData);
+
+            System.Diagnostics.Process.Start($"https://www.tumblr.com/blog/{blogName}");
+
+            EnabledForm(true);
+        }
+
+        private void CbDateTime_CheckedChanged(object sender, EventArgs e)
+        {
+            TbDateTime.Enabled = (sender as CheckBox).Checked == true;
+        }
+
+        private void EnabledForm(bool enabled)
+        {
+            foreach (var control in this.Controls)
+            {
+                if (control is Control)
+                {
+                    (control as Control).Enabled = enabled;
+                }
+            }
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            PhotoView.Controls.Clear();
+            binaryFiles.Clear();
+            tags.Clear();
+
+            TbCaption.Text = "";
+            TbTags.Text = "";
+        }
     }
 }

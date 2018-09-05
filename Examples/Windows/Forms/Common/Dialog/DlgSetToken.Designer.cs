@@ -128,6 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 255);
+            this.ControlBox = false;
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -139,6 +140,7 @@
             this.Controls.Add(this.tbConsumerKey);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DlgSetToken";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Your Token";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DlgSetToken_FormClosing);
             this.ResumeLayout(false);

@@ -9,13 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Post_Photo_Queue
+namespace Post_Photo
 {
     public partial class DialogAddTag : Form
     {
-        public DialogAddTag(Tags tags)
+        public DialogAddTag(Form parent, Tags tags)
         {
             InitializeComponent();
+
+            Owner = parent;
 
             tbTag.AutoCompleteCustomSource = new AutoCompleteStringCollection();
 

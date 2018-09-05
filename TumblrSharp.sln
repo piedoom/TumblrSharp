@@ -40,7 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{6294
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTextPost", "Examples\Console\CreateTextPost\CreateTextPost.csproj", "{782F1C59-5C1A-401F-9CA5-89EDD80E37D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post_Photo_Queue", "Examples\Windows\Forms\Post_Photo_Queue\Post_Photo_Queue.csproj", "{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post_Photo", "Examples\Windows\Forms\Post_Photo_Queue\Post_Photo.csproj", "{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "Examples\Basics\Basics.csproj", "{F80616E7-BBA4-4FE2-B19A-BB9197101534}"
 EndProject

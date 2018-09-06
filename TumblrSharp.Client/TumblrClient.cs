@@ -141,7 +141,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ArgumentException">
 		/// <paramref name="blogName"/> is empty.
 		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
+		/// <exception cref="System.ArgumentOutOfRangeException">
 		/// <list type="bullet">
 		/// <item>
 		///		<description>
@@ -208,6 +208,9 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// Asynchronously retrieves a specific post by id.
 		/// </summary>
+		/// <param name="blogName">
+		/// Blog name to reference
+		/// </param>
 		/// <param name="id">
 		/// The id of the post to retrieve.
 		/// </param>
@@ -225,13 +228,25 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ObjectDisposedException">
 		/// The object has been disposed.
 		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
+		/// <exception cref="ArgumentNullException">
+		/// <paramref name="blogName"/> is <b>null</b>.
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// <paramref name="blogName"/> is empty.
+		/// </exception>
+		/// <exception cref="System.ArgumentOutOfRangeException">
 		///	<paramref name="id"/> is less than 0.
 		/// </exception>
-		public Task<BasePost> GetPostAsync(long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
+		public Task<BasePost> GetPostAsync(string blogName, long id, bool includeReblogInfo = false, bool includeNotesInfo = false)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
+
+		    if (blogName == null)
+		        throw new ArgumentNullException("blogName");
+
+		    if (blogName.Length == 0)
+		        throw new ArgumentException("Blog name cannot be empty.", "blogName");
 
 			if (id < 0)
 				throw new ArgumentOutOfRangeException("id", "id must be greater or equal to zero.");
@@ -243,7 +258,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("notes_info", includeNotesInfo, false);
 
 			return CallApiMethodAsync<Posts, BasePost>(
-				new BlogMethod("dummy", "posts", null, HttpMethod.Get, parameters),
+				new BlogMethod(blogName, "posts", null, HttpMethod.Get, parameters),
 				p => p.Result.FirstOrDefault(),
 				CancellationToken.None);
 		}
@@ -281,7 +296,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ArgumentException">
 		/// <paramref name="blogName"/> is empty.
 		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
+		/// <exception cref="System.ArgumentOutOfRangeException">
 		/// <list type="bullet">
 		/// <item>
 		///		<description>
@@ -355,7 +370,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exception cref="ArgumentException">
 		/// <paramref name="blogName"/> is empty.
 		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
+		/// <exception cref="System.ArgumentOutOfRangeException">
 		/// <list type="bullet">
 		/// <item>
 		///		<description>
@@ -751,64 +766,187 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("comment", comment, null);
 
 			return CallApiMethodAsync<PostCreationInfo>(
-				new UserMethod("post/reblog", OAuthToken, HttpMethod.Post, parameters),
+				new BlogMethod(blogName, "post/reblog", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 
-		#endregion
-
-		#region GetQueuedPostsAsync
-
-		/// <summary>
-		/// Asynchronously returns posts in the current user's queue.
+        /// <summary>
+		/// Asynchronously reblogs a post.
 		/// </summary>
 		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#blog-queue
+		/// See: http://www.tumblr.com/docs/en/api/v2#reblogging
 		/// </remarks>
 		/// <param name="blogName">
-		/// The name of the blog for which to retrieve queued posts.
+		/// The name of the blog where to reblog the psot (must be one of the current user's blogs).
 		/// </param>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the posts. Use 0 to start retrieving from the latest post.
+		/// <param name="postId">
+		/// The identifier of the post to reblog.
 		/// </param>
-		/// <param name="count">
-		/// The number of posts to retrieve. Must be between 1 and 20.
+		/// <param name="reblogKey">
+		/// The post reblog key.
 		/// </param>
-		/// <param name="filter">
-		/// A <see cref="PostFilter"/> to apply.
+		/// <param name="comment">
+		/// An optional comment to add to the reblog.
 		/// </param>
+        /// <param name="state">
+        /// Post creation state
+        /// </param>
+        /// <param name="publish_On">
+        /// if state is <see cref="PostCreationState.Queue"/> is this the publishingtime 
+        /// </param>
 		/// <returns>
 		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+		/// carry a <see cref="PostCreationInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
 		/// representing the error occurred during the call.
 		/// </returns>
 		/// <exception cref="ObjectDisposedException">
 		/// The object has been disposed.
 		/// </exception>
 		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		///	</exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		///	</exception>
-		/// <exception cref="ArgumentOutOfRangeException">
 		/// <list type="bullet">
 		/// <item>
 		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
+		///			<paramref name="blogName"/> is <b>null</b>.
 		///		</description>
 		///	</item>
 		///	<item>
 		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
+		///			<paramref name="reblogKey"/> is <b>null</b>.
 		///		</description>
 		///	</item>
+		/// </list>
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// /// <list type="bullet">
+		/// <item>
+		///		<description>
+		///			<paramref name="blogName"/> is empty.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="reblogKey"/> is empty.
+		///		</description>
+		///	</item>
+        ///	<item>
+        ///	    <description>
+        ///	        <paramref name="publish_On"/> is in the past.
+        ///	    </description>
+        /// </item>
 		/// </list>
 		/// </exception>
 		/// <exception cref="InvalidOperationException">
 		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
 		/// </exception>
-		public Task<BasePost[]> GetQueuedPostsAsync(string blogName, long startIndex = 0, int count = 20, PostFilter filter = PostFilter.Html)
+        public Task<PostCreationInfo> ReblogAsync(string blogName, long postId, string reblogKey, PostCreationState state, DateTime? publish_On = null, string comment = null)
+        {
+            if (state == PostCreationState.Published)
+            {
+                return ReblogAsync(blogName, postId, reblogKey, comment);
+            }
+            else
+            {
+
+                if (disposed)
+                    throw new ObjectDisposedException("TumblrClient");
+
+                if (blogName == null)
+                    throw new ArgumentNullException("blogName");
+
+                if (blogName.Length == 0)
+                    throw new ArgumentException("Blog name cannot be empty.", "blogName");
+
+                if (postId <= 0)
+                    throw new ArgumentException("Post ID must be greater than 0.", "postId");
+
+                if (reblogKey == null)
+                    throw new ArgumentNullException("reblogKey");
+
+                if (reblogKey.Length == 0)
+                    throw new ArgumentException("ReblogKey cannot be empty.", "reblogKey");
+
+                if (OAuthToken == null)
+                    throw new InvalidOperationException("ReblogAsync method requires an OAuth token to be specified.");
+
+                if (publish_On != null)
+                {
+                    if (DateTime.Now >= publish_On)
+                        throw new ArgumentException("Published_On must be in the future");
+                }
+
+                MethodParameterSet parameters = new MethodParameterSet
+                {
+                    { "id", postId },
+                    { "reblog_key", reblogKey },
+                    { "comment", comment, null },
+                    { "state", state.ToString().ToLowerInvariant() }
+                };
+
+                if (state == PostCreationState.Queue && publish_On != null)
+                {
+                    parameters.Add("publish_on", publish_On.Value.ToUniversalTime().ToString("R"));
+                }
+
+                return CallApiMethodAsync<PostCreationInfo>(
+                    new BlogMethod(blogName, "post/reblog", OAuthToken, HttpMethod.Post, parameters),
+                    CancellationToken.None);
+            }
+        }
+
+        #endregion
+
+        #region GetQueuedPostsAsync
+
+        /// <summary>
+        /// Asynchronously returns posts in the current user's queue.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#blog-queue
+        /// </remarks>
+        /// <param name="blogName">
+        /// The name of the blog for which to retrieve queued posts.
+        /// </param>
+        /// <param name="startIndex">
+        /// The offset at which to start retrieving the posts. Use 0 to start retrieving from the latest post.
+        /// </param>
+        /// <param name="count">
+        /// The number of posts to retrieve. Must be between 1 and 20.
+        /// </param>
+        /// <param name="filter">
+        /// A <see cref="PostFilter"/> to apply.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="blogName"/> is <b>null</b>.
+        ///	</exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="blogName"/> is empty.
+        ///	</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task<BasePost[]> GetQueuedPostsAsync(string blogName, long startIndex = 0, int count = 20, PostFilter filter = PostFilter.Html)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -839,47 +977,47 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region GetDraftPostsAsync
+        #region GetDraftPostsAsync
 
-		/// <summary>
-		/// Asynchronously returns draft posts.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#blog-drafts
-		/// </remarks>
-		/// <param name="blogName">
-		/// The name of the blog for which to retrieve drafted posts. 
-		/// </param>
-		/// <param name="sinceId">
-		/// Return posts that have appeared after the specified ID. Use this parameter to page through 
-		/// the results: first get a set of posts, and then get posts since the last ID of the previous set. 
-		/// </param>
-		/// <param name="filter">
-		/// A <see cref="PostFilter"/> to apply.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		///	</exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		///	</exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <paramref name="sinceId"/> is less than 0.
-		///	</exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task<BasePost[]> GetDraftPostsAsync(string blogName, long sinceId = 0, PostFilter filter = PostFilter.Html)
+        /// <summary>
+        /// Asynchronously returns draft posts.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#blog-drafts
+        /// </remarks>
+        /// <param name="blogName">
+        /// The name of the blog for which to retrieve drafted posts. 
+        /// </param>
+        /// <param name="sinceId">
+        /// Return posts that have appeared after the specified ID. Use this parameter to page through 
+        /// the results: first get a set of posts, and then get posts since the last ID of the previous set. 
+        /// </param>
+        /// <param name="filter">
+        /// A <see cref="PostFilter"/> to apply.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="blogName"/> is <b>null</b>.
+        ///	</exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="blogName"/> is empty.
+        ///	</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="sinceId"/> is less than 0.
+        ///	</exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task<BasePost[]> GetDraftPostsAsync(string blogName, long sinceId = 0, PostFilter filter = PostFilter.Html)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -906,46 +1044,46 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region GetSubmissionPostsAsync
+        #region GetSubmissionPostsAsync
 
-		/// <summary>
-		/// Asynchronously retrieves submission posts.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#blog-submissions
-		/// </remarks>
-		/// <param name="blogName">
-		/// The name of the blog for which to retrieve submission posts. 
-		/// </param>
-		/// <param name="startIndex">
-		/// The post number to start at. Pass 0 to start from the first post.
-		/// </param>
-		/// <param name="filter">
-		/// A <see cref="PostFilter"/> to apply.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		///	</exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		///	</exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <paramref name="startIndex"/> is less than 0.
-		///	</exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task<BasePost[]> GetSubmissionPostsAsync(string blogName, long startIndex = 0, PostFilter filter = PostFilter.Html)
+        /// <summary>
+        /// Asynchronously retrieves submission posts.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#blog-submissions
+        /// </remarks>
+        /// <param name="blogName">
+        /// The name of the blog for which to retrieve submission posts. 
+        /// </param>
+        /// <param name="startIndex">
+        /// The post number to start at. Pass 0 to start from the first post.
+        /// </param>
+        /// <param name="filter">
+        /// A <see cref="PostFilter"/> to apply.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="blogName"/> is <b>null</b>.
+        ///	</exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="blogName"/> is empty.
+        ///	</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="startIndex"/> is less than 0.
+        ///	</exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task<BasePost[]> GetSubmissionPostsAsync(string blogName, long startIndex = 0, PostFilter filter = PostFilter.Html)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -972,42 +1110,42 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region DeletePostAsync
+        #region DeletePostAsync
 
-		/// <summary>
-		/// Asynchronously deletes a post.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#deleting-posts
-		/// </remarks>
-		/// <param name="blogName">
-		/// The name of the blog to which the post to delete belongs.
-		/// </param>
-		/// <param name="postId">
-		/// The identifier of the post to delete.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
-		/// will carry a <see cref="TumblrException"/> representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		///	</exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		///	</exception>
-		///	<exception cref="ArgumentOutOfRangeException">
-		///	<paramref name="postId"/> is less than 0.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task DeletePostAsync(string blogName, long postId)
+        /// <summary>
+        /// Asynchronously deletes a post.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#deleting-posts
+        /// </remarks>
+        /// <param name="blogName">
+        /// The name of the blog to which the post to delete belongs.
+        /// </param>
+        /// <param name="postId">
+        /// The identifier of the post to delete.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// will carry a <see cref="TumblrException"/> representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="blogName"/> is <b>null</b>.
+        ///	</exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="blogName"/> is empty.
+        ///	</exception>
+        ///	<exception cref="System.ArgumentOutOfRangeException">
+        ///	<paramref name="postId"/> is less than 0.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task DeletePostAsync(string blogName, long postId)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1071,48 +1209,48 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region GetFollowingAsync
+        #region GetFollowingAsync
 
-		/// <summary>
-		/// Asynchronously retrieves the blog that the current user is following.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-ug-following
-		/// </remarks>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the followed blogs. Use 0 to start retrieving from the latest followed blog.
-		/// </param>
-		/// <param name="count">
-		/// The number of following blogs to retrieve. Must be between 1 and 20.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="Following"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
-		/// generated during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<Following> GetFollowingAsync(long startIndex = 0, int count = 20)
+        /// <summary>
+        /// Asynchronously retrieves the blog that the current user is following.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-ug-following
+        /// </remarks>
+        /// <param name="startIndex">
+        /// The offset at which to start retrieving the followed blogs. Use 0 to start retrieving from the latest followed blog.
+        /// </param>
+        /// <param name="count">
+        /// The number of following blogs to retrieve. Must be between 1 and 20.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry a <see cref="Following"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
+        /// generated during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<Following> GetFollowingAsync(long startIndex = 0, int count = 20)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1135,48 +1273,48 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region GetLikesAsync
+        #region GetLikesAsync
 
-		/// <summary>
-		/// Asynchronously retrieves the current user's likes.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
-		/// </remarks>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
-		/// </param>
-		/// <param name="count">
-		/// The number of likes to retrieve. Must be between 1 and 20.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
-		/// generated during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<Likes> GetLikesAsync(long startIndex = 0, int count = 20)
+        /// <summary>
+        /// Asynchronously retrieves the current user's likes.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
+        /// </remarks>
+        /// <param name="startIndex">
+        /// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
+        /// </param>
+        /// <param name="count">
+        /// The number of likes to retrieve. Must be between 1 and 20.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
+        /// generated during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<Likes> GetLikesAsync(long startIndex = 0, int count = 20)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1199,42 +1337,42 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region LikeAsync
+        #region LikeAsync
 
-		/// <summary>
-		/// Asynchronously likes a post.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-up-like
-		/// </remarks>
-		/// <param name="postId">
-		/// The identifier of the post to like.
-		/// </param>
-		/// <param name="reblogKey">
-		/// The reblog key for the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
-		/// will carry a <see cref="TumblrException"/>
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="reblogKey"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="reblogKey"/> is empty.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <paramref name="postId"/> is less than 0.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task LikeAsync(long postId, string reblogKey)
+        /// <summary>
+        /// Asynchronously likes a post.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-up-like
+        /// </remarks>
+        /// <param name="postId">
+        /// The identifier of the post to like.
+        /// </param>
+        /// <param name="reblogKey">
+        /// The reblog key for the post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// will carry a <see cref="TumblrException"/>
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="reblogKey"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="reblogKey"/> is empty.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="postId"/> is less than 0.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task LikeAsync(long postId, string reblogKey)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1260,42 +1398,42 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region UnlikeAsync
+        #region UnlikeAsync
 
-		/// <summary>
-		/// Asynchronously unlikes a post.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-up-unlike
-		/// </remarks>
-		/// <param name="postId">
-		/// The identifier of the post to like.
-		/// </param>
-		/// <param name="reblogKey">
-		/// The reblog key for the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
-		/// will carry a <see cref="TumblrException"/>
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="reblogKey"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="reblogKey"/> is empty.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <paramref name="postId"/> is less than 0.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		public Task UnlikeAsync(long postId, string reblogKey)
+        /// <summary>
+        /// Asynchronously unlikes a post.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-up-unlike
+        /// </remarks>
+        /// <param name="postId">
+        /// The identifier of the post to like.
+        /// </param>
+        /// <param name="reblogKey">
+        /// The reblog key for the post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// will carry a <see cref="TumblrException"/>
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="reblogKey"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="reblogKey"/> is empty.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="postId"/> is less than 0.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        public Task UnlikeAsync(long postId, string reblogKey)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1368,7 +1506,7 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("url", blogUrl);
 
 			return CallApiMethodNoResultAsync(
-				new UserMethod("follow", OAuthToken, HttpMethod.Get, parameters),
+				new UserMethod("follow", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 
@@ -1419,53 +1557,53 @@ namespace DontPanic.TumblrSharp.Client
 			parameters.Add("url", blogUrl);
 
 			return CallApiMethodNoResultAsync(
-				new UserMethod("unfollow", OAuthToken, HttpMethod.Get, parameters),
+				new UserMethod("unfollow", OAuthToken, HttpMethod.Post, parameters),
 				CancellationToken.None);
 		}
 
-		#endregion
+        #endregion
 
-		#region GetTaggedPostsAsync
+        #region GetTaggedPostsAsync
 
-		/// <summary>
-		/// Asynchronously retrieves posts that have been tagged with a specific <paramref name="tag"/>.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-up-tagged
-		/// </remarks>
-		/// <param name="tag">
-		/// The tag on the posts to retrieve.
-		/// </param>
-		/// <param name="before">
-		/// The timestamp of when to retrieve posts before. 
-		/// </param>
-		/// <param name="count">
-		/// The number of posts to retrieve.
-		/// </param>
-		/// <param name="filter">
-		/// A <see cref="PostFilter"/>.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="tag"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="tag"/> is empty.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <paramref name="count"/> is less than 1 or greater than 20.
-		/// </exception>
-		public Task<BasePost[]> GetTaggedPostsAsync(string tag, DateTime? before = null, int count = 20, PostFilter filter = PostFilter.Html)
+        /// <summary>
+        /// Asynchronously retrieves posts that have been tagged with a specific <paramref name="tag"/>.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-up-tagged
+        /// </remarks>
+        /// <param name="tag">
+        /// The tag on the posts to retrieve.
+        /// </param>
+        /// <param name="before">
+        /// The timestamp of when to retrieve posts before. 
+        /// </param>
+        /// <param name="count">
+        /// The number of posts to retrieve.
+        /// </param>
+        /// <param name="filter">
+        /// A <see cref="PostFilter"/>.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="tag"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="tag"/> is empty.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="count"/> is less than 1 or greater than 20.
+        /// </exception>
+        public Task<BasePost[]> GetTaggedPostsAsync(string tag, DateTime? before = null, int count = 20, PostFilter filter = PostFilter.Html)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1492,64 +1630,64 @@ namespace DontPanic.TumblrSharp.Client
 				new JsonConverter[] { new PostArrayConverter() });
 		}
 
-		#endregion
+        #endregion
 
-		#region GetDashboardPostsAsync
+        #region GetDashboardPostsAsync
 
-		/// <summary>
-		/// Asynchronously retrieves posts from the current user's dashboard.
-		/// </summary>
-		/// See:  http://www.tumblr.com/docs/en/api/v2#m-ug-dashboard
-		/// <param name="sinceId">
-		///  Return posts that have appeared after the specified ID. Use this parameter to page through the results: first get a set 
-		///  of posts, and then get posts since the last ID of the previous set.  
-		/// </param>
-		/// <param name="startIndex">
-		/// The post number to start at.
-		/// </param>
-		/// <param name="count">
-		/// The number of posts to return.
-		/// </param>
-		/// <param name="type">
-		/// The <see cref="PostType"/> to return.
-		/// </param>
-		/// <param name="includeReblogInfo">
-		/// Whether or not the response should include reblog info.
-		/// </param>
-		/// <param name="includeNotesInfo">
-		/// Whether or not the response should include notes info.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="sinceId"/> is less than 0.
-		///		</description>
-		///	</item>
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<BasePost[]> GetDashboardPostsAsync(long sinceId = 0, long startIndex = 0, int count = 20, PostType type = PostType.All, bool includeReblogInfo = false, bool includeNotesInfo = false)
+        /// <summary>
+        /// Asynchronously retrieves posts from the current user's dashboard.
+        /// </summary>
+        /// See:  http://www.tumblr.com/docs/en/api/v2#m-ug-dashboard
+        /// <param name="sinceId">
+        ///  Return posts that have appeared after the specified ID. Use this parameter to page through the results: first get a set 
+        ///  of posts, and then get posts since the last ID of the previous set.  
+        /// </param>
+        /// <param name="startIndex">
+        /// The post number to start at.
+        /// </param>
+        /// <param name="count">
+        /// The number of posts to return.
+        /// </param>
+        /// <param name="type">
+        /// The <see cref="PostType"/> to return.
+        /// </param>
+        /// <param name="includeReblogInfo">
+        /// Whether or not the response should include reblog info.
+        /// </param>
+        /// <param name="includeNotesInfo">
+        /// Whether or not the response should include notes info.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="sinceId"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<BasePost[]> GetDashboardPostsAsync(long sinceId = 0, long startIndex = 0, int count = 20, PostType type = PostType.All, bool includeReblogInfo = false, bool includeNotesInfo = false)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1580,48 +1718,146 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+        /// <summary>
+        /// Asynchronously retrieves posts from the current user's dashboard.
+        /// </summary>
+        /// See:  http://www.tumblr.com/docs/en/api/v2#m-ug-dashboard
+        /// <param name="Id">
+        ///  Returns posts that appeared either after or before the given Id. after or before The <paramref name="drashboardType"/> parameter takes a number.
+        /// </param>
+        /// <param name="drashboardType">
+        /// <see cref="DashboardOption.After"/> returns newer posts,
+        /// <see cref="DashboardOption.Before"/> returns older posts
+        /// </param>
+        /// <param name="startIndex">
+        /// The post number to start at.
+        /// </param>
+        /// <param name="count">
+        /// The number of posts to return.
+        /// </param>
+        /// <param name="type">
+        /// The <see cref="PostType"/> to return.
+        /// </param>
+        /// <param name="includeReblogInfo">
+        /// Whether or not the response should include reblog info.
+        /// </param>
+        /// <param name="includeNotesInfo">
+        /// Whether or not the response should include notes info.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="Id"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<BasePost[]> GetDashboardPostsAsync(long Id, DashboardOption drashboardType, long startIndex = 0, int count = 20, PostType type = PostType.All, bool includeReblogInfo = false, bool includeNotesInfo = false)
+        {
+            if (disposed)
+                throw new ObjectDisposedException("TumblrClient");
 
-		#region GetUserLikesAsync
+            if (Id < 0)
+                throw new ArgumentOutOfRangeException("ID", "Id must be greater or equal to zero.");
+            
+            if (startIndex < 0)
+                throw new ArgumentOutOfRangeException("startIndex", "startIndex must be greater or equal to zero.");
 
-		/// <summary>
-		/// Asynchronously retrieves the current user's likes.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
-		/// </remarks>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
-		/// </param>
-		/// <param name="count">
-		/// The number of likes to retrieve. Must be between 1 and 20.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="InvalidOperationException">
-		/// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-		/// </exception>
-		/// <exception cref="ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<Likes> GetUserLikesAsync(int startIndex = 0, int count = 20)
+            if (count < 1 || count > 20)
+                throw new ArgumentOutOfRangeException("count", "count must be between 1 and 20.");
+
+            if (OAuthToken == null)
+                throw new InvalidOperationException("GetDashboardPostsAsync method requires an OAuth token to be specified.");
+
+            MethodParameterSet parameters = new MethodParameterSet();
+
+            parameters.Add("type", type.ToString().ToLowerInvariant(), "all");
+
+            switch (drashboardType)
+            {
+                case DashboardOption.Before:
+                    parameters.Add("before_id", Id, 0);
+                    break;
+                case DashboardOption.After:
+                    parameters.Add("after_id", Id, 0);
+                    break;
+            }
+            
+            parameters.Add("offset", startIndex, 0);
+            parameters.Add("limit", count, 0);
+            parameters.Add("reblog_info", includeReblogInfo, false);
+            parameters.Add("notes_info", includeNotesInfo, false);
+
+            return CallApiMethodAsync<PostCollection, BasePost[]>(
+                new UserMethod("dashboard", OAuthToken, HttpMethod.Get, parameters),
+                r => r.Posts,
+                CancellationToken.None);
+        }
+
+        #endregion
+
+        #region GetUserLikesAsync
+
+        /// <summary>
+        /// Asynchronously retrieves the current user's likes.
+        /// </summary>
+        /// <remarks>
+        /// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
+        /// </remarks>
+        /// <param name="startIndex">
+        /// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
+        /// </param>
+        /// <param name="count">
+        /// The number of likes to retrieve. Must be between 1 and 20.
+        /// </param>
+        /// <returns>
+        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// representing the error occurred during the call.
+        /// </returns>
+        /// <exception cref="ObjectDisposedException">
+        /// The object has been disposed.
+        /// </exception>
+        /// <exception cref="InvalidOperationException">
+        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <list type="bullet">
+        /// <item>
+        ///		<description>
+        ///			<paramref name="startIndex"/> is less than 0.
+        ///		</description>
+        ///	</item>
+        ///	<item>
+        ///		<description>
+        ///			<paramref name="count"/> is less than 1 or greater than 20.
+        ///		</description>
+        ///	</item>
+        /// </list>
+        /// </exception>
+        public Task<Likes> GetUserLikesAsync(int startIndex = 0, int count = 20)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1664,6 +1900,6 @@ namespace DontPanic.TumblrSharp.Client
 			base.Dispose();
 		}
 
-		#endregion
-	}
+        #endregion
+    }
 }

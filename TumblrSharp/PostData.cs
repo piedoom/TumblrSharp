@@ -59,6 +59,11 @@ namespace DontPanic.TumblrSharp
 		public string Slug { get; set; }
 
         /// <summary>
+        /// Gets or sets the DateTime of publish this, if <see cref="PostCreationState"/> is <see cref="PostCreationState.Queue"/>
+        /// </summary>
+        public DateTime? Publish_On { get; set; }
+
+        /// <summary>
         /// Converts the current instance to a <see cref="MethodParameterSet"/>/
         /// </summary>
         /// <returns>
@@ -84,6 +89,14 @@ namespace DontPanic.TumblrSharp
 				result.Add("slug", Slug);
 
             result.Add("state", State.ToString().ToLowerInvariant());
+
+            if (State == PostCreationState.Queue)
+            {
+                if (Publish_On != null)
+                {
+                    result.Add("publish_on", Publish_On.Value.ToUniversalTime().ToString("R"));
+                }
+            }
 
             return result;
 		}
@@ -192,10 +205,6 @@ namespace DontPanic.TumblrSharp
         /// <param name="tags">
         /// The optional array of string used for tags.
         /// </param>
-        /// </param>
-		/// <param name="caption">
-		/// The caption for the photo post.
-		/// </param>
 		/// <returns>
 		/// A <see cref="PostData"/> instance representing the post.
 		/// </returns>

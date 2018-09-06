@@ -1,104 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C69EA54-A853-4A68-A9A9-34736524BD1F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>netstandard2.0;netstandard1.3</TargetFrameworks>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
+    <AssemblyVersion>1.1.42.0</AssemblyVersion>
+    <Version>1.1.42.0</Version>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
+    <PackageId>NewTumblrSharp.Client</PackageId>
+    <Description>Tumblr# extension for .NETStandard 1.3 and 2.0</Description>
+    <Copyright>Copyright 2017-2018</Copyright>
+    <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
+    <PackageTags>tumblr api</PackageTags>
     <AssemblyName>DontPanic.TumblrSharp.Client</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile49</TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <RepositoryUrl>https://github.com/piedoom/TumblrSharp</RepositoryUrl>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\Debug\DontPanic.TumblrSharp.Client.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <OutputPath>..\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\Release\DontPanic.TumblrSharp.Client.xml</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj">
-      <Project>{4a8b7b77-f7ae-4155-9e9c-253afd6e0c3a}</Project>
-      <Name>TumblrSharp</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AnswerPost.cs" />
-    <Compile Include="AudioPost.cs" />
-    <Compile Include="BaseNote.cs" />
-    <Compile Include="BasePost.cs" />
-    <Compile Include="BlogBase.cs" />
-    <Compile Include="BlogInfo.cs" />
-    <Compile Include="BlogInfoResponse.cs" />
-    <Compile Include="BoolConverter.cs" />
-    <Compile Include="ChatPost.cs" />
-    <Compile Include="EnumConverter.cs" />
-    <Compile Include="Followers.cs" />
-    <Compile Include="Following.cs" />
-    <Compile Include="Likes.cs" />
-    <Compile Include="LinkPost.cs" />
-    <Compile Include="PhotoPost.cs" />
-    <Compile Include="PostArrayConverter.cs" />
-    <Compile Include="PostCollection.cs" />
-    <Compile Include="PostCreationInfo.cs" />
-    <Compile Include="Posts.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuotePost.cs" />
-    <Compile Include="TextPost.cs" />
-    <Compile Include="TimestampConverter.cs" />
-    <Compile Include="TumblrClient.cs" />
-    <Compile Include="TumblrClientFactory.cs" />
-    <Compile Include="UserBlogInfo.cs" />
-    <Compile Include="UserInfo.cs" />
-    <Compile Include="UserInfoResponse.cs" />
-    <Compile Include="VideoPost.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>..\lib\System.Net.Http.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.3|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj" />
+  </ItemGroup>
+
 </Project>

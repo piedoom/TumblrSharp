@@ -32,10 +32,16 @@ namespace DontPanic.TumblrSharp.Client
         [JsonProperty(PropertyName = "ask_anon")]
         public bool IsAnonAskEnabled { get; set; }
 
-		/// <summary>
-		/// Number of likes for this user. Returned only if this is 
-		/// the user's primary blog and sharing of likes is enabled.
-		/// </summary>
+        /// <summary>
+        /// Title from askpage
+        /// </summary>
+        [JsonProperty(PropertyName = "ask_page_title")]
+        public string AskPageTitle { get; set; }
+
+        /// <summary>
+        /// Number of likes for this user. Returned only if this is 
+        /// the user's primary blog and sharing of likes is enabled.
+        /// </summary>
         [JsonProperty(PropertyName = "likes")]
         public long LikesCount { get; set; }
 
@@ -44,5 +50,41 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
 		[JsonProperty(PropertyName = "is_nsfw")]
 		public bool IsNsfw { get; set; }
-	}
+
+        /// <summary>
+        /// Blog is marked as adult
+        /// </summary>
+        [JsonProperty(PropertyName = "is_adult")]
+        public bool IsAdult { get; set; }
+
+        /// <summary>
+        /// IsOptoutAds
+        /// </summary>
+        [JsonProperty(PropertyName = "is_optout_ads")]
+        public bool IsOptoutAds { get; set; }
+
+        /// <summary>
+        /// Reply conditions
+        /// </summary>
+        [JsonProperty(PropertyName = "reply_conditions")]
+        public long ReplyConditions { get; set; }
+
+        /// <summary>
+        /// Share likes
+        /// </summary>
+        [JsonProperty(PropertyName = "share_likes")]
+        public bool ShareLikes { get; set; }
+
+        /// <summary>
+        /// Title from submissionpage
+        /// </summary>
+        [JsonProperty(PropertyName = "submission_page_title")]
+        public string SubmissionPageTitle { get; set; }
+
+        /// <summary>
+        /// Subscribed
+        /// </summary>
+        [JsonProperty(PropertyName = "subscribed")]
+        public bool Subscribed { get; set; }
+    }
 }

@@ -11,7 +11,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <summary>
 		/// The type of note applied to the post
 		/// </summary>
-		[JsonConverter(typeof(EnumConverter))]
+		[JsonConverter(typeof(EnumStringConverter))]
 		[JsonProperty(PropertyName = "type")]
 		public NoteType Type { get; set; }
 

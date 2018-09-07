@@ -49,6 +49,7 @@
             this.tbTag.Name = "tbTag";
             this.tbTag.Size = new System.Drawing.Size(272, 20);
             this.tbTag.TabIndex = 1;
+            this.tbTag.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbTag_PreviewKeyDown);
             // 
             // btnOK
             // 

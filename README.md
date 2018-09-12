@@ -27,14 +27,16 @@ If you download the old TumblrSharp version off of CodePlex or NuGet, you won't 
 - [x] Opted for default values in `PostData`.  This is important because specifying something simple like a `PostCreationState` on 
 a photo post would require possibly unneeded data, like `tags`.
 - [x] Move everything into a PCL for maximum compatibility.
+- [x] Getting dashboard posts *after* a date rather than *before*
+- [x] "Reblogged from" broken
+- [x] Add Reblog Trail support
 
 What needs to be implemented?
 ========
-- [ ] "Reblogged from" broken
-- [ ] Add Reblog Trail support
+
 - [ ] Better documentation
 - [ ] Examples of how to use the library
-- [ ] Getting dashboard posts *after* a date rather than *before*
+
 
 What will *not* be implemented?
 =========
@@ -47,22 +49,7 @@ Which platforms are supported?
 ========
 
 - Portable
-  - .NetFramework 4.5
-  - ASP.Net Core 1.0
-  - Windows Phone 8
-  - Windows Phone Silverlight 8
-  - Xamarin.Android
-  - Xamarin.iOS
-  - Xamarin.iOS (Classic)
-  - Xamarin.Mac
-- .Net Standard 1.3
-  - .Net Core 1.0
-  - .Net Framework 4.6
-  - Mono 4.6
-  - Xamarin.iOS 10.0
-  - Xamarin.Mac 3.0
-  - Xamarin.Android 7.0
-  - Universelle Windows-Plattform 10.0
+- [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) 1.1, 1.2, 1.3, 2.0
 
 Contributing 
 ========
@@ -76,7 +63,8 @@ Things that are needed and would be super appreciated:
 
 NuGet
 =====
-You can find the latest NuGet package [here](https://www.nuget.org/packages/NewTumblrSharp/).  An automated build system will push a new NuGet package when a tagged commit is merged into the master branch.
+- You can find the latest NuGet package [here](https://www.nuget.org/packages/NewTumblrSharp/).  An automated build system will push a new NuGet package when a tagged commit is merged into the master branch.
+- Manual download from [here](https://github.com/piedoom/TumblrSharp/releases), to install show [wiki]()
 
 License
 ========

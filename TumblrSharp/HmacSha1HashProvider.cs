@@ -2,6 +2,18 @@
 using System;
 using System.Text;
 
+#if NETSTANDARD1_1
+  using SshNet.Security.Cryptography;
+#else
+    #if NETSTANDARD1_2
+        using SshNet.Security.Cryptography;
+    #else
+        using System.Security.Cryptography;
+    #endif
+#endif
+
+
+
 namespace DontPanic.TumblrSharp
 {
     /// <summary>
@@ -30,7 +42,7 @@ namespace DontPanic.TumblrSharp
                 return null;
 
             byte[] key = Encoding.UTF8.GetBytes(String.Format("{0}&{1}", consumerSecret, oauthSecret));
-            using (System.Security.Cryptography.HMACSHA1 sha1 = new System.Security.Cryptography.HMACSHA1(key))
+            using (HMACSHA1 sha1 = new HMACSHA1(key))
             {
                 byte[] signatureBaseStringHash = sha1.ComputeHash(Encoding.UTF8.GetBytes(signatureBaseString));
                 return Convert.ToBase64String(signatureBaseStringHash);

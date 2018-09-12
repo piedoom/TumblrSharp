@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.2;netstandard1.1</TargetFrameworks>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
-    <AssemblyVersion>1.1.42.0</AssemblyVersion>
-    <Version>1.1.42.0</Version>
-    <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
+    <AssemblyVersion>1.1.43.0</AssemblyVersion>
+    <Version>1.1.43.0</Version>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill; Et. al.</Authors>
     <PackageId>NewTumblrSharp.Client</PackageId>
-    <Description>Tumblr# extension for .NETStandard 1.3 and 2.0</Description>
+    <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
     <Copyright>Copyright 2017-2018</Copyright>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
@@ -24,7 +24,7 @@
     <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
   
-    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
     <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
 
@@ -32,6 +32,22 @@
     <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.2|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.2|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.1|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.1|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>  
+  
   <ItemGroup>
     <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj" />
   </ItemGroup>

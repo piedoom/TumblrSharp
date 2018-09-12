@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.2;netstandard1.1</TargetFrameworks>
     <RootNamespace>DontPanic.TumblrSharp</RootNamespace>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
-    <Authors>Alexander Lozada; Ulf (Cataurus) Prill</Authors>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill; Et. al.</Authors>
     <PackageId>NewTumblrSharp</PackageId>
-    <Version>1.1.42.0</Version>
-    <AssemblyVersion>1.1.42.0</AssemblyVersion>
-    <Description>Tumblr# extension for .NETStandard 1.3 and 2.0</Description>
+    <Version>1.1.43.0</Version>
+    <AssemblyVersion>1.1.43.0</AssemblyVersion>
+    <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
     <Copyright>Copyright 2017-2018</Copyright>
     <PackageTags>tumblr api</PackageTags>
     <AssemblyName>DontPanic.TumblrSharp</AssemblyName>
@@ -35,9 +35,42 @@
     <OutputPath>..\bin\Debug\</OutputPath>
     <DocumentationFile>..\bin\Debug\netstandard1.3\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.2|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DocumentationFile>..\bin\Release\netstandard1.2\DontPanic.TumblrSharp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.2|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>..\bin\Debug\netstandard1.2\DontPanic.TumblrSharp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.1|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DocumentationFile>..\bin\Release\netstandard1.0\DontPanic.TumblrSharp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.1|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DocumentationFile>..\bin\Debug\netstandard1.0\DontPanic.TumblrSharp.xml</DocumentationFile>
+  </PropertyGroup>
   
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.1'">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>  
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.2'">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">

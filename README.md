@@ -64,7 +64,7 @@ Things that are needed and would be super appreciated:
 NuGet
 =====
 - You can find the latest NuGet package [here](https://www.nuget.org/packages/NewTumblrSharp/).  An automated build system will push a new NuGet package when a tagged commit is merged into the master branch.
-- Manual download from [here](https://github.com/piedoom/TumblrSharp/releases), to install show [wiki]()
+- Manual download from [here](https://github.com/piedoom/TumblrSharp/releases), to install show [wiki](https://github.com/piedoom/TumblrSharp/wiki/Manual-install-NuGet-Package)
 
 License
 ========

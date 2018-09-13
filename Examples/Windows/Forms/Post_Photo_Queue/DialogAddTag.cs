@@ -13,11 +13,15 @@ namespace Post_Photo
 {
     public partial class DialogAddTag : Form
     {
+        private Tags tags;
+
         public DialogAddTag(Form parent, Tags tags)
         {
             InitializeComponent();
 
             Owner = parent;
+
+            this.tags = tags;
 
             tbTag.AutoCompleteCustomSource = new AutoCompleteStringCollection();
 
@@ -43,5 +47,16 @@ namespace Post_Photo
             Close();
         }
 
+        private async void tbTag_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (tbTag.Text != string.Empty && tbTag.Text.Length > 2)
+            {
+                List<string> result = await tags.LookupTag(tbTag.Text);
+                if (result.Count > 0)
+                {
+                    tbTag.AutoCompleteCustomSource.AddRange(result.ToArray());
+                }
+            }
+        }
     }
 }

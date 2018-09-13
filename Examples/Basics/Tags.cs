@@ -146,7 +146,7 @@ namespace Examples.Basics
 
         public void Clear() => tags.Clear();
 
-        public List<string> ToList() => tags;
+        public List<string> ToList() => tags.ToList();
 
         public string[] ToArray() => tags.ToArray();
 
@@ -162,6 +162,34 @@ namespace Examples.Basics
             }
 
             return sb.ToString();
+        }
+
+        public async Task<List<string>> LookupTag(string tag)
+        {
+            List<string> result = new List<string>();
+
+            if (tumblrClient != null)
+            {
+                BasePost[] posts = await tumblrClient.GetTaggedPostsAsync(tag);
+
+                if (posts.Count() > 0)
+                {
+                    foreach (var post in posts)
+                    {
+                        foreach (var _tag in post.Tags)
+                        {
+                            if (postTags.ToList().Find(x => (x == _tag)) == null)
+                            {
+                                postTags.Add(_tag);
+                                result.Add(_tag);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            return result;
         }
 
         #endregion

@@ -43,8 +43,8 @@
   <files>
     <file src="bin\Release\net45\DontPanic.TumblrSharp.dll" target="lib\portable-net45+wp8\DontPanic.TumblrSharp.dll" />
     <file src="bin\Release\net45\DontPanic.TumblrSharp.Client.dll" target="lib\portable-net45+wp8\DontPanic.TumblrSharp.Client.dll" />
-    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.dll" />
-    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.Client.dll" />
+    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.dll" target="lib\netstandard1.1\DontPanic.TumblrSharp.dll" />
+    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.1\DontPanic.TumblrSharp.Client.dll" />
     <file src="bin\Release\netstandard1.2\DontPanic.TumblrSharp.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.dll" />
     <file src="bin\Release\netstandard1.2\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.Client.dll" />
     <file src="bin\Release\netstandard1.3\DontPanic.TumblrSharp.dll" target="lib\netstandard1.3\DontPanic.TumblrSharp.dll" />

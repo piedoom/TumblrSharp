@@ -5,11 +5,15 @@
     <RootNamespace>DontPanic.TumblrSharp</RootNamespace>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/piedoom/TumblrSharp</RepositoryUrl>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill; Et. al.</Authors>
     <PackageId>NewTumblrSharp</PackageId>
+    <Version>1.1.43.0</Version>
+    <AssemblyVersion>1.1.43.0</AssemblyVersion>
+    <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
+    <Copyright>Copyright 2017-2018</Copyright>
     <PackageTags>tumblr api</PackageTags>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>DontPanic.TumblrSharp</AssemblyName>
+    <RepositoryUrl>https://github.com/piedoom/TumblrSharp</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
@@ -51,6 +55,10 @@
     <OutputPath>..\bin\Debug\</OutputPath>
     <DocumentationFile>..\bin\Debug\netstandard1.1\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
   
   <ItemGroup>
     <Folder Include="Properties\" />

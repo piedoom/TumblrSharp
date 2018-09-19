@@ -3,14 +3,17 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.2;netstandard1.1</TargetFrameworks>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
+    <AssemblyVersion>1.1.43.0</AssemblyVersion>
+    <Version>1.1.43.0</Version>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill; et al.</Authors>
     <PackageId>NewTumblrSharp.Client</PackageId>
     <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
+    <Copyright>Copyright 2017-2018</Copyright>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
     <PackageTags>tumblr api</PackageTags>
+    <AssemblyName>DontPanic.TumblrSharp.Client</AssemblyName>
     <RepositoryUrl>https://github.com/piedoom/TumblrSharp</RepositoryUrl>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">

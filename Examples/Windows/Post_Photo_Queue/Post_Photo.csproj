@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Post_Photo_Queue</RootNamespace>
-    <AssemblyName>Post_Photo_Queue</AssemblyName>
+    <RootNamespace>Post_Photo</RootNamespace>
+    <AssemblyName>Post_Photo</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -94,15 +94,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
-      <Project>{CB9E7C42-A77C-4642-AC8D-D2143D45F118}</Project>
+    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+      <Project>{cb9e7c42-a77c-4642-ac8d-d2143d45f118}</Project>
       <Name>TumblrSharp.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj">
+    <ProjectReference Include="..\..\..\TumblrSharp\TumblrSharp.csproj">
       <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
       <Name>TumblrSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Basics\Basics.csproj">
+    <ProjectReference Include="..\..\Basics\Basics.csproj">
       <Project>{f80616e7-bba4-4fe2-b19a-bb9197101534}</Project>
       <Name>Basics</Name>
     </ProjectReference>

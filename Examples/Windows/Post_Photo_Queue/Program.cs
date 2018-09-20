@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Post_Photo_Queue
+namespace Post_Photo
 {
     static class Program
     {

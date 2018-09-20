@@ -1,4 +1,4 @@
-﻿namespace Post_Photo_Queue
+﻿namespace Post_Photo
 {
     partial class DialogAddTag
     {
@@ -49,6 +49,7 @@
             this.tbTag.Name = "tbTag";
             this.tbTag.Size = new System.Drawing.Size(272, 20);
             this.tbTag.TabIndex = 1;
+            this.tbTag.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbTag_PreviewKeyDown);
             // 
             // btnOK
             // 
@@ -63,6 +64,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(212, 69);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -78,13 +80,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(306, 101);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tbTag);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DialogAddTag";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Tag";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

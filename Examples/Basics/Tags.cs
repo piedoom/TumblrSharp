@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Examples.Basics
 {
-    [Serializable]
+
     public class TagsIllegalCharacterException : Exception
     {
         public TagsIllegalCharacterException() { }
@@ -15,10 +16,6 @@ namespace Examples.Basics
         public TagsIllegalCharacterException(string message) : base(message) { }
 
         public TagsIllegalCharacterException(string message, Exception inner) : base(message, inner) { }
-
-        protected TagsIllegalCharacterException(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
     /// <summary>
@@ -26,12 +23,19 @@ namespace Examples.Basics
     /// </summary>
     public class Tags
     {
-        public Tags(IEnumerable<string> tags = null, bool caseSensitive = false, TumblrClient tumblrClient = null)
+        public Tags(TumblrClient tumblrClient)
         {
+            this.tumblrClient = tumblrClient ?? throw new ArgumentNullException("tumblrClient");
+
             this.tags = new List<string>();
 
             postTags = new HashSet<string>();
 
+            LoadTagsFromPosts();
+        }
+
+        public Tags(TumblrClient tumblrClient, bool caseSensitive = false, IEnumerable<string> tags = null) : this(tumblrClient)
+        {
             if (caseSensitive) CaseSensitive = true;
 
             if (tags != null)
@@ -40,14 +44,26 @@ namespace Examples.Basics
                 {
                     Add(tag);
                 }
-            }
+            }            
+        }
 
-            if (tumblrClient != null)
+        public Tags(TumblrClient tumblrClient, bool caseSensitive = false, string tags = "") : this(tumblrClient)
+        {
+            if (caseSensitive) CaseSensitive = true;
+
+            if (tags != string.Empty)
             {
-                this.tumblrClient = tumblrClient;
-            }
+                string regex = @"\B#(?<tag>[a-z0-9\s]*)";
 
-            LoadTagsFromPosts();
+                RegexOptions options = RegexOptions.Multiline;
+
+                MatchCollection matches = Regex.Matches(tags, regex, options);
+
+                foreach (Match match in matches)
+                {
+                    Add(match.Groups["tag"].Value);
+                }
+            }
         }
 
         #region private fields
@@ -146,7 +162,7 @@ namespace Examples.Basics
 
         public void Clear() => tags.Clear();
 
-        public List<string> ToList() => tags;
+        public List<string> ToList() => tags.ToList();
 
         public string[] ToArray() => tags.ToArray();
 
@@ -162,6 +178,34 @@ namespace Examples.Basics
             }
 
             return sb.ToString();
+        }
+
+        public async Task<List<string>> LookupTag(string tag)
+        {
+            List<string> result = new List<string>();
+
+            if (tumblrClient != null)
+            {
+                BasePost[] posts = await tumblrClient.GetTaggedPostsAsync(tag);                                
+
+                if (posts.Count() > 0)
+                {
+                    foreach (var post in posts)
+                    {
+                        foreach (var _tag in post.Tags)
+                        {
+                            if (postTags.ToList().Find(x => (x == _tag)) == null)
+                            {
+                                postTags.Add(_tag);
+                                result.Add(_tag);
+                            }
+                        }
+                    }
+
+                }
+            }
+            
+            return result;
         }
 
         #endregion

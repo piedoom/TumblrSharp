@@ -1,4 +1,4 @@
-﻿namespace Post_Photo_Queue
+﻿namespace Post_Photo
 {
     partial class FrMain
     {
@@ -38,10 +38,13 @@
             this.PhotoView = new System.Windows.Forms.FlowLayoutPanel();
             this.TbDateTime = new System.Windows.Forms.TextBox();
             this.CbDateTime = new System.Windows.Forms.CheckBox();
-            this.BtnPost = new System.Windows.Forms.Button();
+            this.BtnPostAsQueue = new System.Windows.Forms.Button();
             this.TbTags = new System.Windows.Forms.TextBox();
             this.lTags = new System.Windows.Forms.Label();
             this.BtnTag = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnPost = new System.Windows.Forms.Button();
+            this.BtnNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbBlogs
@@ -63,15 +66,15 @@
             // 
             // TbCaption
             // 
-            this.TbCaption.Location = new System.Drawing.Point(12, 79);
+            this.TbCaption.Location = new System.Drawing.Point(12, 63);
             this.TbCaption.Name = "TbCaption";
-            this.TbCaption.Size = new System.Drawing.Size(505, 20);
+            this.TbCaption.Size = new System.Drawing.Size(502, 20);
             this.TbCaption.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Location = new System.Drawing.Point(9, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 3;
@@ -80,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 125);
+            this.label3.Location = new System.Drawing.Point(9, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 5;
@@ -88,7 +91,7 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(12, 308);
+            this.BtnAdd.Location = new System.Drawing.Point(12, 329);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(75, 23);
             this.BtnAdd.TabIndex = 6;
@@ -100,20 +103,24 @@
             // 
             this.DlgAddPhoto.FileName = "openFileDialog1";
             this.DlgAddPhoto.Filter = "Picture|*.jpg;*.png;*.gif; *.bmp";
+            this.DlgAddPhoto.Multiselect = true;
             this.DlgAddPhoto.FileOk += new System.ComponentModel.CancelEventHandler(this.DlgAddPhoto_FileOk);
             // 
             // PhotoView
             // 
             this.PhotoView.AutoScroll = true;
             this.PhotoView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoView.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PhotoView.Location = new System.Drawing.Point(12, 141);
+            this.PhotoView.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.PhotoView.Location = new System.Drawing.Point(12, 102);
             this.PhotoView.Name = "PhotoView";
-            this.PhotoView.Size = new System.Drawing.Size(502, 161);
+            this.PhotoView.Size = new System.Drawing.Size(502, 221);
             this.PhotoView.TabIndex = 7;
+            this.PhotoView.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.PhotoView_ControlAdded);
+            this.PhotoView.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.PhotoView_ControlRemoved);
             // 
             // TbDateTime
             // 
+            this.TbDateTime.Enabled = false;
             this.TbDateTime.Location = new System.Drawing.Point(12, 429);
             this.TbDateTime.Name = "TbDateTime";
             this.TbDateTime.Size = new System.Drawing.Size(502, 20);
@@ -128,22 +135,24 @@
             this.CbDateTime.Size = new System.Drawing.Size(114, 17);
             this.CbDateTime.TabIndex = 10;
             this.CbDateTime.Text = "Time for publishing";
+            this.CbDateTime.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.CbDateTime.UseVisualStyleBackColor = true;
+            this.CbDateTime.CheckedChanged += new System.EventHandler(this.CbDateTime_CheckedChanged);
             // 
-            // BtnPost
+            // BtnPostAsQueue
             // 
-            this.BtnPost.Location = new System.Drawing.Point(12, 472);
-            this.BtnPost.Name = "BtnPost";
-            this.BtnPost.Size = new System.Drawing.Size(75, 23);
-            this.BtnPost.TabIndex = 11;
-            this.BtnPost.Text = "post";
-            this.BtnPost.UseVisualStyleBackColor = true;
-            this.BtnPost.Click += new System.EventHandler(this.BtnPost_Click);
+            this.BtnPostAsQueue.Location = new System.Drawing.Point(93, 482);
+            this.BtnPostAsQueue.Name = "BtnPostAsQueue";
+            this.BtnPostAsQueue.Size = new System.Drawing.Size(100, 23);
+            this.BtnPostAsQueue.TabIndex = 11;
+            this.BtnPostAsQueue.Text = "Post as queue";
+            this.BtnPostAsQueue.UseVisualStyleBackColor = true;
+            this.BtnPostAsQueue.Click += new System.EventHandler(this.BtnPostAsQueue_Click);
             // 
             // TbTags
             // 
             this.TbTags.Enabled = false;
-            this.TbTags.Location = new System.Drawing.Point(12, 371);
+            this.TbTags.Location = new System.Drawing.Point(12, 380);
             this.TbTags.Name = "TbTags";
             this.TbTags.Size = new System.Drawing.Size(415, 20);
             this.TbTags.TabIndex = 12;
@@ -151,7 +160,7 @@
             // lTags
             // 
             this.lTags.AutoSize = true;
-            this.lTags.Location = new System.Drawing.Point(12, 355);
+            this.lTags.Location = new System.Drawing.Point(9, 364);
             this.lTags.Name = "lTags";
             this.lTags.Size = new System.Drawing.Size(34, 13);
             this.lTags.TabIndex = 13;
@@ -159,7 +168,7 @@
             // 
             // BtnTag
             // 
-            this.BtnTag.Location = new System.Drawing.Point(442, 371);
+            this.BtnTag.Location = new System.Drawing.Point(442, 377);
             this.BtnTag.Name = "BtnTag";
             this.BtnTag.Size = new System.Drawing.Size(72, 23);
             this.BtnTag.TabIndex = 14;
@@ -167,15 +176,49 @@
             this.BtnTag.UseVisualStyleBackColor = true;
             this.BtnTag.Click += new System.EventHandler(this.BtnTag_Click);
             // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Enabled = false;
+            this.BtnDelete.Location = new System.Drawing.Point(439, 329);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.TabIndex = 15;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnPost
+            // 
+            this.BtnPost.Location = new System.Drawing.Point(12, 482);
+            this.BtnPost.Name = "BtnPost";
+            this.BtnPost.Size = new System.Drawing.Size(75, 23);
+            this.BtnPost.TabIndex = 16;
+            this.BtnPost.Text = "Post";
+            this.BtnPost.UseVisualStyleBackColor = true;
+            this.BtnPost.Click += new System.EventHandler(this.BtnPost_Click);
+            // 
+            // BtnNew
+            // 
+            this.BtnNew.Location = new System.Drawing.Point(439, 482);
+            this.BtnNew.Name = "BtnNew";
+            this.BtnNew.Size = new System.Drawing.Size(75, 23);
+            this.BtnNew.TabIndex = 17;
+            this.BtnNew.Text = "New";
+            this.BtnNew.UseVisualStyleBackColor = true;
+            this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
             // FrMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 517);
+            this.Controls.Add(this.BtnNew);
+            this.Controls.Add(this.BtnPost);
+            this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnTag);
             this.Controls.Add(this.lTags);
             this.Controls.Add(this.TbTags);
-            this.Controls.Add(this.BtnPost);
+            this.Controls.Add(this.BtnPostAsQueue);
             this.Controls.Add(this.CbDateTime);
             this.Controls.Add(this.TbDateTime);
             this.Controls.Add(this.PhotoView);
@@ -187,7 +230,7 @@
             this.Controls.Add(this.cbBlogs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrMain";
-            this.Text = "PhotoPost as queue";
+            this.Text = "Post a photo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,10 +248,13 @@
         private System.Windows.Forms.FlowLayoutPanel PhotoView;
         private System.Windows.Forms.TextBox TbDateTime;
         private System.Windows.Forms.CheckBox CbDateTime;
-        private System.Windows.Forms.Button BtnPost;
+        private System.Windows.Forms.Button BtnPostAsQueue;
         private System.Windows.Forms.TextBox TbTags;
         private System.Windows.Forms.Label lTags;
         private System.Windows.Forms.Button BtnTag;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnPost;
+        private System.Windows.Forms.Button BtnNew;
     }
 }
 

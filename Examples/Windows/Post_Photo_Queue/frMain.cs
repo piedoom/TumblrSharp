@@ -70,7 +70,7 @@ namespace Post_Photo
         {
             InitializeComponent();
 
-            tags = new Tags(TumblrClient, null, false);
+            tags = new Tags(TumblrClient);
 
             binaryFiles = new List<BinaryFile>();
 

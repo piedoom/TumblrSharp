@@ -4,14 +4,29 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}</ProjectGuid>
+    <ProjectGuid>{C207BFD0-D1EB-4F82-AF7A-120A862AFE1C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Post_Photo</RootNamespace>
-    <AssemblyName>Post_Photo</AssemblyName>
+    <RootNamespace>Authenticate</RootNamespace>
+    <AssemblyName>Authenticate</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,41 +48,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="PlaceholderTextBox, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\PlaceholderTextBox.1.3.1\lib\PlaceholderTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DialogAddTag.cs">
+    <Compile Include="FrAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DialogAddTag.Designer.cs">
-      <DependentUpon>DialogAddTag.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frMain.Designer.cs">
-      <DependentUpon>frMain.cs</DependentUpon>
+    <Compile Include="FrAnnouncement.Designer.cs">
+      <DependentUpon>FrAnnouncement.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DialogAddTag.resx">
-      <DependentUpon>DialogAddTag.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frMain.resx">
-      <DependentUpon>frMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrAnnouncement.resx">
+      <DependentUpon>FrAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,22 +101,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
-      <Project>{CB9E7C42-A77C-4642-AC8D-D2143D45F118}</Project>
+    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+      <Project>{cb9e7c42-a77c-4642-ac8d-d2143d45f118}</Project>
       <Name>TumblrSharp.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj">
+    <ProjectReference Include="..\..\..\TumblrSharp\TumblrSharp.csproj">
       <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
       <Name>TumblrSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Basics\Basics.csproj">
-      <Project>{f80616e7-bba4-4fe2-b19a-bb9197101534}</Project>
-      <Name>Basics</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8258f002-0f2f-43f7-a9fa-dd1e4171d3a9}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

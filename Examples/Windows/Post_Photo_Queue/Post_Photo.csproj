@@ -4,15 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBCBAB94-6012-4FEA-98E1-F5FC29B24342}</ProjectGuid>
+    <ProjectGuid>{43AF29D3-621C-4BAA-BE1D-9EB32E2655AF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Authenticate1</RootNamespace>
-    <AssemblyName>Authenticate1</AssemblyName>
+    <RootNamespace>Post_Photo</RootNamespace>
+    <AssemblyName>Post_Photo</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,33 +33,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DialogAddTag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DialogAddTag.Designer.cs">
+      <DependentUpon>DialogAddTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frMain.Designer.cs">
+      <DependentUpon>frMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebAuth.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WebAuth.Designer.cs">
-      <DependentUpon>WebAuth.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DialogAddTag.resx">
+      <DependentUpon>DialogAddTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frMain.resx">
+      <DependentUpon>frMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,9 +79,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WebAuth.resx">
-      <DependentUpon>WebAuth.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,13 +94,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
-      <Project>{cb9e7c42-a77c-4642-ac8d-d2143d45f118}</Project>
+    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+      <Project>{CB9E7C42-A77C-4642-AC8D-D2143D45F118}</Project>
       <Name>TumblrSharp.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj">
+    <ProjectReference Include="..\..\..\TumblrSharp\TumblrSharp.csproj">
       <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
       <Name>TumblrSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Basics\Basics.csproj">
+      <Project>{f80616e7-bba4-4fe2-b19a-bb9197101534}</Project>
+      <Name>Basics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8258f002-0f2f-43f7-a9fa-dd1e4171d3a9}</Project>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

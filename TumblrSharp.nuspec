@@ -4,7 +4,7 @@
     <id>NewTumblrSharp</id>
     <version>$version$</version>
     <title>New TumblrSharp</title>
-    <authors>Alexander Lozada, Ulf (Cataurus) Prill, Et al.</authors>
+    <authors>Alexander Lozada, Ulf (Cataurus) Prill, et al.</authors>
     <owners>doomy</owners>
     <licenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/piedoom/TumblrSharp</projectUrl>
@@ -43,8 +43,8 @@
   <files>
     <file src="bin\Release\net45\DontPanic.TumblrSharp.dll" target="lib\portable-net45+wp8\DontPanic.TumblrSharp.dll" />
     <file src="bin\Release\net45\DontPanic.TumblrSharp.Client.dll" target="lib\portable-net45+wp8\DontPanic.TumblrSharp.Client.dll" />
-    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.dll" />
-    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.Client.dll" />
+    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.dll" target="lib\netstandard1.1\DontPanic.TumblrSharp.dll" />
+    <file src="bin\Release\netstandard1.1\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.1\DontPanic.TumblrSharp.Client.dll" />
     <file src="bin\Release\netstandard1.2\DontPanic.TumblrSharp.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.dll" />
     <file src="bin\Release\netstandard1.2\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard1.2\DontPanic.TumblrSharp.Client.dll" />
     <file src="bin\Release\netstandard1.3\DontPanic.TumblrSharp.dll" target="lib\netstandard1.3\DontPanic.TumblrSharp.dll" />

@@ -48,13 +48,17 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.1|AnyCPU'">
     <OutputPath>..\bin\Release\</OutputPath>
-    <DocumentationFile>..\bin\Release\netstandard1.0\DontPanic.TumblrSharp.xml</DocumentationFile>
+    <DocumentationFile>..\bin\Release\netstandard1.1\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.1|AnyCPU'">
     <OutputPath>..\bin\Debug\</OutputPath>
-    <DocumentationFile>..\bin\Debug\netstandard1.0\DontPanic.TumblrSharp.xml</DocumentationFile>
+    <DocumentationFile>..\bin\Debug\netstandard1.1\DontPanic.TumblrSharp.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
   
   <ItemGroup>
     <Folder Include="Properties\" />

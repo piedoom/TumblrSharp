@@ -5,7 +5,7 @@
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
     <AssemblyVersion>1.1.43.0</AssemblyVersion>
     <Version>1.1.43.0</Version>
-    <Authors>Alexander Lozada; Ulf (Cataurus) Prill; Et. al.</Authors>
+    <Authors>Alexander Lozada; Ulf (Cataurus) Prill; et al.</Authors>
     <PackageId>NewTumblrSharp.Client</PackageId>
     <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
     <Copyright>Copyright 2017-2018</Copyright>

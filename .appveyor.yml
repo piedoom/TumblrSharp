@@ -16,6 +16,24 @@ image: Visual Studio 2017
 version: 1.1.{build}
 configuration: Release
 
+# enable patching of AssemblyInfo.* files
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: "{version}.0"
+  package_version: "{version}.0"
+  assembly_version: "{version}.0"
+  file_version: "{version}.0"
+  informational_version: "{version}.0"
+
+
 # branches to build
 branches:
   # blacklist

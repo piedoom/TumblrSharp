@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PlaceholderTextBox, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\PlaceholderTextBox.1.3.1\lib\PlaceholderTextBox.dll</HintPath>
+      <HintPath>..\..\..\packages\PlaceholderTextBox.1.3.1\lib\PlaceholderTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,11 +58,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
+    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj">
       <Project>{cb9e7c42-a77c-4642-ac8d-d2143d45f118}</Project>
       <Name>TumblrSharp.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj">
+    <ProjectReference Include="..\..\..\TumblrSharp\TumblrSharp.csproj">
       <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
       <Name>TumblrSharp</Name>
     </ProjectReference>

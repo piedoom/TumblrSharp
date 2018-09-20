@@ -16,9 +16,7 @@ namespace QueuedPosts
         private readonly string CONSUMER_SECRET = "xxx";
         private readonly string OAUTH_TOKEN = "xxx";
         private readonly string OAUTH_TOKEN_SECRET = "xxx";
-
-        private long current = 0;
-
+        
         public Tumblr()
         {
             if (CONSUMER_KEY == "xxx")

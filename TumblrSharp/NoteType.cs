@@ -26,6 +26,10 @@ namespace DontPanic.TumblrSharp
         /// <summary>
         /// reply
         /// </summary>
-		Reply = 3
-	}
+		Reply = 3,
+        /// <summary>
+        /// post attribution
+        /// </summary>
+        Post_attribution = 4
+    }
 }

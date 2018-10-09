@@ -1,4 +1,5 @@
-﻿using DontPanic.TumblrSharp;
+﻿using ConsoleBasics;
+using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using System;
@@ -11,30 +12,10 @@ namespace DashboardPhotoPostwithExif
 {
     class Program
     {
-        public class Tumblr
+        public class Tumblr : TumblrBase
         {
-            private TumblrClient client = null;
-
-            private readonly string CONSUMER_KEY = "xxx";
-            private readonly string CONSUMER_SECRET = "xxx";
-            private readonly string OAUTH_TOKEN = "xxx";
-            private readonly string OAUTH_TOKEN_SECRET = "xxx";
-
             private long current = 0;
-
-            public Tumblr()
-            {
-                if (CONSUMER_KEY == "xxx")
-                {
-                    Console.WriteLine("Change in sourcecode the consumerKey, etc...!");
-                    Console.WriteLine();
-
-                    throw new Exception();
-                }
-
-                this.client = new TumblrClientFactory().Create<TumblrClient>(CONSUMER_KEY, CONSUMER_SECRET, new Token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET));
-            }
-
+            
             public async Task<PhotoPost> GetDrashBoardPostAsync()
             {
                 PhotoPost result = null;

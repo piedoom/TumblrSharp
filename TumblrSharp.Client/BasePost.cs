@@ -96,7 +96,9 @@ namespace DontPanic.TumblrSharp.Client
 	    /// The notes (likes and reblogs) for the post
 	    /// </summary>
 		[JsonProperty(PropertyName = "notes")]
+        [JsonConverter(typeof(NoteConverter))]
 		public List<BaseNote> Notes { get; set; }
+
 		/// <summary>
 		/// The url to the blog that is the source of the post, if any.
 		/// </summary>
@@ -114,6 +116,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
         [JsonProperty(PropertyName = "total_posts")]
         public int NumberOfPostsInResponse { get; set; }
+
 		/// <summary>
 		/// Indicates if the current user has already liked the post or not.
 		/// </summary>

@@ -263,128 +263,137 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-		#endregion
+    #endregion
 
-		#region GetBlogLikesAsync
+    #region GetBlogLikesAsync
 
-		/// <summary>
-		/// Asynchronously retrieves the publicly exposed likes from a blog.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#blog-likes
-		/// </remarks>
-		/// <param name="blogName">
-		/// The name of the blog.
-		/// </param>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
-		/// </param>
-		/// <param name="count">
-		/// The number of likes to retrieve. Must be between 1 and 20.
-		/// </param>
-		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// representing the error occurred during the call.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		/// </exception>
-		/// <exception cref="System.ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<Likes> GetBlogLikesAsync(string blogName, int startIndex = 0, int count = 20)
-		{
-			if (disposed)
-				throw new ObjectDisposedException("TumblrClient");
+    /// <summary>
+    /// Asynchronously retrieves the publicly exposed likes from a blog.
+    /// </summary>
+    /// <remarks>
+    /// See: http://www.tumblr.com/docs/en/api/v2#blog-likes
+    /// </remarks>
+    /// <param name="blogName">
+    /// The name of the blog.
+    /// </param>
+    /// <param name="startIndex">
+    /// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
+    /// </param>
+    /// <param name="count">
+    /// The number of likes to retrieve. Must be between 1 and 20.
+    /// </param>
+    /// <param name="before">
+    /// The timestamp before when to retrieve likes. 
+    /// </param>
+    /// <param name="after">
+    /// The timestamp after when to retrieve likes. 
+    /// </param>
+    /// <returns>
+    /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+    /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+    /// representing the error occurred during the call.
+    /// </returns>
+    /// <exception cref="ObjectDisposedException">
+    /// The object has been disposed.
+    /// </exception>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="blogName"/> is <b>null</b>.
+    /// </exception>
+    /// <exception cref="ArgumentException">
+    /// <paramref name="blogName"/> is empty.
+    /// </exception>
+    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <list type="bullet">
+    /// <item>
+    ///		<description>
+    ///			<paramref name="startIndex"/> is less than 0.
+    ///		</description>
+    ///	</item>
+    ///	<item>
+    ///		<description>
+    ///			<paramref name="count"/> is less than 1 or greater than 20.
+    ///		</description>
+    ///	</item>
+    /// </list>
+    /// </exception>
+    public Task<Likes> GetBlogLikesAsync(string blogName, int startIndex = 0, int count = 20, DateTime? before = null, DateTime? after = null)
+    {
+      if (disposed)
+        throw new ObjectDisposedException("TumblrClient");
 
-			if (blogName == null)
-				throw new ArgumentNullException("blogName");
+      if (blogName == null)
+        throw new ArgumentNullException("blogName");
 
-			if (blogName.Length == 0)
-				throw new ArgumentException("Blog name cannot be empty.", "blogName");
+      if (blogName.Length == 0)
+        throw new ArgumentException("Blog name cannot be empty.", "blogName");
 
-			if (startIndex < 0)
-				throw new ArgumentOutOfRangeException("startIndex", "startIndex must be greater or equal to zero.");
+      if (startIndex < 0)
+        throw new ArgumentOutOfRangeException("startIndex", "startIndex must be greater or equal to zero.");
 
-			if (count < 1 || count > 20)
-				throw new ArgumentOutOfRangeException("count", "count must be between 1 and 20.");
+      if (count < 1 || count > 20)
+        throw new ArgumentOutOfRangeException("count", "count must be between 1 and 20.");
 
-			MethodParameterSet parameters = new MethodParameterSet();
-			parameters.Add("api_key", apiKey);
-			parameters.Add("offset", startIndex, 0);
-			parameters.Add("limit", count, 0);
+      MethodParameterSet parameters = new MethodParameterSet
+      {
+        { "api_key", apiKey },
+        { "offset", startIndex, 0 },
+        { "limit", count, 0 },
+        { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
+        { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
+      };
 
-			return CallApiMethodAsync<Likes>(
-				new BlogMethod(blogName, "likes", null, HttpMethod.Get, parameters),
-				CancellationToken.None);
-		}
+      return CallApiMethodAsync<Likes>(
+        new BlogMethod(blogName, "likes", null, HttpMethod.Get, parameters),
+        CancellationToken.None);
+    }
+    #endregion
 
-		#endregion
+    #region GetFollowersAsync
 
-		#region GetFollowersAsync
-
-		/// <summary>
-		/// Asynchronously retrieves a blog's followers.
-		/// </summary>
-		/// <remarks>
-		/// See: http://www.tumblr.com/docs/en/api/v2#blog-followers
-		/// </remarks>
-		/// <param name="blogName">
-		/// The name of the blog.
-		/// </param>
-		/// <param name="startIndex">
-		/// The offset at which to start retrieving the followers. Use 0 to start retrieving from the latest follower.
-		/// </param>
-		/// <param name="count">
-		/// The number of followers to retrieve. Must be between 1 and 20.
-		/// </param>
-		/// <returns>
-		///  A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-		/// carry a <see cref="Followers"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
-		/// A <see cref="Followers"/> instance.
-		/// </returns>
-		/// <exception cref="ObjectDisposedException">
-		/// The object has been disposed.
-		/// </exception>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="blogName"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="blogName"/> is empty.
-		/// </exception>
-		/// <exception cref="System.ArgumentOutOfRangeException">
-		/// <list type="bullet">
-		/// <item>
-		///		<description>
-		///			<paramref name="startIndex"/> is less than 0.
-		///		</description>
-		///	</item>
-		///	<item>
-		///		<description>
-		///			<paramref name="count"/> is less than 1 or greater than 20.
-		///		</description>
-		///	</item>
-		/// </list>
-		/// </exception>
-		public Task<Followers> GetFollowersAsync(string blogName, int startIndex = 0, int count = 20)
+    /// <summary>
+    /// Asynchronously retrieves a blog's followers.
+    /// </summary>
+    /// <remarks>
+    /// See: http://www.tumblr.com/docs/en/api/v2#blog-followers
+    /// </remarks>
+    /// <param name="blogName">
+    /// The name of the blog.
+    /// </param>
+    /// <param name="startIndex">
+    /// The offset at which to start retrieving the followers. Use 0 to start retrieving from the latest follower.
+    /// </param>
+    /// <param name="count">
+    /// The number of followers to retrieve. Must be between 1 and 20.
+    /// </param>
+    /// <returns>
+    ///  A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+    /// carry a <see cref="Followers"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+    /// A <see cref="Followers"/> instance.
+    /// </returns>
+    /// <exception cref="ObjectDisposedException">
+    /// The object has been disposed.
+    /// </exception>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="blogName"/> is <b>null</b>.
+    /// </exception>
+    /// <exception cref="ArgumentException">
+    /// <paramref name="blogName"/> is empty.
+    /// </exception>
+    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <list type="bullet">
+    /// <item>
+    ///		<description>
+    ///			<paramref name="startIndex"/> is less than 0.
+    ///		</description>
+    ///	</item>
+    ///	<item>
+    ///		<description>
+    ///			<paramref name="count"/> is less than 1 or greater than 20.
+    ///		</description>
+    ///	</item>
+    /// </list>
+    /// </exception>
+    public Task<Followers> GetFollowersAsync(string blogName, int startIndex = 0, int count = 20)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1273,48 +1282,54 @@ namespace DontPanic.TumblrSharp.Client
 				CancellationToken.None);
 		}
 
-        #endregion
+    #endregion
 
-        #region GetLikesAsync
+    #region GetLikesAsync
 
-        /// <summary>
-        /// Asynchronously retrieves the current user's likes.
-        /// </summary>
-        /// <remarks>
-        /// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
-        /// </remarks>
-        /// <param name="startIndex">
-        /// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
-        /// </param>
-        /// <param name="count">
-        /// The number of likes to retrieve. Must be between 1 and 20.
-        /// </param>
-        /// <returns>
-        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-        /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
-        /// generated during the call.
-        /// </returns>
-        /// <exception cref="ObjectDisposedException">
-        /// The object has been disposed.
-        /// </exception>
-        /// <exception cref="InvalidOperationException">
-        /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
-        /// </exception>
-        /// <exception cref="System.ArgumentOutOfRangeException">
-        /// <list type="bullet">
-        /// <item>
-        ///		<description>
-        ///			<paramref name="startIndex"/> is less than 0.
-        ///		</description>
-        ///	</item>
-        ///	<item>
-        ///		<description>
-        ///			<paramref name="count"/> is less than 1 or greater than 20.
-        ///		</description>
-        ///	</item>
-        /// </list>
-        /// </exception>
-        public Task<Likes> GetLikesAsync(long startIndex = 0, int count = 20)
+    /// <summary>
+    /// Asynchronously retrieves the current user's likes.
+    /// </summary>
+    /// <remarks>
+    /// See: http://www.tumblr.com/docs/en/api/v2#m-ug-likes
+    /// </remarks>
+    /// <param name="startIndex">
+    /// The offset at which to start retrieving the likes. Use 0 to start retrieving from the latest like.
+    /// </param>
+    /// <param name="count">
+    /// The number of likes to retrieve. Must be between 1 and 20.
+    /// </param>
+    /// <param name="before">
+    /// The timestamp before when to retrieve likes. 
+    /// </param>
+    /// <param name="after">
+    /// The timestamp after when to retrieve likes. 
+    /// </param>
+    /// <returns>
+    /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+    /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
+    /// generated during the call.
+    /// </returns>
+    /// <exception cref="ObjectDisposedException">
+    /// The object has been disposed.
+    /// </exception>
+    /// <exception cref="InvalidOperationException">
+    /// This <see cref="TumblrClient"/> instance does not have an OAuth token specified.
+    /// </exception>
+    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <list type="bullet">
+    /// <item>
+    ///		<description>
+    ///			<paramref name="startIndex"/> is less than 0.
+    ///		</description>
+    ///	</item>
+    ///	<item>
+    ///		<description>
+    ///			<paramref name="count"/> is less than 1 or greater than 20.
+    ///		</description>
+    ///	</item>
+    /// </list>
+    /// </exception>
+    public Task<Likes> GetLikesAsync(long startIndex = 0, int count = 20, DateTime? before = null, DateTime? after = null)
 		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
@@ -1328,11 +1343,15 @@ namespace DontPanic.TumblrSharp.Client
 			if (OAuthToken == null)
 				throw new InvalidOperationException("GetLikesAsync method requires an OAuth token to be specified.");
 
-			MethodParameterSet parameters = new MethodParameterSet();
-			parameters.Add("offset", startIndex, 0);
-			parameters.Add("limit", count, 0);
+      MethodParameterSet parameters = new MethodParameterSet
+      {
+        { "offset", startIndex, 0 },
+        { "limit", count, 0 },
+        { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
+        { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
+      };
 
-			return CallApiMethodAsync<Likes>(
+      return CallApiMethodAsync<Likes>(
 				new UserMethod("likes", OAuthToken, HttpMethod.Get, parameters),
 				CancellationToken.None);
 		}

@@ -334,13 +334,13 @@ namespace DontPanic.TumblrSharp.Client
                 throw new ArgumentOutOfRangeException("count", "count must be between 1 and 20.");
 
             MethodParameterSet parameters = new MethodParameterSet
-      {
-        { "api_key", apiKey },
-        { "offset", startIndex, 0 },
-        { "limit", count, 0 },
-        { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
-        { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
-      };
+            {
+                { "api_key", apiKey },
+                { "offset", startIndex, 0 },
+                { "limit", count, 0 },
+                { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
+                { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
+            };
 
             return CallApiMethodAsync<Likes>(
               new BlogMethod(blogName, "likes", null, HttpMethod.Get, parameters),
@@ -1344,12 +1344,12 @@ namespace DontPanic.TumblrSharp.Client
                 throw new InvalidOperationException("GetLikesAsync method requires an OAuth token to be specified.");
 
             MethodParameterSet parameters = new MethodParameterSet
-      {
-        { "offset", startIndex, 0 },
-        { "limit", count, 0 },
-        { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
-        { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
-      };
+            {
+                { "offset", startIndex, 0 },
+                { "limit", count, 0 },
+                { "before", before.HasValue ? DateTimeHelper.ToTimestamp(before.Value).ToString() : null, null },
+                { "after", after.HasValue ? DateTimeHelper.ToTimestamp(after.Value).ToString() : null, null }
+            };
 
             return CallApiMethodAsync<Likes>(
               new UserMethod("likes", OAuthToken, HttpMethod.Get, parameters),

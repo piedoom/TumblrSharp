@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA98DDC5-364F-479B-A252-F44635D1B701}"
 	ProjectSection(SolutionItems) = preProject
@@ -59,7 +59,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Followers", "Examples\NetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostAttribution", "Examples\Console\PostAttribution\PostAttribution.csproj", "{8A8A9A18-AC15-4E3B-9A1C-0574FCF7DCCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBasics", "Examples\Console\ConsoleBasics\ConsoleBasics.csproj", "{3B074F0F-B2F8-4D36-8B92-C88653705B6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleBasics", "Examples\Console\ConsoleBasics\ConsoleBasics.csproj", "{3B074F0F-B2F8-4D36-8B92-C88653705B6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

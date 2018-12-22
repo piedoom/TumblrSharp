@@ -62,13 +62,13 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.1'">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
+    <PackageReference Include="Cataurus.SshNet.Security.Cryptography" Version="1.0.20181222.9" />
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
   </ItemGroup>  
   
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.2'">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
+    <PackageReference Include="Cataurus.SshNet.Security.Cryptography" Version="1.0.20181222.9" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">

@@ -21,6 +21,14 @@ namespace Testing
         private readonly string _accessKey = "F1G7BF1JW4f1VKJ93xJSi7D66yZKN3Uj0bArn5i5riwVEnMHuU";
         private readonly string _accessSecret = "O977YH42yg98IsS9BAk80r5e5grYQDY9HauVmgf0aEmceZ2UTz";
 
+        private static readonly string _version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
+
+        private readonly string _postText = "This is a textpost test.";                                            
+
+        private readonly string _footnote = "\n\nPackage <a href=\"https://www.nuget.org/packages/NewTumblrSharp/\">NewTumblrSharp for .Net</a>\n" +
+                                            "Version: " + _version + "\n" +
+                                            "Resposity: <a href=\"https://github.com/piedoom/TumblrSharp/\">Github:piedoom/TumblrSharp</a>";
+
         private TumblrClient tc;
 
         [TestMethod]
@@ -61,7 +69,7 @@ namespace Testing
 
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText("this is a textpost test. NewTumblrSharp " + version, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
+            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
 
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("", postData);
         }
@@ -74,7 +82,7 @@ namespace Testing
 
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText("this is a textpost test. NewTumblrSharp " + version, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
+            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
 
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("test", postData);
         }
@@ -86,10 +94,8 @@ namespace Testing
             string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
 
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
-                        
-            UserInfo userInfo = await tc.GetUserInfoAsync();
-
-            PostCreationInfo postCreationInfo = await tc.CreatePostAsync(userInfo.Blogs[0].Name, null);
+            
+            PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", null);
         }
 
         [TestMethod]
@@ -100,25 +106,41 @@ namespace Testing
 
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            UserInfo userInfo = await tc.GetUserInfoAsync();
-
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", PostData.CreateText());
         }
 
         [TestMethod]
-        public async Task CreatePost_Text()
+        public async Task CreatePost_Text_1()
         {
             string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
 
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText("This is a textpost test.\n\n Package NewTumblrSharp " + version, "Testpost", new List<string> {"NewTumblrSharp", version});
+            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> {"NewTumblrSharp", version});
                         
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", postData);
 
             Assert.IsNotNull(postCreationInfo);
 
             Assert.AreNotEqual(postCreationInfo.PostId, 0);                        
+        }
+
+        [TestMethod]
+        public async Task CreatePost_Text_2()
+        {
+            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
+
+            tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
+
+            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> { "NewTumblrSharp", version });
+
+            postData.State = PostCreationState.Queue;
+
+            PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", postData);
+
+            Assert.IsNotNull(postCreationInfo);
+
+            Assert.AreNotEqual(postCreationInfo.PostId, 0);
         }
     }
 }

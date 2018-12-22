@@ -1,4 +1,5 @@
-﻿using DontPanic.TumblrSharp;
+﻿using ConsoleBasics;
+using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using System;
@@ -9,35 +10,16 @@ using System.Threading.Tasks;
 
 namespace DashboardPosts
 {
-    public class Tumblr
+
+    public class Tumblr : TumblrBase
     {
-        private TumblrClient client = null;
-
-        private readonly string CONSUMER_KEY = "xxx";
-        private readonly string CONSUMER_SECRET = "xxx";
-        private readonly string OAUTH_TOKEN = "xxx";
-        private readonly string OAUTH_TOKEN_SECRET = "xxx";
-
         private long current = 0;
-
-        public Tumblr()
-        {
-            if (CONSUMER_KEY == "xxx")
-            {
-                Console.WriteLine("Change in sourcecode the consumerKey, etc...!");
-                Console.WriteLine();
-
-                throw new Exception();
-            }
-
-            this.client = new TumblrClientFactory().Create<TumblrClient>(CONSUMER_KEY, CONSUMER_SECRET, new Token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET));
-        }
 
         public async Task<BasePost[]> GetDrashBoardPostAsync()
         {
             BasePost[] result;
 
-            result = await client.GetDashboardPostsAsync(current);
+            result = await client.GetDashboardPostsAsync(current, 0, 20, PostType.All, false, true);
 
             if (result.Count() > 0)
             current = result[result.Count() - 1].Id;
@@ -81,6 +63,21 @@ namespace DashboardPosts
                         Console.WriteLine();
 
                         i++;
+                    }
+
+                    if (basePost.Notes.Count() > 0)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"--- Post has {basePost.Notes.Count().ToString()} Notes ---");
+                        Console.WriteLine();
+
+                        foreach (var note in basePost.Notes)
+                        {
+                            Console.WriteLine($"   {i}. note from {note.BlogName}");
+                            Console.WriteLine();
+
+                            i++;
+                        }
                     }
 
                     Console.WriteLine();

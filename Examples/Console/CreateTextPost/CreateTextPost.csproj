@@ -71,6 +71,10 @@
       <Project>{b6d630e0-3a92-4a98-9fc1-c62f67d23cec}</Project>
       <Name>TumblrSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConsoleBasics\ConsoleBasics.csproj">
+      <Project>{3b074f0f-b2f8-4d36-8b92-c88653705b6b}</Project>
+      <Name>ConsoleBasics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

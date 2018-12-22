@@ -11,5 +11,5 @@
 [assembly: AssemblyDescription("Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0")]
 [assembly: AssemblyProduct("DontPanic.TumblrSharp")]
 [assembly: AssemblyTitle("DontPanic.TumblrSharp")]
-[assembly: AssemblyVersion("1.1.43.0")]
-[assembly: AssemblyFileVersion("1.1.43.0")]
+[assembly: AssemblyVersion("1.1.135.0")]
+[assembly: AssemblyFileVersion("1.1.135.0")]

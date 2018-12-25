@@ -14,6 +14,8 @@
     <RepositoryUrl>https://github.com/piedoom/TumblrSharp</RepositoryUrl>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageIconUrl>https://raw.githubusercontent.com/piedoom/TumblrSharp/master/TumblrSharp.png</PackageIconUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>TumblrSharp.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">

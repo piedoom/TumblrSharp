@@ -43,7 +43,9 @@ namespace DontPanic.TumblrSharp.Client
         {
             if (value == null)
             {
-                writer.WriteNull();
+                writer.WriteStartArray();
+                writer.WriteEndArray();
+
                 return;
             }
 

@@ -193,6 +193,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// Trail
 		/// </summary>
         [JsonProperty(PropertyName = "trail")]
+        [JsonConverter(typeof(TrailConverter))]
         public List<Trail> Trials { get; set; }
     }
 }

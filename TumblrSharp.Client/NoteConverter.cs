@@ -14,32 +14,38 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(BaseNote[]);
+            return objectType == typeof(List<BaseNote>);
         }
 
         /// <exclude/>
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             List<BaseNote> list = new List<BaseNote>();
-            reader.Read();
-            do
+
+            if (reader.TokenType == JsonToken.StartArray)
             {
-                if (reader.TokenType == JsonToken.EndArray)
-                    break;
+                reader.Read();
 
-                JObject jo = JObject.Load(reader);
-                switch (jo["type"].ToString())
+                do
                 {
-                    case "post_attribution":
-                        list.Add(jo.ToObject<PostAttributionNote>());
+                    if (reader.TokenType == JsonToken.EndArray)
                         break;
 
-                    default:
-                        list.Add(jo.ToObject<BaseNote>());
-                        break;
+                    JObject jo = JObject.Load(reader);
+
+                    switch (jo["type"].ToString())
+                    {
+                        case "post_attribution":
+                            list.Add(jo.ToObject<PostAttributionNote>());
+                            break;
+
+                        default:
+                            list.Add(jo.ToObject<BaseNote>());
+                            break;
+                    }
                 }
+                while (reader.Read() && reader.TokenType != JsonToken.EndArray);
             }
-            while (reader.Read() && reader.TokenType != JsonToken.EndArray);
 
             return list;
         }
@@ -47,7 +53,37 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            if (value == null)
+            {
+                writer.WriteStartArray();
+                writer.WriteEndArray();
+
+                return;
+            }
+
+            List<BaseNote> notes = value as List<BaseNote>;
+
+            if (notes.Count > 0)
+            {
+                writer.WriteStartArray();
+
+                foreach (BaseNote note in notes)
+                {
+                    if (note is PostAttributionNote)
+                    {
+                        PostAttributionNote spezificNote = (PostAttributionNote)note;
+                        JObject jo = JObject.FromObject(spezificNote);
+                        jo.WriteTo(writer);
+                    }
+                    else
+                    {
+                        JObject jo = JObject.FromObject(note);
+                        jo.WriteTo(writer);
+                    }
+                }
+
+                writer.WriteEndArray();
+            }
         }
     }
 }

@@ -49,7 +49,17 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            if (value == null)
+            {
+                writer.WriteNull();
+                return;
+            }
+
+            TrailTheme trailTheme = (TrailTheme)value;
+
+            JObject jo = JObject.FromObject(trailTheme);
+            jo.WriteTo(writer);
+
         }
     }
 }

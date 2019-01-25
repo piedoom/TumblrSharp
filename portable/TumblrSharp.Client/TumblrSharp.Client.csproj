@@ -80,6 +80,7 @@
     <Compile Include="..\..\TumblrSharp.Client\VideoPost.cs" />
     <Compile Include="..\..\TumblrSharp.Client\Exif.cs" />
     <Compile Include="..\..\TumblrSharp.Client\Trail.cs" />
+    <Compile Include="..\..\TumblrSharp.Client\TrailConverter.cs" />
     <Compile Include="..\..\TumblrSharp.Client\TrailBlog.cs" />
     <Compile Include="..\..\TumblrSharp.Client\TrailPost.cs" />
     <Compile Include="..\..\TumblrSharp.Client\TrailTheme.cs" />

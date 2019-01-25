@@ -65,7 +65,7 @@ namespace DashboardPosts
                         i++;
                     }
 
-                    if (basePost.Notes.Count() > 0)
+                    if (basePost.Notes?.Count() > 0)
                     {
                         Console.WriteLine();
                         Console.WriteLine($"--- Post has {basePost.Notes.Count().ToString()} Notes ---");

@@ -78,7 +78,110 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            if (value == null)
+            {
+                writer.WriteStartArray();
+                writer.WriteEndArray();
+
+                return;
+            }
+
+            List<BasePost> basePosts = (List<BasePost>)value;
+
+            if (basePosts.Count > 0)
+            {
+                writer.WriteStartArray();
+
+                foreach (var basePost in basePosts)
+                {
+                    if (basePost is TextPost)
+                    {
+                        TextPost sp = basePost as TextPost;
+
+                        JObject jo = JObject.FromObject(sp);
+                        jo.WriteTo(writer);
+                    }
+                    else
+                    {
+                        if (basePost is QuotePost)
+                        {
+                            QuotePost sp = basePost as QuotePost;
+
+                            JObject jo = JObject.FromObject(sp);
+                            jo.WriteTo(writer);
+                        }
+                        else
+                        {
+                            if (basePost is PhotoPost)
+                            {
+                                PhotoPost sp = basePost as PhotoPost;
+
+                                JObject jo = JObject.FromObject(sp);
+                                jo.WriteTo(writer);
+                            }
+                            else
+                            {
+                                if (basePost is LinkPost)
+                                {
+                                    LinkPost sp = basePost as LinkPost;
+
+                                    JObject jo = JObject.FromObject(sp);
+                                    jo.WriteTo(writer);
+                                }
+                                else
+                                {
+                                    if (basePost is AnswerPost)
+                                    {
+                                        AnswerPost sp = basePost as AnswerPost;
+
+                                        JObject jo = JObject.FromObject(sp);
+                                        jo.WriteTo(writer);
+                                    }
+                                    else
+                                    {
+                                        if (basePost is AudioPost)
+                                        {
+                                            AudioPost sp = basePost as AudioPost;
+
+                                            JObject jo = JObject.FromObject(sp);
+                                            jo.WriteTo(writer);
+                                        }
+                                        else
+                                        {
+                                            if (basePost is ChatPost)
+                                            {
+                                                ChatPost sp = basePost as ChatPost;
+
+                                                JObject jo = JObject.FromObject(sp);
+                                                jo.WriteTo(writer);
+                                            }
+                                            else
+                                            {
+                                                if (basePost is VideoPost)
+                                                {
+                                                    VideoPost sp = basePost as VideoPost;
+
+                                                    JObject jo = JObject.FromObject(sp);
+                                                    jo.WriteTo(writer);
+                                                }
+                                                else
+                                                {
+                                                    AnswerPost sp = basePost as AnswerPost;
+
+                                                    JObject jo = JObject.FromObject(sp);
+                                                    jo.WriteTo(writer);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                writer.WriteEndArray();
+            }
         }
     }
 }

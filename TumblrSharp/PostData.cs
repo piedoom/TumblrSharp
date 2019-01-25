@@ -94,7 +94,7 @@ namespace DontPanic.TumblrSharp
             {
                 if (Publish_On != null)
                 {
-                    result.Add("publish_on", Publish_On.Value.ToUniversalTime().ToString("R"));
+                    result.Add("publish_on", DateTimeHelper.ToTimestamp(Publish_On.Value));
                 }
             }
 

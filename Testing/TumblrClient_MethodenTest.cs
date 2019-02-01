@@ -67,8 +67,6 @@ namespace Testing
         [ExpectedException(typeof(ArgumentException))]
         public async Task CreatePost_Required_1()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
             PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
@@ -80,21 +78,17 @@ namespace Testing
         [ExpectedException(typeof(InvalidOperationException))]
         public async Task CreatePost_Required_2()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
-            tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
+            tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, null);
 
             PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> { "NewTumblrSharp", "Test" });
 
-            PostCreationInfo postCreationInfo = await tc.CreatePostAsync("test", postData);
+            PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", postData);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public async Task CreatePost_Required_3()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
             
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", null);
@@ -104,8 +98,6 @@ namespace Testing
         [ExpectedException(typeof(ArgumentException))]
         public async Task CreatePost_Required_4()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", PostData.CreateText());
@@ -114,11 +106,9 @@ namespace Testing
         [TestMethod]
         public async Task CreatePost_Text_1()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> {"NewTumblrSharp", version});
+            PostData postData = PostData.CreateText(_postText + _footnote, "Testpost", new List<string> {"NewTumblrSharp", _version});
                         
             PostCreationInfo postCreationInfo = await tc.CreatePostAsync("newtsharp.tumblr.com", postData);
 
@@ -130,11 +120,9 @@ namespace Testing
         [TestMethod]
         public async Task CreatePost_Text_2()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", version });
+            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", _version });
 
             postData.State = PostCreationState.Queue;
 
@@ -148,11 +136,9 @@ namespace Testing
         [TestMethod]
         public async Task DeletePost_1()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", version });
+            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", _version });
 
             postData.State = PostCreationState.Queue;
 
@@ -165,11 +151,9 @@ namespace Testing
         [ExpectedException(typeof(ArgumentException))]
         public async Task DeletePost_2()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", version });
+            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", _version });
 
             postData.State = PostCreationState.Queue;
 
@@ -182,11 +166,9 @@ namespace Testing
         [ExpectedException(typeof(ArgumentNullException))]
         public async Task DeletePost_3()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
-            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", version });
+            PostData postData = PostData.CreateText(_postTextQueue + _footnote, "Testpost", new List<string> { "NewTumblrSharp", _version });
 
             postData.State = PostCreationState.Queue;
 
@@ -199,19 +181,15 @@ namespace Testing
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public async Task DeletePost_4()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
             await tc.DeletePostAsync("newtsharp.tumblr.com", -100);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public async Task DeletePost_5()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
             await tc.DeletePostAsync("newtsharp.tumblr.com", 0);
@@ -221,8 +199,6 @@ namespace Testing
         [ExpectedException(typeof(TumblrException))]
         public async Task DeletePost_6()
         {
-            string version = typeof(TumblrClient).Assembly.GetName().Version.ToString();
-
             tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
 
             await tc.DeletePostAsync("newtsharp.tumblr.com", 1);

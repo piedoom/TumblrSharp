@@ -1,56 +1,57 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 
 namespace DontPanic.TumblrSharp
 {
-	internal class TumblrErrorsConverter : JsonConverter
+    /// <summary>
+    /// convert TumblrError
+    /// </summary>
+    public class TumblrErrorsConverter : JsonConverter
 	{
-		public override bool CanConvert(Type objectType)
-		{
-			return (objectType == typeof(TumblrErrors));
-		}
+        /// <exclude/>
+        public override bool CanConvert(Type objectType)
+        {
+            return (objectType == typeof(TumblrError));
+        }
 
-		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-		{
-			if (reader.TokenType == JsonToken.StartArray)
-			{
-				reader.Read();
-				if (reader.TokenType == JsonToken.EndArray)
-					return new TumblrErrors() { Errors = new String[0] };
+        /// <exclude/>
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            List<TumblrError> result = new List<TumblrError>();
 
-				throw new InvalidOperationException("Unexpected Token.");
-			}
-			else if (reader.TokenType == JsonToken.StartObject)
-			{
-				reader.Read();
-				if (reader.TokenType == JsonToken.PropertyName && (string)reader.Value == "errors")
-				{
-					reader.Read();
-					if (reader.TokenType == JsonToken.StartArray)
-					{
-						List<string> errors = new List<string>();
-						while (reader.Read() && reader.TokenType != JsonToken.EndArray)
-						{
-							if (reader.ValueType == typeof(string))
-								errors.Add((string)reader.Value);
-						}
+            if (reader.TokenType == JsonToken.StartArray)
+            {
+                reader.Read();
+                if (reader.TokenType == JsonToken.EndArray)
+                    return new TumblrError();
 
-						return new TumblrErrors() { Errors = errors.ToArray() };
-					}
-				}
+                do
+                {
+                    JObject jo = JObject.Load(reader);
+                    result.Add(jo.ToObject<TumblrError>());
+                }
+                while (reader.Read() && reader.TokenType != JsonToken.EndArray);
+            }
 
-				throw new InvalidOperationException("Unexpected Token.");
-			}
-			else
-			{
-				throw new InvalidOperationException("Unexpected Token.");
-			}
-		}
+            return result.ToArray();
+        }
 
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        /// <exclude/>
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            List<TumblrError> listToWrite = value as List<TumblrError>;
+
+            writer.WriteStartArray();
+
+            foreach (var element in listToWrite)
+            {
+                JObject jo = JObject.FromObject(element);
+                jo.WriteTo(writer);
+            }
+
+            writer.WriteEndArray();
+        }
+    }
 }

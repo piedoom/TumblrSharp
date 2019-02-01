@@ -25,13 +25,13 @@ namespace DontPanic.TumblrSharp
 		/// <param name="innerException">
 		/// An optional inner exception.
 		/// </param>
-		public TumblrException(HttpStatusCode statusCode, string message = null, IEnumerable<string> errors = null, Exception innerException = null)
+		public TumblrException(HttpStatusCode statusCode, string message = null, IEnumerable<TumblrError> errors = null, Exception innerException = null)
 			: base(message, innerException)
 		{
 			StatusCode = statusCode;
 			Errors = (errors == null)
-			 ? new System.Collections.ObjectModel.ReadOnlyCollection<string>(new List<string>())
-			 : new System.Collections.ObjectModel.ReadOnlyCollection<string>(errors.ToList());
+			 ? new System.Collections.ObjectModel.ReadOnlyCollection<TumblrError>(new List<TumblrError>())
+			 : new System.Collections.ObjectModel.ReadOnlyCollection<TumblrError>(errors.ToList());
 		}
 
 		/// <summary>
@@ -42,6 +42,6 @@ namespace DontPanic.TumblrSharp
 		/// <summary>
 		/// Gets the extra error messages returned from the server (if any).
 		/// </summary>
-		public IReadOnlyCollection<string> Errors { get; private set; }
+		public IReadOnlyCollection<TumblrError> Errors { get; private set; }
 	}
 }

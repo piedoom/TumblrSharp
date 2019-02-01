@@ -158,5 +158,30 @@ namespace Testing
                 Assert.AreEqual(baseTrail.Blog.Theme.TitleFontWeight, jsonTrail.Blog.Theme.TitleFontWeight);
             }
         }
+
+        [TestMethod]
+        public void TumblrErrorConverter()
+        {
+            TumblrError te = new TumblrError
+            {
+                Code = 0,
+                Title = "Not Found",
+                Detail = "Da ist der Wurm drin. Versuche es noch mal."
+            };
+
+            string teStr = "{\r\n  \"title\": \"Not Found\",\r\n  \"code\": 0,\r\n  \"detail\": \"Da ist der Wurm drin. Versuche es noch mal.\"\r\n}";
+
+            // test serialize
+            string json = JsonConvert.SerializeObject(te, Formatting.Indented);
+
+            Assert.AreEqual(teStr, json);
+
+            // test deserialize
+            TumblrError jsonTumblrError = JsonConvert.DeserializeObject<TumblrError>(teStr);
+
+            Assert.AreEqual(te.Code, jsonTumblrError.Code);
+            Assert.AreEqual(te.Detail, jsonTumblrError.Detail);
+            Assert.AreEqual(te.Title, jsonTumblrError.Title);
+        }
     }
 }

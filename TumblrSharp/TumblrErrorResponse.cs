@@ -7,8 +7,8 @@ namespace DontPanic.TumblrSharp
 		[JsonProperty(PropertyName = "meta")]
 		public TumblrResponseStatus Status { get; set; }
 
-		[JsonConverter(typeof(TumblrErrorsConverter))]
-		[JsonProperty(PropertyName = "response")]
-		public TumblrErrors Response { get; set; }
-	}
+        [JsonConverter(typeof(TumblrErrorsConverter))]
+        [JsonProperty(PropertyName = "errors")]
+        public TumblrError[] Errors { get; set; }
+    }
 }

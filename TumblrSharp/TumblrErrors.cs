@@ -8,23 +8,27 @@ using System.Threading.Tasks;
 
 namespace DontPanic.TumblrSharp
 {
-	internal class TumblrErrors
+    /// <summary>
+    /// TumblrError
+    /// </summary>
+	public class TumblrError
 	{
-		[JsonProperty("errors")]
-		public string[] Errors { get; set; }
-	}
+        /// <summary>
+        /// title of error
+        /// </summary>
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
+
+        /// <summary>
+        /// codenumber of error
+        /// </summary>
+        [JsonProperty(PropertyName = "code")]
+        public int Code { get; set; }
+
+        /// <summary>
+        /// details of error
+        /// </summary>
+        [JsonProperty(PropertyName = "detail")]
+        public string Detail { get; set; }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

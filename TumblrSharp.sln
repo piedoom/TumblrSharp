@@ -61,7 +61,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostAttribution", "Examples
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleBasics", "Examples\Console\ConsoleBasics\ConsoleBasics.csproj", "{3B074F0F-B2F8-4D36-8B92-C88653705B6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converter", "Examples\NetCore\Converter\Converter.csproj", "{AA378976-AC5B-4A16-9BA7-1DD3C73AC8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converter", "Examples\NetCore\Converter\Converter.csproj", "{AA378976-AC5B-4A16-9BA7-1DD3C73AC8D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

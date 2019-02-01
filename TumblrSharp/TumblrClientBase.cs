@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using DontPanic.TumblrSharp.OAuth;
+using System.Diagnostics;
 
 namespace DontPanic.TumblrSharp
 {
@@ -243,12 +244,30 @@ namespace DontPanic.TumblrSharp
                         }
                         else
                         {
-							var errorResponse = 
-								(response.StatusCode == System.Net.HttpStatusCode.Unauthorized) 
-									? new TumblrErrors() { Errors = new String[0] } 
-									: serializer.Deserialize<TumblrErrorResponse>(reader).Response;
+                            TumblrError[] errorResponse;
 
-                            throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.Errors);
+                            switch (response.StatusCode)
+                            {
+                                case System.Net.HttpStatusCode.Unauthorized :
+                                    {
+                                        errorResponse = new TumblrError[0];
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        if (response.Content.Headers.ContentType.MediaType == "application/json")
+                                        {
+                                            errorResponse = serializer.Deserialize<TumblrErrorResponse>(reader).Errors;
+                                        }
+                                        else
+                                        {
+                                            errorResponse = new TumblrError[0];
+                                        }
+                                        break;
+                                    }
+                            }
+
+                            throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
                         }
                     }
                 }

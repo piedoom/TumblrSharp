@@ -53,11 +53,11 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value == null)
-            {
-                writer.WriteStartArray();
-                writer.WriteEndArray();
+            writer.WriteStartArray();
 
+            if (value == null)
+            {                
+                writer.WriteEndArray();
                 return;
             }
 
@@ -65,8 +65,6 @@ namespace DontPanic.TumblrSharp.Client
 
             if (notes.Count > 0)
             {
-                writer.WriteStartArray();
-
                 foreach (BaseNote note in notes)
                 {
                     if (note is PostAttributionNote)
@@ -80,10 +78,10 @@ namespace DontPanic.TumblrSharp.Client
                         JObject jo = JObject.FromObject(note);
                         jo.WriteTo(writer);
                     }
-                }
-
-                writer.WriteEndArray();
+                }                
             }
+
+            writer.WriteEndArray();
         }
     }
 }

@@ -78,11 +78,11 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value == null)
-            {
-                writer.WriteStartArray();
-                writer.WriteEndArray();
+            writer.WriteStartArray();
 
+            if (value == null)
+            {                
+                writer.WriteEndArray();
                 return;
             }
 
@@ -90,98 +90,54 @@ namespace DontPanic.TumblrSharp.Client
 
             if (basePosts.Count > 0)
             {
-                writer.WriteStartArray();
-
                 foreach (var basePost in basePosts)
                 {
-                    if (basePost is TextPost)
+                    JObject jo;
+
+                    switch (basePost)
                     {
-                        TextPost sp = basePost as TextPost;
+                        case TextPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
 
-                        JObject jo = JObject.FromObject(sp);
-                        jo.WriteTo(writer);
+                        case QuotePost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case PhotoPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case LinkPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case AnswerPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case AudioPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case ChatPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+
+                        case VideoPost sp:
+                            jo = JObject.FromObject(sp);
+                            break;
+                            
+                        default:
+                            jo = JObject.FromObject(basePost);
+                            break;
                     }
-                    else
-                    {
-                        if (basePost is QuotePost)
-                        {
-                            QuotePost sp = basePost as QuotePost;
 
-                            JObject jo = JObject.FromObject(sp);
-                            jo.WriteTo(writer);
-                        }
-                        else
-                        {
-                            if (basePost is PhotoPost)
-                            {
-                                PhotoPost sp = basePost as PhotoPost;
-
-                                JObject jo = JObject.FromObject(sp);
-                                jo.WriteTo(writer);
-                            }
-                            else
-                            {
-                                if (basePost is LinkPost)
-                                {
-                                    LinkPost sp = basePost as LinkPost;
-
-                                    JObject jo = JObject.FromObject(sp);
-                                    jo.WriteTo(writer);
-                                }
-                                else
-                                {
-                                    if (basePost is AnswerPost)
-                                    {
-                                        AnswerPost sp = basePost as AnswerPost;
-
-                                        JObject jo = JObject.FromObject(sp);
-                                        jo.WriteTo(writer);
-                                    }
-                                    else
-                                    {
-                                        if (basePost is AudioPost)
-                                        {
-                                            AudioPost sp = basePost as AudioPost;
-
-                                            JObject jo = JObject.FromObject(sp);
-                                            jo.WriteTo(writer);
-                                        }
-                                        else
-                                        {
-                                            if (basePost is ChatPost)
-                                            {
-                                                ChatPost sp = basePost as ChatPost;
-
-                                                JObject jo = JObject.FromObject(sp);
-                                                jo.WriteTo(writer);
-                                            }
-                                            else
-                                            {
-                                                if (basePost is VideoPost)
-                                                {
-                                                    VideoPost sp = basePost as VideoPost;
-
-                                                    JObject jo = JObject.FromObject(sp);
-                                                    jo.WriteTo(writer);
-                                                }
-                                                else
-                                                {
-                                                    AnswerPost sp = basePost as AnswerPost;
-
-                                                    JObject jo = JObject.FromObject(sp);
-                                                    jo.WriteTo(writer);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                writer.WriteEndArray();
+                    jo.WriteTo(writer);
+                }                
             }
+
+            writer.WriteEndArray();
         }
     }
 }

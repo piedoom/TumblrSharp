@@ -13,7 +13,7 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(Trail[]);
+            return objectType == typeof(List<Trail>);
         }
 
         /// <exclude/>
@@ -25,7 +25,7 @@ namespace DontPanic.TumblrSharp.Client
 
             do
             {
-                if (reader.TokenType == JsonToken.EndArray)
+                if (reader.TokenType == JsonToken.EndArray || reader.TokenType == JsonToken.EndObject)
                     break;
 
                 JObject jo = JObject.Load(reader);
@@ -41,11 +41,11 @@ namespace DontPanic.TumblrSharp.Client
         /// <exclude/>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value == null)
-            {
-                writer.WriteStartArray();
-                writer.WriteEndArray();
+            writer.WriteStartArray();
 
+            if (value == null)
+            {   
+                writer.WriteEndArray();
                 return;
             }
 
@@ -53,16 +53,14 @@ namespace DontPanic.TumblrSharp.Client
 
             if (trails.Count > 0)
             {
-                writer.WriteStartArray();
-
                 foreach (Trail trail in trails)
                 {
                     JObject jo = JObject.FromObject(trail);
                     jo.WriteTo(writer);
-                }
-
-                writer.WriteEndArray();
+                }                
             }
+
+            writer.WriteEndArray();
         }
     }
 }

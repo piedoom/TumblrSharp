@@ -23,6 +23,49 @@ namespace Testing
         private readonly string _accessSecret = "O977YH42yg98IsS9BAk80r5e5grYQDY9HauVmgf0aEmceZ2UTz";
 
         [TestMethod]
+        public void NoteConverter_Theorie()
+        {
+            const string resultStr = "{\r\n  \"title\": null,\r\n  \"body\": \"testbody\",\r\n  \"type\": \"All\",\r\n  \"blog_name\": \"TestBlog\"," +
+                "\r\n  \"id\": 12456789,\r\n  \"post_url\": null,\r\n  \"slug\": null,\r\n  \"timestamp\": -62135596800.0,\r\n  \"state\": \"published\"," +
+                "\r\n  \"format\": \"Html\",\r\n  \"reblog_key\": null,\r\n  \"tags\": null,\r\n  \"short_url\": null,\r\n  \"summary\": null," +
+                "\r\n  \"note_count\": 0,\r\n  \"notes\": [\r\n    {\r\n      \"type\": \"Like\",\r\n      \"timestamp\": -62135596800.0," +
+                "\r\n      \"blog_name\": \"OtherBlock\",\r\n      \"blog_uuid\": null,\r\n      \"blog_url\": null,\r\n      \"followed\": false," +
+                "\r\n      \"avatar_shape\": \"circle\",\r\n      \"reply_text\": null,\r\n      \"post_id\": null,\r\n      \"reblog_parent_blog_name\": null\r\n    }\r\n  ]," +
+                "\r\n  \"source_url\": null,\r\n  \"source_title\": null,\r\n  \"total_posts\": 0,\r\n  \"liked\": null,\r\n  \"mobile\": null," +
+                "\r\n  \"bookmarklet\": null,\r\n  \"reblog\": null,\r\n  \"reblogged_from_id\": 0,\r\n  \"reblogged_from_url\": null," +
+                "\r\n  \"reblogged_from_name\": null,\r\n  \"reblogged_from_title\": null,\r\n  \"reblogged_root_id\": 0,\r\n  \"reblogged_root_url\": null," +
+                "\r\n  \"reblogged_root_name\": null,\r\n  \"reblogged_root_title\": null,\r\n  \"trail\": []\r\n}";
+
+            TextPost basicTextPost = new TextPost
+            {
+                BlogName = "TestBlog",
+                Body = "testbody",
+                Id = 12456789,
+                Format = PostFormat.Html,
+                Trails = new List<Trail>()
+            };
+
+            basicTextPost.Notes = new List<BaseNote>
+            {
+                new BaseNote()
+                {
+                    BlogName = "OtherBlock",
+                    Type = NoteType.Like,
+                    AvatarShape = AvatarShape.Circle
+                }
+            };
+
+            // convert post
+            string json = JsonConvert.SerializeObject(basicTextPost, Formatting.Indented);
+
+            Assert.AreEqual(resultStr, json);
+
+            TextPost tp = JsonConvert.DeserializeObject<TextPost>(json);
+
+            Assert.AreEqual(basicTextPost.Notes[0].BlogName, tp.Notes[0].BlogName);
+        }
+
+        [TestMethod]
         public async Task NoteConverter()
         {
             TumblrClient tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
@@ -36,9 +79,9 @@ namespace Testing
 
             while (findPostWithNotes == false)
             {
-                BasePost[] basePosts = await tc.GetDashboardPostsAsync(currentID, 0, 20, PostType.Photo, false, true);
+                BasePost[] basePosts = await tc.GetDashboardPostsAsync(currentID, 0, 1, PostType.Photo, false, true);
 
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < basePosts.Count(); i++)
                 {
                     PhotoPost basePost = basePosts[i] as PhotoPost;
 
@@ -46,12 +89,9 @@ namespace Testing
                     {
                         findPostWithNotes = true;
                         notePost = basePost;
+                        break;
                     }
-
-                    if (i == 19)
-                    {
-                        currentID = basePost.Id;
-                    }
+                    currentID = basePost.Id;
                 }
             }
 
@@ -100,7 +140,7 @@ namespace Testing
                 {
                     BasePost basePost = basePosts[i];
 
-                    if (basePost.Trials?.Count() > 0)
+                    if (basePost.Trails?.Count() > 0)
                     {
                         findPostWithTrials = true;
                         post = basePost;
@@ -120,10 +160,10 @@ namespace Testing
             BasePost jsonPost = JsonConvert.DeserializeObject<BasePost>(json);
 
             //testing
-            for (int i = 0; i < post.Trials.Count(); i++)
+            for (int i = 0; i < post.Trails.Count(); i++)
             {
-                Trail baseTrail = post.Trials[i];
-                Trail jsonTrail = jsonPost.Trials[i];
+                Trail baseTrail = post.Trails[i];
+                Trail jsonTrail = jsonPost.Trails[i];
 
                 Assert.AreEqual(baseTrail.Content, jsonTrail.Content);
                 Assert.AreEqual(baseTrail.ContentRaw, jsonTrail.ContentRaw);

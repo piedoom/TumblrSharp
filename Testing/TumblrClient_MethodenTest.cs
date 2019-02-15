@@ -53,6 +53,7 @@ namespace Testing
 
 
                 }
+
                 return _deletePostInfo;
             }
 
@@ -67,13 +68,7 @@ namespace Testing
             tumblrClient = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, _accessSecret));
         }
 
-        ~TumblrClient_MethodenTest()
-        {
-            if (DeletePostInfo != null)
-            {
-                tumblrClient.DeletePostAsync("newtsharp.tumblr.com", DeletePostInfo.PostId);
-            }
-        }
+        #region UserInfo
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
@@ -104,6 +99,10 @@ namespace Testing
 
             Assert.AreEqual(userInfo.Blogs[1].Name, "newtsharp");
         }
+
+        #endregion
+
+        #region CreatePost
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
@@ -174,6 +173,8 @@ namespace Testing
 
             Assert.AreNotEqual(postCreationInfo.PostId, 0);
         }
+
+        #endregion
 
         #region DeletePost
 

@@ -16,7 +16,7 @@ namespace Converter
 
                 Id = 1,
 
-                Trials = new List<Trail>
+                Trails = new List<Trail>
                 {
                     new Trail()
                     {

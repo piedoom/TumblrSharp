@@ -47,19 +47,19 @@ namespace DashboardPosts
                 {
                     Console.WriteLine($"{k.ToString()}. Post from {basePost.BlogName} with ID {basePost.Id.ToString()}");
 
-                    if (basePost.Trials.Count() > 0)
+                    if (basePost.Trails.Count() > 0)
                     {
                         Console.WriteLine();
-                        Console.WriteLine($"--- Post has {basePost.Trials.Count().ToString()} trial ---");
+                        Console.WriteLine($"--- Post has {basePost.Trails.Count().ToString()} trail ---");
                         Console.WriteLine();
                     }
 
                     int i = 1;
 
-                    foreach (var trial in basePost.Trials)
+                    foreach (var trail in basePost.Trails)
                     {
-                        Console.WriteLine($"   {i}. trial from {trial.Blog.Name}");
-                        Console.WriteLine($"   {trial.Content}");
+                        Console.WriteLine($"   {i}. trail from {trail.Blog.Name}");
+                        Console.WriteLine($"   {trail.Content}");
                         Console.WriteLine();
 
                         i++;

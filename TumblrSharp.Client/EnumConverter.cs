@@ -21,7 +21,7 @@ namespace DontPanic.TumblrSharp.Client
 		/// <exclude/>
 		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			writer.WriteValue(value.ToString());
+			writer.WriteValue(value.ToString().ToLower());
 		}
 
 		/// <exclude/>

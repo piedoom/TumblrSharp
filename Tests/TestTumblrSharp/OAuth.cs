@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DontPanic.TumblrSharp.OAuth;
 using System.Threading.Tasks;
 
-namespace Testing
+namespace TestingTumblrSharp
 {
     [TestClass]
     public class OAuthTest

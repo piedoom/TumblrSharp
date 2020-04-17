@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using DontPanic.TumblrSharp.OAuth;
-using System.Diagnostics;
 
 namespace DontPanic.TumblrSharp
 {
@@ -25,10 +24,10 @@ namespace DontPanic.TumblrSharp
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
 		/// </summary>
-        /// <param name="hashProvider">
-        /// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
-        /// HMAC-SHA1 hash for OAuth purposes.
-        /// </param>
+		/// <param name="hashProvider">
+		/// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
+		/// HMAC-SHA1 hash for OAuth purposes.
+		/// </param>
 		/// <param name="consumerKey">
 		/// The consumer key.
 		/// </param>
@@ -61,6 +60,48 @@ namespace DontPanic.TumblrSharp
 			this.oAuthToken = oAuthToken;
 			this.client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, oAuthToken));
 		}
+
+#if (NETCOREAPP2_2)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
+		/// </summary>
+		/// <param name="httpClientFactory"> HttpClientFactory</param>
+		/// <param name="tumblrClientHtppName">The name of logical HttpClient</param>
+		/// <param name="consumerKey">
+		/// The consumer key.
+		/// </param>
+		/// <param name="consumerSecret">
+		/// The consumer secret.
+		/// </param>
+		/// <param name="oAuthToken">
+		/// An optional access token for the API. If no access token is provided, only the methods
+		/// that do not require OAuth can be invoked successfully.
+		/// </param>
+		/// <remarks>
+		///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
+		/// <br/>
+		/// http://www.tumblr.com/oauth/apps
+		/// </remarks>
+		public TumblrClientBase(IHttpClientFactory httpClientFactory, string tumblrClientHtppName, string consumerKey, string consumerSecret, Token oAuthToken = null)
+		{
+			if (consumerKey == null)
+				throw new ArgumentNullException("consumerKey");
+
+			if (consumerKey.Length == 0)
+				throw new ArgumentException("Consumer key cannot be empty.", "consumerKey");
+
+			if (consumerSecret == null)
+				throw new ArgumentNullException("consumerSecret");
+
+			if (consumerSecret.Length == 0)
+				throw new ArgumentException("Consumer secret cannot be empty.", "consumerSecret");
+
+			this.oAuthToken = oAuthToken;
+			this.client = httpClientFactory.CreateClient(tumblrClientHtppName);
+		}
+#endif
+
+
 
 		#region Public Properties
 
@@ -120,21 +161,21 @@ namespace DontPanic.TumblrSharp
 		/// </list>
 		/// </exception>
 		public async Task<TResult> CallApiMethodAsync<TResponse, TResult>(ApiMethod method, Func<TResponse, TResult> projection, CancellationToken cancellationToken, IEnumerable<JsonConverter> converters = null)
-            where TResult : class
-            where TResponse : class
-        {
+			where TResult : class
+			where TResponse : class
+		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
 
-            if (method == null)
-                throw new ArgumentNullException("method");
+			if (method == null)
+				throw new ArgumentNullException("method");
 
-            if (projection == null)
-                throw new ArgumentNullException("projection");
+			if (projection == null)
+				throw new ArgumentNullException("projection");
 
-            var response = await CallApiMethodAsync<TResponse>(method, cancellationToken, converters).ConfigureAwait(false);
-            return projection(response);
-        }
+			var response = await CallApiMethodAsync<TResponse>(method, cancellationToken, converters).ConfigureAwait(false);
+			return projection(response);
+		}
 
 		/// <summary>
 		/// Asynchronously invokes a method on the Tumblr API without expecting a response.
@@ -156,15 +197,15 @@ namespace DontPanic.TumblrSharp
 		/// <paramref name="method"/> is <b>null</b>.
 		/// </exception>
 		public Task CallApiMethodNoResultAsync(ApiMethod method, CancellationToken cancellationToken)
-        {
+		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
 
-            if (method == null)
-                throw new ArgumentNullException("method");
+			if (method == null)
+				throw new ArgumentNullException("method");
 
-            return CallApiMethodAsync<object>(method, cancellationToken);
-        }
+			return CallApiMethodAsync<object>(method, cancellationToken);
+		}
 
 		/// <summary>
 		/// Asynchronously invokes a method on the Tumblr API.
@@ -183,7 +224,7 @@ namespace DontPanic.TumblrSharp
 		/// An optional list of JSON converters that will be used while deserializing the response from the Tumblr API.
 		/// </param>
 		/// <returns>
-		/// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+		/// A <see cref="Task{TResult}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{TResult}.Result"/> will
 		/// carry a <typeparamref name="TResult"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
 		/// representing the error occurred during the call.
 		/// </returns>
@@ -193,111 +234,116 @@ namespace DontPanic.TumblrSharp
 		/// <exception cref="ArgumentNullException">
 		/// <paramref name="method"/> is <b>null</b>.
 		/// </exception>
-        public async Task<TResult> CallApiMethodAsync<TResult>(ApiMethod method, CancellationToken cancellationToken, IEnumerable<JsonConverter> converters = null)
-            where TResult : class
-        {
+		public async Task<TResult> CallApiMethodAsync<TResult>(ApiMethod method, CancellationToken cancellationToken, IEnumerable<JsonConverter> converters = null)
+			where TResult : class
+		{
 			if (disposed)
 				throw new ObjectDisposedException("TumblrClient");
 
-            if (method == null)
-                throw new ArgumentNullException("method");
+			if (method == null)
+				throw new ArgumentNullException("method");
 
-            //build the api call URL
-            StringBuilder apiRequestUrl = new StringBuilder(method.Url);
-            if (method.HttpMethod == HttpMethod.Get && method.Parameters.Count > 0)
-            {
-                //we are in a HTTP GET: add the request parameters to the query string
-                apiRequestUrl.Append("?");
-                apiRequestUrl.Append(method.Parameters.ToFormUrlEncoded());
-            }
+			//build the api call URL
+			StringBuilder apiRequestUrl = new StringBuilder(method.Url);
+			if (method.HttpMethod == HttpMethod.Get && method.Parameters.Count > 0)
+			{
+				//we are in a HTTP GET: add the request parameters to the query string
+				apiRequestUrl.Append("?");
+				apiRequestUrl.Append(method.Parameters.ToFormUrlEncoded());
+			}
 
-            using (var request = new HttpRequestMessage(method.HttpMethod, apiRequestUrl.ToString()))
-            {
-                if (method.OAuthToken != null)
-                    method.Parameters.Add("oauth_token", method.OAuthToken.Key);
+			using (var request = new HttpRequestMessage(method.HttpMethod, apiRequestUrl.ToString()))
+			{
+				if (method.OAuthToken != null)
+					method.Parameters.Add("oauth_token", method.OAuthToken.Key);
 
-                if (method.Parameters.Any(c => c is BinaryMethodParameter))
-                {
-                    //if there is binary content we submit a multipart form request
-                    var content = new MultipartFormDataContent();
-                    foreach (var p in method.Parameters)
-                        content.Add(p.AsHttpContent());
+				if (method.Parameters.Any(c => c is BinaryMethodParameter))
+				{
+					//if there is binary content we submit a multipart form request
+					var content = new MultipartFormDataContent();
+					foreach (var p in method.Parameters)
+						content.Add(p.AsHttpContent());
 
-                    request.Content = content;
-                }
-                else
-                {
-                    //otherwise just a form url encoded request
-                    var content = new FormUrlEncodedContent(method.Parameters.Select(c => new KeyValuePair<string, string>(c.Name, ((StringMethodParameter)c).Value)));
-                    request.Content = content;
-                }
+					request.Content = content;
+				}
+				else
+				{
+					//otherwise just a form url encoded request
+					var content = new FormUrlEncodedContent(method.Parameters.Select(c => new KeyValuePair<string, string>(c.Name, ((StringMethodParameter)c).Value)));
+					request.Content = content;
+				}
 
-                using (var response = await client.SendAsync(request, cancellationToken).ConfigureAwait(false))
-                {
+				using (var response = await client.SendAsync(request, cancellationToken).ConfigureAwait(false))
+				{
 					var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
 					using (var reader = new JsonTextReader(new StreamReader(stream)))
-                    {
-                        var serializer = CreateSerializer(converters);
-                        if (response.IsSuccessStatusCode)
-                        {
-                            return serializer.Deserialize<TumblrRawResponse<TResult>>(reader).Response;
-                        }
-                        else
-                        {
-                            TumblrError[] errorResponse;
+					{
+						var serializer = CreateSerializer(converters);
+						if (response.IsSuccessStatusCode)
+						{
+							return serializer.Deserialize<TumblrRawResponse<TResult>>(reader).Response;
+						}
+						else
+						{
+							TumblrError[] errorResponse;
 
-                            switch (response.StatusCode)
-                            {
-                                case System.Net.HttpStatusCode.Unauthorized :
-                                    {
-                                        errorResponse = new TumblrError[0];
-                                        break;
-                                    }
-                                default:
-                                    {
-                                        if (response.Content.Headers.ContentType.MediaType == "application/json")
-                                        {
-                                            errorResponse = serializer.Deserialize<TumblrErrorResponse>(reader).Errors;
-                                        }
-                                        else
-                                        {
-                                            errorResponse = new TumblrError[0];
-                                        }
-                                        break;
-                                    }
-                            }
+							switch (response.StatusCode)
+							{
+								case System.Net.HttpStatusCode.Unauthorized :
+									{
+										errorResponse = new TumblrError[0];
+										break;
+									}
+								default:
+									{
+										if (response.Content.Headers.ContentType.MediaType == "application/json")
+										{
+											errorResponse = serializer.Deserialize<TumblrErrorResponse>(reader).Errors;
+										}
+										else
+										{
+											errorResponse = new TumblrError[0];
+										}
+										break;
+									}
+							}
 
-                            throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
-                        }
-                    }
-                }
-            }
-        }
+							if (errorResponse == null)
+								errorResponse = new TumblrError[0];
 
-        #endregion
+							throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
+						}
+					}
+				}
+			}
+		}
 
-        #region Private Methods
+		#endregion
 
-        private JsonSerializer CreateSerializer(IEnumerable<JsonConverter> converters)
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            if (converters != null)
-            {
-                foreach (JsonConverter converter in converters)
-                    serializer.Converters.Add(converter);
-            }
+		#region Private Methods
 
-            return serializer;
-        }
+		private JsonSerializer CreateSerializer(IEnumerable<JsonConverter> converters)
+		{
+			JsonSerializer serializer = new JsonSerializer();
+			if (converters != null)
+			{
+				foreach (JsonConverter converter in converters)
+					serializer.Converters.Add(converter);
+			}
 
-        #endregion
+			return serializer;
+		}
 
-        #region IDisposable Implementation
+		#endregion
+
+		#region IDisposable Implementation
 
 		/// <summary>
 		/// Disposes of the object and the internal HttpClient instance.
 		/// </summary>
-        public void Dispose()
+#pragma warning disable CA1063 // Implement IDisposable Correctly
+		public void Dispose()
+#pragma warning restore CA1063 // Implement IDisposable Correctly
 		{
 			if (!disposed)
 			{
@@ -312,7 +358,7 @@ namespace DontPanic.TumblrSharp
 					}
 				}
 			}
-        }
+		}
 
 		/// <summary>
 		/// Subclasses can override this method to provide custom
@@ -324,6 +370,6 @@ namespace DontPanic.TumblrSharp
 		protected virtual void Dispose(bool disposing)
 		{ }
 
-        #endregion
-    }
+		#endregion
+	}
 }

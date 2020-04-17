@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testing
+namespace TestingTumblrSharp
 {
     [TestClass]
     public class TumblrClient_MethodenTest
@@ -53,7 +53,6 @@ namespace Testing
 
 
                 }
-
                 return _deletePostInfo;
             }
 
@@ -144,6 +143,8 @@ namespace Testing
             PostCreationInfo postCreationInfo = await tumblrClient.CreatePostAsync("newtsharp.tumblr.com", PostData.CreateText());
         }
 
+        #region Text 
+
         [TestMethod]
         public async Task CreatePost_Text_1()
         {
@@ -173,6 +174,8 @@ namespace Testing
 
             Assert.AreNotEqual(postCreationInfo.PostId, 0);
         }
+
+        #endregion
 
         #endregion
 
@@ -236,7 +239,7 @@ namespace Testing
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(TumblrException))]
         public async Task DeletePost_5()
         {
             await tumblrClient.DeletePostAsync("newtsharp.tumblr.com", 0);

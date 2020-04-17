@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 #if NETSTANDARD2_0
 using System.Drawing;
@@ -158,5 +159,89 @@ namespace DontPanic.TumblrSharp.Client
         /// </summary>
         [JsonProperty(PropertyName = "title_font_weight")]
         public string TitleFontWeight { get; set; }
+
+        /// <summary>
+        /// compare this object with another
+        /// </summary>
+        /// <param name="obj">Object to be equals</param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return obj is TrailTheme theme &&
+                   HeaderFullWidth == theme.HeaderFullWidth &&
+                   HeaderFullHeight == theme.HeaderFullHeight &&
+                   HeaderFocusWidth == theme.HeaderFocusWidth &&
+                   HeaderFocusHeight == theme.HeaderFocusHeight &&
+                   AvatarShape == theme.AvatarShape &&
+#if NETSTANDARD2_0
+                   BackgroundColor.Equals(theme.BackgroundColor) &&
+#else
+                   BackgroundColor == theme.BackgroundColor &&
+#endif
+                   BodyFont == theme.BodyFont &&
+                   HeaderBounds == theme.HeaderBounds &&
+                   HeaderImage == theme.HeaderImage &&
+                   HeaderImageFocused == theme.HeaderImageFocused &&
+                   HeaderImageScaled == theme.HeaderImageScaled &&
+                   HeaderStretch == theme.HeaderStretch &&
+#if NETSTANDARD2_0
+                   LinkColor.Equals(LinkColor) &&
+#else
+                   LinkColor == theme.LinkColor &&
+#endif
+                   ShowAvatar == theme.ShowAvatar &&
+                   ShowDescription == theme.ShowDescription &&
+                   ShowHeaderImage == theme.ShowHeaderImage &&
+                   ShowTitle == theme.ShowTitle &&
+#if NETSTANDARD2_0
+                   TitleColor.Equals(TitleColor) &&
+#else
+                   TitleColor == theme.TitleColor &&
+#endif
+                   TitleFont == theme.TitleFont &&
+                   TitleFontWeight == theme.TitleFontWeight;
+        }
+
+        /// <summary>
+        /// return a hash code
+        /// </summary>
+        /// <returns>hashcode as <see cref="int" /></returns>
+        public override int GetHashCode()
+        {
+            var hashCode = -2087474320;
+            hashCode = hashCode * -1521134295 + HeaderFullWidth.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderFullHeight.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderFocusWidth.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderFocusHeight.GetHashCode();
+            hashCode = hashCode * -1521134295 + AvatarShape.GetHashCode();
+#if NETSTANDARD2_0
+            hashCode = hashCode * -1521134295 + BackgroundColor.GetHashCode();
+#else
+            hashCode = hashCode * -1521134295 + BackgroundColor.GetHashCode();
+#endif
+            hashCode = hashCode * -1521134295 + BodyFont.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderBounds.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderImage.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderImageFocused.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderImageScaled.GetHashCode();
+            hashCode = hashCode * -1521134295 + HeaderStretch.GetHashCode();
+#if NETSTANDARD2_0
+            hashCode = hashCode * -1521134295 + LinkColor.GetHashCode();
+#else
+            hashCode = hashCode * -1521134295 + LinkColor.GetHashCode();
+#endif
+            hashCode = hashCode * -1521134295 + ShowAvatar.GetHashCode();
+            hashCode = hashCode * -1521134295 + ShowDescription.GetHashCode();
+            hashCode = hashCode * -1521134295 + ShowHeaderImage.GetHashCode();
+            hashCode = hashCode * -1521134295 + ShowTitle.GetHashCode();
+#if NETSTANDARD2_0
+            hashCode = hashCode * -1521134295 + TitleColor.GetHashCode();
+#else
+            hashCode = hashCode * -1521134295 + TitleColor.GetHashCode();
+#endif
+            hashCode = hashCode * -1521134295 + TitleFont.GetHashCode();
+            hashCode = hashCode * -1521134295 + TitleFontWeight.GetHashCode();
+            return hashCode;
+        }
     }
 }

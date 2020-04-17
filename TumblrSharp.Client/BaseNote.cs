@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace DontPanic.TumblrSharp.Client
@@ -73,5 +74,38 @@ namespace DontPanic.TumblrSharp.Client
 		/// </summary>
 		[JsonProperty(PropertyName = "reblog_parent_blog_name")]
 		public string ReblogParentBlogName { get; set; }
+
+		/// <inheritdoc/>
+		public override bool Equals(object obj)
+		{
+			return obj is BaseNote note &&
+				   Type == note.Type &&
+				   Timestamp == note.Timestamp &&
+				   BlogName == note.BlogName &&
+				   BlogUuid == note.BlogUuid &&
+				   BlogUrl == note.BlogUrl &&
+				   Followed == note.Followed &&
+				   AvatarShape == note.AvatarShape &&
+				   ReplyText == note.ReplyText &&
+				   PostId == note.PostId &&
+				   ReblogParentBlogName == note.ReblogParentBlogName;
+		}
+
+		/// <inheritdoc/>
+		public override int GetHashCode()
+		{
+			var hashCode = 1122491329;
+			hashCode = hashCode * -1521134295 + Type.GetHashCode();
+			hashCode = hashCode * -1521134295 + Timestamp.GetHashCode();
+			hashCode = hashCode * -1521134295 + BlogName.GetHashCode();
+			hashCode = hashCode * -1521134295 + BlogUuid.GetHashCode();
+			hashCode = hashCode * -1521134295 + BlogUrl.GetHashCode();
+			hashCode = hashCode * -1521134295 + Followed.GetHashCode();
+			hashCode = hashCode * -1521134295 + AvatarShape.GetHashCode();
+			hashCode = hashCode * -1521134295 + ReplyText.GetHashCode();
+			hashCode = hashCode * -1521134295 + PostId.GetHashCode();
+			hashCode = hashCode * -1521134295 + ReblogParentBlogName.GetHashCode();
+			return hashCode;
+		}
 	}
 }

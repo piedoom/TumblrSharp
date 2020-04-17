@@ -45,6 +45,16 @@ What will *not* be implemented?
 
 (This is due to restrictions to the V2 API.  These endpoints exist but can only be accessed with the official Tumblr app API key).
 
+Roadmap
+========
+
+Version 1.1.* 
+- Advanced testings
+
+Version 1.2 
+- Support Neues Post Format (npf)
+- Create / Edit / Fetch Post for npf
+
 Which platforms are supported?
 ========
 

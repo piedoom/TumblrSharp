@@ -7,22 +7,40 @@ using System.Linq;
 
 namespace DontPanic.TumblrSharp.OAuth
 {
-	internal class OAuthMessageHandler : DelegatingHandler
+	/// <summary>
+	/// MessageHandler for the HttpClient
+	/// </summary>
+	public class OAuthMessageHandler : DelegatingHandler
 	{
-        private readonly IHmacSha1HashProvider hashProvider;
+		private readonly IHmacSha1HashProvider hashProvider;
 		private readonly string consumerKey;
 		private readonly string consumerSecret;
 		private readonly Token oAuthToken;
 
+		/// <summary>
+		/// Create OAuthMessageHandler
+		/// </summary>
+		/// <param name="hashProvider"></param>
+		/// <param name="consumerKey"></param>
+		/// <param name="consumerSecret"></param>
+		/// <param name="oAuthToken"></param>
 		public OAuthMessageHandler(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken)
-            : this(new HttpClientHandler(), hashProvider, consumerKey, consumerSecret, oAuthToken)
+			: this(new HttpClientHandler(), hashProvider, consumerKey, consumerSecret, oAuthToken)
 		{ }
 
+		/// <summary>
+		/// Create OAuthMessageHandle
+		/// </summary>
+		/// <param name="innerHandler"></param>
+		/// <param name="hashProvider"></param>
+		/// <param name="consumerKey"></param>
+		/// <param name="consumerSecret"></param>
+		/// <param name="oAuthToken"></param>
 		public OAuthMessageHandler(HttpMessageHandler innerHandler, IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken)
 			: base(innerHandler)
 		{
-            if (hashProvider == null)
-                throw new ArgumentNullException("hashProvider");
+			if (hashProvider == null)
+				throw new ArgumentNullException("hashProvider");
 
 			if (consumerKey == null)
 				throw new ArgumentNullException("consumerKey");
@@ -39,15 +57,21 @@ namespace DontPanic.TumblrSharp.OAuth
 			if(oAuthToken != null && !oAuthToken.IsValid)
 				throw new ArgumentException("OAuth token is not valid.", "oAuthToken");
 
-            if (consumerKey == null)
-                throw new ArgumentNullException("consumerKey");
+			if (consumerKey == null)
+				throw new ArgumentNullException("consumerKey");
 
-            this.hashProvider = hashProvider;
+			this.hashProvider = hashProvider;
 			this.consumerKey = consumerKey;
 			this.consumerSecret = consumerSecret;
 			this.oAuthToken = oAuthToken;
 		}
 
+		/// <summary>
+		/// Send methode 
+		/// </summary>
+		/// <param name="request"></param>
+		/// <param name="cancellationToken"></param>
+		/// <returns></returns>
 		protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
 		{
 			MethodParameterSet requestParameters = null;

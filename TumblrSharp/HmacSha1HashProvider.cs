@@ -1,15 +1,14 @@
-﻿using DontPanic.TumblrSharp;
-using System;
+﻿using System;
 using System.Text;
 
 #if NETSTANDARD1_1
   using SshNet.Security.Cryptography;
 #else
-    #if NETSTANDARD1_2
+#if NETSTANDARD1_2
         using SshNet.Security.Cryptography;
-    #else
-        using System.Security.Cryptography;
-    #endif
+#else
+using System.Security.Cryptography;
+#endif
 #endif
 
 

@@ -55,7 +55,11 @@ namespace DontPanic.TumblrSharp
 		
 		public override int GetHashCode()
 		{
-			return this.Name.GetHashCode() ^ this.value.GetHashCode();
+#if NETSTANDARD2_1
+            return HashCode.Combine(Name, value);
+#else
+            return this.Name.GetHashCode() ^ this.value.GetHashCode();
+#endif
 		}
 
 		public override bool Equals(object obj)

@@ -1,7 +1,11 @@
-﻿using DontPanic.TumblrSharp;
-using DontPanic.TumblrSharp.Client;
+﻿using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using System;
+using System.Net.Http;
+
+#if (NETCOREAPP2_2)
+using Microsoft.Extensions.DependencyInjection;
+#endif
 
 namespace DontPanic.TumblrSharp
 {
@@ -10,6 +14,39 @@ namespace DontPanic.TumblrSharp
     /// </summary>
     public class TumblrClientFactory : ITumblrClientFactory
     {
+
+#if (NETCOREAPP2_2)
+        internal static string TumblrSharpClientName
+        {
+            get
+            {
+                return "tumblrSharpHtppClient";
+            }
+        }
+        
+        public static void ConfigureService(IServiceCollection services, string consumerKey, string consumerSecret, Token oAuthToken = null)
+        {
+            var service = services.AddHttpClient(TumblrSharpClientName);
+            
+            service.ConfigurePrimaryHttpMessageHandler(() =>
+            {
+                return new OAuthMessageHandler(new HmacSha1HashProvider(), consumerKey, consumerSecret, oAuthToken);
+            }
+            );
+        }
+
+
+        public TClient Create<TClient>(IHttpClientFactory httpClientFactory, string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase
+        {
+            if (typeof(TClient) == typeof(TumblrClient))
+            {
+                return new TumblrClient(httpClientFactory, TumblrSharpClientName, consumerKey, consumerSecret, oAuthToken) as TClient;
+            }
+
+            throw new ArgumentException(String.Format("The provided type '{0}'cannot be created by this factory.", typeof(TClient).FullName));
+        }
+#endif
+
         /// <summary>
         /// Creates a new Tumblr client instance of type <typeparamref name="TClient"/>.
         /// </summary>

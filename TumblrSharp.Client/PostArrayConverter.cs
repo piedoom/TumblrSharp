@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DontPanic.TumblrSharp.Client
 {
@@ -86,9 +87,9 @@ namespace DontPanic.TumblrSharp.Client
                 return;
             }
 
-            List<BasePost> basePosts = (List<BasePost>)value;
+            BasePost[] basePosts = (BasePost[])value;
 
-            if (basePosts.Count > 0)
+            if (basePosts.Count() > 0)
             {
                 foreach (var basePost in basePosts)
                 {

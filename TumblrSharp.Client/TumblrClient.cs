@@ -38,11 +38,39 @@ namespace DontPanic.TumblrSharp.Client
         /// <br/>
         /// http://www.tumblr.com/oauth/apps
         /// </remarks>
-        public TumblrClient(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null)
-      : base(hashProvider, consumerKey, consumerSecret, oAuthToken)
+        public TumblrClient(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null) : base(hashProvider, consumerKey, consumerSecret, oAuthToken)
         {
             this.apiKey = consumerKey;
         }
+
+#if (NETCOREAPP2_2)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TumblrClient"/> class.
+        /// </summary>
+        /// <param name="hashProvider">
+        /// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
+        /// HMAC-SHA1 hash for OAuth purposes.
+        /// </param>
+        /// <param name="consumerKey">
+        /// The consumer key.
+        /// </param>
+        /// <param name="consumerSecret">
+        /// The consumer secret.
+        /// </param>
+        /// <param name="oAuthToken">
+        /// An optional access token for the API. If no access token is provided, only the methods
+        /// that do not require OAuth can be invoked successfully.
+        /// </param>
+        /// <remarks>
+        ///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
+        /// <br/>
+        /// http://www.tumblr.com/oauth/apps
+        /// </remarks>
+        public TumblrClient(IHttpClientFactory httpClientFactory, string tumblrClientName, string consumerKey, string consumerSecret, Token oAuthToken = null) : base(httpClientFactory, tumblrClientName, consumerKey, consumerSecret, oAuthToken)
+        {
+            this.apiKey = consumerKey;
+        }
+#endif
 
         #region Public Methods
 
@@ -60,7 +88,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The name of the blog.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A Task&lt;<see cref="BlogInfo"/>&gt; that can be used to track the operation. If the task succeeds, the <see cref="Task{BlogInfo}.Result"/> will
         /// carry a <see cref="BlogInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -128,7 +156,7 @@ namespace DontPanic.TumblrSharp.Client
         /// A tag to filter by.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{Posts}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Posts}.Result"/> will
         /// carry a <see cref="Posts"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -221,7 +249,7 @@ namespace DontPanic.TumblrSharp.Client
         /// Whether or not to include notes info with the posts.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{BasePost}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{BasePost}.Result"/> will
         /// carry a <see cref="BasePost"/> instance representing the desired post. Otherwise <see cref="Task.Exception"/> will carry a 
         /// <see cref="TumblrException"/> if the post with the specified id cannot be found.
         /// </returns>
@@ -289,7 +317,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The timestamp after when to retrieve likes. 
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{Likes}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Likes}.Result"/> will
         /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -366,7 +394,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The number of followers to retrieve. Must be between 1 and 20.
         /// </param>
         /// <returns>
-        ///  A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        ///  A <see cref="Task{Followers}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Followers}.Result"/> will
         /// carry a <see cref="Followers"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// A <see cref="Followers"/> instance.
         /// </returns>
@@ -440,7 +468,7 @@ namespace DontPanic.TumblrSharp.Client
         /// to create various post types.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{PostCreationInfo}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{PostCreationInfo}.Result"/> will
         /// carry a <see cref="PostCreationInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -559,7 +587,7 @@ namespace DontPanic.TumblrSharp.Client
         /// to create various post types.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{PostCreationInfo}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{PostCreationInfo}.Result"/> will
         /// carry a <see cref="PostCreationInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -708,7 +736,7 @@ namespace DontPanic.TumblrSharp.Client
         /// An optional comment to add to the reblog.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{PostCreationInfo}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{PostCreationInfo}.Result"/> will
         /// carry a <see cref="PostCreationInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -925,7 +953,7 @@ namespace DontPanic.TumblrSharp.Client
         /// A <see cref="PostFilter"/> to apply.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result will
         /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -1007,7 +1035,7 @@ namespace DontPanic.TumblrSharp.Client
         /// A <see cref="PostFilter"/> to apply.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result will
         /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -1073,7 +1101,7 @@ namespace DontPanic.TumblrSharp.Client
         /// A <see cref="PostFilter"/> to apply.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result; will
         /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
@@ -1136,7 +1164,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The identifier of the post to delete.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// A <see cref="Task"/> that can be used to track the operation. If the task fails, <see cref="Exception"/> 
         /// will carry a <see cref="TumblrException"/> representing the error occurred during the call.
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1194,7 +1222,7 @@ namespace DontPanic.TumblrSharp.Client
         /// See: http://www.tumblr.com/docs/en/api/v2#user-methods
         /// </remarks>
         /// <returns>
-        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{UserInfo}.Result"/> will
         /// carry a <see cref="UserInfo"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
         /// generated during the call.
         /// </returns>
@@ -1235,7 +1263,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The number of following blogs to retrieve. Must be between 1 and 20.
         /// </param>
         /// <returns>
-        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Following}.Result"/> will
         /// carry a <see cref="Following"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
         /// generated during the call.
         /// </returns>
@@ -1305,7 +1333,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The timestamp after when to retrieve likes. 
         /// </param>
         /// <returns>
-        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Likes}.Result"/> will
         /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry the <see cref="TumblrException"/>
         /// generated during the call.
         /// </returns>
@@ -1373,7 +1401,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The reblog key for the post.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// A <see cref="Task"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
         /// will carry a <see cref="TumblrException"/>
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1434,7 +1462,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The reblog key for the post.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// A <see cref="Task"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
         /// will carry a <see cref="TumblrException"/>
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1492,7 +1520,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The url of the blog to follow.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// A <see cref="Task"/> that can be used to track the operation. If the task fails, <see cref="Exception"/> 
         /// will carry a <see cref="TumblrException"/>
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1543,7 +1571,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The url of the blog to unfollow.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task fails, <see cref="Task.Exception"/> 
+        /// A <see cref="Task"/> that can be used to track the operation. If the task fails, <see cref="Exception"/> 
         /// will carry a <see cref="TumblrException"/>
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1603,8 +1631,8 @@ namespace DontPanic.TumblrSharp.Client
         /// A <see cref="PostFilter"/>.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result will
+        /// carry an array of <see cref="BasePost">posts</see>. Otherwise <see cref="Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1677,8 +1705,8 @@ namespace DontPanic.TumblrSharp.Client
         /// Whether or not the response should include notes info.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result"/> will
+        /// carry an array of <see cref="BasePost">posts</see>. Otherwise <see cref="Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1764,8 +1792,8 @@ namespace DontPanic.TumblrSharp.Client
         /// Whether or not the response should include notes info.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
-        /// carry an array of posts. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
+        /// A Task&lt;<see cref="BasePost"/>[]&gt; that can be used to track the operation. If the task succeeds, the Task&lt;<see cref="BasePost"/>[]&gt;.Result"/> will
+        /// carry an array of <see cref="BasePost">posts</see>. Otherwise <see cref="Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>
         /// <exception cref="ObjectDisposedException">
@@ -1852,7 +1880,7 @@ namespace DontPanic.TumblrSharp.Client
         /// The number of likes to retrieve. Must be between 1 and 20.
         /// </param>
         /// <returns>
-        /// A <see cref="Task{T}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{T}.Result"/> will
+        /// A <see cref="Task{Likes}"/> that can be used to track the operation. If the task succeeds, the <see cref="Task{Likes}.Result"/> will
         /// carry a <see cref="Likes"/> instance. Otherwise <see cref="Task.Exception"/> will carry a <see cref="TumblrException"/>
         /// representing the error occurred during the call.
         /// </returns>

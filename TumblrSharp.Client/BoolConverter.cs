@@ -27,7 +27,26 @@ namespace DontPanic.TumblrSharp.Client
 		public override object ReadJson(JsonReader reader, Type	objectType, object existingValue, JsonSerializer serializer)
 		{
 			var value = reader.Value.ToString();
-			return String.Compare(value, "Y", StringComparison.OrdinalIgnoreCase) == 0;
+
+            bool result;
+
+            if  (String.Compare(value, "Y", StringComparison.OrdinalIgnoreCase) == 0 ||
+                String.Compare(value, "true", StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                result = true;
+            }
+            else 
+            if (String.Compare(value, "N", StringComparison.OrdinalIgnoreCase) == 0 ||
+               String.Compare(value, "false", StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                result = false;
+            }
+            else
+            {
+                throw new JsonReaderException("value is not Y or N");
+            }
+
+            return result;
 		}
 	}
 }

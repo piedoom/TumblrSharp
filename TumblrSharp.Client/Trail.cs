@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace DontPanic.TumblrSharp.Client
 {
@@ -30,5 +31,26 @@ namespace DontPanic.TumblrSharp.Client
         /// </summary>
         [JsonProperty(PropertyName = "content")]
         public string Content { get; set; }
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj)
+        {
+            return obj is Trail trail &&
+                   Blog.Equals(trail.Blog) &&
+                   Post.Equals(trail.Post) &&
+                   ContentRaw == trail.ContentRaw &&
+                   Content == trail.Content;
+        }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            int hashCode = 326892894;
+            hashCode = hashCode * -1521134295 + EqualityComparer<TrailBlog>.Default.GetHashCode(Blog);
+            hashCode = hashCode * -1521134295 + EqualityComparer<TrailPost>.Default.GetHashCode(Post);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(ContentRaw);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Content);
+            return hashCode;
+        }
     }
 }

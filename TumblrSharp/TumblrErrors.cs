@@ -30,5 +30,32 @@ namespace DontPanic.TumblrSharp
         /// </summary>
         [JsonProperty(PropertyName = "detail")]
         public string Detail { get; set; }
+
+        /// <summary>
+        /// compare this object with another
+        /// </summary>
+        /// <param name="obj">Object to be equals</param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            return obj is TumblrError error &&
+                   Title == error.Title &&
+                   Code == error.Code &&
+                   Detail == error.Detail;
+        }
+
+        /// <summary>
+        /// returns a hash code
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+#if NETSTANDARD2_1
+            return HashCode.Combine(Title, Code, Detail);
+#else
+            var hashString = Title + Code.ToString() + Detail;
+            return hashString.GetHashCode();
+#endif
+        }
     }
 }

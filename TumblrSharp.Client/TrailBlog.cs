@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace DontPanic.TumblrSharp.Client
 {
@@ -47,5 +48,37 @@ namespace DontPanic.TumblrSharp.Client
         [JsonConverter(typeof(BoolConverter))]
         [JsonProperty(PropertyName = "can_be_followed")]
         public bool CanBeFollowed { get; set; }
+
+        /// <summary>
+        /// Compare a trailblog with another
+        /// </summary>
+        /// <param name="obj">Object to be equals</param>
+        /// <returns>bool</returns>
+        public override bool Equals(object obj)
+        {
+            return obj is TrailBlog blog &&
+                   Name == blog.Name &&
+                   Active == blog.Active &&
+                   Theme.Equals(blog.Theme) &&
+                   ShareLikes == blog.ShareLikes &&
+                   ShareFollowing == blog.ShareFollowing &&
+                   CanBeFollowed == blog.CanBeFollowed;
+        }
+
+        /// <summary>
+        /// return a hash code
+        /// </summary>
+        /// <returns>hashcode as <cref>int</cref></returns>
+        public override int GetHashCode()
+        {
+            var hashCode = 1185437142;
+            hashCode = hashCode * -1521134295 + Name.GetHashCode();
+            hashCode = hashCode * -1521134295 + Active.GetHashCode();
+            hashCode = hashCode * -1521134295 + Theme.GetHashCode();
+            hashCode = hashCode * -1521134295 + ShareLikes.GetHashCode();
+            hashCode = hashCode * -1521134295 + ShareFollowing.GetHashCode();
+            hashCode = hashCode * -1521134295 + CanBeFollowed.GetHashCode();
+            return hashCode;
+        }
     }
 }

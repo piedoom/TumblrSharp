@@ -1,14 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.2;netstandard1.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.2;netstandard1.1;netcoreapp2.2</TargetFrameworks>
     <RootNamespace>DontPanic.TumblrSharp.Client</RootNamespace>
-    <AssemblyVersion>1.1.43.0</AssemblyVersion>
-    <Version>1.1.43.0</Version>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill; et al.</Authors>
     <PackageId>NewTumblrSharp.Client</PackageId>
-    <Description>Tumblr# extension for .NETStandard 1.1, 1.2, 1.3 and 2.0</Description>
-    <Copyright>Copyright 2017-2018</Copyright>
     <PackageLicenseUrl>https://github.com/piedoom/TumblrSharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
     <PackageTags>tumblr api</PackageTags>
@@ -18,12 +14,21 @@
     <PackageIconUrl>https://raw.githubusercontent.com/piedoom/TumblrSharp/master/TumblrSharp.png</PackageIconUrl>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TumblrSharpClient.snk</AssemblyOriginatorKeyFile>
+    <RepositoryType>GIT</RepositoryType>
   </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.2|AnyCPU'">
     <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.2|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
@@ -55,5 +60,5 @@
   <ItemGroup>
     <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj" />
   </ItemGroup>
-
+  
 </Project>

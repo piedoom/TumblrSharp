@@ -84,17 +84,26 @@ namespace DontPanic.TumblrSharp
 		/// </remarks>
 		public TumblrClientBase(IHttpClientFactory httpClientFactory, string tumblrClientHtppName, string consumerKey, string consumerSecret, Token oAuthToken = null)
 		{
+			if (httpClientFactory == null)
+				throw new ArgumentNullException(nameof(httpClientFactory));
+
+			if (tumblrClientHtppName == null)
+				throw new ArgumentNullException(nameof(tumblrClientHtppName));
+
+			if (tumblrClientHtppName.Length == 0)
+				throw new ArgumentException("tumblrClientHttpName cannot be empty", nameof(tumblrClientHtppName));
+
 			if (consumerKey == null)
-				throw new ArgumentNullException("consumerKey");
+				throw new ArgumentNullException(nameof(consumerKey));
 
 			if (consumerKey.Length == 0)
-				throw new ArgumentException("Consumer key cannot be empty.", "consumerKey");
+				throw new ArgumentException("Consumer key cannot be empty.", nameof(consumerKey));
 
 			if (consumerSecret == null)
 				throw new ArgumentNullException("consumerSecret");
 
 			if (consumerSecret.Length == 0)
-				throw new ArgumentException("Consumer secret cannot be empty.", "consumerSecret");
+				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
 
 			this.oAuthToken = oAuthToken;
 			this.client = httpClientFactory.CreateClient(tumblrClientHtppName);

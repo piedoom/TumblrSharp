@@ -26,6 +26,21 @@ namespace DontPanic.TumblrSharp
         
         public static void ConfigureService(IServiceCollection services, string consumerKey, string consumerSecret, Token oAuthToken = null)
         {
+            if (services == null)
+                throw new ArgumentNullException(nameof(services));
+
+            if (consumerKey == null)
+                throw new ArgumentNullException(nameof(consumerKey));
+
+            if (consumerKey.Length == 0)
+                throw new ArgumentException("Consumer key cannot be empty.", nameof(consumerKey));
+
+            if (consumerSecret == null)
+                throw new ArgumentNullException("consumerSecret");
+
+            if (consumerSecret.Length == 0)
+                throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
+
             var service = services.AddHttpClient(TumblrSharpClientName);
             
             service.ConfigurePrimaryHttpMessageHandler(() =>

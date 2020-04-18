@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueuedPosts", "Examples\Net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reblog_Queue", "Examples\Console\Reblog_Queue\Reblog_Queue.csproj", "{0BF48C8B-B153-4052-9663-702F4F1CDD26}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore", "NetCore", "{EB6E050C-EA7B-4963-A6AD-ABE7354BD961}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net Core Console", "Net Core Console", "{EB6E050C-EA7B-4963-A6AD-ABE7354BD961}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Followers", "Examples\NetCore\Followers\Followers.csproj", "{D6590135-A714-4DEB-ADDF-F0752CED4806}"
 EndProject

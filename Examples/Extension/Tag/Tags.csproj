@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj" />
+    <ProjectReference Include="..\..\..\src\TumblrSharp.Client\TumblrSharp.Client.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,15 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TumblrSharp.png = TumblrSharp.png
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portable", "Portable", "{3F20BAC4-141B-49AD-9F98-8F797A40CE5E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portable", "src\Portable", "{3F20BAC4-141B-49AD-9F98-8F797A40CE5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "Portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "src\Portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "Portable\TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "src\Portable\TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TumblrSharp", "TumblrSharp\TumblrSharp.csproj", "{B6D630E0-3A92-4A98-9FC1-C62F67D23CEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TumblrSharp", "src\TumblrSharp\TumblrSharp.csproj", "{B6D630E0-3A92-4A98-9FC1-C62F67D23CEC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TumblrSharp.Client", "TumblrSharp.Client\TumblrSharp.Client.csproj", "{CB9E7C42-A77C-4642-AC8D-D2143D45F118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TumblrSharp.Client", "src\TumblrSharp.Client\TumblrSharp.Client.csproj", "{CB9E7C42-A77C-4642-AC8D-D2143D45F118}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{B103B48F-8100-4DD6-A00C-3CFFBA6A31BD}"
 	ProjectSection(SolutionItems) = preProject

@@ -46,16 +46,16 @@ namespace DontPanic.TumblrSharp
 		public TumblrClientBase(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null)
 		{
 			if (consumerKey == null)
-				throw new ArgumentNullException("consumerKey");
+				throw new ArgumentNullException(nameof(consumerKey));
 
 			if (consumerKey.Length == 0)
-				throw new ArgumentException("Consumer key cannot be empty.", "consumerKey");
+				throw new ArgumentException("Consumer key cannot be empty.", nameof(consumerKey));
 
 			if (consumerSecret == null)
-				throw new ArgumentNullException("consumerSecret");
+				throw new ArgumentNullException(nameof(consumerSecret));
 
 			if (consumerSecret.Length == 0)
-				throw new ArgumentException("Consumer secret cannot be empty.", "consumerSecret");
+				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
 
 			this.oAuthToken = oAuthToken;
 			this.client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, oAuthToken));
@@ -65,8 +65,8 @@ namespace DontPanic.TumblrSharp
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
 		/// </summary>
-		/// <param name="httpClientFactory"> HttpClientFactory</param>
-		/// <param name="tumblrClientHtppName">The name of logical HttpClient</param>
+		/// <param name="httpClientFactory"> <see cref="IHttpClientFactory">HttpClientFactory</see> to create internal HttpClient</param>
+		/// <param name="tumblrClientHtppName">The name of logical HttpClient from the <see cref="IHttpClientFactory">HttpClientFactory</see></param>
 		/// <param name="consumerKey">
 		/// The consumer key.
 		/// </param>
@@ -177,10 +177,10 @@ namespace DontPanic.TumblrSharp
 				throw new ObjectDisposedException("TumblrClient");
 
 			if (method == null)
-				throw new ArgumentNullException("method");
+				throw new ArgumentNullException(nameof(method));
 
 			if (projection == null)
-				throw new ArgumentNullException("projection");
+				throw new ArgumentNullException(nameof(projection));
 
 			var response = await CallApiMethodAsync<TResponse>(method, cancellationToken, converters).ConfigureAwait(false);
 			return projection(response);
@@ -211,7 +211,7 @@ namespace DontPanic.TumblrSharp
 				throw new ObjectDisposedException("TumblrClient");
 
 			if (method == null)
-				throw new ArgumentNullException("method");
+				throw new ArgumentNullException(nameof(method));
 
 			return CallApiMethodAsync<object>(method, cancellationToken);
 		}
@@ -250,7 +250,7 @@ namespace DontPanic.TumblrSharp
 				throw new ObjectDisposedException("TumblrClient");
 
 			if (method == null)
-				throw new ArgumentNullException("method");
+				throw new ArgumentNullException(nameof(method));
 
 			//build the api call URL
 			StringBuilder apiRequestUrl = new StringBuilder(method.Url);
@@ -300,7 +300,12 @@ namespace DontPanic.TumblrSharp
 							{
 								case System.Net.HttpStatusCode.Unauthorized :
 									{
+#if (NETSTANDARD1_3 || NETSTANDARD2_0 || NETCOREAPP2_2)
+										errorResponse = Array.Empty<TumblrError>();
+#else
 										errorResponse = new TumblrError[0];
+#endif
+
 										break;
 									}
 								default:
@@ -311,14 +316,22 @@ namespace DontPanic.TumblrSharp
 										}
 										else
 										{
-											errorResponse = new TumblrError[0];
+#if (NETSTANDARD2_0 || NETCOREAPP2_2)
+											errorResponse = Array.Empty<TumblrError>();
+#else
+										errorResponse = new TumblrError[0];
+#endif
 										}
 										break;
 									}
 							}
 
 							if (errorResponse == null)
-								errorResponse = new TumblrError[0];
+#if (NETSTANDARD2_0 || NETCOREAPP2_2)
+								errorResponse = Array.Empty<TumblrError>();
+#else
+										errorResponse = new TumblrError[0];
+#endif
 
 							throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
 						}
@@ -327,9 +340,9 @@ namespace DontPanic.TumblrSharp
 			}
 		}
 
-		#endregion
+#endregion
 
-		#region Private Methods
+#region Private Methods
 
 		private JsonSerializer CreateSerializer(IEnumerable<JsonConverter> converters)
 		{
@@ -343,9 +356,9 @@ namespace DontPanic.TumblrSharp
 			return serializer;
 		}
 
-		#endregion
+#endregion
 
-		#region IDisposable Implementation
+#region IDisposable Implementation
 
 		/// <summary>
 		/// Disposes of the object and the internal HttpClient instance.
@@ -379,6 +392,6 @@ namespace DontPanic.TumblrSharp
 		protected virtual void Dispose(bool disposing)
 		{ }
 
-		#endregion
+#endregion
 	}
 }

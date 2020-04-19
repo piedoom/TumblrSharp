@@ -55,7 +55,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.1|AnyCPU'">
     <OutputPath>..\bin\Debug\</OutputPath>
-  </PropertyGroup>  
+  </PropertyGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\TumblrSharp\TumblrSharp.csproj" />

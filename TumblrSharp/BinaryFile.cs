@@ -28,7 +28,7 @@ namespace DontPanic.TumblrSharp
 		public BinaryFile(byte[] data, string fileName = null, string mimeType = null)
 		{
 			if (data == null)
-				throw new ArgumentNullException("data");
+				throw new ArgumentNullException(nameof(data));
 
 			this.data = data;
 			this.fileName = fileName ?? "file";
@@ -50,10 +50,10 @@ namespace DontPanic.TumblrSharp
 		public BinaryFile(Stream stream, string fileName = null, string mimeType = null)
 		{
 			if (stream == null)
-				throw new ArgumentNullException("stream");
+				throw new ArgumentNullException(nameof(stream));
 
 			if (!stream.CanRead || !stream.CanSeek)
-				throw new ArgumentException("The stream must be readable and seekable.", "stream");
+				throw new ArgumentException("The stream must be readable and seekable.", nameof(stream));
 
 			using (stream)
 			{

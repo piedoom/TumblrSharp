@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,5 @@
 ﻿using DontPanic.TumblrSharp.OAuth;
+using System.Net.Http;
 
 namespace DontPanic.TumblrSharp
 {
@@ -27,5 +28,31 @@ namespace DontPanic.TumblrSharp
         /// A new Tumblr client instance of type <typeparamref name="TClient"/>.
         /// </returns>
         TClient Create<TClient>(string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase;
+
+#if (NETCOREAPP2_2)
+        /// <summary>
+        /// Creates a new Tumblr client instance of type <typeparamref name="TClient"/>.
+        /// </summary>
+        /// <typeparam name="TClient">
+        /// The type of client to create (must derive from <see cref="TumblrClientBase"/>).
+        /// </typeparam>
+        /// <param name="httpClientFactory">
+        /// <see cref="IHttpClientFactory">HttpClientFactory</see> to create internal HttpClient
+        /// </param>
+        /// <param name="consumerKey">
+        /// The consumer key.
+        /// </param>
+        /// <param name="consumerSecret">
+        /// The consumer secret.
+        /// </param>
+        /// <param name="oAuthToken">
+        /// An optional access token for the API. If no access token is provided, only the methods
+        /// that do not require OAuth can be invoked successfully.
+        /// </param>
+        /// <returns>
+        /// A new Tumblr client instance of type <typeparamref name="TClient"/>.
+        /// </returns>
+        TClient Create<TClient>(IHttpClientFactory httpClientFactory, string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase;
+#endif
     }
 }

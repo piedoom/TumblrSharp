@@ -8,4 +8,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Examples for NewTumblrSharp for .Net")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.2.0.0")]

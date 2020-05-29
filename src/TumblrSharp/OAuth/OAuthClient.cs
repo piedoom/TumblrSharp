@@ -32,17 +32,17 @@ namespace DontPanic.TumblrSharp.OAuth
 		private const string requestTokenUrl = "https://www.tumblr.com/oauth/request_token";
 		private const string authorizeTokenUrl = "https://www.tumblr.com/oauth/authorize";
 
-        private readonly IHmacSha1HashProvider hashProvider;
+		private readonly IHmacSha1HashProvider hashProvider;
 		private readonly string consumerKey;
 		private readonly string consumerSecret;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="OAuth"/> client class.
 		/// </summary>
-        /// <param name="hashProvider">
-        /// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
-        /// HMAC-SHA1 hash for OAuth purposes.
-        /// </param>
+		/// <param name="hashProvider">
+		/// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
+		/// HMAC-SHA1 hash for OAuth purposes.
+		/// </param>
 		/// <param name="consumerKey">
 		/// The consumer key.
 		/// </param>
@@ -56,11 +56,11 @@ namespace DontPanic.TumblrSharp.OAuth
 		/// </remarks>
 		/// <exception cref="ArgumentNullException">
 		/// <list type="bullet">
-        /// <item>
-        ///		<description>
-        ///			<paramref name="hashProvider"/> is <b>null</b>.
-        ///		</description>
-        ///	</item>
+		/// <item>
+		///		<description>
+		///			<paramref name="hashProvider"/> is <b>null</b>.
+		///		</description>
+		///	</item>
 		/// <item>
 		///		<description>
 		///			<paramref name="consumerKey"/> is <b>null</b>.
@@ -89,8 +89,8 @@ namespace DontPanic.TumblrSharp.OAuth
 		/// </exception>
 		public OAuthClient(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret)
 		{
-            if (hashProvider == null)
-                throw new ArgumentNullException("hashProvider");
+			if (hashProvider == null)
+				throw new ArgumentNullException("hashProvider");
 
 			if (consumerKey == null)
 				throw new ArgumentNullException("consumerKey");
@@ -104,7 +104,7 @@ namespace DontPanic.TumblrSharp.OAuth
 			if (consumerSecret.Length == 0)
 				throw new ArgumentException("Consumer secret cannot be empty.", "consumerSecret");
 
-            this.hashProvider = hashProvider;
+			this.hashProvider = hashProvider;
 			this.consumerKey = consumerKey;
 			this.consumerSecret = consumerSecret;
 		}
@@ -190,8 +190,10 @@ namespace DontPanic.TumblrSharp.OAuth
 
 			using (var client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, null)))
 			{
-				var request = new HttpRequestMessage(HttpMethod.Post, accessTokenUrl);
-				request.Content = new FormUrlEncodedContent(requestParameters);
+				var request = new HttpRequestMessage(HttpMethod.Post, accessTokenUrl)
+				{
+					Content = new FormUrlEncodedContent(requestParameters)
+				};
 
 				var response = await client.SendAsync(request).ConfigureAwait(false);
 				if (response.IsSuccessStatusCode)
@@ -261,17 +263,21 @@ namespace DontPanic.TumblrSharp.OAuth
 				 { "oauth_callback", callbackUrl }
 			};
 
-            using (var client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, null)))
+			using (var client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, null)))
 			{
-				var request = new HttpRequestMessage(HttpMethod.Post, requestTokenUrl);
-				request.Content = new FormUrlEncodedContent(requestParameters);
+				var request = new HttpRequestMessage(HttpMethod.Post, requestTokenUrl)
+				{
+					Content = new FormUrlEncodedContent(requestParameters)
+				};
 
 				var response = await client.SendAsync(request).ConfigureAwait(false);
+
 				if (response.IsSuccessStatusCode)
 				{
 					string tokenString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
 					System.Text.RegularExpressions.Match m = oauthTempTokensRegEx.Match(tokenString);
+				
 					if (m.Success && String.Compare(m.Groups["confirmed"].Value, Boolean.TrueString, StringComparison.OrdinalIgnoreCase) == 0)
 					{
 						return new Token(m.Groups["token"].Value, m.Groups["secret"].Value);
@@ -339,7 +345,7 @@ namespace DontPanic.TumblrSharp.OAuth
 		/// Gets the authorized access token that can be used to make OAuth calls.
 		/// </summary>
 		/// <param name="requestToken">
-		/// The request token sent from the server to the <b>callback url</b>.
+		/// The rest token sent from the server to the <b>callback url</b>.que
 		/// </param>
 		/// <param name="verifierUrl">
 		/// The verifier url returned from the server.
@@ -390,55 +396,126 @@ namespace DontPanic.TumblrSharp.OAuth
 				throw new ArgumentException("Verifier URL cannot be empty.", "verifierUrl");
 
 			Uri uri = new Uri(verifierUrl, UriKind.RelativeOrAbsolute);
+
 			string verifierString = (uri.IsAbsoluteUri) ? uri.Query : verifierUrl;
 
 			System.Text.RegularExpressions.Match m = oauthVerifierRegEx.Match(verifierString);
+			
 			if (m.Success)
 			{
 				string token = m.Groups["token"].Value;
 				string verifier = m.Groups["verifier"].Value;
 
-				MethodParameterSet authorizationHeaderParameters = new MethodParameterSet();
-				authorizationHeaderParameters.Add("oauth_token", token);
-				authorizationHeaderParameters.Add("oauth_verifier", verifier);
-
-				var requestParameters = new Dictionary<string, string>() 
-				{
-					{ "oauth_token", token },
-					{ "oauth_verifier", verifier },
-				};
-
-                using (var client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, requestToken)))
-				{
-					var request = new HttpRequestMessage(HttpMethod.Post, accessTokenUrl);
-					request.Content = new FormUrlEncodedContent(requestParameters);
-
-					using (var response = await client.SendAsync(request).ConfigureAwait(false))
-					{
-						if (response.IsSuccessStatusCode)
-						{
-							string tokenString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-							System.Text.RegularExpressions.Match m1 = xauthTokensRegEx.Match(tokenString);
-							if (m1.Success)
-							{
-								return new Token(m1.Groups["token"].Value, m1.Groups["secret"].Value);
-							}
-							else
-							{
-								throw new OAuthException("Could not determine oauth_token and oauth_token_secret from server response.");
-							}
-						}
-						else
-						{
-							throw new OAuthException(String.Format("GetAccessTokenAsync failed. Status Code: {0}, Message: {1}", response.StatusCode, response.ReasonPhrase));
-						}
-					}
-				}
+				return await GetAccessTokenAsync(requestToken, token, verifier).ConfigureAwait(false);
 			}
 			else
 			{
 				throw new OAuthException("Could not parse response to callback URL");
+			}
+		}
+
+		/// <summary>
+		/// Gets the authorized access token that can be used to make OAuth calls.
+		/// </summary>
+		/// <param name="requestToken">The rest token sent from the server to the <b>callback url</b> que</param>
+		/// <param name="oAuthToken">oauth_token</param>
+		/// <param name="oAuthVerifier">oauth_verifier</param>
+		/// <returns>The access token.</returns>
+		/// <exception cref="ArgumentNullException">
+		/// <list type="bullet">
+		/// <item>
+		///		<description>
+		///			<paramref name="requestToken"/> is <b>null</b>.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="oAuthToken"/> is <b>null</b>.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="oAuthVerifier"/> is <b>null</b>.
+		///		</description>
+		///	</item>
+		/// </list>
+		/// </exception>
+		/// <exception cref="ArgumentException">
+		/// <list type="bullet">
+		/// <item>
+		///		<description>
+		///			<paramref name="oAuthToken"/> is empty.
+		///		</description>
+		///	</item>
+		///	<item>
+		///		<description>
+		///			<paramref name="oAuthVerifier"/> is empty..
+		///		</description>
+		///	</item>
+		/// </list>
+		/// </exception>
+		/// <exception cref="OAuthException">
+		/// <list type="bullet">
+		///	<item>
+		///		<description>
+		///			An exception occurred during the method call.
+		///		</description>
+		///	</item>
+		/// </list>
+		/// </exception>
+		public async Task<Token> GetAccessTokenAsync(Token requestToken, string oAuthToken, string oAuthVerifier)
+		{
+			if (requestToken == null)
+				throw new ArgumentNullException(nameof(requestToken));
+
+			if (oAuthToken == null)
+				throw new ArgumentNullException(nameof(oAuthToken));
+
+			if (oAuthToken.Length == 0)
+				throw new ArgumentException("Verifier URL cannot be empty.", nameof(oAuthToken));
+
+			if (oAuthVerifier == null)
+				throw new ArgumentNullException(nameof(oAuthVerifier));
+
+			if (oAuthVerifier.Length == 0)
+				throw new ArgumentException("Verifier URL cannot be empty.", nameof(oAuthVerifier));
+
+
+			var requestParameters = new Dictionary<string, string>()
+			{
+				{ "oauth_token", oAuthToken },
+				{ "oauth_verifier", oAuthVerifier }
+			};
+
+			using (var client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, requestToken)))
+			{
+				var request = new HttpRequestMessage(HttpMethod.Post, accessTokenUrl)
+				{
+					Content = new FormUrlEncodedContent(requestParameters)
+				};
+
+				using (var response = await client.SendAsync(request).ConfigureAwait(false))
+				{
+					if (response.IsSuccessStatusCode)
+					{
+						string tokenString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+
+						System.Text.RegularExpressions.Match match = xauthTokensRegEx.Match(tokenString);
+
+						if (match.Success)
+						{
+							return new Token(match.Groups["token"].Value, match.Groups["secret"].Value);
+						}
+						else
+						{
+							throw new OAuthException("Could not determine oauth_token and oauth_token_secret from server response.");
+						}
+					}
+					else
+					{
+						throw new OAuthException(String.Format("GetAccessTokenAsync failed. Status Code: {0}, Message: {1}", response.StatusCode, response.ReasonPhrase));
+					}
+				}
 			}
 		}
 	}

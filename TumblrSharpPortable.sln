@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "src\portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp.Client", "src\portable\TumblrSharp.Client\TumblrSharp.Client.csproj", "{8C69EA54-A853-4A68-A9A9-34736524BD1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C69EA54-A853-4A68-A9A9-34736524BD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F490C63D-84A6-4D29-BF47-13FE1C901F38}
+	EndGlobalSection
+EndGlobal

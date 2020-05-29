@@ -7,10 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.appveyor.yml = .appveyor.yml
 		README.md = README.md
 		TumblrSharp.nuspec = TumblrSharp.nuspec
-		TumblrSharp.png = TumblrSharp.png
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portable", "src\Portable", "{3F20BAC4-141B-49AD-9F98-8F797A40CE5E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portable", "Portable", "{3F20BAC4-141B-49AD-9F98-8F797A40CE5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TumblrSharp", "src\Portable\TumblrSharp\TumblrSharp.csproj", "{4A8B7B77-F7AE-4155-9E9C-253AFD6E0C3A}"
 EndProject
@@ -74,6 +73,35 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extension", "Extension", "{7B628DE7-0B29-432A-87A2-AB812D610A5A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tags", "Examples\Extension\Tag\Tags.csproj", "{AB0BB597-E235-49AF-955D-B9919FDCA23C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{28FD2064-A20A-4E3D-AD9F-FE55D88913E1}"
+	ProjectSection(SolutionItems) = preProject
+		docfx\docfx.json = docfx\docfx.json
+		docfx\index.md = docfx\index.md
+		docfx\toc.yml = docfx\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{26DD396E-5DB1-458A-9B0C-C49D208A1100}"
+	ProjectSection(SolutionItems) = preProject
+		docfx\articles\firststeps.md = docfx\articles\firststeps.md
+		docfx\articles\intro.md = docfx\articles\intro.md
+		docfx\articles\revision.md = docfx\articles\revision.md
+		docfx\articles\roadmap.md = docfx\articles\roadmap.md
+		docfx\articles\toc.yml = docfx\articles\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorials", "tutorials", "{DD5FD214-2348-44E8-928F-C75287DF249D}"
+	ProjectSection(SolutionItems) = preProject
+		docfx\tutorial\index.md = docfx\tutorial\index.md
+		docfx\tutorial\toc.yml = docfx\tutorial\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F8241D6F-4CD5-4A7C-BE26-AEE01465F8FD}"
+	ProjectSection(SolutionItems) = preProject
+		docfx\images\articles_revision.png = docfx\images\articles_revision.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetAuthenticate", "Examples\.NET Core\AspNetAuthenticate\AspNetAuthenticate.csproj", "{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -619,6 +647,30 @@ Global
 		{AB0BB597-E235-49AF-955D-B9919FDCA23C}.Release|x64.Build.0 = Release|Any CPU
 		{AB0BB597-E235-49AF-955D-B9919FDCA23C}.Release|x86.ActiveCfg = Release|Any CPU
 		{AB0BB597-E235-49AF-955D-B9919FDCA23C}.Release|x86.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|ARM.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|iPhone.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|x64.Build.0 = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -650,6 +702,10 @@ Global
 		{DFDEA11F-C1A3-45BA-A034-C5A501905758} = {B103B48F-8100-4DD6-A00C-3CFFBA6A31BD}
 		{7B628DE7-0B29-432A-87A2-AB812D610A5A} = {B103B48F-8100-4DD6-A00C-3CFFBA6A31BD}
 		{AB0BB597-E235-49AF-955D-B9919FDCA23C} = {7B628DE7-0B29-432A-87A2-AB812D610A5A}
+		{26DD396E-5DB1-458A-9B0C-C49D208A1100} = {28FD2064-A20A-4E3D-AD9F-FE55D88913E1}
+		{DD5FD214-2348-44E8-928F-C75287DF249D} = {28FD2064-A20A-4E3D-AD9F-FE55D88913E1}
+		{F8241D6F-4CD5-4A7C-BE26-AEE01465F8FD} = {28FD2064-A20A-4E3D-AD9F-FE55D88913E1}
+		{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220} = {BAA06ECF-995E-4FDE-851E-1744454DE4D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32217C45-3DBC-48F5-9517-D14CFF7F3504}

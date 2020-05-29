@@ -19,7 +19,12 @@ namespace DontPanic.TumblrSharp
 		private readonly object disposeLock = new object();
 		private bool disposed;
 
-		private readonly HttpClient client;
+		private readonly HttpClient httpClient;
+
+		private readonly string _consumerKey;
+		private readonly string _consumerSecret;
+
+		private readonly IHmacSha1HashProvider _hashProvider;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
@@ -42,6 +47,7 @@ namespace DontPanic.TumblrSharp
 		///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
 		/// <br/>
 		/// http://www.tumblr.com/oauth/apps
+		/// <br/><br/>platform: .NetStandard 1.1+
 		/// </remarks>
 		public TumblrClientBase(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null)
 		{
@@ -58,15 +64,26 @@ namespace DontPanic.TumblrSharp
 				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
 
 			this.oAuthToken = oAuthToken;
-			this.client = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, oAuthToken));
+
+			_consumerKey = consumerKey;
+			_consumerSecret = consumerSecret;
+
+			_hashProvider = hashProvider;
+
+			//this.httpClient = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, oAuthToken));
+
+			this.httpClient = new HttpClient();
 		}
 
-#if (NETCOREAPP2_2)
+#if (NETSTANDARD2_0 || NETCOREAPP2_2)
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
 		/// </summary>
 		/// <param name="httpClientFactory"> <see cref="IHttpClientFactory">HttpClientFactory</see> to create internal HttpClient</param>
-		/// <param name="tumblrClientHtppName">The name of logical HttpClient from the <see cref="IHttpClientFactory">HttpClientFactory</see></param>
+		/// <param name="hashProvider">
+		/// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
+		/// HMAC-SHA1 hash for OAuth purposes.
+		/// </param>
 		/// <param name="consumerKey">
 		/// The consumer key.
 		/// </param>
@@ -79,19 +96,13 @@ namespace DontPanic.TumblrSharp
 		/// </param>
 		/// <remarks>
 		///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
-		/// <br/>
-		/// http://www.tumblr.com/oauth/apps
+		/// http://www.tumblr.com/oauth/apps 
+		/// <br/><br/>platform: .NetStandard 2.0+, .Net Core 2.2+
 		/// </remarks>
-		public TumblrClientBase(IHttpClientFactory httpClientFactory, string tumblrClientHtppName, string consumerKey, string consumerSecret, Token oAuthToken = null)
+		public TumblrClientBase(IHttpClientFactory httpClientFactory, IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null)
 		{
 			if (httpClientFactory == null)
 				throw new ArgumentNullException(nameof(httpClientFactory));
-
-			if (tumblrClientHtppName == null)
-				throw new ArgumentNullException(nameof(tumblrClientHtppName));
-
-			if (tumblrClientHtppName.Length == 0)
-				throw new ArgumentException("tumblrClientHttpName cannot be empty", nameof(tumblrClientHtppName));
 
 			if (consumerKey == null)
 				throw new ArgumentNullException(nameof(consumerKey));
@@ -100,13 +111,19 @@ namespace DontPanic.TumblrSharp
 				throw new ArgumentException("Consumer key cannot be empty.", nameof(consumerKey));
 
 			if (consumerSecret == null)
-				throw new ArgumentNullException("consumerSecret");
+				throw new ArgumentNullException(nameof(consumerSecret));
 
 			if (consumerSecret.Length == 0)
 				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
 
 			this.oAuthToken = oAuthToken;
-			this.client = httpClientFactory.CreateClient(tumblrClientHtppName);
+
+			_consumerKey = consumerKey;
+			_consumerSecret = consumerSecret;
+
+			_hashProvider = hashProvider;
+
+			this.httpClient = httpClientFactory.CreateClient();
 		}
 #endif
 
@@ -282,7 +299,9 @@ namespace DontPanic.TumblrSharp
 					request.Content = content;
 				}
 
-				using (var response = await client.SendAsync(request, cancellationToken).ConfigureAwait(false))
+				await request.PreparationForTumblrClient(_hashProvider, _consumerKey, _consumerSecret, oAuthToken);
+
+				using (var response = await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false))
 				{
 					var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
 					using (var reader = new JsonTextReader(new StreamReader(stream)))
@@ -296,16 +315,16 @@ namespace DontPanic.TumblrSharp
 						{
 							TumblrError[] errorResponse;
 
+#if (NETSTANDARD1_3 || NETSTANDARD2_0 || NETCOREAPP2_2)
+							errorResponse = Array.Empty<TumblrError>();
+#else
+							errorResponse = new TumblrError[0];
+#endif
+
 							switch (response.StatusCode)
 							{
 								case System.Net.HttpStatusCode.Unauthorized :
 									{
-#if (NETSTANDARD1_3 || NETSTANDARD2_0 || NETCOREAPP2_2)
-										errorResponse = Array.Empty<TumblrError>();
-#else
-										errorResponse = new TumblrError[0];
-#endif
-
 										break;
 									}
 								default:
@@ -314,24 +333,9 @@ namespace DontPanic.TumblrSharp
 										{
 											errorResponse = serializer.Deserialize<TumblrErrorResponse>(reader).Errors;
 										}
-										else
-										{
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
-											errorResponse = Array.Empty<TumblrError>();
-#else
-										errorResponse = new TumblrError[0];
-#endif
-										}
 										break;
 									}
 							}
-
-							if (errorResponse == null)
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
-								errorResponse = Array.Empty<TumblrError>();
-#else
-										errorResponse = new TumblrError[0];
-#endif
 
 							throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
 						}
@@ -342,8 +346,13 @@ namespace DontPanic.TumblrSharp
 
 #endregion
 
-#region Private Methods
-
+		#region Private Methods
+		
+		/// <summary>
+		/// Create serialize
+		/// </summary>
+		/// <param name="converters"><see cref="IEnumerable{T}" /> from <see cref="JsonConverter"/></param>
+		/// <returns><see cref="JsonSerializer"/></returns>
 		private JsonSerializer CreateSerializer(IEnumerable<JsonConverter> converters)
 		{
 			JsonSerializer serializer = new JsonSerializer();
@@ -356,9 +365,9 @@ namespace DontPanic.TumblrSharp
 			return serializer;
 		}
 
-#endregion
+		#endregion
 
-#region IDisposable Implementation
+		#region IDisposable Implementation
 
 		/// <summary>
 		/// Disposes of the object and the internal HttpClient instance.
@@ -374,8 +383,11 @@ namespace DontPanic.TumblrSharp
 					if (!disposed)
 					{
 						disposed = true;
-						client.Dispose();
+
+						httpClient.Dispose();
+						
 						Dispose(true);
+						
 						GC.SuppressFinalize(this);
 					}
 				}
@@ -392,6 +404,6 @@ namespace DontPanic.TumblrSharp
 		protected virtual void Dispose(bool disposing)
 		{ }
 
-#endregion
+		#endregion
 	}
 }

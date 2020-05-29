@@ -1,9 +1,9 @@
 using DontPanic.TumblrSharp;
+using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Testing
@@ -14,10 +14,8 @@ namespace Testing
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            TumblrClientFactory.ConfigureService(services, Settings.CONSUMER_KEY, Settings.CONSUMER_SECRET, new Token(Settings.OAUTH_TOKEN, Settings.OAUTH_TOKEN_SECRET));
-
+            services.UseTumblrClient();
             services.AddTransient<IMyTumblrService, MyTumblrService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,17 +26,24 @@ namespace Testing
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Map("", context => {
-
+            app.Map("", context =>
+            {
                 context.Run(async (subcontext) =>
                 {
-                    var myService = app.ApplicationServices.GetRequiredService<IMyTumblrService>();
-                    var pageContent = await myService.GetFollowerCount();
+                    if (Settings.CONSUMER_KEY == "xxx")
+                    {
+                        await subcontext.Response.WriteAsync("<h1>Examples for Asp.Net</h1><p>You must set the consumer token and the access token in the source code. Restart the project.</p>");
+                    }
+                    else
+                    {
+                        var myService = app.ApplicationServices.GetRequiredService<IMyTumblrService>();
 
-                    await subcontext.Response.WriteAsync(pageContent);
+                        var pageContent = await myService.GetFollowerCount();
+
+                        await subcontext.Response.WriteAsync(pageContent);
+                    }                    
                 });
-                
-                });
-        }
+            });
+        }        
     }
 }

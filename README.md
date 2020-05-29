@@ -52,7 +52,13 @@ Version 1.1.*
 - Advanced testings
 - Advanced supported plattform
 
-Version 1.2 
+Version 1.2.0.* 
+- NetStandard 2.0
+- supported HttpClientFactory
+- Example for Asp.Net, Azure Function
+- Api-Documentation
+
+Version 2.0 
 - Support Neues Post Format (npf)
 - Create / Edit / Fetch Post for npf
 

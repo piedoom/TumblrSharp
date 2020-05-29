@@ -25,20 +25,20 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\net45\</OutputPath>
+    <OutputPath>..\..\..\bin\Debug\net45\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\bin\Debug\net45\DontPanic.TumblrSharp.XML</DocumentationFile>
+    <DocumentationFile>..\..\..\bin\Debug\net45\DontPanic.TumblrSharp.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\net45</OutputPath>
+    <OutputPath>..\..\..\bin\Release\net45</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\bin\Release\net45\DontPanic.TumblrSharp.XML</DocumentationFile>
+    <DocumentationFile>..\..\..\bin\Release\net45\DontPanic.TumblrSharp.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\TumblrSharp\ApiMethod.cs" />
@@ -48,6 +48,7 @@
     <Compile Include="..\..\TumblrSharp\BlogMethod.cs" />
     <Compile Include="..\..\TumblrSharp\BlogType.cs" />
     <Compile Include="..\..\TumblrSharp\DateTimeHelper.cs" />
+    <Compile Include="..\..\TumblrSharp\ExtensionHttpRequestMessage.cs" />
     <Compile Include="..\..\TumblrSharp\HmacSha1HashProvider.cs" />
     <Compile Include="..\..\TumblrSharp\IHmacSha1HashProvider.cs" />
     <Compile Include="..\..\TumblrSharp\IMethodParameter.cs" />

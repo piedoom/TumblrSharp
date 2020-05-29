@@ -9,7 +9,7 @@ namespace Testing
 {
     public class MyTumblrService : IMyTumblrService
     {
-        private readonly TumblrClient _tc;
+        private TumblrClient _tc;
 
         public MyTumblrService(IHttpClientFactory clientFactory)
         {

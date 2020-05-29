@@ -37,16 +37,20 @@ namespace DontPanic.TumblrSharp.Client
         ///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
         /// <br/>
         /// http://www.tumblr.com/oauth/apps
+        /// <br/><br/>platform: .Net Standard 1.1+, .Net Core 2.2+
         /// </remarks>
         public TumblrClient(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null) : base(hashProvider, consumerKey, consumerSecret, oAuthToken)
         {
             this.apiKey = consumerKey;
         }
 
-#if (NETCOREAPP2_2)
+#if (NETSTANDARD2_0 || NETCOREAPP2_2)
         /// <summary>
         /// Initializes a new instance of the <see cref="TumblrClient"/> class.
         /// </summary>
+        /// <param name="httpClientFactory">
+        /// <see cref="IHttpClientFactory">HttpClientFactory</see> to create internal <see cref="HttpClient">HttpClient</see>
+        /// </param>
         /// <param name="hashProvider">
         /// A <see cref="IHmacSha1HashProvider"/> implementation used to generate a
         /// HMAC-SHA1 hash for OAuth purposes.
@@ -62,11 +66,11 @@ namespace DontPanic.TumblrSharp.Client
         /// that do not require OAuth can be invoked successfully.
         /// </param>
         /// <remarks>
-        ///  You can get a consumer key and a consumer secret by registering an application with Tumblr:<br/>
-        /// <br/>
-        /// http://www.tumblr.com/oauth/apps
+        /// You can get a consumer key and a consumer secret by registering an application with Tumblr App-Registration:<br/> http://www.tumblr.com/oauth/apps 
+        /// <br/><br/>platform: .Net Standard 2.0+, .Net Core 2.2+
         /// </remarks>
-        public TumblrClient(IHttpClientFactory httpClientFactory, string tumblrClientName, string consumerKey, string consumerSecret, Token oAuthToken = null) : base(httpClientFactory, tumblrClientName, consumerKey, consumerSecret, oAuthToken)
+        public TumblrClient(IHttpClientFactory httpClientFactory, IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret, Token oAuthToken = null)
+            : base(httpClientFactory, hashProvider, consumerKey, consumerSecret, oAuthToken)
         {
             this.apiKey = consumerKey;
         }

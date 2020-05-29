@@ -17,17 +17,6 @@ namespace DontPanic.TumblrSharp
 
 #if (NETSTANDARD2_0 || NETCOREAPP2_2)
         /// <summary>
-        /// name for a named HttpClient create from IHttpClientFavtory
-        /// </summary>
-        internal static string TumblrSharpClientName
-        {
-            get
-            {
-                return "tumblrSharpHtppClient";
-            }
-        }
-
-        /// <summary>
         /// Creates a new Tumblr client instance of type <typeparamref name="TClient"/>.
         /// </summary>
         /// <remarks>
@@ -56,16 +45,6 @@ namespace DontPanic.TumblrSharp
         /// <exception cref="ArgumentException">
         /// <typeparamref name="TClient"/> is not <see cref="TumblrClientBase"/> or <see cref="TumblrClient"/>.
         /// </exception>
-        /*public TClient Create<TClient>(IHttpClientFactory httpClientFactory, string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase
-        {
-            if (typeof(TClient) == typeof(TumblrClient))
-            {
-                return new TumblrClient(httpClientFactory, TumblrSharpClientName, new HmacSha1HashProvider(), consumerKey, consumerSecret, oAuthToken) as TClient;
-            }
-
-            throw new ArgumentException(string.Format("The provided type '{0}'cannot be created by this factory.", typeof(TClient).FullName));
-        }*/
-
         public TClient Create<TClient>(IHttpClientFactory httpClientFactory, string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase
         {
             if (typeof(TClient) == typeof(TumblrClient))

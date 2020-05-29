@@ -63,14 +63,18 @@ namespace DontPanic.TumblrSharp
 			if (consumerSecret.Length == 0)
 				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
 
+			if (oAuthToken != null)
+			{
+				if (oAuthToken.IsValid == false)
+					throw new ArgumentException("oAuthToken is not valid", nameof(oAuthToken));
+			}
+
 			this.oAuthToken = oAuthToken;
 
 			_consumerKey = consumerKey;
 			_consumerSecret = consumerSecret;
 
 			_hashProvider = hashProvider;
-
-			//this.httpClient = new HttpClient(new OAuthMessageHandler(hashProvider, consumerKey, consumerSecret, oAuthToken));
 
 			this.httpClient = new HttpClient();
 		}
@@ -115,6 +119,12 @@ namespace DontPanic.TumblrSharp
 
 			if (consumerSecret.Length == 0)
 				throw new ArgumentException("Consumer secret cannot be empty.", nameof(consumerSecret));
+
+			if (oAuthToken != null)
+			{
+				if (oAuthToken.IsValid == false)
+					throw new ArgumentException("oAuthToken is not valid", nameof(oAuthToken));
+			}
 
 			this.oAuthToken = oAuthToken;
 

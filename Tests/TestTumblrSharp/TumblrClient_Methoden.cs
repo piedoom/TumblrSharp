@@ -242,13 +242,6 @@ namespace TestingTumblrSharp
         [ExpectedException(typeof(TumblrException))]
         public async Task DeletePost_5()
         {
-            await tumblrClient.DeletePostAsync("newtsharp.tumblr.com", 0);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(TumblrException))]
-        public async Task DeletePost_6()
-        {
             await tumblrClient.DeletePostAsync("newtsharp.tumblr.com", 1);
         }
 

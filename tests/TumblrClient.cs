@@ -32,6 +32,13 @@ namespace TestingTumblrSharp
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void TumblrClient_Create_Null_3()
+        {
+            var tc = new TumblrClientFactory().Create<TumblrClient>(null, _consumerKey, _consumerSecret);
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TumblrClient_Create_Empty_1()
         {

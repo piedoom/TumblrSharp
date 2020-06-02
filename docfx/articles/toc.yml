@@ -3,6 +3,8 @@
   items:
   - name: First Steps
     href: firststeps.md
+  - name: Authenticating
+    href: Authenticating.md
 - name: Revision
   href: revision.md
 - name: Roadmap

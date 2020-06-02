@@ -8,7 +8,7 @@
 
 ## 1.2.1.x
 
-- support .NetStandard 2.1 an .NetCore 3.1
+- support .NetStandard 2.1 and .NetCore 3.1
 
 ## 2.2.1.x
 

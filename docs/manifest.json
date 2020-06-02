@@ -4469,11 +4469,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/Authenticating.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Authenticating.html",
+          "hash": "bDrZpdDG7Yx0gV53L3XWPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/firststeps.md",
       "output": {
         ".html": {
           "relative_path": "articles/firststeps.html",
-          "hash": "KO5IUh/vHhIqwbU3i0lLvg=="
+          "hash": "CL1ekjMNbyFHsY230Ui8Bw=="
         }
       },
       "is_incremental": true,
@@ -4521,7 +4533,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "dgvtCNgfx7vGHf/svjFy4A=="
+          "hash": "Fw3Kv5IpgaxBLjBlvRYWAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/NugetManager_Install.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/NugetManager_Install.png"
         }
       },
       "is_incremental": false,
@@ -4599,7 +4622,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 8,
           "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {

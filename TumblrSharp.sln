@@ -52,7 +52,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleBasics", "Examples\.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{39A37DFE-D158-4C93-B128-7CB98A1D98FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTumblrSharp", "Tests\TestTumblrSharp\TestTumblrSharp.csproj", "{825124C9-EDC6-49D5-A97A-98FEEA23A611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTumblrSharp", "Tests\TestTumblrSharp.csproj", "{825124C9-EDC6-49D5-A97A-98FEEA23A611}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Core", ".NET Core", "{BAA06ECF-995E-4FDE-851E-1744454DE4D4}"
 EndProject
@@ -83,6 +83,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{26DD396E-5DB1-458A-9B0C-C49D208A1100}"
 	ProjectSection(SolutionItems) = preProject
+		docfx\articles\Authenticating.md = docfx\articles\Authenticating.md
 		docfx\articles\firststeps.md = docfx\articles\firststeps.md
 		docfx\articles\intro.md = docfx\articles\intro.md
 		docfx\articles\revision.md = docfx\articles\revision.md
@@ -101,7 +102,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F8241D
 		docfx\images\articles_revision.png = docfx\images\articles_revision.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetAuthenticate", "Examples\.NET Core\AspNetAuthenticate\AspNetAuthenticate.csproj", "{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetAuthenticate", "Examples\.NET Core\AspNetAuthenticate\AspNetAuthenticate.csproj", "{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

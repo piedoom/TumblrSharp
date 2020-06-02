@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Authenticating </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Authenticating ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="authenticating">Authenticating</h1>
+
+<hr>
+<p>To use TumblrSharp properly, you'll need to authenticate with a user account.  Tumblr does provide some unauthenticated API endpoints in their V1 API, but TumblrSharp doesn't cover those (and will most likely never).</p>
+<h2 id="without-oauth-flow">without OAuth Flow</h2>
+<hr>
+<p>Often, apps that consume 3rd party APIs use OAuth.  There are a few ways to setup TumblrSharp with OAuth, but the easiest is to use the <a href="https://api.tumblr.com/console">Tumblr Console</a>. Note - this method is only suitable for your own usage (e.g., if you are making a personal bot or anything specific to your own user account.  Please look below if you're looking to make an app that anyone can use).</p>
+<p>Sign into your account, create an application, and then enter your Consumer key and Consumer Secret into the <a href="https://api.tumblr.com/console">Tumblr Console</a>.  Tumblr will then show four sensitive keys - a <code>consumer key</code>, <code>consumer secret</code>, <code>oauth_token</code> and <code>oauth_token_secret</code>.</p>
+<p>Here is an example class -</p>
+<pre><code class="lang-cs">using DontPanic.TumblrSharp;
+using DontPanic.TumblrSharp.Client;
+
+public static class Tumblr
+{
+    public static string Blog { get; set; }
+    public static TumblrClient Client;
+    const string CONSUMER_KEY = &quot;xxx&quot;;
+    const string CONSUMER_SECRET = &quot;xxx&quot;;
+    const string OAUTH_TOKEN = &quot;xxx&quot;;
+    const string OAUTH_TOKEN_SECRET = &quot;xxx&quot;;
+
+    static Tumblr()
+    {
+        // create our client
+        Client = new TumblrClientFactory().Create&lt;TumblrClient&gt;(CONSUMER_KEY, CONSUMER_SECRET, new DontPanic.TumblrSharp.OAuth.Token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET));
+    }
+}
+</code></pre>
+<p>With that static class set up, you can call methods easily</p>
+<pre><code class="lang-cs">UserInfo userInfo = await Tumblr.Client.GetUserInfoAsync();
+</code></pre>
+<h2 id="with-oauth-flow">with OAuth Flow</h2>
+<hr>
+<p>This section is for production applications.  If you want individual user access, you'll need to use OAuth's regular flow.
+Before continuing, I recommend reading the <a href="http://oauthbible.com/#oauth-10a-three-legged">OAuth Bible</a> if you are not familiar with how OAuth works.  (We're doing Three-Legged OAuth 1.0A).</p>
+<p>This section also is <strong>not</strong> going to show how to implement C#/WPF/Winforms specific functions, like capturing a custom URI protocol.  (However, an examples repository will be up soon!)</p>
+<h3 id="overview">Overview</h3>
+<p>Before we begin, let's take a minute to deconstruct the steps we'll need to accomplish in order to sign in a user.</p>
+<ol>
+<li>Create our Tumblr Application</li>
+<li>Request a <code>Request</code> Token</li>
+<li>Open a web browser and prompt a user for permission</li>
+<li>Capture a <code>callback</code> URI</li>
+<li>Request an <code>Access</code> Token</li>
+<li>Perform authenticated requests</li>
+</ol>
+<p>Although this may seem complex, it's not terribly difficult.  The hardest part is capturing the <code>callback</code> URI, as it differs depending on if you are using Xamarin, WPF, UWP, etc.</p>
+<h3 id="creating-the-tumblr-application">Creating the Tumblr Application</h3>
+<p>You will first need to register a Tumblr application.  This can be accomplished by signing into your account, clicking Settings &gt; Apps &gt; Register New Application.  If you're already signed in, just <a href="https://www.tumblr.com/oauth/register">click here</a>.</p>
+<p>The form will ask for several necessary fields.  You can fill out everything but the <code>Default callback URL</code> anyway you'd like.  For the <code>Default callback URL</code>, you have a few choices.  If you're using TumblrSharp with an ASP.NET web project, you'll want to set this to your website's URL.  If you're creating anything that doesn't live on a web server, you're going to want to specify a custom URI</p>
+<blockquote>
+<p>A URI scheme is a simple way to associate certain calls to a specific application. For instance, <code>https://</code> opens with a web browser, and <code>ftp://</code> is used with FTP clients like Filezilla.  URI schemes are fairly arbitrary.  Music streaming company Spotify uses the URI <code>spotify://</code> to communicate between the browser and their desktop application.</p>
+</blockquote>
+<p>For our own application, we can use a custom URI.  This can be anything, but I recommend using your app's name.  If my application were &quot;Noted&quot;, my <code>Default callback URL</code> would be <code>noted://</code>.</p>
+<p>After you have chosen a callback URL, save the application.</p>
+<h3 id="getting-a-request-token">Getting a request token</h3>
+<p>The first step in the OAuth flow is to get a request token.</p>
+<pre><code class="lang-cs">// create our OAuth client
+OAuthClient oauthClient = new OAuthClient(
+    new DontPanic.TumblrSharp.HmacSha1HashProvider(),
+    CONSUMER_KEY,
+    CONSUMER_SECRET);
+
+// get a request token
+// replace &quot;noted://&quot; with your own callback URI
+Token requestToken = await oauthClient.GetRequestTokenAsync(&quot;noted://&quot;);
+</code></pre>
+<p>Next, we need to ask the user for their permission. We can do this in a variety of ways, but preferably we want to open the default browser to a specific URL, which is a specific site route with the requestToken key appended.</p>
+<pre><code class="lang-cs">var authenticateUrl = &quot;https://www.tumblr.com/oauth/authorize?oauth_token=&quot; + requestToken.Key;
+
+// depending on your project, you might open up a web browser a different way
+System.Diagnostics.Process.Start(authenticateUrl);
+</code></pre>
+<p>Once the webpage opens, the user will hopefully click &quot;Allow&quot;, and your callback URL will be triggered.</p>
+<h3 id="capturing-the-callback-url">Capturing the callback URL</h3>
+<p>This is the toughest part, since it requires a little research.  There is a different way for every platform, so look up how to associate your application with a URI protocol.  For instance, if you were using Xamarin with Android, you would flag your method like this:</p>
+<pre><code class="lang-cs">[IntentFilter(new[] { Intent.ActionView }, DataScheme = &quot;noted&quot;, Categories = new[] { Intent.CategoryBrowsable, Intent.CategoryDefault })]
+</code></pre>
+<p>We want a specific method to fire when the callback URI is called.</p>
+<h3 id="getting-access-tokens">Getting access tokens</h3>
+<p>Once you've captured your callback, you're ready for the final step: requesting access tokens.  Let's parse our verifier url.</p>
+<pre><code class="lang-cs">// this will be significantly different depending on what type of project you're making.  You'll need to consult the documentation for the service in question.
+var verifierUrl = Intent.Data.EncodedQuery;
+</code></pre>
+<p>Once we have the query, we can make a request for an Access Token, and then we can initialize our TumblrClient class!</p>
+<pre><code class="lang-cs">Token accessToken = await oauthClient.GetAccessTokenAsync(requestToken, verifierUrl);
+TumblrClient client = new TumblrClientFactory().Create&lt;TumblrClient&gt;(CONSUMER_KEY, CONSUMER_SECRET, accessToken);
+</code></pre>
+<h3 id="using-the-tumblrclient">Using the TumblrClient</h3>
+<p>Once we're done, we have access to all of our necessary API endpoints.</p>
+<pre><code class="lang-cs">UserInfo info = await client.GetUserInfoAsync();
+</code></pre>
+<h3 id="code">Code</h3>
+<pre><code class="lang-cs">
+Token requestToken;
+
+async void Authenticate()
+{
+    // create a new instance of our OAuthClient we will use to authenticate
+    OAuthClient oauthClient = new OAuthClient(
+        new DontPanic.TumblrSharp.HmacSha1HashProvider(),
+        CONSUMER_KEY,
+        CONSUMER_SECRET);
+
+    // Get our request token with the URI scheme &quot;noted://&quot;
+    requestToken = await oauthClient.GetRequestTokenAsync(&quot;noted://&quot;);
+
+    // open up the authenticateUrl in the user's default browser
+    // var authenticateUrl = &quot;https://www.tumblr.com/oauth/authorize?oauth_token=&quot; + requestToken.Key;
+    var authenticateUrl = oauthClient.GetAuthorizeUrl(requestToken).AbsoluteUri;
+    System.Diagnostics.Process.Start(authenticateUrl);
+}
+
+// this method is called when the user allows access through the web browser
+// this will look different depending on what your platform uses to open URI schemes
+[SomeFlagThatTellsThisMethodWhatToOpen]
+async void OnAllow(string data)
+{
+    // get our access token and instantiate a new TumblrClient
+    Token accessToken = await oauthClient.GetAccessTokenAsync(requestToken, data);
+    TumblrClient client = new TumblrClientFactory().Create&lt;TumblrClient&gt;(CONSUMER_KEY, CONSUMER_SECRET, accessToken);
+
+    // call a method that requires authentication
+    UserInfo info = await client.GetUserInfoAsync();
+}
+</code></pre>
+<h2 id="example-for-winforms--aspnet">Example for WinForms / Asp.Net</h2>
+<hr>
+<ul>
+<li><a href="https://github.com/piedoom/TumblrSharp/tree/master/Examples/.Net%20Framework/Windows/Authenticate">WinForms</a></li>
+<li><a href="">Asp.Net</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Cataurus/TumblrSharp/blob/master/docfx/articles/Authenticating.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

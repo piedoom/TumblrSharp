@@ -1,7 +1,5 @@
 ﻿#if (NETSTANDARD2_0 || NETCOREAPP2_2)
 using Microsoft.Extensions.DependencyInjection;
-#endif
-
 using System;
 
 namespace DontPanic.TumblrSharp.Client
@@ -11,12 +9,10 @@ namespace DontPanic.TumblrSharp.Client
     /// </summary>
     public static class ExtensionService
     {
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
         /// <summary>
-        /// Configure ServiceCollection for <see cref="Microsoft.Extensions.DependencyInjection.IHttpClientFactory">HttpClientFactory</see>
+        /// Configure ServiceCollection for <see cref="System.Net.Http.IHttpClientFactory">HttpClientFactory</see>
         /// </summary>
-        /// <param name="services">
-        /// <see cref="Microsoft.Extensions.DependencyInjection.IHttpClientFactory">HttpClientFactory</see> to create internal HttpClient
+        /// <param name="services">services collection to add httpclient for <see cref="System.Net.Http.IHttpClientFactory">HttpClientFactory</see> to create internal HttpClient
         /// </param>
         public static void UseTumblrClient(this IServiceCollection services)
         {
@@ -25,6 +21,6 @@ namespace DontPanic.TumblrSharp.Client
 
             _ = services.AddHttpClient();
         }
-#endif
     }
 }
+#endif

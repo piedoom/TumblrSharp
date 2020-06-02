@@ -12,9 +12,6 @@
 # general
 image: Visual Studio 2019
 
-install:
-- ps: build/ci/appveyor/installDotnetCore3.1.ps1
-
 # version format
 version: 1.2.0.{build}
 configuration: Release

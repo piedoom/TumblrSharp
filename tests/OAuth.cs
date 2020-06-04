@@ -10,8 +10,8 @@ namespace TestingTumblrSharp
     {
         // This consumer-token is only for testing!
 
-        private readonly string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
-        private readonly string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
+        private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
+        private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");
 
         private readonly string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
 
@@ -201,18 +201,8 @@ namespace TestingTumblrSharp
 
             Assert.IsNotNull(url);
 
-        }
-
-        [TestMethod]
-        public async Task OAuth_GetAuthorizeUrl_Arg_2()
-        {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
-
-            Uri url = oAuthClient.GetAuthorizeUrl(requestToken);
-
             Assert.AreNotEqual(url, string.Empty);
+
 
         }
 

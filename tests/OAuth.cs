@@ -193,6 +193,9 @@ namespace TestingTumblrSharp
         [TestMethod]
         public async Task OAuth_GetAuthorizeUrl_Arg_1()
         {
+            Console.WriteLine(_consumerKey);
+            Console.WriteLine(_consumerSecret);
+
             OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
 
             Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);

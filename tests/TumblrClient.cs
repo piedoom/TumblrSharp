@@ -11,11 +11,17 @@ namespace TestingTumblrSharp
     {
         // This consumer-token and AccesToken is only for testing!
 
-        private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
+        /*private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
         private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");
 
         private readonly string _accessKey = Environment.GetEnvironmentVariable("AccessKey");
-        private readonly string _accessSecret = Environment.GetEnvironmentVariable("AccessSecret");
+        private readonly string _accessSecret = Environment.GetEnvironmentVariable("AccessSecret");*/
+
+        private string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
+        private string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
+
+        private string _accessKey = "F1G7BF1JW4f1VKJ93xJSi7D66yZKN3Uj0bArn5i5riwVEnMHuU";
+        private string _accessSecret = "O977YH42yg98IsS9BAk80r5e5grYQDY9HauVmgf0aEmceZ2UTz";
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]

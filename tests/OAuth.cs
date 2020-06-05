@@ -10,8 +10,11 @@ namespace TestingTumblrSharp
     {
         // This consumer-token is only for testing!
 
-        private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
-        private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");
+        /*private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
+        private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");*/
+
+        private readonly string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
+        private readonly string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
 
         private readonly string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
 

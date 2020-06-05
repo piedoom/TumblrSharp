@@ -1,7 +1,9 @@
 # First step
+***
 
 
 ## Nuget
+***
 
 TumblrSharp is currently on Nuget as `NewTumblrSharp`.  If you want TumblrSharp just for your own use, and don't wish to develop it further, simply use Nuget.
 
@@ -20,6 +22,7 @@ Open the nuget-manager by right clicking on your project. In the searchbox type 
 
 
 ## Source code
+***
 If you'd like to use TumblrSharp via its source code to continue development, there are two methods.
 
 The following is for Visual Studio users, but the same steps can be used for Xamarin studio, etc. with little modification.

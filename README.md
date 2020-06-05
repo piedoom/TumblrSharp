@@ -8,7 +8,7 @@ This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codepl
 Documentation
 ========
 
-Please refer to the [Wiki](https://github.com/piedoom/TumblrSharp/wiki) to learn how to use TumblrSharp. 
+Please refer to the [Wiki](https://github.com/piedoom/TumblrSharp/wiki) to learn how to use TumblrSharp. A complete documentation can be found [here](https://cataurus.github.io/TumblrSharp/).
 
 Why?
 ========

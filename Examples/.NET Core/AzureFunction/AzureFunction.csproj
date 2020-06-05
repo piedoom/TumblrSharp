@@ -10,8 +10,8 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.6" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj" />
-    <ProjectReference Include="..\..\..\TumblrSharp\TumblrSharp.csproj" />
+    <ProjectReference Include="..\..\..\src\TumblrSharp.Client\TumblrSharp.Client.csproj" />
+    <ProjectReference Include="..\..\..\src\TumblrSharp\TumblrSharp.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

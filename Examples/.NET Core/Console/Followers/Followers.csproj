@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\TumblrSharp.Client\TumblrSharp.Client.csproj" />
-    <ProjectReference Include="..\..\..\..\TumblrSharp\TumblrSharp.csproj" />
+    <ProjectReference Include="..\..\..\..\src\TumblrSharp.Client\TumblrSharp.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\src\TumblrSharp\TumblrSharp.csproj" />
   </ItemGroup>
 
 </Project>

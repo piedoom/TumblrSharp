@@ -73,7 +73,7 @@ namespace Authenticate
             eRequestSecret.Text = requestToken.Secret;
 
             // get the url for authorization
-            var lAuthorizeUrl = oAuthClient.GetAuthorizeUrl(new Token(eRequestKey.Text, eRequestSecret.Text));
+            var lAuthorizeUrl = oAuthClient.GetAuthorizeUrl(requestToken);
 
             // starting authorization
             System.Diagnostics.Process.Start(lAuthorizeUrl.AbsoluteUri);
@@ -85,8 +85,7 @@ namespace Authenticate
         private async void btnTest_Click(object sender, EventArgs e)
         {
             // create TumblrClient
-            TumblrClientFactory fTumblrFactory = new TumblrClientFactory();
-            tumblrClient = fTumblrFactory.Create<TumblrClient>(eConsumerKey.Text, eConsumerSecret.Text, new Token(eAccessKey.Text, eAccessSecret.Text));
+            tumblrClient = new TumblrClientFactory().Create<TumblrClient>(eConsumerKey.Text, eConsumerSecret.Text, new Token(eAccessKey.Text, eAccessSecret.Text));
 
             // Queries user info
             var userInfo = await tumblrClient.GetUserInfoAsync();
@@ -99,7 +98,7 @@ namespace Authenticate
         internal async void SetAccessUrl(string accessUrl)
         {
             // get the accesstoken
-            var accessToken = await oAuthClient.GetAccessTokenAsync(new Token(eRequestKey.Text, eRequestSecret.Text), accessUrl.ToString());
+            var accessToken = await oAuthClient.GetAccessTokenAsync(new Token(eRequestKey.Text, eRequestSecret.Text), accessUrl);
 
             eAccessKey.Text = accessToken.Key;
             eAccessSecret.Text = accessToken.Secret;
@@ -111,7 +110,11 @@ namespace Authenticate
         private void FrAuthenticate_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (tumblrClient != null)
+            {
                 tumblrClient.Dispose();
+
+                tumblrUrlProtocol.Remove();
+            }
         }
     }
 }

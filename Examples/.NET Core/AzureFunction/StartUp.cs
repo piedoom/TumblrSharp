@@ -15,7 +15,7 @@ namespace AzureTest
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            TumblrClientFactory.ConfigureService(builder.Services, Settings.CONSUMER_KEY, Settings.CONSUMER_SECRET, new DontPanic.TumblrSharp.OAuth.Token(Settings.OAUTH_TOKEN, Settings.OAUTH_TOKEN_SECRET));
+            builder.Services.UseTumblrClient();
 
             builder.Services.AddScoped<IMyTumblrService, MyTumblrService>();
         }

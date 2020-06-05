@@ -13,7 +13,7 @@
 image: Visual Studio 2019
 
 # version format
-version: 1.1.{build}
+version: 1.2.0.{build}
 configuration: Release
 
 # enable patching of AssemblyInfo.* files
@@ -23,6 +23,16 @@ assembly_info:
   assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
+
+environment:
+  ConsumerKey:
+    secure: QAUTMaa5qZ3EoZTCIROl6kfRfpw7hUSQtZbjQhW3ax/oxSz3jiR6sRUmhfpj9yL9bu7XZv7bl4C1IuuZS1+1Dw==
+  ConsumerSecret:
+    secure: 1Lcag3U2vj4mdhcb9W4038p3ohtgM3FCmshCHbhpRlsIW3pb7f/B6gbh9wJSpoQN1p91qjDRmsn5txSFl5Kasg==
+  AccessKey:
+    secure: NMk3MRvbyIfP09txl2GOxybP9hVBSJT8RxI0O9snFNuoBPlcPEM5Qnzc1/o2E98LOVFSQTXEJyCs72XxNnHdpw==
+  AccessSecret:
+    secure: 0PgFMZeIdtZL1pJc16h21lixtrm5mF/ApGhj7o7pRjbwdnvYT5+lKaubcxukv2P1UTuanbISXH4sSZGJiNQFXw==
 
 # branches to build
 branches:

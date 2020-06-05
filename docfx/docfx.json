@@ -1,0 +1,63 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "cwd": "../", 
+          "files": [
+            "src/TumblrSharp/**.csproj", "src/TumblrSharp.client/**.csproj"
+          ]
+        }
+      ],
+      "properties": { "TargetFramework": "netcoreapp2.2" },
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "api/**.yml", "api/index.md" ]
+      },
+      {
+        "files": [ "articles/**.md", "articles/**/toc.yml", "toc.yml", "*.md" ]
+      },
+      {
+        "files": [ "tutorial/**.md", "tutorial/**/toc.yml", "toc.yml", "*.md" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "cwd": "../",
+    "dest": "../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "plugins/memberpage.2.52.0/content"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

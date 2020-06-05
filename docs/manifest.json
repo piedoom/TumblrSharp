@@ -1,0 +1,4667 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Catau/Documents/GitHub/C#/Lib/Cataurus/NewTumblrSharp/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.-ctor.html",
+          "hash": "7MjK54yIM85un8nJfae4lQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.Url.html",
+          "hash": "VsEHwq0jiypVXMISUCCM2g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.OAuthToken.html",
+          "hash": "QLZh1P+jxRlignOnjCZBAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.HttpMethod.html",
+          "hash": "wHo7TFxMeHtzWKiucVBl3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.Parameters.html",
+          "hash": "gtGDoZ7pv82/Lda7eo+Ydw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.html",
+          "hash": "IG0MpRu/HeAKwJp+dzD/bQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.AvatarShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.AvatarShape.html",
+          "hash": "GaByLx3xm6fvDQZLLaXFNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.html",
+          "hash": "buYfOAQvrtewfcBPIlHaqw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.-ctor.html",
+          "hash": "DCys/iJuuGbihShpqmnowA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.Data.html",
+          "hash": "vRQpM05rVaFhrozkmteLJw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.FileName.html",
+          "hash": "HEiCVD2QfBsuiieZsFYVnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.MimeType.html",
+          "hash": "AR3HAlR53oLA0YsFRIhflQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BlogMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BlogMethod.-ctor.html",
+          "hash": "WSTm8yXkMnc9Ig921x+bdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BlogMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BlogMethod.html",
+          "hash": "emDQlL7jMSWKLMOJMOjgBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BlogType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BlogType.html",
+          "hash": "6AaNy2M18x6LXU5LV3f67A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.AskingName.html",
+          "hash": "wIs8Qq2M5H93miZJJZbvdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.AskingUrl.html",
+          "hash": "BlVCmlOLS56rJLWtjyNcxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.Question.html",
+          "hash": "lOMSfJH7rLjB2L79Qw0bWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.Answer.html",
+          "hash": "2p+ubjjYjwoSh7ngbPUXBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.html",
+          "hash": "Eicv4OUMWp2x2XhyyXSXsA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Caption.html",
+          "hash": "lCJmqBBV3cjn5iIFVCO5Zw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.AudioUrl.html",
+          "hash": "83TZjNyEixDhDaXOFHsVkg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Player.html",
+          "hash": "IJKCnJuDNdjBdvh9MucIBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.PlaysCount.html",
+          "hash": "gQ+bNXf8a3odKeRjcO8Z8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.AlbumArt.html",
+          "hash": "hZtxq2lTgum7dcEGxfAKpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Artist.html",
+          "hash": "IdknlM+N4Qw5T7bwKK/D/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Album.html",
+          "hash": "lBZYewmYJrHjNz+pSDuTnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.TrackName.html",
+          "hash": "2onCmRnR+Ci+pLRKctfFXg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.TrackNumber.html",
+          "hash": "UJYvbefapLe5MszPCBXbBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Year.html",
+          "hash": "75uxw1FV6mQDhzVefX/Wpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.html",
+          "hash": "SWokGIfh7MZPWLxUTikRIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogUuid.html",
+          "hash": "TUPEphKtIuuE/YqfYIq2zA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogUrl.html",
+          "hash": "AdiX7PAKk0Ih/aw185LgAQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Followed.html",
+          "hash": "QIx2LIMJ1Wu5Pd92aB658A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.AvatarShape.html",
+          "hash": "RnNxUAh3J9nkcP7UQ6iOUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.ReplyText.html",
+          "hash": "UBpE1OjqkbRHPqiAXlD1dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.PostId.html",
+          "hash": "LQYc5JsCPrt/lBHwRE/gEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.ReblogParentBlogName.html",
+          "hash": "oRWwFbdB9gBNHMIeqN1Nyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Equals.html",
+          "hash": "RHNqWfv0jcYwqzSmnQ57Fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.GetHashCode.html",
+          "hash": "H8ZZs3WWG+RgCVPwmWUT6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.html",
+          "hash": "33lWCKwPesazPTBBu1cHHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Type.html",
+          "hash": "z07wrgo7N1sGui2JyRDI5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Timestamp.html",
+          "hash": "YMJcpb0SUnAv6a0BM8XPTg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogName.html",
+          "hash": "fpw7sn5RmD9dKKdfNEvVIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Type.html",
+          "hash": "1ncQCY84SQXmcHGwv3nnCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.BlogName.html",
+          "hash": "JZZP1vmY+wexXkEyRj4AIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Id.html",
+          "hash": "k3Gm3dAL6FlwcIci9zS7oQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Url.html",
+          "hash": "J8JJbCDFqqXIYtPffpg0fA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Slug.html",
+          "hash": "W1gCKn34TWNKzkWiBFfwKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Timestamp.html",
+          "hash": "ZmhMW/f2jVq3o+MhubN4eA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.State.html",
+          "hash": "S9JB19idsJ1FmR+W0q2TDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Format.html",
+          "hash": "RreBgY9OnLRiXjFv/Aco2g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.ReblogKey.html",
+          "hash": "dYpw/AHh2Fk50HYd6k5VTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Tags.html",
+          "hash": "0psqSVOlbpGid4Ygb9FaiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.ShortUrl.html",
+          "hash": "Ktc69vpMK8fQBzI67b1sbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Summary.html",
+          "hash": "t4BPXJcabSI6COLyiF33Ow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.NotesCount.html",
+          "hash": "yXstWPAM4pcqCjmTMpHiOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Notes.html",
+          "hash": "JwSL6Zhih44R2s9k81yDGw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.SourceUrl.html",
+          "hash": "uC6SoVH4/owee2ODP27HSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.SourceTitle.html",
+          "hash": "CH8t2qIIVR+BnDf2QFGN+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.NumberOfPostsInResponse.html",
+          "hash": "Lnhd8Q96J5VhpQyf+5Rg1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Liked.html",
+          "hash": "yVEjobVr5QmAutCUPStjUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.IsMobile.html",
+          "hash": "gjwB3FyUFGB/MtH/11XG6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.IsBookmarklet.html",
+          "hash": "jUTEqJuLJs+3XhmhWyNCWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Reblog.html",
+          "hash": "qid0zButayrFMDA6WBU4IQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromId.html",
+          "hash": "dsVhmUWX9C5Jt+P9P/9/7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromUrl.html",
+          "hash": "e5HAau8gOrRMWh/5/nXH7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromName.html",
+          "hash": "HIMd1b/Wi2mQWBELQt6z6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromTitle.html",
+          "hash": "nqkvsZZqsbHonrP+31qHxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootId.html",
+          "hash": "7JYiJJbQ+jRLXXZtWpz5jQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootUrl.html",
+          "hash": "2RgnCCijM6AJeowIbhVmCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootName.html",
+          "hash": "JygrST3FaJj/3Gh3noJryg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootTitle.html",
+          "hash": "DUFSHpWm1I4SfQOSG4+9Jw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Trails.html",
+          "hash": "EYNPTOWRJY+T4OrJt1u/8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.html",
+          "hash": "ZeQEgKuVT+nud6KGa1iL+Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Title.html",
+          "hash": "R0/e5tlF5NQD0iUmK9mjjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Name.html",
+          "hash": "J07jgBvJYiQ7TYNF7F/Y4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Url.html",
+          "hash": "sVhlbNiqWG8D9aYmYd0eqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.LastUpdated.html",
+          "hash": "xO/hDFS5fPuc1l24h7rRpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.html",
+          "hash": "Er+Fd4YtvhTTKy8HZbErcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.html",
+          "hash": "/r4Pb07Ga0kevDwgQ9cLQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.PostsCount.html",
+          "hash": "dG04XS60ezRCdjMYvMyIEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.Description.html",
+          "hash": "JI+XwywK4eg6fEq5Nw2lJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAskEnabled.html",
+          "hash": "3vT1/fcE3ctF7ty5wgZ7lw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAnonAskEnabled.html",
+          "hash": "5vutNA5LMnUsqyqCvMl8tA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.AskPageTitle.html",
+          "hash": "8InT/jonF3fao1RF6/drmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.LikesCount.html",
+          "hash": "HUNilLRdoaFwYDt11vcBQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsNsfw.html",
+          "hash": "kfUmaorNVTSTy8qfrk19QQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAdult.html",
+          "hash": "jpdHdxSDOGbAfbFSH+m50w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsOptoutAds.html",
+          "hash": "q3Y+tzR/xrjB2ggbuTFNUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.ReplyConditions.html",
+          "hash": "KmjFK5OEpkJvyNFhlChIAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.ShareLikes.html",
+          "hash": "caPZeMV9KO9Q5u5O99R7Zg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.SubmissionPageTitle.html",
+          "hash": "2/Taw8uTP44jDb1yXorxHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.Subscribed.html",
+          "hash": "tyNstkQLT2jqVxvLVDx33w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.CanConvert.html",
+          "hash": "Mic7kvGbB/t2qinKS4GfdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.WriteJson.html",
+          "hash": "LzYW8lq1VKTJOhgQgtLQsw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.ReadJson.html",
+          "hash": "uNOUq18gtfakqGv4ShgZ1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BoolConverter.html",
+          "hash": "PHoL/FILe5yl3ZHrHJ1onw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Label.html",
+          "hash": "HoJggwhvfPzpdZslYocIIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Name.html",
+          "hash": "x+OIewvpnb7P58HyM6YQBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Phrase.html",
+          "hash": "QQA5AypOd3LtDEvv+m7zbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.html",
+          "hash": "+jlzjXIdm7z1lwsc9S2xKA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Title.html",
+          "hash": "suTOu4q3R1juYB+4iLOl8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Body.html",
+          "hash": "0cfviHCzS8s+Njq3fG/4bQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Dialogue.html",
+          "hash": "dpgYvdZ7hMLJjna+Rr62rg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.html",
+          "hash": "eNZp+BkKj7Gds/ic6tU6VA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.DashboardOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.DashboardOption.html",
+          "hash": "P4/kxE26LOIcbf6hFpN2tQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.CanConvert.html",
+          "hash": "qtB+OcKK7g8OQbMgK1TArA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.WriteJson.html",
+          "hash": "vSvO70hr1jr15Q2E7dndlw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.ReadJson.html",
+          "hash": "1WRoq5MjIUyWelhAxUX8YA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.EnumStringConverter.html",
+          "hash": "/el1qKD0RRDxu2iO0Iudxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Camera.html",
+          "hash": "EIdK1hbxdYWwk2BzPEAOIA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.ISO.html",
+          "hash": "q0bkzEJ5aotlmIrOjbIf2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Aperture.html",
+          "hash": "QlkoRpYClYI07cju73fG7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Exposure.html",
+          "hash": "F/YZVn/JSCde7vzQ8hyRhA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.FocalLength.html",
+          "hash": "YYBlzadij+cL1Vu4pYj1dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.html",
+          "hash": "agknFlkeyPtAnpgWJvTpJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.Count.html",
+          "hash": "ngzi2Ee2Sd1xmPSaiIHeRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.Result.html",
+          "hash": "cJxj0dQCayv2KbEZWJhvKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.UserName.html",
+          "hash": "lDryNdp42wtyMmZkj0usRA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.PrimaryBlogUrl.html",
+          "hash": "SbJ5YFpa+o9VLqiiTYyNqQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.LastUpdated.html",
+          "hash": "+oSstKJqlwqOK0IsbrM/6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.html",
+          "hash": "TRHMNIBM+yhq2uixH8M6tQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Following.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Following.Count.html",
+          "hash": "w9NqVAZSb94KkIKnoS+0nQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Following.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Following.Result.html",
+          "hash": "br7+K5zo5E2JlK2f1oLY1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Following.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Following.html",
+          "hash": "p+YlHPmSjrCW/IY6q6XQ0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Likes.Count.html",
+          "hash": "lQK4+p2D3UBE0IShwnBmdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Likes.Result.html",
+          "hash": "9sKoQTrOQ7Rp9CH9t+qrfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Likes.html",
+          "hash": "drKLDxkj3b1R022cnQ7cTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.Title.html",
+          "hash": "zAm3SgdHLxaI76nClm3GOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.LinkUrl.html",
+          "hash": "aflCPcN33Qta2KnCW3zW1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.Description.html",
+          "hash": "siPTcr/iWvK6lFrS+D3ZLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.html",
+          "hash": "0fHt7tJM9Bhgsw/Zz8+X9Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.CanConvert.html",
+          "hash": "VUS+yZyODaWEQcLKe3S0WQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.ReadJson.html",
+          "hash": "dVRlGHg2G3Mm6YJtIrmUHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.WriteJson.html",
+          "hash": "FT6b8AykmiPHPm674vaFUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.NoteConverter.html",
+          "hash": "nDH00H6Xrz4V059KafhiWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.Caption.html",
+          "hash": "JvnRFtSgTgxv7gjKKERvSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.AlternateSizes.html",
+          "hash": "7V3vWhHROpi3F4TMxg+5xw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.OriginalSize.html",
+          "hash": "JKmPQLd8E7noGtwMl6TkVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.Exif.html",
+          "hash": "PSLm74xYK8bvnE/xGLAGwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.html",
+          "hash": "h2tHXex17PjJlqdl1sg5lg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.Width.html",
+          "hash": "lCjgUPITmC7JBmA5vAbv0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.Height.html",
+          "hash": "VKRhYOAl/pL1fjAvvxvQTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.ImageUrl.html",
+          "hash": "zybRApHuf0LLfhkjeAm9KQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.html",
+          "hash": "LGMbc4KZYFECnRsXGf6rZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.Caption.html",
+          "hash": "6v2PZcP/tUFqKIhwISHGMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.PhotoSet.html",
+          "hash": "b12v34vcFufK8cjcxXAiOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.Photo.html",
+          "hash": "a4toIBg1+drJSvb7uoz0RQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.html",
+          "hash": "Ykc4vyfVVBoOUPYDMV9Ayg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Player.Width.html",
+          "hash": "z/AwHoJy+WL34tOFN9/c/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Player.EmbedCode.html",
+          "hash": "PHbaE7KlLuRThtMyeCMGaw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Player.html",
+          "hash": "6qFmuawFSE8f40NRdzsC4g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.CanConvert.html",
+          "hash": "L9sVqBO2bCGwWwUbo4UFtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.ReadJson.html",
+          "hash": "cU3TqH4HcPPg7T++aqcmVA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.WriteJson.html",
+          "hash": "6A8zlLvFVCeu95uBYA3org=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostArrayConverter.html",
+          "hash": "65kQeaoPMd7R0i0SIi2jjA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type.html",
+          "hash": "HdH7k+B1OlsZCRcJRMdZtw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type_name.html",
+          "hash": "vZH2D6dgL6k2MPiDxzl0mg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_url.html",
+          "hash": "LqsGtNcCOfyqDQ5WLnbkjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_width.html",
+          "hash": "xDm9p7/sfEk8SVMVrnZoQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_height.html",
+          "hash": "XJbPujseo7RylV8HrdXbpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.html",
+          "hash": "1dewyZnERjUIHUmfpmepwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.PostId.html",
+          "hash": "kMdYvCDf60MU1e+uo+NPSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.html",
+          "hash": "3LATJ6UdmK0jphIvW1XWJA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Posts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Posts.Blog.html",
+          "hash": "u/ONz6ZAWKj9yMaIfVIxyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Posts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Posts.Result.html",
+          "hash": "+BVU2oTSjTICf5Tz1EcRbw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Posts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Posts.html",
+          "hash": "qY7du6ch0bnGYKAC7vOJpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.Text.html",
+          "hash": "o4vTo6thTJnA7pIBjaYi7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.Source.html",
+          "hash": "WroX9OPIqovgtd6X6n2o0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.html",
+          "hash": "P6T8xq+p0dft05N1ylFBrw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.Comment.html",
+          "hash": "5enCZ42vzCe1Dyfnh+oXKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.TreeHtml.html",
+          "hash": "U93Sn52uewasTF8OsXTq5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.html",
+          "hash": "Nax/PNO16lRLdXDP4j1QvA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.Title.html",
+          "hash": "mJDyGg/m2NlMGVtPT+DoUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.Body.html",
+          "hash": "li7bBT6PCgamtxpkVISU1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.html",
+          "hash": "X8llR3PvVtC2NFgGVpk6TQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.CanConvert.html",
+          "hash": "CeQ8AUnoLS8alVnKsYuDug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.WriteJson.html",
+          "hash": "PoTno898FXaaFrY7umvkCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.ReadJson.html",
+          "hash": "NNLE/6Txc8xz36ve16DZjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TimestampConverter.html",
+          "hash": "UsNMIajtBC+Ir7Zj0G5FIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Blog.html",
+          "hash": "4WlGcAMuNLe/60qhkYLedw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Post.html",
+          "hash": "XJdVsWrJq9W587PybSH6QA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.ContentRaw.html",
+          "hash": "q4JCAZ6Ff2sCzXiKne1xag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Content.html",
+          "hash": "w4SgPoqfmBd1lZROdn6ZkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Equals.html",
+          "hash": "Byilvbs/Sg3rPWow0skuHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.GetHashCode.html",
+          "hash": "ZC5YZKgv+irruPUox2bi5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.html",
+          "hash": "Bg+/weoynd4D60IFPvaF2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Name.html",
+          "hash": "KiQMjZnMIE7uAXdPPYsb9g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Active.html",
+          "hash": "Amwbap2do5rz5vsYg50A/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Theme.html",
+          "hash": "/gaQ2rCM3SHHJVRkIuUi+Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.ShareLikes.html",
+          "hash": "fmo7UBWwPkpNsJYb/hSXww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.ShareFollowing.html",
+          "hash": "UXwg9Z4HxinR62rxrn2Rnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.CanBeFollowed.html",
+          "hash": "BIkXF3Bc4e71F4A31zYJ4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Equals.html",
+          "hash": "tQmD6O1ro/9/XkQ7zZeQFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.GetHashCode.html",
+          "hash": "ueQHpm0ImKgDYx80JkBU5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.html",
+          "hash": "qoLzWWyme9RXUZNX84pX2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.html",
+          "hash": "tFA0KliuoQoglTTSsBmSOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.CanConvert.html",
+          "hash": "DtA3ig90ksCEp4R7YZiphg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.ReadJson.html",
+          "hash": "jKOcJ6p27uFLT5yEvFe5dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailConverter.WriteJson.html",
+          "hash": "o8Un9fDgyCsyitI5lPen3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.Id.html",
+          "hash": "5NIabFySkz44TFudPI3beQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.Equals.html",
+          "hash": "ZGhTYmimIzJmhvajaBz0NA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.GetHashCode.html",
+          "hash": "IIMa6Z69YeFj+23wPBh2cg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.html",
+          "hash": "NrKWFW45m9lRrnB5E9VxGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowHeaderImage.html",
+          "hash": "ejtN7IUZfN6x91b6I5X6qg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowTitle.html",
+          "hash": "NGWEeyZ5AxN77euATz2XiA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleColor.html",
+          "hash": "Gd6gvYDTP+n4mdPQWAS8KQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleFont.html",
+          "hash": "3IBO4qJt8zrygjNlaIss+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleFontWeight.html",
+          "hash": "Qi5iV+kupULhqFlrmuZzPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.Equals.html",
+          "hash": "wqv9lnxJP9cv0ReZuVZI+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.GetHashCode.html",
+          "hash": "mzvtwZSe+druTBH1H9RIFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.html",
+          "hash": "jRVN86nr1IgJdlChHCM0Gw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullWidth.html",
+          "hash": "vuw+sUH7qAnM1I/5kEu+jA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullHeight.html",
+          "hash": "zGhRr4+KhVwOe5dKgt9zcw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusWidth.html",
+          "hash": "oJJdMNWxJFom2peJ9oABVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusHeight.html",
+          "hash": "P2dCXRW+s4GeAW6M4P2kxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.AvatarShape.html",
+          "hash": "5Zmocp2tELNbUbSGpeEpAw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.BackgroundColor.html",
+          "hash": "/nzmKztZG5Kv/txnM7NY0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.BodyFont.html",
+          "hash": "O2XCOM26aU3IZQb9nOKoUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderBounds.html",
+          "hash": "lsHd/Sbxb0+zCrxX6MgfVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImage.html",
+          "hash": "dFkTAk2w+2TkrdLuxv2Afg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageFocused.html",
+          "hash": "iP7+Tt9QpsZbyHz2sssE8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageScaled.html",
+          "hash": "SxBl2tEbx8eNx5RbGQkJGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderStretch.html",
+          "hash": "XIqwYQG1tlPqq5MyqjygOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.LinkColor.html",
+          "hash": "3IazR2f0sr4fiQ1Plwv6cg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowAvatar.html",
+          "hash": "FGTDZJX5vFDNmeLtWv37fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowDescription.html",
+          "hash": "4Odk9AR4xAwH7Y1X9mQ4/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.CanConvert.html",
+          "hash": "9g6Q03NWAt6MH4o9AysjhQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.ReadJson.html",
+          "hash": "IfCtxD3IeY4+6kyH51t3KA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.WriteJson.html",
+          "hash": "Y9lSy6NglT+whSKG8/HYUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailThemeConverter.html",
+          "hash": "8UJN1nJnONNiHiYhuW+zBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync.html",
+          "hash": "bbrAIEKYYL4pnrU3yxPgCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync.html",
+          "hash": "v22HddscB68f7QLN/i0lSA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetDraftPostsAsync.html",
+          "hash": "Ix7ei+7L60kGBf4sF3O9og=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.html",
+          "hash": "YC/oijlHl4YdFC8QAdbkkA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetUserLikesAsync.html",
+          "hash": "Acy/GsmG1il9t/ejjbQdjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.Dispose.html",
+          "hash": "ScQ9bbO/hvOwEp7w+RFYKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.-ctor.html",
+          "hash": "M/BIbRJQdkkys+nuvqEQRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetTaggedPostsAsync.html",
+          "hash": "mYqXqPZCKqO/f797I0USYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync.html",
+          "hash": "qgC2HN2aaLBkHbOtzVq0Ig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetPostsAsync.html",
+          "hash": "4GRnwmH/iVqksB/XWzkE0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetPostAsync.html",
+          "hash": "eGkeP8DW/EkW/IuJKckpsg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetSubmissionPostsAsync.html",
+          "hash": "29xZEzj5niAFq61y4iPDoA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetBlogLikesAsync.html",
+          "hash": "um7csb5OSRSSbMy1awtYQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetFollowersAsync.html",
+          "hash": "5vGD7zCmB4mZlpm+CyiRTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync.html",
+          "hash": "h2gL9mhsMhM4OSpaQrDPQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetQueuedPostsAsync.html",
+          "hash": "aMbKHdjqH8pmb+do+cZBjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.FollowAsync.html",
+          "hash": "oBdXs7Fr3FbQPPq524yX2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.UnfollowAsync.html",
+          "hash": "DAcgfpQQHBLz2GPwS89tRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetBlogInfoAsync.html",
+          "hash": "pxjeMPHXK9Ld/vgGjCDFwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.DeletePostAsync.html",
+          "hash": "BaKwK+oX7yN9GZOHlkibCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetUserInfoAsync.html",
+          "hash": "gBAHkpv1Ti2CYOzk3nyKGg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetFollowingAsync.html",
+          "hash": "fhfGTlyuQ4QT9GoyHu+MbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetLikesAsync.html",
+          "hash": "xmjOmixUECgA9SkeUVC86g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.LikeAsync.html",
+          "hash": "8re/suQ9uQbHl69wFaCiLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.UnlikeAsync.html",
+          "hash": "fhQPDy201k/AcGLkGdGMNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled.html",
+          "hash": "0TELNHWFZ9QhgUHOQJammA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled.html",
+          "hash": "tyQyiak5f/QLrs9WRNY+cw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType.html",
+          "hash": "Js1CLUZyu2j9Mr+YPdQxJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes.html",
+          "hash": "brEL0O2EFtrt1y9VAbJqlg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount.html",
+          "hash": "GXL7BFzLyezj2rhPgxW/Og=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount.html",
+          "hash": "mzd1IK0LdjOUvhBu+l71dQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount.html",
+          "hash": "74XvPgBfmwhcprEPt5xC3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary.html",
+          "hash": "iFYECXTIvCJAi3NpTi0FjA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount.html",
+          "hash": "CHZrYIQjRvmPsr3XInn71Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.html",
+          "hash": "RYFcvf8LY+wSjzl/LwCrRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.FollowingCount.html",
+          "hash": "9RjEnJLokRYGh26syhUN7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat.html",
+          "hash": "ozCGi2ttn9B9z+R9+//cdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.Name.html",
+          "hash": "f0tivLHyxgcQCjqzEQpFbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.LikesCount.html",
+          "hash": "m9tMxXME8GLoK1KZ9BxqOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.Blogs.html",
+          "hash": "B7pgYgielsOfI4uVf5jqKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.html",
+          "hash": "U85qeXMLJaS5Xp+Nr+TWsA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Caption.html",
+          "hash": "rZhxCvxDm3GEm0jbXVfc1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.VideoUrl.html",
+          "hash": "wXoo7nLsHYsxosRePNyIMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailUrl.html",
+          "hash": "Bbp2ACpNravGtRxPAv+HNQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailWidth.html",
+          "hash": "ua67jkou2oVegmOWtChhEw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailHeight.html",
+          "hash": "ddHbs0NeqFj4jUA5D7ZBbQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Player.html",
+          "hash": "sKw1t98Bcr2hQu7ybg5q+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Duration.html",
+          "hash": "IPbu7PcMidtel4y88wE59w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.IsHtml5Capable.html",
+          "hash": "5dRCkLjiR32jPAB46mkNIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.html",
+          "hash": "Hh+n43I38wmlrm0Ja+Rw5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.html",
+          "hash": "dVT1z9jbWgZ8qTeoB4j1lQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.FromTimestamp.html",
+          "hash": "R8ZFTrAEoSfuEQhsD3G4nQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.ToTimestamp.html",
+          "hash": "1aKgp26ObLoysBisiw58gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.html",
+          "hash": "GJ5P1v3SZeT1OOZnQqTsUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.ComputeHash.html",
+          "hash": "y32LokEc0T3o+0rQFuNLtA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.html",
+          "hash": "Ef8ggJ97H080wgN+G84D5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.ComputeHash.html",
+          "hash": "kGjWsWwZPl2G7WKcgdQ4IQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.html",
+          "hash": "FM7vfQGdiEdv84571Xh93w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.Name.html",
+          "hash": "ibYhdPFo9SMzVGAQDzXQwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.AsHttpContent.html",
+          "hash": "6waIHBmMfGWbMulTh7rDtA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.html",
+          "hash": "Lo8Nxu0ugsBNY1A/fCQXwg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.Create.html",
+          "hash": "bI3I1bKDW7tAs9VP9HnL1w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.html",
+          "hash": "Dh5l/6VFBBeZ1eM0AVfK2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.Add.html",
+          "hash": "T+Fl9EPnqCfafXosT3ytBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.html",
+          "hash": "MXbAbD8O0vJcS4DLCPcu+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.-ctor.html",
+          "hash": "a9gp5b+jE870+yopU8z1gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.NoteType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.NoteType.html",
+          "hash": "OTNvibVEADRnNa03eswLFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.Create.html",
+          "hash": "pPHooBT/Vhvwgyu7AZAWdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.html",
+          "hash": "xGMTOOtkBTWO43umNTk9RQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.html",
+          "hash": "VKEpoag8Y2RyY2krtaxSaQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.-ctor.html",
+          "hash": "nQiXtq1OCAyqmb7nNB7xxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync.html",
+          "hash": "E0KmIc2vmCQSqQyiJOdKBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync.html",
+          "hash": "jOF3XfaBIzm6RO9d3uwqFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl.html",
+          "hash": "Wox/BNexhjcRXHT0IFOq5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync.html",
+          "hash": "id8qmZ1nZXa8ylOK8M8BNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.Create.html",
+          "hash": "JfsvNdva8+Z83cxin5AIyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.html",
+          "hash": "CL3v2lZM8y7fGQP+jw01rw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.-ctor.html",
+          "hash": "GuJOFjKpgljhHeRaq4jlZw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.html",
+          "hash": "+mOAZAY2cPnGjK18FSkg3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.-ctor.html",
+          "hash": "yDOFCc6CwQxkd0OwNjvncA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.SendAsync.html",
+          "hash": "Az+g07qQ4FcphAuwMWghLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.html",
+          "hash": "NrDJlt+FUOhO5a3Qe40ybA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.-ctor.html",
+          "hash": "UjmsE2yCb36UFmTxb3xilw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.Key.html",
+          "hash": "WRzShV8V8B6m3MhuLS54RA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.Secret.html",
+          "hash": "K3DrCS1o9wcYXbXoEvx6CQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.IsValid.html",
+          "hash": "yTpIOg62LEPVsFpiNkkU/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.Equals.html",
+          "hash": "ICgO/XENJwxfk5sLrPIy2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.GetHashCode.html",
+          "hash": "Ukoq3Sl6OPdD9q5yRrImiw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.ToString.html",
+          "hash": "ICeqJmaz17sVMv1DLuVMwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.html",
+          "hash": "VJ/rMRixByZ3cJco/kqy7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.html",
+          "hash": "H1Mt9THFdNp1Op57QFecVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostCreationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostCreationState.html",
+          "hash": "6gXOg1aOxx7nWdHMSScrdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreatePhoto.html",
+          "hash": "Lp2zGRYXkW4Q5HradR4jHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateQuote.html",
+          "hash": "UHxCQs0FViQbEiYdkyQVAQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.State.html",
+          "hash": "r4O01XuN88UixMr99/5T2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Tags.html",
+          "hash": "izuJ54TlGj1C/bRgLB3qVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Tweet.html",
+          "hash": "mJ8W4pzAfb/v4RRzTBn9iw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Date.html",
+          "hash": "7nORxeW9YAtI9EiwdLmRxQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Format.html",
+          "hash": "AbzOeJ85r5IVDjMLZf5j0g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Slug.html",
+          "hash": "ruDuyfW9uJPNUB6iE6Vjww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Publish_On.html",
+          "hash": "/VZTdm8btc+4W39g7DZ75Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.ToMethodParameterSet.html",
+          "hash": "k+htQ4073vJ4OisQPx9CFg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateAnswer.html",
+          "hash": "der1w7djbXt4dnH6gzW8uQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateText.html",
+          "hash": "oDMnmMI/XlXCAQ8lzTnUyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateLink.html",
+          "hash": "bldnVP6Flj1Yrjm/dZ1QKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateChat.html",
+          "hash": "XzWxS8s1/V/4byE8MZT4cg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateAudio.html",
+          "hash": "h+77oOL4kmHruEzspaeptg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateVideo.html",
+          "hash": "YIe47eK5N4Qi3zXBoAu4Ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.html",
+          "hash": "MnT0qQeIC+c1tbYesdSXpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostFilter.html",
+          "hash": "AWFYdRt5BAwpzkXlwwMoMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostFormat.html",
+          "hash": "2bBcTvH/Um295Q5LeOIAVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostType.html",
+          "hash": "td4Vu84xAa0AzmL6c61QmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.Dispose.html",
+          "hash": "8Elv95Kfc6EanLPPYbnsYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.-ctor.html",
+          "hash": "WTOpuGniYXfa/hA4XEDjQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.html",
+          "hash": "7MOLfVW47CWu8iHbS7999g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodAsync.html",
+          "hash": "Iv74CmXKkKytKzoOHbiJDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodNoResultAsync.html",
+          "hash": "7CEIylUduwCJloj1MpDuXw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.OAuthToken.html",
+          "hash": "hziUcjKc9Mz+39bBenyvxQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.Create.html",
+          "hash": "+ubPt+LrzWrxTXDuTOgy7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.html",
+          "hash": "qUBfiKKWXkC18OtgfiAU0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.ConfigureService.html",
+          "hash": "FsIgV6tTBTOBjm2ZL6p8CA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Equals.html",
+          "hash": "J9DdiYR8/m6nD88xTwObCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.GetHashCode.html",
+          "hash": "sCv/TJ+uv7sqcVXd67tpyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.html",
+          "hash": "UWKxTB7SrNP+a4G8B+jJmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Title.html",
+          "hash": "krGcr0dt8ncPJOJ3boBsrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Code.html",
+          "hash": "GtC3tF8YTx1RF5nHsIkUHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Detail.html",
+          "hash": "t9fHZkkAbifepKqqm27o/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.ReadJson.html",
+          "hash": "1GMywhFoAV6cwwO6iAGEzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.WriteJson.html",
+          "hash": "POP5PwCDMZ9pfUWaqGb9Vg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.html",
+          "hash": "Ufkd2+89H1/6PGaKgajqug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrErrorsConverter.CanConvert.html",
+          "hash": "a5RK25Yddo6YtjsFPLU1oA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.-ctor.html",
+          "hash": "Iihrj9oBV6USHU9lNSQp5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.StatusCode.html",
+          "hash": "8WRDxUn7nlfF5nmSMV2yew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.Errors.html",
+          "hash": "bEu9JVt1BuGfIg3T63C/qQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.html",
+          "hash": "2+yngE7lPJgdReR02r8phA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.UserMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.UserMethod.-ctor.html",
+          "hash": "2A9VIEipDIFG04hLa7GqTw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.UserMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.UserMethod.html",
+          "hash": "r8VD90Nq4j5MAtqG1iYGeg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.html",
+          "hash": "LDn8ctKS1PJppuYV+VsmIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "G4hSA6ITLCQiiZ6A0ORG5g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Z5tlzzGTMrJx5aO099ODdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Authenticating.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Authenticating.html",
+          "hash": "bDrZpdDG7Yx0gV53L3XWPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/firststeps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/firststeps.html",
+          "hash": "cLMUeojo+SKY2u0/htWMdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "48wURSHG4frBLuokifCL1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/revision.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/revision.html",
+          "hash": "L1jqZTmWEzLvZzlXe+X9mw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/roadmap.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/roadmap.html",
+          "hash": "XZBC9Wr+sH1+VR9BCR4hog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "Fw3Kv5IpgaxBLjBlvRYWAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/NugetManager_Install.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/NugetManager_Install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/articles_revision.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/articles_revision.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "IesJRVmmIVkJSH/dcc2SUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "bLg909uhPsPDjExdF1up+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/index.html",
+          "hash": "hLwG+SsGtFcSqZiCqjY1Lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/toc.html",
+          "hash": "byaEbVkHkXYGBUsItrcLkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 6
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 71,
+          "skipped_file_count": 71
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

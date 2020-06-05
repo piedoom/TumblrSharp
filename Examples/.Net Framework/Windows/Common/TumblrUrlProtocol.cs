@@ -21,7 +21,7 @@ namespace Common
 
         private void CleanRegistration(string name, string applicationPath, string parameterChar)
         {
-            RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\Classes\\" + name + "shell\\open\\command", true);
+            RegistryKey rk = Registry.CurrentUser.OpenSubKey("Software\\Classes\\" + name + "\\shell\\open\\command", true);
             rk.DeleteValue("");
             rk.Close();
 
@@ -156,6 +156,11 @@ namespace Common
                     }
                 }
             }
+        }
+
+        public void Remove()
+        {
+            CleanRegistration(Name, ApplicationPath, ParameterChar);
         }
         #endregion
     }

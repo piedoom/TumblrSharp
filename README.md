@@ -1,4 +1,4 @@
-![status badge](https://ci.appveyor.com/api/projects/status/35487kj678vdpq6h/branch/master?svg=true) [![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
+[![Build status](https://ci.appveyor.com/api/projects/status/ra32qyvgubf15ttg?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp) [![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
 
 TumblrSharp
 ========

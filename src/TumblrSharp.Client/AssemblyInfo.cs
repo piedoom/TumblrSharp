@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 
 [assembly: AssemblyCompany("Alexander Lozada; Ulf (Cataurus) Prill; et al.")]
-[assembly: AssemblyCopyright("Copyright 2017-2020")]
+[assembly: AssemblyCopyright("Copyright 2017-2025")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
@@ -15,12 +15,6 @@
 [assembly: AssemblyDescription("Tumblr# extension for .NETStandard 2.0")]
 [assembly: AssemblyProduct("DontPanic.TumblrSharp.Client for .NETStandard 2.0")]
 #endif
-
-#if (NET6_0)
-[assembly: AssemblyDescription("Tumblr# extension for .NET 6.0")]
-[assembly: AssemblyProduct("DontPanic.TumblrSharp.Client for .NET 3.0")]
-#endif
-
 
 [assembly: AssemblyTitle("DontPanic.TumblrSharp.Client")]
 [assembly: AssemblyFileVersion("1.2.1.0")]

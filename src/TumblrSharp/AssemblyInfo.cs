@@ -14,10 +14,6 @@
 [assembly: AssemblyDescription("Tumblr# extension for .NETStandard 2.0")]
 [assembly: AssemblyProduct("DontPanic.TumblrSharp for .NETStandard 2.0")]
 #endif
-#if (NET6_0)
-[assembly: AssemblyDescription("Tumblr# extension for .NET 6.0")]
-[assembly: AssemblyProduct("DontPanic.TumblrSharp for .NET 6.0")]
-#endif
 
 [assembly: AssemblyTitle("DontPanic.TumblrSharp")]
 [assembly: AssemblyVersion("1.2.1.0")]

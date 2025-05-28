@@ -1,7 +1,6 @@
-﻿using DontPanic.TumblrSharp.OAuth;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Testing
+namespace ASPNet
 {
     public interface IMyTumblrService
     {

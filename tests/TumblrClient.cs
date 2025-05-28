@@ -3,87 +3,63 @@ using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
+using TestTumblrSharp;
 
 namespace TestingTumblrSharp
 {
     [TestClass]
     public class TumblrClientTest
     {
-        // This consumer-token and AccesToken is only for testing!
-
-        /*private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
-        private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");
-
-        private readonly string _accessKey = Environment.GetEnvironmentVariable("AccessKey");
-        private readonly string _accessSecret = Environment.GetEnvironmentVariable("AccessSecret");*/
-
-        private string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
-        private string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
-
-        private string _accessKey = "F1G7BF1JW4f1VKJ93xJSi7D66yZKN3Uj0bArn5i5riwVEnMHuU";
-        private string _accessSecret = "O977YH42yg98IsS9BAk80r5e5grYQDY9HauVmgf0aEmceZ2UTz";
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void TumblrClient_Create_Null_1()
+        public static IEnumerable<object[]> ConsumerTokenEmptyData
         {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(null, null);
+            get
+            {
+                yield return new object[] { string.Empty, string.Empty };
+                yield return new object[] { Settings.consumerKey, string.Empty };
+                yield return new object[] { string.Empty, Settings.consumerSecret };
+            }
+        }
+
+        public static IEnumerable<object[]> ConsumerTokenNullData
+        {
+            get
+            {
+                yield return new object[] { null, null };
+                yield return new object[] { Settings.consumerKey, null };
+                yield return new object[] { null, Settings.consumerSecret };
+            }
+        }
+
+        public static IEnumerable<object[]> AccessTokenNullData
+        {
+            get
+            {
+                yield return new object[] { null, null };
+                yield return new object[] { Settings.accessKey, null };
+                yield return new object[] { null, Settings.accessSecret };
+            }
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void TumblrClient_Create_Null_2()
+        [DynamicData(nameof(ConsumerTokenNullData), DynamicDataSourceType.Property)]
+        public void TumblrClient_Create_NullPrams(string consumerKey, string consumerSecret)
         {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, null);
+            Assert.ThrowsExactly<ArgumentNullException>( () => new TumblrClientFactory().Create<TumblrClient>(consumerKey, consumerSecret) );
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void TumblrClient_Create_Null_3()
+        [DynamicData(nameof(ConsumerTokenEmptyData), DynamicDataSourceType.Property)]
+        public void TumblrClient_Create_EmptyParams(string consumerKey, string consumerSecret)
         {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(null, _consumerKey, _consumerSecret);
+            Assert.ThrowsExactly<ArgumentException>(() => new TumblrClientFactory().Create<TumblrClient>(consumerKey, consumerSecret) );
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_Empty_1()
+        [DynamicData(nameof(AccessTokenNullData), DynamicDataSourceType.Property)]
+        public void TumblrClient_Create_NotValid(string accessKey, string accessSecret)
         {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(string.Empty, string.Empty);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_Empty_2()
-        {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, string.Empty);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_Empty_3()
-        {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(string.Empty, _consumerSecret);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_NotValid_1()
-        {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(null, null));
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_NotValid_2()
-        {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(_accessKey, null));
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TumblrClient_Create_NotValid_3()
-        {
-            var tc = new TumblrClientFactory().Create<TumblrClient>(_consumerKey, _consumerSecret, new Token(null, _accessSecret));
+            Assert.ThrowsExactly<ArgumentException>(() => new TumblrClientFactory().Create<TumblrClient>(Settings.consumerKey, Settings.consumerSecret, new Token(accessKey, accessSecret)) );
         }
     }
 }

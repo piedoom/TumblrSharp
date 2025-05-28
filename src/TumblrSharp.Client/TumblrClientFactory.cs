@@ -3,10 +3,6 @@ using DontPanic.TumblrSharp.OAuth;
 using System;
 using System.Net.Http;
 
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
-using Microsoft.Extensions.DependencyInjection;
-#endif
-
 namespace DontPanic.TumblrSharp
 {
     /// <summary>
@@ -15,7 +11,6 @@ namespace DontPanic.TumblrSharp
     public class TumblrClientFactory : ITumblrClientFactory
     {
 
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
         /// <summary>
         /// Creates a new Tumblr client instance of type <typeparamref name="TClient"/>.
         /// </summary>
@@ -54,7 +49,6 @@ namespace DontPanic.TumblrSharp
 
             throw new ArgumentException(string.Format("The provided type '{0}'cannot be created by this factory.", typeof(TClient).FullName));
         }
-#endif
 
         /// <summary>
         /// Creates a new Tumblr client instance of type <typeparamref name="TClient"/>.

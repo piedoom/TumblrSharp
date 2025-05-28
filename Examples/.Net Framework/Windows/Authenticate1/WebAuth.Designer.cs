@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser1 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webBrowser1)).BeginInit();
             this.SuspendLayout();
             // 
             // webBrowser1
             // 
+            this.webBrowser1.AllowExternalDrop = true;
+            this.webBrowser1.CreationProperties = null;
+            this.webBrowser1.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(542, 644);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
+            this.webBrowser1.ZoomFactor = 1D;
+            this.webBrowser1.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webBrowser1_NavigationCompleted);
             // 
             // WebAuth
             // 
@@ -50,12 +54,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "WebAuth";
             this.Text = "WebAuth";
+            ((System.ComponentModel.ISupportInitialize)(this.webBrowser1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser1;
     }
 }

@@ -1,4 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/ra32qyvgubf15ttg?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp) [![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
+[![Build status - appveyor](https://ci.appveyor.com/api/projects/status/ra32qyvgubf15ttg?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp)
+[![Build status - azure](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_apis/build/status/NewTumblrSharp-CataurusWin)](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_build/latest?definitionId=5)
+[![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
 
 TumblrSharp
 ========
@@ -8,16 +10,20 @@ This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codepl
 Documentation
 ========
 
-Please refer to the [Wiki](https://github.com/piedoom/TumblrSharp/wiki) to learn how to use TumblrSharp. A complete documentation can be found [here](https://cataurus.github.io/TumblrSharp/).
+Please refer to the [Wiki](https://github.com/piedoom/TumblrSharp/wiki) to learn how to use TumblrSharp.
+A complete documentation can be found [here](https://cataurus.github.io/TumblrSharp/).
 
 Why?
 ========
-TumblrSharp is a very nicely designed library, and perhaps the *only* usable C# library that currently exists.  However, development for the Codeplex project stopped in 2014.  While using the library, I've noticed several bugs which I'll fix and post to this repository.
+TumblrSharp is a very nicely designed library, and perhaps the *only* usable C# library that currently exists.
+However, development for the Codeplex project stopped in 2014.  While using the library, I've noticed several
+bugs which I'll fix and post to this repository.
 
 What has been fixed in this new version?
 ========
 
-If you download the old TumblrSharp version off of CodePlex or NuGet, you won't get any of the fixes this libary provides - most notably, support for `Asks` and `Submissions`.
+If you download the old TumblrSharp version off of CodePlex or NuGet, you won't get any of the fixes this libary provides - most notably,
+support for `Asks` and `Submissions`.
 
 - [x] Errors with getting submission posts and their new post `state` type
 - [x] Allow posts to be sent with a `published` state, which is currently the only way to publish asks
@@ -45,7 +51,7 @@ What will *not* be implemented?
 
 (This is due to restrictions to the V2 API.  These endpoints exist but can only be accessed with the official Tumblr app API key).
 
-Roadmap
+Roadmap / History
 ========
 
 Version 1.1.* 
@@ -58,6 +64,11 @@ Version 1.2.0.*
 - Example for Asp.Net, Azure Function
 - Api-Documentation
 
+Version 1.2.1.*
+- no longer supported platforms removed
+- the platform for .NET Example change to .NET 8.0
+- Example Authenticate1 under .NET Framework / Windows now uses WebView2 as WebControl
+
 Version 2.0 
 - Support Neues Post Format (npf)
 - Create / Edit / Fetch Post for npf
@@ -65,9 +76,9 @@ Version 2.0
 Which platforms are supported?
 ========
 
-- Portable
-- [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) 1.1, 1.2, 1.3, 2.0
-- .Net Core 2.2
+- [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) 2.0
+- .NET and .NET Core 2.0+
+- .NET Framework 4.6.1+
 
 Contributing 
 ========

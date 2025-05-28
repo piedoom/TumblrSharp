@@ -44,7 +44,6 @@ namespace DontPanic.TumblrSharp.Client
             this.apiKey = consumerKey;
         }
 
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
         /// <summary>
         /// Initializes a new instance of the <see cref="TumblrClient"/> class.
         /// </summary>
@@ -74,7 +73,6 @@ namespace DontPanic.TumblrSharp.Client
         {
             this.apiKey = consumerKey;
         }
-#endif
 
         #region Public Methods
 

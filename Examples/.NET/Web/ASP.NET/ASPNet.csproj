@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\TumblrSharp.Client\TumblrSharp.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\src\TumblrSharp\TumblrSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<Compile Include="..\..\..\BasicAssemblyInfo.cs" />
+  </ItemGroup>
+
+</Project>

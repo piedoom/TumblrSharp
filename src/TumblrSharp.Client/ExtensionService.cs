@@ -1,5 +1,4 @@
-﻿#if (NETSTANDARD2_0 || NETCOREAPP2_2)
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace DontPanic.TumblrSharp.Client
@@ -23,4 +22,3 @@ namespace DontPanic.TumblrSharp.Client
         }
     }
 }
-#endif

@@ -79,7 +79,6 @@ namespace DontPanic.TumblrSharp
 			this.httpClient = new HttpClient();
 		}
 
-#if (NETSTANDARD2_0 || NETCOREAPP2_2)
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TumblrClientBase"/> class.
 		/// </summary>
@@ -135,9 +134,6 @@ namespace DontPanic.TumblrSharp
 
 			this.httpClient = httpClientFactory.CreateClient();
 		}
-#endif
-
-
 
 		#region Public Properties
 

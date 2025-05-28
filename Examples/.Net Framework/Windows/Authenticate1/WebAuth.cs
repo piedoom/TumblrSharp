@@ -30,7 +30,7 @@ namespace Authenticate1
                 if (value != null)
                 {
                     startUrl = value;
-                    webBrowser1.Url = value;
+                    webBrowser1.Source = value;
                 }
             }
         }
@@ -55,9 +55,9 @@ namespace Authenticate1
             return result;
         }
 
-        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        private void webBrowser1_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
         {
-            Uri url = webBrowser1.Url;
+            Uri url = webBrowser1.Source;
 
             if (url.OriginalString.StartsWith(CallBackUrl) == true)
             {

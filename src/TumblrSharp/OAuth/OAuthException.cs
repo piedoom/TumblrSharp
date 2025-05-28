@@ -24,7 +24,7 @@ namespace DontPanic.TumblrSharp.OAuth
 		/// An optional inner exception.
 		/// </param>
 		public OAuthException(string message, Exception innerException = null)
-			: base(message)
+			: base(message, innerException)
 		{ }
 	}
 }

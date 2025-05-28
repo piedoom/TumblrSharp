@@ -2,14 +2,14 @@
   "metadata": [
     {
       "src": [
-        {
-          "cwd": "../", 
+        { 
           "files": [
-            "src/TumblrSharp/**.csproj", "src/TumblrSharp.client/**.csproj"
-          ]
+            "src/TumblrSharp/*.csproj", "src/TumblrSharp.Client/*.csproj"
+          ],
+          "src": "../"
         }
       ],
-      "properties": { "TargetFramework": "netcoreapp2.2" },
+      "properties": { "TargetFramework": "netstandard2.0" },
       "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
@@ -45,8 +45,7 @@
         ]
       }
     ],
-    "cwd": "../",
-    "dest": "../docs",
+    "output": "../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

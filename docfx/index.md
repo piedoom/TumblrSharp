@@ -13,7 +13,7 @@ Yes!
 
 This repository will always be up-to-date, and it sometimes might fall out of sync with the NuGet servers.
 If you need a feature right away, it's best to clone this repository instead of using NuGet.  For more information, check out
-[Setting Up.](/articles/intro.md)
+[Setting Up.](articles/intro.md)
 
 ## I need help!
 

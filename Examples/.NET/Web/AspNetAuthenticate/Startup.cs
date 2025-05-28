@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DontPanic.TumblrSharp;
+﻿using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Primitives;
 
 namespace AspNetAuthenticate
@@ -43,8 +40,7 @@ namespace AspNetAuthenticate
         /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// </summary>
         /// <param name="app">IApplicationBuilder</param>
-        /// <param name="env">IHostingEnvironment</param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -90,7 +86,7 @@ namespace AspNetAuthenticate
 
                         var userInfo = await tumblrClient.GetUserInfoAsync();
 
-                        await subcontext.Response.WriteAsync($"<h1>Authenticate - Examples for Asp.Net</h1><p>User: {userInfo.Name}</p><p>Following: {userInfo.FollowingCount}</p>");
+                        await subcontext.Response.WriteAsync($"<h1>Authenticate - Examples for Asp.Net - Login Success</h1><p>User: {userInfo.Name}</p><p>Following: {userInfo.FollowingCount}</p>");
                     });
 
                 });

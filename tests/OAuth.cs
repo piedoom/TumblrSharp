@@ -1,23 +1,15 @@
-﻿using System;
+﻿using DontPanic.TumblrSharp.OAuth;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DontPanic.TumblrSharp.OAuth;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using TestTumblrSharp;
 
 namespace TestingTumblrSharp
 {
     [TestClass]
     public class OAuthTest
     {
-        // This consumer-token is only for testing!
-
-        /*private readonly string _consumerKey = Environment.GetEnvironmentVariable("ConsumerKey");
-        private readonly string _consumerSecret = Environment.GetEnvironmentVariable("ConsumerSecret");*/
-
-        private readonly string _consumerKey = "hGSKqgb24RJBnWkodL5GTFIeadgyOnWl0qsXi7APRC76HELnrE";
-        private readonly string _consumerSecret = "jdNWSSbG7bZ8tYJcYzmyfH33o5cq7ihmJeWMVntB3pUHNptqn3";
-
-        private readonly string _callbackUrl = "https://github.com/piedoom/TumblrSharp";
-
         [TestMethod]
         public void Token_IsValid()
         {
@@ -35,74 +27,55 @@ namespace TestingTumblrSharp
             current = new Token(string.Empty, string.Empty).IsValid;
             Assert.IsFalse(current);
 
-            current = new Token(_consumerKey, null).IsValid;
+            current = new Token(Settings.consumerKey, null).IsValid;
             Assert.IsFalse(current);
 
-            current = new Token(_consumerKey, string.Empty).IsValid;
+            current = new Token(Settings.consumerKey, string.Empty).IsValid;
             Assert.IsFalse(current);
 
-            current = new Token(null, _consumerSecret).IsValid;
+            current = new Token(null, Settings.consumerSecret).IsValid;
             Assert.IsFalse(current);
 
-            current = new Token(string.Empty, _consumerSecret).IsValid;
+            current = new Token(string.Empty, Settings.consumerSecret).IsValid;
             Assert.IsFalse(current);
 
-            current = new Token(_consumerKey, _consumerSecret).IsValid;
+            current = new Token(Settings.consumerKey, Settings.consumerSecret).IsValid;
             Assert.IsTrue(current);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_ClientFactory_Create_Null_1()
+        public static IEnumerable<object[]> SecretTokenNullData 
         {
-            OAuthClient lOAuthClient;
-
-            lOAuthClient = new OAuthClientFactory().Create(null, null);
+            get 
+            {
+                yield return new object[] { null, null};
+                yield return new object[] { Settings.consumerKey, null };
+                yield return new object[] { null, Settings.consumerSecret };
+            }
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_ClientFactory_Create_Null_2()
+        [DynamicData(nameof(SecretTokenNullData), DynamicDataSourceType.Property)]
+        public void OAuth_ClientFactory_Create_Null(string consumerKey, string consumerSecret)
         {
             OAuthClient lOAuthClient;
-            
-            lOAuthClient = new OAuthClientFactory().Create(_consumerKey, null);
+            Assert.ThrowsExactly<ArgumentNullException>(() => lOAuthClient = new OAuthClientFactory().Create(consumerKey, consumerSecret));
+        }
+
+        public static IEnumerable<object[]> SecretTokenEmptyData
+        {
+            get
+            {
+                yield return new object[] { string.Empty, string.Empty };
+                yield return new object[] { Settings.consumerKey, string.Empty };
+                yield return new object[] { string.Empty, Settings.consumerSecret };
+            }
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_ClientFactory_Create_Null_3()
+        [DynamicData(nameof(SecretTokenEmptyData), DynamicDataSourceType.Property)]
+        public void OAuth_ClientFactory_Create_Empty(string consumerKey, string consumerSecret)
         {
-            OAuthClient lOAuthClient;
-            
-            lOAuthClient = new OAuthClientFactory().Create(null, _consumerSecret);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_ClientFactory_Create_Empty_1()
-        {
-            OAuthClient lOAuthClient;
-
-            lOAuthClient = new OAuthClientFactory().Create(string.Empty, string.Empty);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_ClientFactory_Create_Empty_2()
-        {
-            OAuthClient lOAuthClient;
-
-            lOAuthClient = new OAuthClientFactory().Create(_consumerKey, string.Empty);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_ClientFactory_Create_Empty_3()
-        {
-            OAuthClient lOAuthClient;
-
-            lOAuthClient = new OAuthClientFactory().Create(string.Empty, _consumerSecret);
+            Assert.ThrowsExactly<ArgumentException>(() => new OAuthClientFactory().Create(consumerKey, consumerSecret));
         }
 
         [TestMethod]
@@ -110,137 +83,107 @@ namespace TestingTumblrSharp
         {
             OAuthClient oAuthClient;
 
-            oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
             Assert.IsNotNull(oAuthClient);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public async Task OAuth_GetRequestTokenAsync_Null()
+        public void OAuth_GetRequestTokenAsync_Null()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(null);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
+            
+            Assert.ThrowsExactly<ArgumentNullException>( () => oAuthClient.GetRequestTokenAsync(null).GetAwaiter().GetResult());
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public async Task OAuth_GetRequestTokenAsync_Empty()
+        public void OAuth_GetRequestTokenAsync_Empty()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(string.Empty);
+            Assert.ThrowsExactly<ArgumentException>(() => oAuthClient.GetRequestTokenAsync(string.Empty).GetAwaiter().GetResult());
         }
 
         [TestMethod]
-        [ExpectedException(typeof(OAuthException))]
-        public async Task OAuth_GetRequestTokenAsync_Unauthorized()
+        public void OAuth_GetRequestTokenAsync_Unauthorized()
         {
             OAuthClient oAuthClient = new OAuthClientFactory().Create("ertd", "ertg");
 
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
+            Assert.ThrowsExactly<OAuthException>(() => oAuthClient.GetRequestTokenAsync(Settings.callbackUrl).GetAwaiter().GetResult());
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void OAuth_GetAuthorizeUrl_Arg_null_1()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Uri url;
-
-            url = oAuthClient.GetAuthorizeUrl(null);
+            Assert.ThrowsExactly<ArgumentNullException>(() => oAuthClient.GetAuthorizeUrl(null));
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_GetAuthorizeUrl_Arg_null_2()
+        [DataRow(null, null)]
+        [DataRow(null, "ert")]
+        public void OAuth_GetAuthorizeUrl_Arg_null_2(string requestKey, string requestSecret)
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token(null, null)); ;
+            Token requestToken = new Token(requestKey, requestSecret);
+
+            Assert.ThrowsExactly<ArgumentNullException>(() => oAuthClient.GetAuthorizeUrl(requestToken));
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void OAuth_GetAuthorizeUrl_Arg_null_3()
+        [DataRow("", "")]
+        [DataRow("", "ert")]
+        public void OAuth_GetAuthorizeUrl_Arg_empty_1(string requestKey, string requestSecret)
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token(null, "ertdgfrt"));
-        }
+            Token requestToken = new Token(requestKey, requestSecret);
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_GetAuthorizeUrl_Arg_empty_1()
-        {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Token requestToken = new Token(string.Empty, string.Empty);
-
-            Uri url = oAuthClient.GetAuthorizeUrl(requestToken);
-        }
-        
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void OAuth_GetAuthorizeUrl_Arg_empty_2()
-        {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Token requestToken = new Token(string.Empty, "erdertf");
-
-            Uri url = oAuthClient.GetAuthorizeUrl(new Token(string.Empty, "ertdgfrt"));
+            Assert.ThrowsExactly<ArgumentException>(() => oAuthClient.GetAuthorizeUrl(requestToken));
         }
 
         [TestMethod]
         public async Task OAuth_GetAuthorizeUrl_Arg_1()
         {
-            Console.WriteLine(_consumerKey);
-            Console.WriteLine(_consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
-
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
+            Token requestToken = await oAuthClient.GetRequestTokenAsync(Settings.callbackUrl);
 
             Uri url = oAuthClient.GetAuthorizeUrl(requestToken);
 
             Assert.IsNotNull(url);
 
-            Assert.AreNotEqual(url, string.Empty);
-
-
+            Assert.AreNotEqual(url.ToString(), string.Empty);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public async Task OAuth_GetAccessTokenAsync_Null_1()
+        public void OAuth_GetAccessTokenAsync_Null_1()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Token accessToken = await oAuthClient.GetAccessTokenAsync(null, null);
+            Assert.ThrowsExactly<ArgumentNullException>(() => oAuthClient.GetAccessTokenAsync(null, null).GetAwaiter().GetResult());
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
         public async Task OAuth_GetAccessTokenAsync_Null_2()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
+            Token requestToken = await oAuthClient.GetRequestTokenAsync(Settings.callbackUrl);
 
-            Token accessToken = await oAuthClient.GetAccessTokenAsync(requestToken, null);
+            Assert.ThrowsExactly<ArgumentNullException>(() => oAuthClient.GetAccessTokenAsync(requestToken, null).GetAwaiter().GetResult());
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public async Task OAuth_GetAccessTokenAsync_Empty_1()
         {
-            OAuthClient oAuthClient = new OAuthClientFactory().Create(_consumerKey, _consumerSecret);
+            OAuthClient oAuthClient = new OAuthClientFactory().Create(Settings.consumerKey, Settings.consumerSecret);
 
-            Token requestToken = await oAuthClient.GetRequestTokenAsync(_callbackUrl);
+            Token requestToken = await oAuthClient.GetRequestTokenAsync(Settings.callbackUrl);
 
-            Token accessToken = await oAuthClient.GetAccessTokenAsync(requestToken, string.Empty);
+            Assert.ThrowsExactly<ArgumentException>(() => oAuthClient.GetAccessTokenAsync(requestToken, string.Empty).GetAwaiter().GetResult());
         }
     }
 }

@@ -52,14 +52,14 @@ namespace QueuedPosts
 
             test = await client.GetQueuedPostsAsync(blog);
 
-            while (test.Count() == 20)
+            while (test.Length == 20)
             {
-                result = result + 20;
+                result += 20;
 
                 test = await client.GetQueuedPostsAsync(blog);
             }
 
-            result = result + test.Count();
+            result += test.Length;
 
             return result;
         }
@@ -77,7 +77,7 @@ namespace QueuedPosts
             Console.WriteLine("Your blogs:");
             Console.WriteLine("");
 
-            for (int i = 0; i < blogs.Count(); i++)
+            for (int i = 0; i < blogs.Count; i++)
             {
                 Console.WriteLine($"   {i}. {blogs[i]} ");
             }

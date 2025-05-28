@@ -330,7 +330,7 @@ namespace DontPanic.TumblrSharp.OAuth
 		public Uri GetAuthorizeUrl(Token requestToken)
 		{
 			if (requestToken == null)
-				throw new ArgumentNullException("requestToken");
+				throw new ArgumentNullException(nameof(requestToken));
 
 			if (requestToken.Key == null)
 				throw new ArgumentNullException("requestToken.Key");

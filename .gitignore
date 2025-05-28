@@ -24,6 +24,7 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+.vscode/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -154,6 +155,7 @@ PublishScripts/
 # NuGet Packages
 #*.nupkg
 # The packages folder can be ignored because of Package Restore
+packages/
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/

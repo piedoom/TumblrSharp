@@ -1,18 +1,18 @@
-﻿using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using DontPanic.TumblrSharp;
+﻿using DontPanic.TumblrSharp;
 using DontPanic.TumblrSharp.Client;
 using DontPanic.TumblrSharp.OAuth;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
-namespace Testing
+namespace ASPNet
 {
     /// <summary>
     /// Tumblr Service
     /// </summary>
     public class MyTumblrService : IMyTumblrService
     {
-        private TumblrClient _tc;
+        private readonly TumblrClient _tc;
 
         /// <summary>
         /// create Tumblrservice
@@ -20,7 +20,9 @@ namespace Testing
         /// <param name="clientFactory">IHttpClientFactory to create internal HttpClient</param>
         public MyTumblrService(IHttpClientFactory clientFactory)
         {
-            _tc = new TumblrClientFactory().Create<TumblrClient>(clientFactory, Settings.CONSUMER_KEY, Settings.CONSUMER_SECRET, new Token(Settings.OAUTH_TOKEN, Settings.OAUTH_TOKEN_SECRET));
+            Token accessToken = new(Settings.OAUTH_TOKEN, Settings.OAUTH_TOKEN_SECRET);
+
+            _tc = new TumblrClientFactory().Create<TumblrClient>(clientFactory, Settings.CONSUMER_KEY, Settings.CONSUMER_SECRET, accessToken);
         }
 
         /// <summary>
@@ -37,5 +39,6 @@ namespace Testing
 
             return result;
         }
+
     }
 }

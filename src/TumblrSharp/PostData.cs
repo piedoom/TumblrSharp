@@ -333,88 +333,103 @@ namespace DontPanic.TumblrSharp
 			return postData;
 		}
 
-		#endregion
+        #endregion
 
-		#region CreateLink
+        #region CreateLink
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a link post.
-		/// </summary>
-		/// <param name="url">
-		/// The url for the link.
-		/// </param>
-		/// <param name="title">
-		/// The display text for the link.
-		/// </param>
-		/// <param name="description">
-		/// The link's description.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <param name="state">
-		/// The <see cref="PostCreationState"/> of the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateLink(
-            string url, 
-            string title = null, 
-            string description = null, 
-            IEnumerable<string> tags = null, 
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a link post.
+        /// </summary>
+        /// <param name="url">
+        /// The url for the link.
+        /// </param>
+        /// <param name="title">
+        /// The display text for the link.
+        /// </param>
+        /// <param name="description">
+        /// The link's description.
+        /// </param>
+        /// <param name="tags">
+        /// The tags to associate with the post.
+        /// </param>
+        /// <param name="state">
+        /// The <see cref="PostCreationState"/> of the post.
+        /// </param>
+        /// <param name="thumbnail">
+        /// The url of an image to use as a thumbnail for the post
+        /// </param>
+        /// <param name="excerpt">
+        /// An excerpt from the page the link points to, HTML entities should be escaped
+        /// </param>
+        /// <param name="author">
+        /// The name of the author from the page the link points to, HTML entities should be escaped
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="url"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="url"/> is empty.
+        /// </exception>
+        public static PostData CreateLink(
+            string url,
+            string title = null,
+            string description = null,
+            string thumbnail = null,
+            string excerpt = null,
+            string author = null,
+            IEnumerable<string> tags = null,
             PostCreationState state = PostCreationState.Published)
-		{
-			if (url == null)
-				throw new ArgumentNullException("url");
+        {
+            if (url == null)
+                throw new ArgumentNullException(nameof(url));
 
-			if (url.Length == 0)
-				throw new ArgumentException("Url cannot be empty.", "url");
+            if (url.Length == 0)
+                throw new ArgumentException("Url cannot be empty.", nameof(url));
 
-			var postData = new PostData(state, tags);
-			postData.parameters.Add("type", "link");
-			postData.parameters.Add("url", url);
-			postData.parameters.Add("title", title, null);
-			postData.parameters.Add("description", description, null);
+            var postData = new PostData(state, tags);
+            postData.parameters.Add("type", "link");
+            postData.parameters.Add("url", url);
+            postData.parameters.Add("title", title, null);
+            postData.parameters.Add("description", description, null);
+            postData.parameters.Add("thumbnail", thumbnail, null);
+            postData.parameters.Add("excerpt", excerpt, null);
+            postData.parameters.Add("author", author, null);
 
-			return postData;
-		}
+            return postData;
+        }
 
-		#endregion
+        #endregion
 
-		#region CreateChat
+        #region CreateChat
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a chat post.
-		/// </summary>
-		/// <param name="conversation">
-		/// The chat conversation.
-		/// </param>
-		/// <param name="title">
-		/// The title of the chat.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <param name="state">
-		/// The <see cref="PostCreationState"/> of the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="conversation"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="conversation"/> is empty.
-		/// </exception>
-		public static PostData CreateChat(
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a chat post.
+        /// </summary>
+        /// <param name="conversation">
+        /// The chat conversation.
+        /// </param>
+        /// <param name="title">
+        /// The title of the chat.
+        /// </param>
+        /// <param name="tags">
+        /// The tags to associate with the post.
+        /// </param>
+        /// <param name="state">
+        /// The <see cref="PostCreationState"/> of the post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="conversation"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="conversation"/> is empty.
+        /// </exception>
+        public static PostData CreateChat(
             string conversation, 
             string title = null, 
             IEnumerable<string> tags = null, 

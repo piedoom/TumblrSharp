@@ -4029,15 +4029,15 @@ references:
   isSpec: "True"
   fullName: DontPanic.TumblrSharp.PostData.CreateChat
   nameWithType: PostData.CreateChat
-- uid: DontPanic.TumblrSharp.PostData.CreateLink(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
-  name: CreateLink(string, string, string, IEnumerable<string>, PostCreationState)
-  href: api/DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateLink_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_
-  commentId: M:DontPanic.TumblrSharp.PostData.CreateLink(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
-  name.vb: CreateLink(String, String, String, IEnumerable(Of String), PostCreationState)
-  fullName: DontPanic.TumblrSharp.PostData.CreateLink(string, string, string, System.Collections.Generic.IEnumerable<string>, DontPanic.TumblrSharp.PostCreationState)
-  fullName.vb: DontPanic.TumblrSharp.PostData.CreateLink(String, String, String, System.Collections.Generic.IEnumerable(Of String), DontPanic.TumblrSharp.PostCreationState)
-  nameWithType: PostData.CreateLink(string, string, string, IEnumerable<string>, PostCreationState)
-  nameWithType.vb: PostData.CreateLink(String, String, String, IEnumerable(Of String), PostCreationState)
+- uid: DontPanic.TumblrSharp.PostData.CreateLink(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
+  name: CreateLink(string, string, string, string, string, string, IEnumerable<string>, PostCreationState)
+  href: api/DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateLink_System_String_System_String_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_
+  commentId: M:DontPanic.TumblrSharp.PostData.CreateLink(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
+  name.vb: CreateLink(String, String, String, String, String, String, IEnumerable(Of String), PostCreationState)
+  fullName: DontPanic.TumblrSharp.PostData.CreateLink(string, string, string, string, string, string, System.Collections.Generic.IEnumerable<string>, DontPanic.TumblrSharp.PostCreationState)
+  fullName.vb: DontPanic.TumblrSharp.PostData.CreateLink(String, String, String, String, String, String, System.Collections.Generic.IEnumerable(Of String), DontPanic.TumblrSharp.PostCreationState)
+  nameWithType: PostData.CreateLink(string, string, string, string, string, string, IEnumerable<string>, PostCreationState)
+  nameWithType.vb: PostData.CreateLink(String, String, String, String, String, String, IEnumerable(Of String), PostCreationState)
 - uid: DontPanic.TumblrSharp.PostData.CreateLink*
   name: CreateLink
   href: api/DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateLink_

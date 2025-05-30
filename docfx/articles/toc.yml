@@ -1,11 +1,9 @@
-- name: Setting Up
-  href: intro.md
+- name: Introduction
+  href: introduction.md
   items:
   - name: First Steps
     href: firststeps.md
   - name: Authenticating
     href: Authenticating.md
-- name: Revision
-  href: revision.md
 - name: Roadmap
   href: roadmap.md

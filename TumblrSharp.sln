@@ -79,22 +79,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{26
 	ProjectSection(SolutionItems) = preProject
 		docfx\articles\Authenticating.md = docfx\articles\Authenticating.md
 		docfx\articles\firststeps.md = docfx\articles\firststeps.md
-		docfx\articles\intro.md = docfx\articles\intro.md
-		docfx\articles\revision.md = docfx\articles\revision.md
 		docfx\articles\roadmap.md = docfx\articles\roadmap.md
 		docfx\articles\toc.yml = docfx\articles\toc.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tutorials", "tutorials", "{DD5FD214-2348-44E8-928F-C75287DF249D}"
-	ProjectSection(SolutionItems) = preProject
-		docfx\tutorial\index.md = docfx\tutorial\index.md
-		docfx\tutorial\toc.yml = docfx\tutorial\toc.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F8241D6F-4CD5-4A7C-BE26-AEE01465F8FD}"
-	ProjectSection(SolutionItems) = preProject
-		docfx\images\articles_revision.png = docfx\images\articles_revision.png
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetAuthenticate", "Examples\.NET\Web\AspNetAuthenticate\AspNetAuthenticate.csproj", "{D9F1D88F-F5AA-49F0-9DF6-AC5FC2440220}"
 EndProject

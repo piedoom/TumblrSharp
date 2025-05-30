@@ -3,6 +3,14 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
       "output": {
@@ -1025,16 +1033,6 @@
       "Summary": null
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
@@ -1069,20 +1067,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/introduction.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/revision.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/revision.html"
+          "relative_path": "articles/introduction.html"
         }
       },
       "version": ""
@@ -1121,16 +1109,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "images/articles_revision.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/articles_revision.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
@@ -1149,29 +1127,6 @@
         },
         ".json": {
           "relative_path": "toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorial/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorial/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "tutorial/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "tutorial/toc.html"
-        },
-        ".json": {
-          "relative_path": "tutorial/toc.json"
         }
       },
       "version": ""

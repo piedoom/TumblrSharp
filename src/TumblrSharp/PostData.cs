@@ -165,23 +165,56 @@ namespace DontPanic.TumblrSharp
 			return postData;
 		}
 
-		#endregion 
+        #endregion
 
-		#region CreatePhoto
+        #region CreatePhoto
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photo">
-		/// A photo to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photo"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreatePhoto(BinaryFile photo)
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a photo post with a source url for photo.
+        /// </summary>
+        /// <param name="sourceUrl">The photo source URL</param>
+        /// <param name="caption">The user-supplied caption, HTML allowed</param>
+        /// <param name="clickThroughUrl">The "click-through URL" for the photo</param>
+        /// <param name="tags">list of tags for this post</param>
+        /// <param name="state">The state of the post. Specify one of the following: published, draft, queue, private</param>
+        /// <returns>A <see cref="PostData"/> instance representing the post.</returns>
+        /// <exception cref="ArgumentNullException">the url for photo source must be set and not null</exception>
+        /// <exception cref="ArgumentException">the url for photo source must be set</exception>
+        public static PostData CreatePhoto(
+            string sourceUrl,
+            string caption = null,
+            string clickThroughUrl = null,
+            IEnumerable<string> tags = null,
+            PostCreationState state = PostCreationState.Published)
+        {
+            if (sourceUrl == null)
+                throw new ArgumentNullException(nameof(sourceUrl));
+
+            if (sourceUrl.Length == 0)
+                throw new ArgumentException("The photo source URL be not empty.", nameof(sourceUrl));
+
+            var postData = new PostData(state, tags);
+            postData.parameters.Add("type", "photo");
+			postData.parameters.Add("source", sourceUrl);
+            postData.parameters.Add("caption", caption, null);
+            postData.parameters.Add("link", clickThroughUrl, null);
+
+            return postData;
+        }
+
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a photo post.
+        /// </summary>
+        /// <param name="photo">
+        /// A photo to upload, defined as a <see cref="BinaryFile"/> instance.
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="photo"/> is <b>null</b>.
+        /// </exception>
+        public static PostData CreatePhoto(BinaryFile photo)
 		{
 			if (photo == null)
 				throw new ArgumentNullException("photo");

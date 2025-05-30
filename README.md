@@ -1,4 +1,4 @@
-[![Build status - appveyor](https://ci.appveyor.com/api/projects/status/ra32qyvgubf15ttg?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp)
+[![Build status](https://ci.appveyor.com/api/projects/status/2lhkdtquwr1h40wx?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp)
 [![Build Status](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_apis/build/status%2FNewTumblrSharp-CataurusWin?branchName=master)](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_build/latest?definitionId=5)
 [![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
 

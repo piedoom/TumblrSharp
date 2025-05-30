@@ -4069,6 +4069,15 @@ references:
   fullName.vb: DontPanic.TumblrSharp.PostData.CreatePhoto(System.Collections.Generic.IEnumerable(Of DontPanic.TumblrSharp.BinaryFile), String, String, System.Collections.Generic.IEnumerable(Of String), DontPanic.TumblrSharp.PostCreationState)
   nameWithType: PostData.CreatePhoto(IEnumerable<BinaryFile>, string, string, IEnumerable<string>, PostCreationState)
   nameWithType.vb: PostData.CreatePhoto(IEnumerable(Of BinaryFile), String, String, IEnumerable(Of String), PostCreationState)
+- uid: DontPanic.TumblrSharp.PostData.CreatePhoto(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
+  name: CreatePhoto(string, string, string, IEnumerable<string>, PostCreationState)
+  href: api/DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreatePhoto_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_
+  commentId: M:DontPanic.TumblrSharp.PostData.CreatePhoto(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)
+  name.vb: CreatePhoto(String, String, String, IEnumerable(Of String), PostCreationState)
+  fullName: DontPanic.TumblrSharp.PostData.CreatePhoto(string, string, string, System.Collections.Generic.IEnumerable<string>, DontPanic.TumblrSharp.PostCreationState)
+  fullName.vb: DontPanic.TumblrSharp.PostData.CreatePhoto(String, String, String, System.Collections.Generic.IEnumerable(Of String), DontPanic.TumblrSharp.PostCreationState)
+  nameWithType: PostData.CreatePhoto(string, string, string, IEnumerable<string>, PostCreationState)
+  nameWithType.vb: PostData.CreatePhoto(String, String, String, IEnumerable(Of String), PostCreationState)
 - uid: DontPanic.TumblrSharp.PostData.CreatePhoto*
   name: CreatePhoto
   href: api/DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreatePhoto_

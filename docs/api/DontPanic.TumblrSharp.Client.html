@@ -1,239 +1,325 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Namespace DontPanic.TumblrSharp.Client </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Namespace DontPanic.TumblrSharp.Client ">
-    
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Namespace DontPanic.TumblrSharp.Client | NewTumblrSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace DontPanic.TumblrSharp.Client | NewTumblrSharp ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NewTumblrSharp">
+            NewTumblrSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DontPanic.TumblrSharp.Client">
+
+        <article data-uid="DontPanic.TumblrSharp.Client">
 
   <h1 id="DontPanic_TumblrSharp_Client" data-uid="DontPanic.TumblrSharp.Client" class="text-break">Namespace DontPanic.TumblrSharp.Client</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
+
     <h3 id="classes">
 Classes
 </h3>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.AnswerPost.html">AnswerPost</a></h4>
-      <section><p>Represents an answer post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.AudioPost.html">AudioPost</a></h4>
-      <section><p>Represents an audio post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.BaseNote.html">BaseNote</a></h4>
-      <section><p>Base class for post notes.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.BasePost.html">BasePost</a></h4>
-      <section><p>Base class for post types.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html">BlogBase</a></h4>
-      <section><p>Contains common properties for a blog.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.BlogInfo.html">BlogInfo</a></h4>
-      <section><p>Contains information about a blog.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.BoolConverter.html">BoolConverter</a></h4>
-      <section><p>Converts &quot;Y&quot; and &quot;N&quot; to boolean.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.ChatFragment.html">ChatFragment</a></h4>
-      <section><p>Represents a fragment of a <a class="xref" href="DontPanic.TumblrSharp.Client.ChatPost.html">ChatPost</a>.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.ChatPost.html">ChatPost</a></h4>
-      <section><p>Represents a chat post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.EnumStringConverter.html">EnumStringConverter</a></h4>
-      <section><p>Generic converter for enumerations.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Exif.html">Exif</a></h4>
-      <section><p>Exif</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.ExtensionService.html">ExtensionService</a></h4>
-      <section><p>extensionclass for IServiceCollection</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Followers.html">Followers</a></h4>
-      <section><p>Contains information about a blog's followers.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Following.html">Following</a></h4>
-      <section><p>Contains the blogs that a user is following.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Likes.html">Likes</a></h4>
-      <section><p>Contains the user's likes.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.LinkPost.html">LinkPost</a></h4>
-      <section><p>Represents a link post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.NoteConverter.html">NoteConverter</a></h4>
-      <section><p>convert note</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Photo.html">Photo</a></h4>
-      <section><p>Represents a photo in a <a class="xref" href="DontPanic.TumblrSharp.Client.PhotoPost.html">PhotoPost</a>.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.PhotoInfo.html">PhotoInfo</a></h4>
-      <section><p>Represents information about a <a class="xref" href="DontPanic.TumblrSharp.Client.Photo.html">Photo</a>.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.PhotoPost.html">PhotoPost</a></h4>
-      <section><p>Represents a photo post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Player.html">Player</a></h4>
-      <section><p>Represents an embeddable player for a video in a <a class="xref" href="DontPanic.TumblrSharp.Client.VideoPost.html">VideoPost</a>.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.PostArrayConverter.html">PostArrayConverter</a></h4>
-      <section><p>Converts post objects to the proper post type.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.PostAttributionNote.html">PostAttributionNote</a></h4>
-      <section><p>PostAttributionNote</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.PostCreationInfo.html">PostCreationInfo</a></h4>
-      <section><p>Represents information about a newly created post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Posts.html">Posts</a></h4>
-      <section><p>Contains information about a blog's posts.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.QuotePost.html">QuotePost</a></h4>
-      <section><p>Represents a quote post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Reblog.html">Reblog</a></h4>
-      <section><p>reblog</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TextPost.html">TextPost</a></h4>
-      <section><p>Represents a text post.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TimestampConverter.html">TimestampConverter</a></h4>
-      <section><p>Converts a timestamp to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.Trail.html">Trail</a></h4>
-      <section><p>Trail</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.html">TrailBlog</a></h4>
-      <section><p>The blog from Trail</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TrailConverter.html">TrailConverter</a></h4>
-      <section><p>convert trail</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TrailPost.html">TrailPost</a></h4>
-      <section><p>post object from <a class="xref" href="DontPanic.TumblrSharp.Client.Trail.html">Trail</a></p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html">TrailTheme</a></h4>
-      <section><p>theme of a blog see <a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.html#DontPanic_TumblrSharp_Client_TrailBlog_Theme">Theme</a></p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TrailThemeConverter.html">TrailThemeConverter</a></h4>
-      <section><p>Converter for trail theme</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a></h4>
-      <section><p>Encapsulates the Tumblr API.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.html">UserBlogInfo</a></h4>
-      <section><p>Contains information about a user's blog.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.html">UserInfo</a></h4>
-      <section><p>Contains information about a user's account.</p>
-</section>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.VideoPost.html">VideoPost</a></h4>
-      <section><p>Represents a video post.</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.AnswerPost.html">AnswerPost</a></dt>
+      <dd><p>Represents an answer post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.AudioPost.html">AudioPost</a></dt>
+      <dd><p>Represents an audio post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.BaseNote.html">BaseNote</a></dt>
+      <dd><p>Base class for post notes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.BasePost.html">BasePost</a></dt>
+      <dd><p>Base class for post types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html">BlogBase</a></dt>
+      <dd><p>Contains common properties for a blog.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.BlogInfo.html">BlogInfo</a></dt>
+      <dd><p>Contains information about a blog.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.BoolConverter.html">BoolConverter</a></dt>
+      <dd><p>Converts &quot;Y&quot; and &quot;N&quot; to boolean.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.ChatFragment.html">ChatFragment</a></dt>
+      <dd><p>Represents a fragment of a <a class="xref" href="DontPanic.TumblrSharp.Client.ChatPost.html">ChatPost</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.ChatPost.html">ChatPost</a></dt>
+      <dd><p>Represents a chat post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.EnumStringConverter.html">EnumStringConverter</a></dt>
+      <dd><p>Generic converter for enumerations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Exif.html">Exif</a></dt>
+      <dd><p>Exif</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.ExtensionService.html">ExtensionService</a></dt>
+      <dd><p>extensionclass for IServiceCollection</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Followers.html">Followers</a></dt>
+      <dd><p>Contains information about a blog's followers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Following.html">Following</a></dt>
+      <dd><p>Contains the blogs that a user is following.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Likes.html">Likes</a></dt>
+      <dd><p>Contains the user's likes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.LinkPost.html">LinkPost</a></dt>
+      <dd><p>Represents a link post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.NoteConverter.html">NoteConverter</a></dt>
+      <dd><p>convert note</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Photo.html">Photo</a></dt>
+      <dd><p>Represents a photo in a <a class="xref" href="DontPanic.TumblrSharp.Client.PhotoPost.html">PhotoPost</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.PhotoInfo.html">PhotoInfo</a></dt>
+      <dd><p>Represents information about a <a class="xref" href="DontPanic.TumblrSharp.Client.Photo.html">Photo</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.PhotoPost.html">PhotoPost</a></dt>
+      <dd><p>Represents a photo post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Player.html">Player</a></dt>
+      <dd><p>Represents an embeddable player for a video in a <a class="xref" href="DontPanic.TumblrSharp.Client.VideoPost.html">VideoPost</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.PostArrayConverter.html">PostArrayConverter</a></dt>
+      <dd><p>Converts post objects to the proper post type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.PostAttributionNote.html">PostAttributionNote</a></dt>
+      <dd><p>PostAttributionNote</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.PostCreationInfo.html">PostCreationInfo</a></dt>
+      <dd><p>Represents information about a newly created post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Posts.html">Posts</a></dt>
+      <dd><p>Contains information about a blog's posts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.QuotePost.html">QuotePost</a></dt>
+      <dd><p>Represents a quote post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Reblog.html">Reblog</a></dt>
+      <dd><p>reblog</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TextPost.html">TextPost</a></dt>
+      <dd><p>Represents a text post.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TimestampConverter.html">TimestampConverter</a></dt>
+      <dd><p>Converts a timestamp to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.Trail.html">Trail</a></dt>
+      <dd><p>Trail</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.html">TrailBlog</a></dt>
+      <dd><p>The blog from Trail</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailConverter.html">TrailConverter</a></dt>
+      <dd><p>convert trail</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailPost.html">TrailPost</a></dt>
+      <dd><p>post object from <a class="xref" href="DontPanic.TumblrSharp.Client.Trail.html">Trail</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html">TrailTheme</a></dt>
+      <dd><p>theme of a blog see <a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.html#DontPanic_TumblrSharp_Client_TrailBlog_Theme">Theme</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailThemeConverter.html">TrailThemeConverter</a></dt>
+      <dd><p>Converter for trail theme</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a></dt>
+      <dd><p>Encapsulates the Tumblr API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.html">UserBlogInfo</a></dt>
+      <dd><p>Contains information about a user's blog.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.html">UserInfo</a></dt>
+      <dd><p>Contains information about a user's account.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.VideoPost.html">VideoPost</a></dt>
+      <dd><p>Represents a video post.</p>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
-      <h4><a class="xref" href="DontPanic.TumblrSharp.Client.DashboardOption.html">DashboardOption</a></h4>
-      <section><p>Option for get dashboardpost, before or after a spezifics Id</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="DontPanic.TumblrSharp.Client.DashboardOption.html">DashboardOption</a></dt>
+      <dd><p>Option for get dashboardpost, before or after a spezifics Id</p>
+</dd>
+    </dl>
 
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

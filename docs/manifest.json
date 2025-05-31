@@ -3,6 +3,84 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ApiMethod.ApiMethod",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.Url.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ApiMethod.Url",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.OAuthToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ApiMethod.OAuthToken",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.HttpMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ApiMethod.HttpMethod",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ApiMethod.Parameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ApiMethod.Parameters",
+      "Summary": null
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.ApiMethod.yml",
       "output": {
@@ -35,6 +113,62 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.BinaryFile.BinaryFile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.BinaryFile.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.FileName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.BinaryFile.FileName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.MimeType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.BinaryFile.MimeType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BinaryFile.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.BinaryFile.html"
         }
       },
@@ -60,6 +194,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.BlogMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.BlogMethod.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.BlogMethod.BlogMethod",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.BlogType.yml",
       "output": {
         ".html": {
@@ -71,6 +219,62 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.BlogType",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.BlogType.yml\" sourcestartlinenumber=\"1\">Defines the type of a blog.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.AskingName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AnswerPost.AskingName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.AskingUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AnswerPost.AskingUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.Question.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AnswerPost.Question",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AnswerPost.Answer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AnswerPost.Answer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -91,6 +295,104 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Year.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.Year",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.PlaysCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.PlaysCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.AlbumArt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.AlbumArt",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Artist.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.Artist",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Album.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.Album",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.TrackName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.TrackName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.TrackNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.TrackNumber",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.html"
         }
       },
@@ -99,6 +401,216 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.AudioPost",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.AudioPost.yml\" sourcestartlinenumber=\"1\">Represents an audio post.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Caption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.Caption",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.Player.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.Player",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.AudioPost.AudioUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.AudioPost.AudioUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogUuid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.BlogUuid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.BlogName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Timestamp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.Timestamp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Type.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.Type",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Followed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.Followed",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.AvatarShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.AvatarShape",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.ReplyText.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.ReplyText",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.PostId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.PostId",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.ReblogParentBlogName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.ReblogParentBlogName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BaseNote.BlogUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BaseNote.BlogUrl",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -113,6 +625,426 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.BaseNote",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.BaseNote.yml\" sourcestartlinenumber=\"1\">Base class for post notes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedFromUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.NumberOfPostsInResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.NumberOfPostsInResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedFromId",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.SourceTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.SourceTitle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.SourceUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.SourceUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Notes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Notes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.NotesCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.NotesCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Summary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Summary",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.ShortUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.ShortUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Tags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Tags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Type.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Type",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.BlogName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.BlogName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Id.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Id",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Url.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Url",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Reblog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Reblog",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.IsBookmarklet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.IsBookmarklet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.IsMobile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.IsMobile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Slug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Slug",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Timestamp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Timestamp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.State.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.State",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Liked.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Liked",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Format.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Format",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.ReblogKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.ReblogKey",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedFromName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedFromTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedFromTitle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedRootId",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedRootUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedRootName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.RebloggedRootTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.RebloggedRootTitle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BasePost.Trails.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BasePost.Trails",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -144,6 +1076,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Title.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogBase.Title",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogBase.Name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.Url.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogBase.Url",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogBase.LastUpdated.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogBase.LastUpdated",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.ReplyConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.ReplyConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.PostsCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.PostsCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.Description.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.Description",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAskEnabled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.IsAskEnabled",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAnonAskEnabled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.IsAnonAskEnabled",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.AskPageTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.AskPageTitle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.LikesCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.LikesCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsNsfw.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.IsNsfw",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
       "output": {
         ".html": {
@@ -155,6 +1255,76 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.BlogInfo",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.BlogInfo.yml\" sourcestartlinenumber=\"1\">Contains information about a blog.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.Subscribed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.Subscribed",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsAdult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.IsAdult",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.ShareLikes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.ShareLikes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.IsOptoutAds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.IsOptoutAds",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.BlogInfo.SubmissionPageTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.BlogInfo.SubmissionPageTitle",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -175,6 +1345,20 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Phrase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatFragment.Phrase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.html"
         }
       },
@@ -183,6 +1367,34 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.ChatFragment",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.ChatFragment.yml\" sourcestartlinenumber=\"1\">Represents a fragment of a <xref href=\"DontPanic.TumblrSharp.Client.ChatPost\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatFragment.Name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatFragment.Label.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatFragment.Label",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -197,6 +1409,48 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.ChatPost",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.ChatPost.yml\" sourcestartlinenumber=\"1\">Represents a chat post.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Dialogue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatPost.Dialogue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Body.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatPost.Body",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ChatPost.Title.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ChatPost.Title",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -242,6 +1496,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.FocalLength.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Exif.FocalLength",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Camera.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Exif.Camera",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.ISO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Exif.ISO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Aperture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Exif.Aperture",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Exif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Exif.Exposure.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Exif.Exposure",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.ExtensionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.ExtensionService.UseTumblrClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.ExtensionService.UseTumblrClient",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.ExtensionService.yml",
       "output": {
         ".html": {
@@ -253,6 +1591,76 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.ExtensionService",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.ExtensionService.yml\" sourcestartlinenumber=\"1\">extensionclass for IServiceCollection</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.Count.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Followers.Count",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Followers.Result",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.UserName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Followers.UserName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.PrimaryBlogUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Followers.PrimaryBlogUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Followers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Followers.LastUpdated.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Followers.LastUpdated",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -284,6 +1692,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Following.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Following.Count.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Following.Count",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Following.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Following.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Following.Result",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
       "output": {
         ".html": {
@@ -295,6 +1731,76 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.Likes",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.Likes.yml\" sourcestartlinenumber=\"1\">Contains the user's likes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Likes.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Likes.Result",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Likes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Likes.Count.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Likes.Count",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.Title.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.LinkPost.Title",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.LinkUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.LinkPost.LinkUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.LinkPost.Description.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.LinkPost.Description",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -329,6 +1835,62 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.Caption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Photo.Caption",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.AlternateSizes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Photo.AlternateSizes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.OriginalSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Photo.OriginalSize",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.Exif.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Photo.Exif",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Photo.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.Photo.html"
         }
       },
@@ -354,6 +1916,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.ImageUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoInfo.ImageUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.Width.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoInfo.Width",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoInfo.Height.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoInfo.Height",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.Caption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoPost.Caption",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.Photo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoPost.Photo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
       "output": {
         ".html": {
@@ -368,6 +2000,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PhotoPost.PhotoSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PhotoPost.PhotoSet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Player.EmbedCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Player.EmbedCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
       "output": {
         ".html": {
@@ -379,6 +2039,20 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.Player",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.Player.yml\" sourcestartlinenumber=\"1\">Represents an embeddable player for a video in a <xref href=\"DontPanic.TumblrSharp.Client.VideoPost\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Player.Width.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Player.Width",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -399,6 +2073,48 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_url.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_url",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_width.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_width",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_height.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote.Photo_height",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.html"
         }
       },
@@ -407,6 +2123,48 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml\" sourcestartlinenumber=\"1\">PostAttributionNote</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type_name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostAttributionNote.Post_attribution_type_name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.PostCreationInfo.PostId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.PostCreationInfo.PostId",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -438,6 +2196,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Posts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Posts.Blog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Posts.Blog",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Posts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Posts.Result.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Posts.Result",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.Text.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.QuotePost.Text",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.Source.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.QuotePost.Source",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.QuotePost.yml",
       "output": {
         ".html": {
@@ -455,6 +2269,34 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.Comment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Reblog.Comment",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.TreeHtml.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Reblog.TreeHtml",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.Reblog.html"
         }
       },
@@ -463,6 +2305,34 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.Reblog",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.Reblog.yml\" sourcestartlinenumber=\"1\">reblog</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.Title.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TextPost.Title",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TextPost.Body.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TextPost.Body",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -497,6 +2367,34 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.ContentRaw.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.ContentRaw",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.html"
         }
       },
@@ -505,6 +2403,146 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.Trail",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.Trail.yml\" sourcestartlinenumber=\"1\">Trail</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Content.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.Content",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Post.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.Post",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.Trail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.Trail.Blog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.Trail.Blog",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.ShareLikes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.ShareLikes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Active.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.Active",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.Name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.CanBeFollowed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.CanBeFollowed",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Theme.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.Theme",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.GetHashCode",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -519,6 +2557,34 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.TrailBlog",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.TrailBlog.yml\" sourcestartlinenumber=\"1\">The blog from Trail</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailBlog.ShareFollowing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailBlog.ShareFollowing",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -539,6 +2605,48 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.Id.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailPost.Id",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailPost.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailPost.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.TrailPost.html"
         }
       },
@@ -553,6 +2661,132 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullWidth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullWidth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderBounds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderBounds",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.BodyFont.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.BodyFont",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.BackgroundColor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.BackgroundColor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.AvatarShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.AvatarShape",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusHeight.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusHeight",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusWidth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusWidth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullHeight.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullHeight",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderImage",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.html"
         }
       },
@@ -561,6 +2795,188 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.TrailTheme",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.TrailTheme.yml\" sourcestartlinenumber=\"1\">theme of a blog see <xref href=\"DontPanic.TumblrSharp.Client.TrailBlog.Theme\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleFontWeight.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.TitleFontWeight",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleFont.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.TitleFont",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.TitleColor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.TitleColor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowTitle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.ShowTitle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowHeaderImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.ShowHeaderImage",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageScaled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageScaled",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageFocused.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageFocused",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.HeaderStretch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.HeaderStretch",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.LinkColor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.LinkColor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowAvatar.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.ShowAvatar",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TrailTheme.ShowDescription.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TrailTheme.ShowDescription",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -581,6 +2997,160 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetUserInfoAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetUserInfoAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetLikesAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetLikesAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetFollowingAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetFollowingAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.DeletePostAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.DeletePostAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.LikeAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.LikeAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetSubmissionPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetSubmissionPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.FollowAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.FollowAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetTaggedPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetTaggedPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetUserLikesAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetUserLikesAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.Dispose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.Dispose",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.html"
         }
       },
@@ -589,6 +3159,188 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.TumblrClient",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.TumblrClient.yml\" sourcestartlinenumber=\"1\">Encapsulates the Tumblr API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.UnlikeAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.UnlikeAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetDraftPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetDraftPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.UnfollowAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.UnfollowAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetPostAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetPostAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetBlogLikesAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetBlogLikesAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetFollowersAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetFollowersAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetQueuedPostsAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetQueuedPostsAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.GetBlogInfoAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.GetBlogInfoAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.TumblrClient",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -606,6 +3358,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.Name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserInfo.Name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.Blogs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserInfo.Blogs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.LikesCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserInfo.LikesCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
       "output": {
         ".html": {
@@ -620,6 +3540,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.FollowingCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserInfo.FollowingCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.ThumbnailUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Duration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.Duration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
       "output": {
         ".html": {
@@ -631,6 +3607,90 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.Client.VideoPost",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.Client.VideoPost.yml\" sourcestartlinenumber=\"1\">Represents a video post.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Caption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.Caption",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.VideoUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.VideoUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailHeight.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.ThumbnailHeight",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.ThumbnailWidth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.ThumbnailWidth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.Player.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.Player",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.Client.VideoPost.IsHtml5Capable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.Client.VideoPost.IsHtml5Capable",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -651,6 +3711,20 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.ToTimestamp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.DateTimeHelper.ToTimestamp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.html"
         }
       },
@@ -659,6 +3733,34 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.DateTimeHelper",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.DateTimeHelper.yml\" sourcestartlinenumber=\"1\">Converts from Unix-type timestamp to <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> and vice-versa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.DateTimeHelper.FromTimestamp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.DateTimeHelper.FromTimestamp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ExtensionHttpRequestMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ExtensionHttpRequestMessage.PreparationForTumblrClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ExtensionHttpRequestMessage.PreparationForTumblrClient",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -679,6 +3781,20 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.ComputeHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.HmacSha1HashProvider.ComputeHash",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.HmacSha1HashProvider.html"
         }
       },
@@ -687,6 +3803,20 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.HmacSha1HashProvider",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.HmacSha1HashProvider.yml\" sourcestartlinenumber=\"1\">Provides an implementation of <xref href=\"DontPanic.TumblrSharp.IHmacSha1HashProvider\" data-throw-if-not-resolved=\"false\"></xref> for signing OAuth requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IHmacSha1HashProvider.ComputeHash.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.IHmacSha1HashProvider.ComputeHash",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -707,6 +3837,34 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.Name.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.IMethodParameter.Name",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.AsHttpContent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.IMethodParameter.AsHttpContent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.IMethodParameter.html"
         }
       },
@@ -715,6 +3873,20 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.IMethodParameter",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.IMethodParameter.yml\" sourcestartlinenumber=\"1\">Represents a parameter for an <xref href=\"DontPanic.TumblrSharp.ApiMethod\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.ITumblrClientFactory.Create.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.ITumblrClientFactory.Create",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -746,6 +3918,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.Add.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.MethodParameterSet.Add",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.MethodParameterSet.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.MethodParameterSet.MethodParameterSet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.NoteType.yml",
       "output": {
         ".html": {
@@ -774,6 +3974,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.Create.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.IOAuthClientFactory.Create",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
       "output": {
         ".html": {
@@ -785,6 +4013,76 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml\" sourcestartlinenumber=\"1\">A client for OAuth.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient.OAuthClient",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthClientFactory.Create.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthClientFactory.Create",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -816,6 +4114,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthException.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthException.OAuthException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
       "output": {
         ".html": {
@@ -830,6 +4142,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.OAuthMessageHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.SendAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.OAuthMessageHandler.SendAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.Token.Token",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
       "output": {
         ".html": {
@@ -841,6 +4195,48 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.OAuth.Token",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.OAuth.Token.yml\" sourcestartlinenumber=\"1\">Represents a token for OAuth.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.IsValid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.Token.IsValid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.Secret.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.Token.Secret",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.OAuth.Token.Key.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.OAuth.Token.Key",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -875,6 +4271,146 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Tags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Tags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.State.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.State",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.ToMethodParameterSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.ToMethodParameterSet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateText.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateText",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreatePhoto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreatePhoto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateQuote.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateQuote",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateLink.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateLink",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateChat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateChat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateAudio.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateAudio",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.CreateVideo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.CreateVideo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.PostData.html"
         }
       },
@@ -883,6 +4419,76 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.PostData",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.PostData.yml\" sourcestartlinenumber=\"1\">Represents a post to be submitted to a Tumblr blog.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Format.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Format",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Date.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Date",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Publish_On.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Publish_On",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Tweet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Tweet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.PostData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.PostData.Slug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.PostData.Slug",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -931,6 +4537,76 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.OAuthToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientBase.OAuthToken",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientBase.TumblrClientBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodNoResultAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodNoResultAsync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.Dispose.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientBase.Dispose",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.TumblrClientBase.html"
         }
       },
@@ -956,6 +4632,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrClientFactory.Create.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrClientFactory.Create",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.GetHashCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrError.GetHashCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Equals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrError.Equals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
       "output": {
         ".html": {
@@ -967,6 +4685,48 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.TumblrError",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.TumblrError.yml\" sourcestartlinenumber=\"1\">TumblrError</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Title.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrError.Title",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Code.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrError.Code",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrError.Detail.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrError.Detail",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -987,6 +4747,34 @@
       "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
       "output": {
         ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.StatusCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrException.StatusCode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.Errors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrException.Errors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/DontPanic.TumblrSharp.TumblrException.html"
         }
       },
@@ -995,6 +4783,34 @@
       "IsMRef": true,
       "Title": "DontPanic.TumblrSharp.TumblrException",
       "Summary": "<p sourcefile=\"api/DontPanic.TumblrSharp.TumblrException.yml\" sourcestartlinenumber=\"1\">Represents an error that occour during a Tumblr API call.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.TumblrException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.TumblrException.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.TumblrException.TumblrException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DontPanic.TumblrSharp.UserMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DontPanic.TumblrSharp.UserMethod.-ctor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DontPanic.TumblrSharp.UserMethod.UserMethod",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1069,20 +4885,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/introduction.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/revision.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/revision.html"
+          "relative_path": "articles/introduction.html"
         }
       },
       "version": ""
@@ -1121,16 +4927,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "images/articles_revision.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/articles_revision.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
@@ -1149,29 +4945,6 @@
         },
         ".json": {
           "relative_path": "toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "tutorial/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "tutorial/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "tutorial/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "tutorial/toc.html"
-        },
-        ".json": {
-          "relative_path": "tutorial/toc.json"
         }
       },
       "version": ""

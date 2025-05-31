@@ -1,30 +1,28 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
-        { 
+        {
+          "src": "../src",
           "files": [
-            "src/TumblrSharp/*.csproj", "src/TumblrSharp.Client/*.csproj"
-          ],
-          "src": "../"
+            "**/*.csproj"
+          ]
         }
       ],
-      "properties": { "TargetFramework": "netstandard2.0" },
       "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "memberLayout": "separatePages" 
     }
   ],
   "build": {
     "content": [
       {
-        "files": [ "api/**.yml", "api/index.md" ]
-      },
-      {
-        "files": [ "articles/**.md", "articles/**/toc.yml", "toc.yml", "*.md" ]
-      },
-      {
-        "files": [ "tutorial/**.md", "tutorial/**/toc.yml", "toc.yml", "*.md" ]
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
       }
     ],
     "resource": [
@@ -34,29 +32,16 @@
         ]
       }
     ],
-    "overwrite": [
-      {
-        "files": [
-          "apidoc/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "docs/**"
-        ]
-      }
-    ],
     "output": "../docs",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
     "template": [
       "default",
-      "plugins/memberpage.2.52.0/content"
+      "modern"
     ],
-    "postProcessors": [],
-    "markdownEngineName": "markdig",
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "globalMetadata": {
+      "_appName": "NewTumblrSharp",
+      "_appTitle": "NewTumblrSharp",
+      "_enableSearch": true,
+      "pdf": false
+    }
   }
 }

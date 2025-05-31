@@ -1,105 +1,147 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class TumblrClient </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class TumblrClient ">
-    
-    <meta name="description" content="Encapsulates the Tumblr API.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class TumblrClient | NewTumblrSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TumblrClient | NewTumblrSharp ">
+      
+      <meta name="description" content="Encapsulates the Tumblr API.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_Client_TumblrClient.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.Client.TumblrClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NewTumblrSharp">
+            NewTumblrSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DontPanic.TumblrSharp.Client.TumblrClient">
+
+        <article data-uid="DontPanic.TumblrSharp.Client.TumblrClient">
 
 
 
-  <h1 id="DontPanic_TumblrSharp_Client_TumblrClient" data-uid="DontPanic.TumblrSharp.Client.TumblrClient" class="text-break">Class TumblrClient</h1>
-  <div class="markdown level0 summary"><p>Encapsulates the Tumblr API.</p>
+  <h1 id="DontPanic_TumblrSharp_Client_TumblrClient" data-uid="DontPanic.TumblrSharp.Client.TumblrClient" class="text-break">
+Class TumblrClient  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TumblrClient.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a>.<a class="xref" href="DontPanic.TumblrSharp.Client.html">Client</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DontPanic.TumblrSharp.Client.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Encapsulates the Tumblr API.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a></div>
-    <div class="level2"><span class="xref">TumblrClient</span></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TumblrClient : TumblrClientBase, IDisposable</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a></div>
+      <div><span class="xref">TumblrClient</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html#DontPanic_TumblrSharp_TumblrClientBase_OAuthToken">TumblrClientBase.OAuthToken</a>
+      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.OAuthToken.html#DontPanic_TumblrSharp_TumblrClientBase_OAuthToken">TumblrClientBase.OAuthToken</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodAsync__2_DontPanic_TumblrSharp_ApiMethod_System_Func___0___1__System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_Newtonsoft_Json_JsonConverter__">TumblrClientBase.CallApiMethodAsync&lt;TResponse, TResult&gt;(ApiMethod, Func&lt;TResponse, TResult&gt;, CancellationToken, IEnumerable&lt;JsonConverter&gt;)</a>
+      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodAsync.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodAsync__2_DontPanic_TumblrSharp_ApiMethod_System_Func___0___1__System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_Newtonsoft_Json_JsonConverter__">TumblrClientBase.CallApiMethodAsync&lt;TResponse, TResult&gt;(ApiMethod, Func&lt;TResponse, TResult&gt;, CancellationToken, IEnumerable&lt;JsonConverter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodNoResultAsync_DontPanic_TumblrSharp_ApiMethod_System_Threading_CancellationToken_">TumblrClientBase.CallApiMethodNoResultAsync(ApiMethod, CancellationToken)</a>
+      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodNoResultAsync.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodNoResultAsync_DontPanic_TumblrSharp_ApiMethod_System_Threading_CancellationToken_">TumblrClientBase.CallApiMethodNoResultAsync(ApiMethod, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodAsync__1_DontPanic_TumblrSharp_ApiMethod_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_Newtonsoft_Json_JsonConverter__">TumblrClientBase.CallApiMethodAsync&lt;TResult&gt;(ApiMethod, CancellationToken, IEnumerable&lt;JsonConverter&gt;)</a>
+      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.CallApiMethodAsync.html#DontPanic_TumblrSharp_TumblrClientBase_CallApiMethodAsync__1_DontPanic_TumblrSharp_ApiMethod_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_Newtonsoft_Json_JsonConverter__">TumblrClientBase.CallApiMethodAsync&lt;TResult&gt;(ApiMethod, CancellationToken, IEnumerable&lt;JsonConverter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html#DontPanic_TumblrSharp_TumblrClientBase_Dispose">TumblrClientBase.Dispose()</a>
+      <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.Dispose.html#DontPanic_TumblrSharp_TumblrClientBase_Dispose">TumblrClientBase.Dispose()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -122,281 +164,189 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a>.<a class="xref" href="DontPanic.TumblrSharp.Client.html">Client</a></h6>
-  <h6><strong>Assembly</strong>: DontPanic.TumblrSharp.Client.dll</h6>
-  <h5 id="DontPanic_TumblrSharp_Client_TumblrClient_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TumblrClient : TumblrClientBase, IDisposable</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.#ctor(DontPanic.TumblrSharp.IHmacSha1HashProvider,System.String,System.String,DontPanic.TumblrSharp.OAuth.Token)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">TumblrClient(IHmacSha1HashProvider, string, string, Token)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> class.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient__ctor_System_Net_Http_IHttpClientFactory_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.#ctor(System.Net.Http.IHttpClientFactory,DontPanic.TumblrSharp.IHmacSha1HashProvider,System.String,System.String,DontPanic.TumblrSharp.OAuth.Token)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient__ctor_System_Net_Http_IHttpClientFactory_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">TumblrClient(IHttpClientFactory, IHmacSha1HashProvider, string, string, Token)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> class.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync(System.String,DontPanic.TumblrSharp.PostData)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_">CreatePostAsync(string, PostData)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously creates a new post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync(System.String,DontPanic.TumblrSharp.PostData,System.Threading.CancellationToken)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_">CreatePostAsync(string, PostData, CancellationToken)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously creates a new post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_DeletePostAsync_System_String_System_Int64_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.DeletePostAsync(System.String,System.Int64)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_DeletePostAsync_System_String_System_Int64_">DeletePostAsync(string, long)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously deletes a post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_Dispose_System_Boolean_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.Dispose(System.Boolean)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_Dispose_System_Boolean_">Dispose(bool)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Disposes of the object.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync(System.String,System.Int64,DontPanic.TumblrSharp.PostData)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_">EditPostAsync(string, long, PostData)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously edits an existing post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync(System.String,System.Int64,DontPanic.TumblrSharp.PostData,System.Threading.CancellationToken)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_">EditPostAsync(string, long, PostData, CancellationToken)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously edits an existing post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_FollowAsync_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.FollowAsync(System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_FollowAsync_System_String_">FollowAsync(string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously follows a blog.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetBlogInfoAsync_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetBlogInfoAsync(System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetBlogInfoAsync_System_String_">GetBlogInfoAsync(string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves general information about the blog, such as the title, number of posts, and other high-level data.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetBlogLikesAsync_System_String_System_Int32_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetBlogLikesAsync(System.String,System.Int32,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetBlogLikesAsync_System_String_System_Int32_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__">GetBlogLikesAsync(string, int, int, DateTime?, DateTime?)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves the publicly exposed likes from a blog.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_DontPanic_TumblrSharp_Client_DashboardOption_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync(System.Int64,DontPanic.TumblrSharp.Client.DashboardOption,System.Int64,System.Int32,DontPanic.TumblrSharp.PostType,System.Boolean,System.Boolean)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_DontPanic_TumblrSharp_Client_DashboardOption_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_">GetDashboardPostsAsync(long, DashboardOption, long, int, PostType, bool, bool)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves posts from the current user's dashboard.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync(System.Int64,System.Int64,System.Int32,DontPanic.TumblrSharp.PostType,System.Boolean,System.Boolean)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_">GetDashboardPostsAsync(long, long, int, PostType, bool, bool)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves posts from the current user's dashboard.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetDraftPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetDraftPostsAsync(System.String,System.Int64,DontPanic.TumblrSharp.PostFilter)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDraftPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_">GetDraftPostsAsync(string, long, PostFilter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously returns draft posts.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetFollowersAsync_System_String_System_Int32_System_Int32_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetFollowersAsync(System.String,System.Int32,System.Int32)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetFollowersAsync_System_String_System_Int32_System_Int32_">GetFollowersAsync(string, int, int)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves a blog's followers.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetFollowingAsync_System_Int64_System_Int32_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetFollowingAsync(System.Int64,System.Int32)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetFollowingAsync_System_Int64_System_Int32_">GetFollowingAsync(long, int)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves the blog that the current user is following.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetLikesAsync_System_Int64_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetLikesAsync(System.Int64,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetLikesAsync_System_Int64_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__">GetLikesAsync(long, int, DateTime?, DateTime?)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves the current user's likes.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetPostAsync_System_String_System_Int64_System_Boolean_System_Boolean_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetPostAsync(System.String,System.Int64,System.Boolean,System.Boolean)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetPostAsync_System_String_System_Int64_System_Boolean_System_Boolean_">GetPostAsync(string, long, bool, bool)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves a specific post by id.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_DontPanic_TumblrSharp_PostFilter_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetPostsAsync(System.String,System.Int64,System.Int32,DontPanic.TumblrSharp.PostType,System.Boolean,System.Boolean,DontPanic.TumblrSharp.PostFilter,System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_DontPanic_TumblrSharp_PostFilter_System_String_">GetPostsAsync(string, long, int, PostType, bool, bool, PostFilter, string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves published posts from a blog.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetQueuedPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostFilter_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetQueuedPostsAsync(System.String,System.Int64,System.Int32,DontPanic.TumblrSharp.PostFilter)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetQueuedPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostFilter_">GetQueuedPostsAsync(string, long, int, PostFilter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously returns posts in the current user's queue.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetSubmissionPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetSubmissionPostsAsync(System.String,System.Int64,DontPanic.TumblrSharp.PostFilter)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetSubmissionPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_">GetSubmissionPostsAsync(string, long, PostFilter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves submission posts.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetTaggedPostsAsync_System_String_System_Nullable_System_DateTime__System_Int32_DontPanic_TumblrSharp_PostFilter_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetTaggedPostsAsync(System.String,System.Nullable{System.DateTime},System.Int32,DontPanic.TumblrSharp.PostFilter)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetTaggedPostsAsync_System_String_System_Nullable_System_DateTime__System_Int32_DontPanic_TumblrSharp_PostFilter_">GetTaggedPostsAsync(string, DateTime?, int, PostFilter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves posts that have been tagged with a specific <code class="paramref">tag</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetUserInfoAsync" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetUserInfoAsync">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetUserInfoAsync">GetUserInfoAsync()</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves the user's account information that matches the OAuth credentials submitted with the request.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_GetUserLikesAsync_System_Int32_System_Int32_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.GetUserLikesAsync(System.Int32,System.Int32)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_GetUserLikesAsync_System_Int32_System_Int32_">GetUserLikesAsync(int, int)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously retrieves the current user's likes.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_LikeAsync_System_Int64_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.LikeAsync(System.Int64,System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_LikeAsync_System_Int64_System_String_">LikeAsync(long, string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously likes a post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_DontPanic_TumblrSharp_PostCreationState_System_Nullable_System_DateTime__System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync(System.String,System.Int64,System.String,DontPanic.TumblrSharp.PostCreationState,System.Nullable{System.DateTime},System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_DontPanic_TumblrSharp_PostCreationState_System_Nullable_System_DateTime__System_String_">ReblogAsync(string, long, string, PostCreationState, DateTime?, string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously reblogs a post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync(System.String,System.Int64,System.String,System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_System_String_">ReblogAsync(string, long, string, string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously reblogs a post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_UnfollowAsync_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.UnfollowAsync(System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_UnfollowAsync_System_String_">UnfollowAsync(string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously unfollows a blog.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TumblrClient_UnlikeAsync_System_Int64_System_String_" data-uid="DontPanic.TumblrSharp.Client.TumblrClient.UnlikeAsync(System.Int64,System.String)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html#DontPanic_TumblrSharp_Client_TumblrClient_UnlikeAsync_System_Int64_System_String_">UnlikeAsync(long, string)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Asynchronously unlikes a post.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.-ctor.html#DontPanic_TumblrSharp_Client_TumblrClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">TumblrClient(IHmacSha1HashProvider, string, string, Token)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> class.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.-ctor.html#DontPanic_TumblrSharp_Client_TumblrClient__ctor_System_Net_Http_IHttpClientFactory_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">TumblrClient(IHttpClientFactory, IHmacSha1HashProvider, string, string, Token)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> class.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_">CreatePostAsync(string, PostData)</a></dt>
+    <dd><p>Asynchronously creates a new post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.CreatePostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_CreatePostAsync_System_String_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_">CreatePostAsync(string, PostData, CancellationToken)</a></dt>
+    <dd><p>Asynchronously creates a new post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.DeletePostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_DeletePostAsync_System_String_System_Int64_">DeletePostAsync(string, long)</a></dt>
+    <dd><p>Asynchronously deletes a post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.Dispose.html#DontPanic_TumblrSharp_Client_TumblrClient_Dispose_System_Boolean_">Dispose(bool)</a></dt>
+    <dd><p>Disposes of the object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_">EditPostAsync(string, long, PostData)</a></dt>
+    <dd><p>Asynchronously edits an existing post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.EditPostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_EditPostAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostData_System_Threading_CancellationToken_">EditPostAsync(string, long, PostData, CancellationToken)</a></dt>
+    <dd><p>Asynchronously edits an existing post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.FollowAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_FollowAsync_System_String_">FollowAsync(string)</a></dt>
+    <dd><p>Asynchronously follows a blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetBlogInfoAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetBlogInfoAsync_System_String_">GetBlogInfoAsync(string)</a></dt>
+    <dd><p>Asynchronously retrieves general information about the blog, such as the title, number of posts, and other high-level data.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetBlogLikesAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetBlogLikesAsync_System_String_System_Int32_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__">GetBlogLikesAsync(string, int, int, DateTime?, DateTime?)</a></dt>
+    <dd><p>Asynchronously retrieves the publicly exposed likes from a blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_DontPanic_TumblrSharp_Client_DashboardOption_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_">GetDashboardPostsAsync(long, DashboardOption, long, int, PostType, bool, bool)</a></dt>
+    <dd><p>Asynchronously retrieves posts from the current user's dashboard.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetDashboardPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDashboardPostsAsync_System_Int64_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_">GetDashboardPostsAsync(long, long, int, PostType, bool, bool)</a></dt>
+    <dd><p>Asynchronously retrieves posts from the current user's dashboard.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetDraftPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetDraftPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_">GetDraftPostsAsync(string, long, PostFilter)</a></dt>
+    <dd><p>Asynchronously returns draft posts.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetFollowersAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetFollowersAsync_System_String_System_Int32_System_Int32_">GetFollowersAsync(string, int, int)</a></dt>
+    <dd><p>Asynchronously retrieves a blog's followers.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetFollowingAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetFollowingAsync_System_Int64_System_Int32_">GetFollowingAsync(long, int)</a></dt>
+    <dd><p>Asynchronously retrieves the blog that the current user is following.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetLikesAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetLikesAsync_System_Int64_System_Int32_System_Nullable_System_DateTime__System_Nullable_System_DateTime__">GetLikesAsync(long, int, DateTime?, DateTime?)</a></dt>
+    <dd><p>Asynchronously retrieves the current user's likes.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetPostAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetPostAsync_System_String_System_Int64_System_Boolean_System_Boolean_">GetPostAsync(string, long, bool, bool)</a></dt>
+    <dd><p>Asynchronously retrieves a specific post by id.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostType_System_Boolean_System_Boolean_DontPanic_TumblrSharp_PostFilter_System_String_">GetPostsAsync(string, long, int, PostType, bool, bool, PostFilter, string)</a></dt>
+    <dd><p>Asynchronously retrieves published posts from a blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetQueuedPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetQueuedPostsAsync_System_String_System_Int64_System_Int32_DontPanic_TumblrSharp_PostFilter_">GetQueuedPostsAsync(string, long, int, PostFilter)</a></dt>
+    <dd><p>Asynchronously returns posts in the current user's queue.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetSubmissionPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetSubmissionPostsAsync_System_String_System_Int64_DontPanic_TumblrSharp_PostFilter_">GetSubmissionPostsAsync(string, long, PostFilter)</a></dt>
+    <dd><p>Asynchronously retrieves submission posts.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetTaggedPostsAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetTaggedPostsAsync_System_String_System_Nullable_System_DateTime__System_Int32_DontPanic_TumblrSharp_PostFilter_">GetTaggedPostsAsync(string, DateTime?, int, PostFilter)</a></dt>
+    <dd><p>Asynchronously retrieves posts that have been tagged with a specific <code class="paramref">tag</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetUserInfoAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetUserInfoAsync">GetUserInfoAsync()</a></dt>
+    <dd><p>Asynchronously retrieves the user's account information that matches the OAuth credentials submitted with the request.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.GetUserLikesAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_GetUserLikesAsync_System_Int32_System_Int32_">GetUserLikesAsync(int, int)</a></dt>
+    <dd><p>Asynchronously retrieves the current user's likes.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.LikeAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_LikeAsync_System_Int64_System_String_">LikeAsync(long, string)</a></dt>
+    <dd><p>Asynchronously likes a post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_DontPanic_TumblrSharp_PostCreationState_System_Nullable_System_DateTime__System_String_">ReblogAsync(string, long, string, PostCreationState, DateTime?, string)</a></dt>
+    <dd><p>Asynchronously reblogs a post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.ReblogAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_ReblogAsync_System_String_System_Int64_System_String_System_String_">ReblogAsync(string, long, string, string)</a></dt>
+    <dd><p>Asynchronously reblogs a post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.UnfollowAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_UnfollowAsync_System_String_">UnfollowAsync(string)</a></dt>
+    <dd><p>Asynchronously unfollows a blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.UnlikeAsync.html#DontPanic_TumblrSharp_Client_TumblrClient_UnlikeAsync_System_Int64_System_String_">UnlikeAsync(long, string)</a></dt>
+    <dd><p>Asynchronously unlikes a post.</p>
+</dd>
+  </dl>
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_Client_TumblrClient.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.Client.TumblrClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TumblrClient.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TumblrClient.cs/#L14" class="edit-link">Edit this page</a>
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

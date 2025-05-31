@@ -1,22 +1,17 @@
-# NewTumblrSharp Documentation
+---
+_layout: landing
+---
 
-Welcome to the TumblrSharp documentation!  To get you started, here's a few FAQs.  If you need more in-detail documentation,
-click some tops on the menu.
+[![Build status](https://ci.appveyor.com/api/projects/status/2lhkdtquwr1h40wx?svg=true)](https://ci.appveyor.com/project/Cataurus/tumblrsharp)
+[![Build Status](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_apis/build/status%2FNewTumblrSharp-CataurusWin?branchName=master)](https://dev.azure.com/CataurusFynn/NewTumblrSharp/_build/latest?definitionId=5)
+[![NuGet version (NewTumblrSharp)](https://img.shields.io/nuget/v/NewTumblrSharp.svg?style=flat-square)](https://www.nuget.org/packages/NewTumblrSharp/)
 
-## Can I use NewTumblrSharp?
 
-Yes!  
-* Everything here is a PCL, so it should work with anything from Windows RT to Silverlight to Desktop.
-* This package supports .NetStandard from version 1.3 to 2.0 and supports platform independent development.
 
-## Something isn't working as specified in the documentation!
+# NewTumblrSharp
 
-This repository will always be up-to-date, and it sometimes might fall out of sync with the NuGet servers.
-If you need a feature right away, it's best to clone this repository instead of using NuGet.  For more information, check out
-[Setting Up.](articles/intro.md)
+This is a continuation of the excellent [TumblrSharp](https://tumblrsharp.codeplex.com/) C# Library developed by [the community](http://archive.is/mrzqG).
 
-## I need help!
-
-If you need help with something not currently documented, please submit an issue with a tutorial request!
-
-[![licenseimg](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommon.org/license/by/4.0/) 
+TumblrSharp is a very nicely designed library, and perhaps the *only* usable C# library that currently exists.
+However, development for the Codeplex project stopped in 2014.  While using the library, I've noticed several
+bugs which I'll fix and post to this repository.

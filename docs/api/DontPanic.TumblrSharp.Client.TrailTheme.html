@@ -1,86 +1,126 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class TrailTheme </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class TrailTheme ">
-    
-    <meta name="description" content="theme of a blog see">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class TrailTheme | NewTumblrSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TrailTheme | NewTumblrSharp ">
+      
+      <meta name="description" content="theme of a blog see">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_Client_TrailTheme.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.Client.TrailTheme%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NewTumblrSharp">
+            NewTumblrSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DontPanic.TumblrSharp.Client.TrailTheme">
+
+        <article data-uid="DontPanic.TumblrSharp.Client.TrailTheme">
 
 
 
-  <h1 id="DontPanic_TumblrSharp_Client_TrailTheme" data-uid="DontPanic.TumblrSharp.Client.TrailTheme" class="text-break">Class TrailTheme</h1>
-  <div class="markdown level0 summary"><p>theme of a blog see <a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.html#DontPanic_TumblrSharp_Client_TrailBlog_Theme">Theme</a></p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">TrailTheme</span></div>
+  <h1 id="DontPanic_TumblrSharp_Client_TrailTheme" data-uid="DontPanic.TumblrSharp.Client.TrailTheme" class="text-break">
+Class TrailTheme  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TrailTheme.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a>.<a class="xref" href="DontPanic.TumblrSharp.Client.html">Client</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DontPanic.TumblrSharp.Client.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>theme of a blog see <a class="xref" href="DontPanic.TumblrSharp.Client.TrailBlog.Theme.html#DontPanic_TumblrSharp_Client_TrailBlog_Theme">Theme</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TrailTheme</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TrailTheme</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
@@ -96,232 +136,154 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a>.<a class="xref" href="DontPanic.TumblrSharp.Client.html">Client</a></h6>
-  <h6><strong>Assembly</strong>: DontPanic.TumblrSharp.Client.dll</h6>
-  <h5 id="DontPanic_TumblrSharp_Client_TrailTheme_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TrailTheme</code></pre>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_AvatarShape" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.AvatarShape">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_AvatarShape">AvatarShape</a>
-        </td>
-        <td class="markdown level1 summary"><p>avatarshape</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_BackgroundColor" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.BackgroundColor">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_BackgroundColor">BackgroundColor</a>
-        </td>
-        <td class="markdown level1 summary"><p>Backgroundcolor</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_BodyFont" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.BodyFont">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_BodyFont">BodyFont</a>
-        </td>
-        <td class="markdown level1 summary"><p>font of the body</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderBounds" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderBounds">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderBounds">HeaderBounds</a>
-        </td>
-        <td class="markdown level1 summary"><p>bounds of the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusHeight" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusHeight">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusHeight">HeaderFocusHeight</a>
-        </td>
-        <td class="markdown level1 summary"><p>focus height of the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusWidth" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusWidth">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusWidth">HeaderFocusWidth</a>
-        </td>
-        <td class="markdown level1 summary"><p>focus width of the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullHeight" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullHeight">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullHeight">HeaderFullHeight</a>
-        </td>
-        <td class="markdown level1 summary"><p>full height of the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullWidth" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullWidth">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullWidth">HeaderFullWidth</a>
-        </td>
-        <td class="markdown level1 summary"><p>full width of the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderImage" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImage">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImage">HeaderImage</a>
-        </td>
-        <td class="markdown level1 summary"><p>image from the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageFocused" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageFocused">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageFocused">HeaderImageFocused</a>
-        </td>
-        <td class="markdown level1 summary"><p>focused image from the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageScaled" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageScaled">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageScaled">HeaderImageScaled</a>
-        </td>
-        <td class="markdown level1 summary"><p>scaled image from the header</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_HeaderStretch" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.HeaderStretch">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderStretch">HeaderStretch</a>
-        </td>
-        <td class="markdown level1 summary"><p>is the header stretched</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_LinkColor" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.LinkColor">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_LinkColor">LinkColor</a>
-        </td>
-        <td class="markdown level1 summary"><p>color of link</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_ShowAvatar" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.ShowAvatar">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowAvatar">ShowAvatar</a>
-        </td>
-        <td class="markdown level1 summary"><p>show the avatar</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_ShowDescription" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.ShowDescription">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowDescription">ShowDescription</a>
-        </td>
-        <td class="markdown level1 summary"><p>show the description</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_ShowHeaderImage" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.ShowHeaderImage">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowHeaderImage">ShowHeaderImage</a>
-        </td>
-        <td class="markdown level1 summary"><p>show headerimage</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_ShowTitle" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.ShowTitle">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowTitle">ShowTitle</a>
-        </td>
-        <td class="markdown level1 summary"><p>show title</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_TitleColor" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.TitleColor">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleColor">TitleColor</a>
-        </td>
-        <td class="markdown level1 summary"><p>color of the title</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_TitleFont" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.TitleFont">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleFont">TitleFont</a>
-        </td>
-        <td class="markdown level1 summary"><p>font of the title</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_TitleFontWeight" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.TitleFontWeight">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleFontWeight">TitleFontWeight</a>
-        </td>
-        <td class="markdown level1 summary"><p>weight of the font from title</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_Equals_System_Object_" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.Equals(System.Object)">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_Equals_System_Object_">Equals(object)</a>
-        </td>
-        <td class="markdown level1 summary"><p>compare this object with another</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_Client_TrailTheme_GetHashCode" data-uid="DontPanic.TumblrSharp.Client.TrailTheme.GetHashCode">
-          <a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.html#DontPanic_TumblrSharp_Client_TrailTheme_GetHashCode">GetHashCode()</a>
-        </td>
-        <td class="markdown level1 summary"><p>return a hash code</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.AvatarShape.html#DontPanic_TumblrSharp_Client_TrailTheme_AvatarShape">AvatarShape</a></dt>
+    <dd><p>avatarshape</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.BackgroundColor.html#DontPanic_TumblrSharp_Client_TrailTheme_BackgroundColor">BackgroundColor</a></dt>
+    <dd><p>Backgroundcolor</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.BodyFont.html#DontPanic_TumblrSharp_Client_TrailTheme_BodyFont">BodyFont</a></dt>
+    <dd><p>font of the body</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderBounds.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderBounds">HeaderBounds</a></dt>
+    <dd><p>bounds of the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusHeight.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusHeight">HeaderFocusHeight</a></dt>
+    <dd><p>focus height of the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFocusWidth.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFocusWidth">HeaderFocusWidth</a></dt>
+    <dd><p>focus width of the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullHeight.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullHeight">HeaderFullHeight</a></dt>
+    <dd><p>full height of the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderFullWidth.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderFullWidth">HeaderFullWidth</a></dt>
+    <dd><p>full width of the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImage.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImage">HeaderImage</a></dt>
+    <dd><p>image from the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageFocused.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageFocused">HeaderImageFocused</a></dt>
+    <dd><p>focused image from the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderImageScaled.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderImageScaled">HeaderImageScaled</a></dt>
+    <dd><p>scaled image from the header</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.HeaderStretch.html#DontPanic_TumblrSharp_Client_TrailTheme_HeaderStretch">HeaderStretch</a></dt>
+    <dd><p>is the header stretched</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.LinkColor.html#DontPanic_TumblrSharp_Client_TrailTheme_LinkColor">LinkColor</a></dt>
+    <dd><p>color of link</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.ShowAvatar.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowAvatar">ShowAvatar</a></dt>
+    <dd><p>show the avatar</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.ShowDescription.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowDescription">ShowDescription</a></dt>
+    <dd><p>show the description</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.ShowHeaderImage.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowHeaderImage">ShowHeaderImage</a></dt>
+    <dd><p>show headerimage</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.ShowTitle.html#DontPanic_TumblrSharp_Client_TrailTheme_ShowTitle">ShowTitle</a></dt>
+    <dd><p>show title</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.TitleColor.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleColor">TitleColor</a></dt>
+    <dd><p>color of the title</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.TitleFont.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleFont">TitleFont</a></dt>
+    <dd><p>font of the title</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.TitleFontWeight.html#DontPanic_TumblrSharp_Client_TrailTheme_TitleFontWeight">TitleFontWeight</a></dt>
+    <dd><p>weight of the font from title</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.Equals.html#DontPanic_TumblrSharp_Client_TrailTheme_Equals_System_Object_">Equals(object)</a></dt>
+    <dd><p>compare this object with another</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.TrailTheme.GetHashCode.html#DontPanic_TumblrSharp_Client_TrailTheme_GetHashCode">GetHashCode()</a></dt>
+    <dd><p>return a hash code</p>
+</dd>
+  </dl>
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_Client_TrailTheme.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.Client.TrailTheme%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TrailTheme.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TrailTheme.cs/#L13" class="edit-link">Edit this page</a>
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

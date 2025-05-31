@@ -1,86 +1,126 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class PostData </title>
-      <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class PostData ">
-    
-    <meta name="description" content="Represents a post to be submitted to a Tumblr blog.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      <title>Class PostData | NewTumblrSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PostData | NewTumblrSharp ">
+      
+      <meta name="description" content="Represents a post to be submitted to a Tumblr blog.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_PostData.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.PostData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NewTumblrSharp">
+            NewTumblrSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DontPanic.TumblrSharp.PostData">
+
+        <article data-uid="DontPanic.TumblrSharp.PostData">
 
 
 
-  <h1 id="DontPanic_TumblrSharp_PostData" data-uid="DontPanic.TumblrSharp.PostData" class="text-break">Class PostData</h1>
-  <div class="markdown level0 summary"><p>Represents a post to be submitted to a Tumblr blog.</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">PostData</span></div>
+  <h1 id="DontPanic_TumblrSharp_PostData" data-uid="DontPanic.TumblrSharp.PostData" class="text-break">
+Class PostData  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/PostData.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DontPanic.TumblrSharp.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Represents a post to be submitted to a Tumblr blog.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PostData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PostData</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -102,223 +142,149 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="DontPanic.html">DontPanic</a>.<a class="xref" href="DontPanic.TumblrSharp.html">TumblrSharp</a></h6>
-  <h6><strong>Assembly</strong>: DontPanic.TumblrSharp.dll</h6>
-  <h5 id="DontPanic_TumblrSharp_PostData_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PostData</code></pre>
-  </div>
-  <h5 id="DontPanic_TumblrSharp_PostData_remarks"><strong>Remarks</strong></h5>
+  </dd></dl>
+
+
+
+
+  <h2 id="DontPanic_TumblrSharp_PostData_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This class cannot be instantiated directly. Use one of the static factory methods to
 create an instance of this class.</p>
 </div>
-  <h3 id="properties">Properties
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Date" data-uid="DontPanic.TumblrSharp.PostData.Date">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Date">Date</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the post date.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Format" data-uid="DontPanic.TumblrSharp.PostData.Format">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Format">Format</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="DontPanic.TumblrSharp.PostFormat.html">PostFormat</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Publish_On" data-uid="DontPanic.TumblrSharp.PostData.Publish_On">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Publish_On">Publish_On</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the DateTime of publish this, if <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html">PostCreationState</a> is <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Queue">Queue</a></p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Slug" data-uid="DontPanic.TumblrSharp.PostData.Slug">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Slug">Slug</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the post slug.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_State" data-uid="DontPanic.TumblrSharp.PostData.State">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_State">State</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html">PostCreationState</a> of the post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Tags" data-uid="DontPanic.TumblrSharp.PostData.Tags">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Tags">Tags</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets the tags associated with the post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_Tweet" data-uid="DontPanic.TumblrSharp.PostData.Tweet">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_Tweet">Tweet</a>
-        </td>
-        <td class="markdown level1 summary"><p>Gets or sets the autotweet (if enabled) for this post: set to <b>off</b>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Date.html#DontPanic_TumblrSharp_PostData_Date">Date</a></dt>
+    <dd><p>Gets or sets the post date.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Format.html#DontPanic_TumblrSharp_PostData_Format">Format</a></dt>
+    <dd><p>Gets or sets the <a class="xref" href="DontPanic.TumblrSharp.PostFormat.html">PostFormat</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Publish_On.html#DontPanic_TumblrSharp_PostData_Publish_On">Publish_On</a></dt>
+    <dd><p>Gets or sets the DateTime of publish this, if <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html">PostCreationState</a> is <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Queue">Queue</a></p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Slug.html#DontPanic_TumblrSharp_PostData_Slug">Slug</a></dt>
+    <dd><p>Gets or sets the post slug.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.State.html#DontPanic_TumblrSharp_PostData_State">State</a></dt>
+    <dd><p>Gets or sets the <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html">PostCreationState</a> of the post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Tags.html#DontPanic_TumblrSharp_PostData_Tags">Tags</a></dt>
+    <dd><p>Gets the tags associated with the post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.Tweet.html#DontPanic_TumblrSharp_PostData_Tweet">Tweet</a></dt>
+    <dd><p>Gets or sets the autotweet (if enabled) for this post: set to <b>off</b>
 for no tweet, or enter text to override the default tweet.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateAnswer_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateAnswer(System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateAnswer_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateAnswer(string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for an answer post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateAudio_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateAudio(DontPanic.TumblrSharp.BinaryFile,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateAudio_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateAudio(BinaryFile, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for an audio post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateAudio_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateAudio(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateAudio_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateAudio(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for an audio post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateChat_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateChat(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateChat_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateChat(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a chat post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateLink_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateLink(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateLink_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateLink(string, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a link post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_" data-uid="DontPanic.TumblrSharp.PostData.CreatePhoto(DontPanic.TumblrSharp.BinaryFile)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_">CreatePhoto(BinaryFile)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreatePhoto(DontPanic.TumblrSharp.BinaryFile,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreatePhoto(BinaryFile, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreatePhoto_System_Collections_Generic_IEnumerable_DontPanic_TumblrSharp_BinaryFile__System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreatePhoto(System.Collections.Generic.IEnumerable{DontPanic.TumblrSharp.BinaryFile},System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreatePhoto_System_Collections_Generic_IEnumerable_DontPanic_TumblrSharp_BinaryFile__System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreatePhoto(IEnumerable&lt;BinaryFile&gt;, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateQuote_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateQuote(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateQuote_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateQuote(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a quote post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateText_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateText(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateText_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateText(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a text post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateVideo_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateVideo(DontPanic.TumblrSharp.BinaryFile,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateVideo_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateVideo(BinaryFile, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a video post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_CreateVideo_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_" data-uid="DontPanic.TumblrSharp.PostData.CreateVideo(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DontPanic.TumblrSharp.PostCreationState)">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_CreateVideo_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateVideo(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a video post.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="DontPanic_TumblrSharp_PostData_ToMethodParameterSet" data-uid="DontPanic.TumblrSharp.PostData.ToMethodParameterSet">
-          <a class="xref" href="DontPanic.TumblrSharp.PostData.html#DontPanic_TumblrSharp_PostData_ToMethodParameterSet">ToMethodParameterSet()</a>
-        </td>
-        <td class="markdown level1 summary"><p>Converts the current instance to a <a class="xref" href="DontPanic.TumblrSharp.MethodParameterSet.html">MethodParameterSet</a>/</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateAudio.html#DontPanic_TumblrSharp_PostData_CreateAudio_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateAudio(BinaryFile, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for an audio post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateAudio.html#DontPanic_TumblrSharp_PostData_CreateAudio_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateAudio(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for an audio post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateChat.html#DontPanic_TumblrSharp_PostData_CreateChat_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateChat(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a chat post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateLink.html#DontPanic_TumblrSharp_PostData_CreateLink_System_String_System_String_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateLink(string, string, string, string, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a link post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreatePhoto.html#DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_">CreatePhoto(BinaryFile)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreatePhoto.html#DontPanic_TumblrSharp_PostData_CreatePhoto_DontPanic_TumblrSharp_BinaryFile_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreatePhoto(BinaryFile, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreatePhoto.html#DontPanic_TumblrSharp_PostData_CreatePhoto_System_Collections_Generic_IEnumerable_DontPanic_TumblrSharp_BinaryFile__System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreatePhoto(IEnumerable&lt;BinaryFile&gt;, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreatePhoto.html#DontPanic_TumblrSharp_PostData_CreatePhoto_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreatePhoto(string, string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a photo post with a source url for photo.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateQuote.html#DontPanic_TumblrSharp_PostData_CreateQuote_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateQuote(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a quote post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateText.html#DontPanic_TumblrSharp_PostData_CreateText_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateText(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a text post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateVideo.html#DontPanic_TumblrSharp_PostData_CreateVideo_DontPanic_TumblrSharp_BinaryFile_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateVideo(BinaryFile, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a video post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.CreateVideo.html#DontPanic_TumblrSharp_PostData_CreateVideo_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__DontPanic_TumblrSharp_PostCreationState_">CreateVideo(string, string, IEnumerable&lt;string&gt;, PostCreationState)</a></dt>
+    <dd><p>Creates the <a class="xref" href="DontPanic.TumblrSharp.PostData.html">PostData</a> for a video post.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.PostData.ToMethodParameterSet.html#DontPanic_TumblrSharp_PostData_ToMethodParameterSet">ToMethodParameterSet()</a></dt>
+    <dd><p>Converts the current instance to a <a class="xref" href="DontPanic.TumblrSharp.MethodParameterSet.html">MethodParameterSet</a>/</p>
+</dd>
+  </dl>
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/new/master/apiSpec/new?filename=DontPanic_TumblrSharp_PostData.md&amp;value=---%0Auid%3A%20DontPanic.TumblrSharp.PostData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/PostData.cs/#L17" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/PostData.cs/#L17" class="edit-link">Edit this page</a>
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

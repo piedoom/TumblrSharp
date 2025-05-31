@@ -14,15 +14,18 @@
     <PackageIconUrl>https://raw.githubusercontent.com/piedoom/TumblrSharp/master/TumblrSharp.png</PackageIconUrl>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TumblrSharpClient.snk</AssemblyOriginatorKeyFile>
-    <RepositoryType>GIT</RepositoryType>
+    <RepositoryType>GIT</RepositoryType>	
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <OutputPath>..\..\bin\Release\</OutputPath>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
+	<Optimize>True</Optimize>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <OutputPath>..\..\bin\Debug\</OutputPath>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>

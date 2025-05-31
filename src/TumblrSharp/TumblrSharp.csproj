@@ -7,7 +7,7 @@
     <PackageProjectUrl>https://github.com/piedoom/TumblrSharp</PackageProjectUrl>
     <Authors>Alexander Lozada; Ulf (Cataurus) Prill; et al.</Authors>
     <PackageId>NewTumblrSharp</PackageId>
-    <Description>Tumblr# extension for .NETStandard 2.0</Description>
+    <Description>Tumblr# for .NETStandard 2.0</Description>
     <Copyright>Copyright 2017-2025</Copyright>
     <PackageTags>tumblr api</PackageTags>
     <AssemblyName>DontPanic.TumblrSharp</AssemblyName>
@@ -17,14 +17,16 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TumblrSharp.snk</AssemblyOriginatorKeyFile>
     <RepositoryType>GIT</RepositoryType>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <OutputPath>..\..\bin\Release\</OutputPath>
+	<Optimize>True</Optimize>
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <OutputPath>..\..\bin\Debug\</OutputPath>
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>

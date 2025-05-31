@@ -17,15 +17,16 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TumblrSharp.snk</AssemblyOriginatorKeyFile>
     <RepositoryType>GIT</RepositoryType>
-	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
 	<Optimize>True</Optimize>
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+	<OutputPath>..\..\bin\$(Configuration)\$(Platform)</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>

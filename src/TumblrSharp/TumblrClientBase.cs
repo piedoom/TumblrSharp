@@ -343,7 +343,7 @@ namespace DontPanic.TumblrSharp
 									}
 							}
 
-							throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse.ToList());
+							throw new TumblrException(response.StatusCode, response.ReasonPhrase, errorResponse?.ToList());
 						}
 					}
 				}

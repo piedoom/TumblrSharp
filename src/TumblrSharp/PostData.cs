@@ -103,25 +103,6 @@ namespace DontPanic.TumblrSharp
 
         #region Static Methods
 
-        #region CreateAnswer
-
-        /// <summary>
-        /// Creates the <see cref="PostData"/> for an answer post.
-        /// </summary>
-        /// <param name="answer">The body of the answer post.</param>
-        /// <param name="tags"></param>
-        /// <param name="state"></param>
-        /// <returns></returns>
-        public static PostData CreateAnswer(string answer, IEnumerable<string> tags, PostCreationState state)
-        {
-            var postData = new PostData(state, tags);
-            postData.parameters.Add("type", "answer");
-            postData.parameters.Add("answer", answer);
-
-            return postData;
-        }
-        #endregion
-
         #region CreateText
 
 		/// <summary>
@@ -223,30 +204,34 @@ namespace DontPanic.TumblrSharp
 			return CreatePhoto(photos, null, null, null, PostCreationState.Published);
 		}
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for a photo post.
-		/// </summary>
-		/// <param name="photo">
-		/// A photo to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for a photo post.
+        /// </summary>
+        /// <param name="photo">
+        /// A photo to upload, defined as a <see cref="BinaryFile"/> instance.
+        /// </param>
         /// <param name="state">
         /// The <see cref="PostCreationState"/> of this photo post.
         /// </param>
         /// <param name="caption">
         /// The optional string caption for this photo post.
         /// </param>
+        /// <param name="clickThroughUrl">
+        /// The photo(s) click trough url.
+        /// </param>
         /// <param name="tags">
         /// The optional array of string used for tags.
         /// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="photo"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreatePhoto(
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="photo"/> is <b>null</b>.
+        /// </exception>
+        public static PostData CreatePhoto(
             BinaryFile photo, 
             string caption = null,
+            string clickThroughUrl = null,
             IEnumerable<string> tags = null,
             PostCreationState state = PostCreationState.Published)
 		{
@@ -254,7 +239,8 @@ namespace DontPanic.TumblrSharp
 				throw new ArgumentNullException("photo");
 
 			var photos = new BinaryFile[] { photo };
-			return CreatePhoto(photos, caption, null, tags, PostCreationState.Published);
+
+			return CreatePhoto(photos, caption, clickThroughUrl, tags, state);
 		}
 
 		/// <summary>
@@ -297,10 +283,18 @@ namespace DontPanic.TumblrSharp
 			if (photos.FirstOrDefault() == null)
 				throw new ArgumentException("There must be at least one photo to post.", "photos");
 
-			var postData = new PostData(state, tags);
-			postData.parameters.Add("type", "photo");
+            foreach (var photo in photos)
+            {
+                if (photo.Data.LongLength >= 1048576)
+                    throw new ArgumentException("The size of photo must smaller 10 MiB", "photos");
+            }
 
-			if (photos.Count() == 1)
+            var postData = new PostData(state, tags);
+			postData.parameters.Add("type", "photo");
+            postData.parameters.Add("caption", caption, null);
+            postData.parameters.Add("link", clickThroughUrl, null);
+
+            if (photos.Count() == 1)
 			{
 				var photo = photos.First();
 				postData.parameters.Add(new BinaryMethodParameter("data", photo.Data, photo.FileName, photo.MimeType));
@@ -311,9 +305,6 @@ namespace DontPanic.TumblrSharp
 				foreach (var photo in photos)
 					postData.parameters.Add(new BinaryMethodParameter(String.Format("data[{0}]", i++), photo.Data, photo.FileName, photo.MimeType));
 			}
-
-			postData.parameters.Add("caption", caption, null);
-			postData.parameters.Add("link", clickThroughUrl, null);
 
 			return postData;
 		}
@@ -482,32 +473,36 @@ namespace DontPanic.TumblrSharp
 			return postData;
 		}
 
-		#endregion
+        #endregion
 
-		#region CreateAudio
+        #region CreateAudio
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="audioFile">
-		/// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <param name="state">
-		/// The <see cref="PostCreationState"/> of the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="audioFile"/> is <b>null</b>.
-		/// </exception>
-		public static PostData CreateAudio(
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for an audio post.
+        /// </summary>
+        /// <param name="audioFile">
+        /// The audio file to upload, defined as a <see cref="BinaryFile"/> instance.
+        /// </param>
+        /// <param name="caption">
+        /// The caption for the audio post.
+        /// </param>
+        /// <param name="tags">
+        /// The tags to associate with the post.
+        /// </param>
+        /// <param name="state">
+        /// The <see cref="PostCreationState"/> of the post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="audioFile"/> is <b>null</b>.
+        /// </exception>
+        /// <remarks>
+        /// The audio file can only be posted to Tumblr once, otherwise the post will be rejected with a “Bad request” response.
+		/// Likewise, the size limit appears to be less than the 10 MB specified in the official API documentation.
+        /// </remarks>
+        public static PostData CreateAudio(
             BinaryFile audioFile, 
             string caption = null, 
             IEnumerable<string> tags = null, 
@@ -516,7 +511,10 @@ namespace DontPanic.TumblrSharp
 			if (audioFile == null)
 				throw new ArgumentNullException("audioFile");
 
-			var postData = new PostData(state, tags);
+			if (audioFile.Data.Length  >= 10_000_000)
+                throw new ArgumentException("The size of photo must smaller 10 MB", "audioFile");
+
+            var postData = new PostData(state, tags);
 			postData.parameters.Add("type", "audio");
 			postData.parameters.Add(new BinaryMethodParameter("data", audioFile.Data, audioFile.FileName, audioFile.MimeType));
 			postData.parameters.Add("caption", caption, null);
@@ -524,31 +522,35 @@ namespace DontPanic.TumblrSharp
 			return postData;
 		}
 
-		/// <summary>
-		/// Creates the <see cref="PostData"/> for an audio post.
-		/// </summary>
-		/// <param name="url">
-		/// The url to the audio file to post (the url must not be on Tumblr).
-		/// </param>
-		/// <param name="caption">
-		/// The caption for the audio post.
-		/// </param>
-		/// <param name="tags">
-		/// The tags to associate with the post.
-		/// </param>
-		/// <param name="state">
-		/// The <see cref="PostCreationState"/> of the post.
-		/// </param>
-		/// <returns>
-		/// A <see cref="PostData"/> instance representing the post.
-		/// </returns>
-		/// <exception cref="ArgumentNullException">
-		/// <paramref name="url"/> is <b>null</b>.
-		/// </exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="url"/> is empty.
-		/// </exception>
-		public static PostData CreateAudio(
+        /// <summary>
+        /// Creates the <see cref="PostData"/> for an audio post.
+        /// </summary>
+        /// <param name="url">
+        /// The url to the audio file to post (the url must not be on Tumblr).
+        /// </param>
+        /// <param name="caption">
+        /// The caption for the audio post.
+        /// </param>
+        /// <param name="tags">
+        /// The tags to associate with the post.
+        /// </param>
+        /// <param name="state">
+        /// The <see cref="PostCreationState"/> of the post.
+        /// </param>
+        /// <returns>
+        /// A <see cref="PostData"/> instance representing the post.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="url"/> is <b>null</b>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="url"/> is empty.
+        /// </exception>
+        /// /// <remarks>
+        /// The audio file can only be posted to Tumblr once, otherwise the post will be rejected with a “Bad request” response.
+        /// Likewise, the size limit appears to be less than the 10 MB specified in the official API documentation.
+        /// </remarks>
+        public static PostData CreateAudio(
             string url, 
             string caption = null, 
             IEnumerable<string> tags = null, 
@@ -562,7 +564,7 @@ namespace DontPanic.TumblrSharp
 
 			var postData = new PostData(state, tags);
 			postData.parameters.Add("type", "audio");
-			postData.parameters.Add("url", url);
+			postData.parameters.Add("external_url", url);
 			postData.parameters.Add("caption", caption, null);
 
 			return postData;

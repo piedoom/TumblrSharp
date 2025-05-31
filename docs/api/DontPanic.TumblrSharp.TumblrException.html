@@ -188,119 +188,28 @@ Class TumblrException  <a class="header-action link-secondary" title="View sourc
 
 
 
-
   <h2 class="section" id="constructors">Constructors
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_TumblrException__ctor_" data-uid="DontPanic.TumblrSharp.TumblrException.#ctor*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_TumblrException__ctor_System_Net_HttpStatusCode_System_String_System_Collections_Generic_IEnumerable_DontPanic_TumblrSharp_TumblrError__System_Exception_" data-uid="DontPanic.TumblrSharp.TumblrException.#ctor(System.Net.HttpStatusCode,System.String,System.Collections.Generic.IEnumerable{DontPanic.TumblrSharp.TumblrError},System.Exception)">
-  TumblrException(HttpStatusCode, string, IEnumerable&lt;TumblrError&gt;, Exception)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/TumblrException.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.TumblrException.html">TumblrException</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TumblrException(HttpStatusCode statusCode, string message = null, IEnumerable&lt;TumblrError&gt; errors = null, Exception innerException = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a> of the error.</p>
-</dd>
-    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The error message.</p>
-</dd>
-    <dt><code>errors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.TumblrError.html">TumblrError</a>&gt;</dt>
-    <dd><p>An optional list of extra errors.</p>
-</dd>
-    <dt><code>innerException</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd><p>An optional inner exception.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.TumblrException.-ctor.html#DontPanic_TumblrSharp_TumblrException__ctor_System_Net_HttpStatusCode_System_String_System_Collections_Generic_IEnumerable_DontPanic_TumblrSharp_TumblrError__System_Exception_">TumblrException(HttpStatusCode, string, IEnumerable&lt;TumblrError&gt;, Exception)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.TumblrException.html">TumblrException</a> class.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
 
   <h2 class="section" id="properties">Properties
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_TumblrException_Errors_" data-uid="DontPanic.TumblrSharp.TumblrException.Errors*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_TumblrException_Errors" data-uid="DontPanic.TumblrSharp.TumblrException.Errors">
-  Errors
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/TumblrException.cs/#L45"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the extra error messages returned from the server (if any).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;TumblrError&gt; Errors { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.TumblrError.html">TumblrError</a>&gt;</dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.TumblrException.Errors.html#DontPanic_TumblrSharp_TumblrException_Errors">Errors</a></dt>
+    <dd><p>Gets the extra error messages returned from the server (if any).</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_TumblrException_StatusCode_" data-uid="DontPanic.TumblrSharp.TumblrException.StatusCode*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_TumblrException_StatusCode" data-uid="DontPanic.TumblrSharp.TumblrException.StatusCode">
-  StatusCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/TumblrException.cs/#L40"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a> of the error.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpStatusCode StatusCode { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.TumblrException.StatusCode.html#DontPanic_TumblrSharp_TumblrException_StatusCode">StatusCode</a></dt>
+    <dd><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a> of the error.</p>
+</dd>
   </dl>
-
-
-
-
-
-
 
 
 

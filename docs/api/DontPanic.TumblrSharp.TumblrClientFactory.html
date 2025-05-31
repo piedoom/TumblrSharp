@@ -154,136 +154,19 @@ Class TumblrClientFactory  <a class="header-action link-secondary" title="View s
 
 
 
-
   <h2 class="section" id="methods">Methods
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_TumblrClientFactory_Create_" data-uid="DontPanic.TumblrSharp.TumblrClientFactory.Create*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_Net_Http_IHttpClientFactory_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_" data-uid="DontPanic.TumblrSharp.TumblrClientFactory.Create``1(System.Net.Http.IHttpClientFactory,System.String,System.String,DontPanic.TumblrSharp.OAuth.Token)">
-  Create&lt;TClient&gt;(IHttpClientFactory, string, string, Token)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TumblrClientFactory.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Creates a new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TClient Create&lt;TClient&gt;(IHttpClientFactory httpClientFactory, string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>httpClientFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">HttpClientFactory</a> to create internal HttpClient</p>
-</dd>
-    <dt><code>consumerKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer key.</p>
-</dd>
-    <dt><code>consumerSecret</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer secret.</p>
-</dd>
-    <dt><code>oAuthToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>An optional access token for the API. If no access token is provided, only the methods
-that do not require OAuth can be invoked successfully.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.TumblrClientFactory.Create.html#DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_Net_Http_IHttpClientFactory_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">Create&lt;TClient&gt;(IHttpClientFactory, string, string, Token)</a></dt>
+    <dd><p>Creates a new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
 </dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TClient</span></dt>
-    <dd><p>A new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.TumblrClientFactory.Create.html#DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_">Create&lt;TClient&gt;(string, string, Token)</a></dt>
+    <dd><p>Creates a new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
 </dd>
   </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TClient</code></dt>
-    <dd><p>The type of client to create (must derive from <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a>).</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_Net_Http_IHttpClientFactory_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This factory only supports <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a> or <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> as values
-for <code class="typeparamref">TClient</code>.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="typeparamref">TClient</code> is not <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a> or <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="DontPanic_TumblrSharp_TumblrClientFactory_Create_" data-uid="DontPanic.TumblrSharp.TumblrClientFactory.Create*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token_" data-uid="DontPanic.TumblrSharp.TumblrClientFactory.Create``1(System.String,System.String,DontPanic.TumblrSharp.OAuth.Token)">
-  Create&lt;TClient&gt;(string, string, Token)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/TumblrClientFactory.cs/#L79"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Creates a new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TClient Create&lt;TClient&gt;(string consumerKey, string consumerSecret, Token oAuthToken = null) where TClient : TumblrClientBase</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>consumerKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer key.</p>
-</dd>
-    <dt><code>consumerSecret</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer secret.</p>
-</dd>
-    <dt><code>oAuthToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>An optional access token for the API. If no access token is provided, only the methods
-that do not require OAuth can be invoked successfully.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">TClient</span></dt>
-    <dd><p>A new Tumblr client instance of type <code class="typeparamref">TClient</code>.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TClient</code></dt>
-    <dd><p>The type of client to create (must derive from <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a>).</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_TumblrClientFactory_Create__1_System_String_System_String_DontPanic_TumblrSharp_OAuth_Token__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>This factory only supports <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a> or <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a> as values
-for <code class="typeparamref">TClient</code>.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="typeparamref">TClient</code> is not <a class="xref" href="DontPanic.TumblrSharp.TumblrClientBase.html">TumblrClientBase</a> or <a class="xref" href="DontPanic.TumblrSharp.Client.TumblrClient.html">TumblrClient</a>.</p>
-</dd>
-  </dl>
-
 
 
 

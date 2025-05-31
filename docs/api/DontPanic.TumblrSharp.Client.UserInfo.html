@@ -148,176 +148,35 @@ Class UserInfo  <a class="header-action link-secondary" title="View source" href
 
 
 
-
   <h2 class="section" id="properties">Properties
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_Client_UserInfo_Blogs_" data-uid="DontPanic.TumblrSharp.Client.UserInfo.Blogs*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserInfo_Blogs" data-uid="DontPanic.TumblrSharp.Client.UserInfo.Blogs">
-  Blogs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserInfo.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>An array of <a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.html">UserBlogInfo</a> instances, containing information
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.Blogs.html#DontPanic_TumblrSharp_Client_UserInfo_Blogs">Blogs</a></dt>
+    <dd><p>An array of <a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.html">UserBlogInfo</a> instances, containing information
 about the user's blogs.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;blogs&quot;)]
-public UserBlogInfo[] Blogs { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.html">UserBlogInfo</a>[]</dt>
-    <dd></dd>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserInfo_DefaultPostFormat_" data-uid="DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserInfo_DefaultPostFormat" data-uid="DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat">
-  DefaultPostFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserInfo.cs/#L19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The user's default <a class="xref" href="DontPanic.TumblrSharp.PostFormat.html">PostFormat</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EnumStringConverter))]
-[JsonProperty(PropertyName = &quot;default_post_format&quot;)]
-public PostFormat DefaultPostFormat { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="DontPanic.TumblrSharp.PostFormat.html">PostFormat</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.DefaultPostFormat.html#DontPanic_TumblrSharp_Client_UserInfo_DefaultPostFormat">DefaultPostFormat</a></dt>
+    <dd><p>The user's default <a class="xref" href="DontPanic.TumblrSharp.PostFormat.html">PostFormat</a>.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserInfo_FollowingCount_" data-uid="DontPanic.TumblrSharp.Client.UserInfo.FollowingCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserInfo_FollowingCount" data-uid="DontPanic.TumblrSharp.Client.UserInfo.FollowingCount">
-  FollowingCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserInfo.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The number of blogs the user is following</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;following&quot;)]
-public long FollowingCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.FollowingCount.html#DontPanic_TumblrSharp_Client_UserInfo_FollowingCount">FollowingCount</a></dt>
+    <dd><p>The number of blogs the user is following</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserInfo_LikesCount_" data-uid="DontPanic.TumblrSharp.Client.UserInfo.LikesCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserInfo_LikesCount" data-uid="DontPanic.TumblrSharp.Client.UserInfo.LikesCount">
-  LikesCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserInfo.cs/#L32"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The total count of the user's likes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;likes&quot;)]
-public long LikesCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.LikesCount.html#DontPanic_TumblrSharp_Client_UserInfo_LikesCount">LikesCount</a></dt>
+    <dd><p>The total count of the user's likes</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserInfo_Name_" data-uid="DontPanic.TumblrSharp.Client.UserInfo.Name*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserInfo_Name" data-uid="DontPanic.TumblrSharp.Client.UserInfo.Name">
-  Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserInfo.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The user's tumblr short name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;name&quot;)]
-public string Name { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserInfo.Name.html#DontPanic_TumblrSharp_Client_UserInfo_Name">Name</a></dt>
+    <dd><p>The user's tumblr short name.</p>
+</dd>
   </dl>
-
-
-
-
-
-
 
 
 

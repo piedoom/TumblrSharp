@@ -123,16 +123,16 @@ Class UserBlogInfo  <a class="header-action link-secondary" title="View source" 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html#DontPanic_TumblrSharp_Client_BlogBase_Title">BlogBase.Title</a>
+      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.Title.html#DontPanic_TumblrSharp_Client_BlogBase_Title">BlogBase.Title</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html#DontPanic_TumblrSharp_Client_BlogBase_Name">BlogBase.Name</a>
+      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.Name.html#DontPanic_TumblrSharp_Client_BlogBase_Name">BlogBase.Name</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html#DontPanic_TumblrSharp_Client_BlogBase_Url">BlogBase.Url</a>
+      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.Url.html#DontPanic_TumblrSharp_Client_BlogBase_Url">BlogBase.Url</a>
     </div>
     <div>
-      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.html#DontPanic_TumblrSharp_Client_BlogBase_LastUpdated">BlogBase.LastUpdated</a>
+      <a class="xref" href="DontPanic.TumblrSharp.Client.BlogBase.LastUpdated.html#DontPanic_TumblrSharp_Client_BlogBase_LastUpdated">BlogBase.LastUpdated</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -161,308 +161,53 @@ Class UserBlogInfo  <a class="header-action link-secondary" title="View source" 
 
 
 
-
   <h2 class="section" id="properties">Properties
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_BlogType_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_BlogType" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType">
-  BlogType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L27"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The type of blog (public or private).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EnumStringConverter))]
-[JsonProperty(PropertyName = &quot;type&quot;)]
-public BlogType BlogType { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="DontPanic.TumblrSharp.BlogType.html">BlogType</a></dt>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.BlogType.html#DontPanic_TumblrSharp_Client_UserBlogInfo_BlogType">BlogType</a></dt>
+    <dd><p>The type of blog (public or private).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount.html#DontPanic_TumblrSharp_Client_UserBlogInfo_DraftsCount">DraftsCount</a></dt>
+    <dd><p>The number of posts in <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Draft">Draft</a> state.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount.html#DontPanic_TumblrSharp_Client_UserBlogInfo_FollowersCount">FollowersCount</a></dt>
+    <dd><p>Total count of followers for this blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled.html#DontPanic_TumblrSharp_Client_UserBlogInfo_IsFacebookPostEnabled">IsFacebookPostEnabled</a></dt>
+    <dd><p>Whether the automatic posting to Facebook of posts is enabled or not.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary.html#DontPanic_TumblrSharp_Client_UserBlogInfo_IsPrimary">IsPrimary</a></dt>
+    <dd><p>Indicates if this is the user's primary blog.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes.html#DontPanic_TumblrSharp_Client_UserBlogInfo_IsSharingLikes">IsSharingLikes</a></dt>
+    <dd><p>Whether if the user likes are public or not.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled.html#DontPanic_TumblrSharp_Client_UserBlogInfo_IsTweetEnabled">IsTweetEnabled</a></dt>
+    <dd><p>Whether the automatic tweet of posts is enabled or not.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount.html#DontPanic_TumblrSharp_Client_UserBlogInfo_MessagesCount">MessagesCount</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_DraftsCount_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_DraftsCount" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.DraftsCount">
-  DraftsCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L52"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The number of posts in <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Draft">Draft</a> state.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;drafts&quot;)]
-public int DraftsCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount.html#DontPanic_TumblrSharp_Client_UserBlogInfo_QueueCount">QueueCount</a></dt>
+    <dd><p>The number of posts in <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Queue">Queue</a> state.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_FollowersCount_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_FollowersCount" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.FollowersCount">
-  FollowersCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L64"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Total count of followers for this blog.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;followers&quot;)]
-public long FollowersCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsFacebookPostEnabled_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsFacebookPostEnabled" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsFacebookPostEnabled">
-  IsFacebookPostEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Whether the automatic posting to Facebook of posts is enabled or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(BoolConverter))]
-[JsonProperty(PropertyName = &quot;facebook&quot;)]
-public bool IsFacebookPostEnabled { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsPrimary_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsPrimary" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsPrimary">
-  IsPrimary
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L58"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Indicates if this is the user's primary blog.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;primary&quot;)]
-public bool IsPrimary { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsSharingLikes_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsSharingLikes" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsSharingLikes">
-  IsSharingLikes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L34"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Whether if the user likes are public or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;share_likes&quot;)]
-public bool IsSharingLikes { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsTweetEnabled_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_IsTweetEnabled" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.IsTweetEnabled">
-  IsTweetEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Whether the automatic tweet of posts is enabled or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(BoolConverter))]
-[JsonProperty(PropertyName = &quot;tweet&quot;)]
-public bool IsTweetEnabled { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_MessagesCount_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_MessagesCount" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.MessagesCount">
-  MessagesCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L40"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;messages&quot;)]
-public int MessagesCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_Client_UserBlogInfo_QueueCount_" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_Client_UserBlogInfo_QueueCount" data-uid="DontPanic.TumblrSharp.Client.UserBlogInfo.QueueCount">
-  QueueCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp.Client/UserBlogInfo.cs/#L46"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The number of posts in <a class="xref" href="DontPanic.TumblrSharp.PostCreationState.html#DontPanic_TumblrSharp_PostCreationState_Queue">Queue</a> state.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;queue&quot;)]
-public int QueueCount { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
 

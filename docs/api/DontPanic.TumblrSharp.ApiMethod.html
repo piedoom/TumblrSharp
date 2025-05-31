@@ -155,198 +155,38 @@ Class ApiMethod  <a class="header-action link-secondary" title="View source" hre
 
 
 
-
   <h2 class="section" id="constructors">Constructors
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_ApiMethod__ctor_" data-uid="DontPanic.TumblrSharp.ApiMethod.#ctor*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_ApiMethod__ctor_System_String_DontPanic_TumblrSharp_OAuth_Token_System_Net_Http_HttpMethod_DontPanic_TumblrSharp_MethodParameterSet_" data-uid="DontPanic.TumblrSharp.ApiMethod.#ctor(System.String,DontPanic.TumblrSharp.OAuth.Token,System.Net.Http.HttpMethod,DontPanic.TumblrSharp.MethodParameterSet)">
-  ApiMethod(string, Token, HttpMethod, MethodParameterSet)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/ApiMethod.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.ApiMethod.html">ApiMethod</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApiMethod(string methodUrl, Token oAuthToken, HttpMethod httpMethod, MethodParameterSet parameters = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>methodUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The url of the method to call.</p>
-</dd>
-    <dt><code>oAuthToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>The OAuth <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a> to use for the call. Can be <b>null</b> if the
-method does not require OAuth.</p>
-</dd>
-    <dt><code>httpMethod</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpmethod">HttpMethod</a></dt>
-    <dd><p>The required <a class="xref" href="DontPanic.TumblrSharp.ApiMethod.html#DontPanic_TumblrSharp_ApiMethod_HttpMethod">HttpMethod</a> for the Tumblr API call. Only GET and
-POST are supported.</p>
-</dd>
-    <dt><code>parameters</code> <a class="xref" href="DontPanic.TumblrSharp.MethodParameterSet.html">MethodParameterSet</a></dt>
-    <dd><p>The parameters for the Tumblr API call. Can be <b>null</b> if the method does not require parameters.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.ApiMethod.-ctor.html#DontPanic_TumblrSharp_ApiMethod__ctor_System_String_DontPanic_TumblrSharp_OAuth_Token_System_Net_Http_HttpMethod_DontPanic_TumblrSharp_MethodParameterSet_">ApiMethod(string, Token, HttpMethod, MethodParameterSet)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.ApiMethod.html">ApiMethod</a> class.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">methodUrl</code> is <b>null</b>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">methodUrl</code> is empty.
-	</li><li>
-		<code class="paramref">httpMethod</code> is not Get or Post.
-	</li></ul>
-</dd>
-  </dl>
-
-
 
   <h2 class="section" id="properties">Properties
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_ApiMethod_HttpMethod_" data-uid="DontPanic.TumblrSharp.ApiMethod.HttpMethod*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_ApiMethod_HttpMethod" data-uid="DontPanic.TumblrSharp.ApiMethod.HttpMethod">
-  HttpMethod
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/ApiMethod.cs/#L85"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the required <a class="xref" href="DontPanic.TumblrSharp.ApiMethod.html#DontPanic_TumblrSharp_ApiMethod_HttpMethod">HttpMethod</a> for the Tumblr API call.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpMethod HttpMethod { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpmethod">HttpMethod</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.ApiMethod.HttpMethod.html#DontPanic_TumblrSharp_ApiMethod_HttpMethod">HttpMethod</a></dt>
+    <dd><p>Gets the required <a class="xref" href="DontPanic.TumblrSharp.ApiMethod.HttpMethod.html#DontPanic_TumblrSharp_ApiMethod_HttpMethod">HttpMethod</a> for the Tumblr API call.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_ApiMethod_OAuthToken_" data-uid="DontPanic.TumblrSharp.ApiMethod.OAuthToken*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_ApiMethod_OAuthToken" data-uid="DontPanic.TumblrSharp.ApiMethod.OAuthToken">
-  OAuthToken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/ApiMethod.cs/#L80"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the OAuth <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a> to use for the call.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Token OAuthToken { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.ApiMethod.OAuthToken.html#DontPanic_TumblrSharp_ApiMethod_OAuthToken">OAuthToken</a></dt>
+    <dd><p>Gets the OAuth <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a> to use for the call.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_ApiMethod_Parameters_" data-uid="DontPanic.TumblrSharp.ApiMethod.Parameters*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_ApiMethod_Parameters" data-uid="DontPanic.TumblrSharp.ApiMethod.Parameters">
-  Parameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/ApiMethod.cs/#L90"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the parameters for the Tumblr API call.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MethodParameterSet Parameters { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="DontPanic.TumblrSharp.MethodParameterSet.html">MethodParameterSet</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.ApiMethod.Parameters.html#DontPanic_TumblrSharp_ApiMethod_Parameters">Parameters</a></dt>
+    <dd><p>Gets the parameters for the Tumblr API call.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-  <a id="DontPanic_TumblrSharp_ApiMethod_Url_" data-uid="DontPanic.TumblrSharp.ApiMethod.Url*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_ApiMethod_Url" data-uid="DontPanic.TumblrSharp.ApiMethod.Url">
-  Url
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/ApiMethod.cs/#L75"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the url of the Tumblr API method to call.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Url { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.ApiMethod.Url.html#DontPanic_TumblrSharp_ApiMethod_Url">Url</a></dt>
+    <dd><p>Gets the url of the Tumblr API method to call.</p>
+</dd>
   </dl>
-
-
-
-
-
-
 
 
 

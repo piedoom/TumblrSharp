@@ -19,6 +19,6 @@ namespace TestTumblrSharp
 
         public static Token AccessToken => new Token(accessKey, accessSecret);
 
-        public static string callbackUrl = "https://github.com/piedoom/TumblrSharp";
+        public static string callbackUrl = "https://www.test.de";
     }
 }

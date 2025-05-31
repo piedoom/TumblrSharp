@@ -15,7 +15,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TumblrSharpClient.snk</AssemblyOriginatorKeyFile>
     <RepositoryType>GIT</RepositoryType>
-	<OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+	<OutputPath>..\bin\$(Configuration)\$(Platform)</OutputPath>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 

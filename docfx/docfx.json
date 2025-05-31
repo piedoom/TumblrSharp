@@ -10,7 +10,8 @@
           ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "memberLayout": "separatePages" 
     }
   ],
   "build": {

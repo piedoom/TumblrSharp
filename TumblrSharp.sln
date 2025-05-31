@@ -91,6 +91,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetAuthenticate", "Examp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo Daten", "Demo Daten", "{DA37D4C8-DAF8-4DBA-93BC-50FA84EBBA7C}"
+	ProjectSection(SolutionItems) = preProject
+		demo_daten\Burosch_universaltestbild_avec-3840x2160.jpg = demo_daten\Burosch_universaltestbild_avec-3840x2160.jpg
+		demo_daten\Free_Test_Data_5MB_MP3.mp3 = demo_daten\Free_Test_Data_5MB_MP3.mp3
+		demo_daten\SampleVideo_360x240_30mb.mp4 = demo_daten\SampleVideo_360x240_30mb.mp4
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

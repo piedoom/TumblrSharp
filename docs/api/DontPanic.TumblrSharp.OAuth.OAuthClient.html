@@ -153,396 +153,44 @@ If the user authorizes the app, an access token will be generated that can then 
 used to make OAuth method calls.</p>
 </div>
 
-
   <h2 class="section" id="constructors">Constructors
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient__ctor_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.#ctor*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.#ctor(DontPanic.TumblrSharp.IHmacSha1HashProvider,System.String,System.String)">
-  OAuthClient(IHmacSha1HashProvider, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L90"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.OAuth.html">DontPanic.TumblrSharp.OAuth</a> client class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OAuthClient(IHmacSha1HashProvider hashProvider, string consumerKey, string consumerSecret)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>hashProvider</code> <a class="xref" href="DontPanic.TumblrSharp.IHmacSha1HashProvider.html">IHmacSha1HashProvider</a></dt>
-    <dd><p>A <a class="xref" href="DontPanic.TumblrSharp.IHmacSha1HashProvider.html">IHmacSha1HashProvider</a> implementation used to generate a
-HMAC-SHA1 hash for OAuth purposes.</p>
-</dd>
-    <dt><code>consumerKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer key.</p>
-</dd>
-    <dt><code>consumerSecret</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The consumer secret.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.-ctor.html#DontPanic_TumblrSharp_OAuth_OAuthClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String_">OAuthClient(IHmacSha1HashProvider, string, string)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="DontPanic.TumblrSharp.OAuth.html">DontPanic.TumblrSharp.OAuth</a> client class.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_OAuth_OAuthClient__ctor_DontPanic_TumblrSharp_IHmacSha1HashProvider_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>You can get a consumer key and a consumer secret by registering an application with Tumblr:<br>
-<br>
-<a href="http://www.tumblr.com/oauth/apps">http://www.tumblr.com/oauth/apps</a></p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">hashProvider</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">consumerKey</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">consumerSecret</code> is <b>null</b>.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">consumerKey</code> is empty.
-	</li><li>
-		<code class="paramref">consumerSecret</code> is empty.
-	</li></ul>
-</dd>
-  </dl>
-
-
 
   <h2 class="section" id="methods">Methods
 </h2>
 
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_DontPanic_TumblrSharp_OAuth_Token_System_String_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync(DontPanic.TumblrSharp.OAuth.Token,System.String)">
-  GetAccessTokenAsync(Token, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L387"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the authorized access token that can be used to make OAuth calls.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Token&gt; GetAccessTokenAsync(Token requestToken, string verifierUrl)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>requestToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>The rest token sent from the server to the <b>callback url</b>.que</p>
-</dd>
-    <dt><code>verifierUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The verifier url returned from the server.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync.html#DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_DontPanic_TumblrSharp_OAuth_Token_System_String_">GetAccessTokenAsync(Token, string)</a></dt>
+    <dd><p>Gets the authorized access token that can be used to make OAuth calls.</p>
 </dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a>&gt;</dt>
-    <dd><p>The access token.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync.html#DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_DontPanic_TumblrSharp_OAuth_Token_System_String_System_String_">GetAccessTokenAsync(Token, string, string)</a></dt>
+    <dd><p>Gets the authorized access token that can be used to make OAuth calls.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">requestToken</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">verifierUrl</code> is <b>null</b>.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">verifierUrl</code> is empty.</p>
-</dd>
-    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthException.html">OAuthException</a></dt>
-    <dd><ul><li>
-		Could not determine oauth_token and oauth_token_secret from server response.
-	</li><li>
-		An exception occurred during the method call.
-	</li></ul>
-</dd>
-  </dl>
-
-
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAccessTokenAsync_DontPanic_TumblrSharp_OAuth_Token_System_String_System_String_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAccessTokenAsync(DontPanic.TumblrSharp.OAuth.Token,System.String,System.String)">
-  GetAccessTokenAsync(Token, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L466"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the authorized access token that can be used to make OAuth calls.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Token&gt; GetAccessTokenAsync(Token requestToken, string oAuthToken, string oAuthVerifier)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>requestToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>The rest token sent from the server to the <b>callback url</b> que</p>
-</dd>
-    <dt><code>oAuthToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>oauth_token</p>
-</dd>
-    <dt><code>oAuthVerifier</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>oauth_verifier</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a>&gt;</dt>
-    <dd><p>The access token.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">requestToken</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">oAuthToken</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">oAuthVerifier</code> is <b>null</b>.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">oAuthToken</code> is empty.
-	</li><li>
-		<code class="paramref">oAuthVerifier</code> is empty..
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthException.html">OAuthException</a></dt>
-    <dd><ul><li>
-		An exception occurred during the method call.
-	</li></ul>
-</dd>
-  </dl>
-
-
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAuthorizeUrl_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAuthorizeUrl_DontPanic_TumblrSharp_OAuth_Token_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl(DontPanic.TumblrSharp.OAuth.Token)">
-  GetAuthorizeUrl(Token)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L330"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Builds the url that is required to connect to the server, where the server will authenticate the user
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.GetAuthorizeUrl.html#DontPanic_TumblrSharp_OAuth_OAuthClient_GetAuthorizeUrl_DontPanic_TumblrSharp_OAuth_Token_">GetAuthorizeUrl(Token)</a></dt>
+    <dd><p>Builds the url that is required to connect to the server, where the server will authenticate the user
 and ask for authorization.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Uri GetAuthorizeUrl(Token requestToken)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>requestToken</code> <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a></dt>
-    <dd><p>The request token obtained during the call to <a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.html#DontPanic_TumblrSharp_OAuth_OAuthClient_GetRequestTokenAsync_System_String_">GetRequestTokenAsync(string)</a>.</p>
 </dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a> where to direct the user to obtain authorization.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync.html#DontPanic_TumblrSharp_OAuth_OAuthClient_GetRequestTokenAsync_System_String_">GetRequestTokenAsync(string)</a></dt>
+    <dd><p>Asynchronously gets a request token.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetAuthorizeUrl_DontPanic_TumblrSharp_OAuth_Token__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>After the User authenticates with the Service Provider and grants permission for Consumer access, the Consumer will be
-notified that the Request Token has been authorized and ready to be exchanged for an Access Token. The Service Provider
-will construct an HTTP GET request URL, and redirects the User’s web browser to that URL with the following parameters:
-<b>oauth_token</b> which is the request token and <b>oauth_verifier</b> which is the verification code tied to the request token.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">requestToken</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">requestToken</code>.Key is <b>null</b>.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">requestToken</code>.Key is empty.</p>
+  <dl class="jumplist">
+    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync.html#DontPanic_TumblrSharp_OAuth_OAuthClient_PerformXAuthAsync_System_String_System_String_">PerformXAuthAsync(string, string)</a></dt>
+    <dd><p>Asynchronously performs XAuth.</p>
 </dd>
   </dl>
-
-
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetRequestTokenAsync_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetRequestTokenAsync_System_String_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.GetRequestTokenAsync(System.String)">
-  GetRequestTokenAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L253"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Asynchronously gets a request token.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Token&gt; GetRequestTokenAsync(string callbackUrl)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>callbackUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The server redirects Users to this URL after they authorize access to their private data.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a>&gt;</dt>
-    <dd><p>The request token.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_OAuth_OAuthClient_GetRequestTokenAsync_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The Consumer obtains an unauthorized Request Token by asking the Service Provider to issue a Token.
-The Request Token’s sole purpose is to receive User approval and can only be used to obtain an Access Token.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p><code class="paramref">callbackUrl</code> is <b>null</b>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p><code class="paramref">callbackUrl</code> is empty.</p>
-</dd>
-    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthException.html">OAuthException</a></dt>
-    <dd><ul><li>
-		Could not determine oauth_token and oauth_token_secret from server response.
-	</li><li>
-		An exception occurred during the method call.
-	</li></ul>
-</dd>
-  </dl>
-
-
-
-  <a id="DontPanic_TumblrSharp_OAuth_OAuthClient_PerformXAuthAsync_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync*"></a>
-
-  <h3 id="DontPanic_TumblrSharp_OAuth_OAuthClient_PerformXAuthAsync_System_String_System_String_" data-uid="DontPanic.TumblrSharp.OAuth.OAuthClient.PerformXAuthAsync(System.String,System.String)">
-  PerformXAuthAsync(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cataurus/TumblrSharp/blob/master/src/TumblrSharp/OAuth/OAuthClient.cs/#L170"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Asynchronously performs XAuth.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Token&gt; PerformXAuthAsync(string userName, string password)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>userName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The user name.</p>
-</dd>
-    <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The user password.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a>&gt;</dt>
-    <dd><p>The access <a class="xref" href="DontPanic.TumblrSharp.OAuth.Token.html">Token</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="DontPanic_TumblrSharp_OAuth_OAuthClient_PerformXAuthAsync_System_String_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>XAuth is mainly used in mobile applications, where the device does not (or can not) have a
-callback url. It uses the user name and password to get the access token from the server.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">userName</code> is <b>null</b>.
-	</li><li>
-		<code class="paramref">password</code> is <b>null</b>.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><ul><li>
-		<code class="paramref">userName</code> is empty.
-	</li><li>
-		<code class="paramref">password</code> is empty.
-	</li></ul>
-</dd>
-    <dt><a class="xref" href="DontPanic.TumblrSharp.OAuth.OAuthException.html">OAuthException</a></dt>
-    <dd><ul><li>
-		Could not determine oauth_token and oauth_token_secret from server response.
-	</li><li>
-		An exception occurred during the method call.
-	</li></ul>
-</dd>
-  </dl>
-
 
 
 

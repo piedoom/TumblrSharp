@@ -68,7 +68,7 @@ Version 1.2.1.*
 - no longer supported platforms removed
 - the platform for .NET Example change to .NET 8.0
 - Example Authenticate1 under .NET Framework / Windows now uses WebView2 as WebControl
-- Tests for CreateAudio, CreateVideo, ....
+- Adjustment at PostData for CreateLink, CreateAudio, CreateVideo, ....
 
 Version 2.0 
 - Support Neues Post Format (npf)

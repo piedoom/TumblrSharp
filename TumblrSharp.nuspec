@@ -24,9 +24,11 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\netstandard2.0\DontPanic.TumblrSharp.dll" target="lib\netstandard2.0\DontPanic.TumblrSharp.dll" />
-    <file src="bin\Release\netstandard2.0\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard2.0\DontPanic.TumblrSharp.Client.dll" />
-    <file src="images\TumblrSharp.png" target="images\" />
+    <file src="bin\Release\AnyCpu\netstandard2.0\DontPanic.TumblrSharp.dll" target="lib\netstandard2.0\DontPanic.TumblrSharp.dll" />
+	<file src="bin\Release\AnyCpu\netstandard2.0\DontPanic.TumblrSharp.xml" target="lib\netstandard2.0\DontPanic.TumblrSharp.xml" />
+    <file src="bin\Release\AnyCpu\netstandard2.0\DontPanic.TumblrSharp.Client.dll" target="lib\netstandard2.0\DontPanic.TumblrSharp.Client.dll" />
+	<file src="bin\Release\AnyCpu\netstandard2.0\DontPanic.TumblrSharp.Client.xml" target="lib\netstandard2.0\DontPanic.TumblrSharp.Client.xml" />
+	<file src="images\TumblrSharp.png" target="images\" />
 	<file src="README.md" target="docs\" />
   </files>
 </package>
